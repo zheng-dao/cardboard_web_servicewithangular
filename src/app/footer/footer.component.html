@@ -1,0 +1,106 @@
+<div class="footer" [style.display]="footerShow? 'block':'none'">
+  <div class="content_1">
+      <ul>
+        <li>
+          <div >
+            <img src="../../assets/images/icon/telephone.png">
+            <span class="span-text">Toll Free No: 8000177030</span>
+         </div>
+        </li>
+        <li>
+          <div >
+            <img src="../../assets/images/icon/weburl.png">
+            <span class="span-text">info@nysm.com</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <img src="../../assets/images/icon/phone.png">
+            <span class="span-text">Toll No: 961 90 898 228</span>
+          </div>
+        </li>
+        <li>
+          <div>
+              <ejs-multiselect id='multiselect-checkbox' #checkbox [dataSource]='countries' [placeholder]='checkWaterMark' [fields]='checkFields'
+              [mode]='mode' [popupHeight]='popHeight' [showDropDownIcon]='true' showSelectAll='true' [filterBarPlaceholder]='filterPlaceholder'>
+              </ejs-multiselect>
+          </div> 
+        </li>
+      </ul>
+       
+     
+  </div>
+  <div class="content_2">
+    <div class="content_2_1">
+         <div class="title_in_footer"> {{'footer.title1'|translate}}</div>
+          <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-2 country" *ngFor="let country of countries"  >
+              <img [src]="country.url"><a href="#">Jobs in {{country.name}}</a>
+            </div>
+          </div>
+          <hr>
+    </div>
+    <div class="content_2_2">
+        <div class="row">
+            <div class="col-sm-12 col-md-8 " > 
+              <div class="content_2_2_1">
+                  <div class="title_in_footer">{{'footer.title2'|translate}}</div> 
+                  <div  class="description_nysm"> 
+                    {{'footer.sub_title2'|translate}}
+                  </div>       
+              </div>      
+              <div class="content_2_2_2">
+                  <div class="title_in_footer">{{'footer.title3'|translate}}</div> 
+                   <ul>
+                     <li><a href="#"><img src="../../assets/images/social_icon/Facebook.png"></a></li>
+                     <li><a href="#"><img src="../../assets/images/social_icon/Twitter.png"></a></li>
+                     <li><a href="#"><img src="../../assets/images/social_icon/youtube.png"></a></li>
+                     <li><a href="#"><img src="../../assets/images/social_icon/Google_Plus.png"></a></li>
+                     <li><a href="#"><img src="../../assets/images/social_icon/Instagram.png"></a></li>
+                   </ul> 
+              </div> 
+            </div>
+            <div class="col-sm-12  col-md-2"></div>
+            <div class="col-sm-12 col-md-2 " > 
+              <div class="content_2_2_3"> 
+                  <div class="title_in_footer">{{'footer.title4'|translate}}</div> 
+                  <ul>
+                    <li><a href="#">{{'footer.sub_menu4.menu1'|translate}}</a></li>
+                    <li><a href="#">{{'footer.sub_menu4.menu2'|translate}}</a></li>
+                    <li><a href="#">{{'footer.sub_menu4.menu3'|translate}}</a></li>                 
+                  </ul> 
+              </div>
+              <div class="content_2_2_4"> 
+                  <div class="title_in_footer">LANGUAGE</div> 
+                  <ul>
+                    <li>{{'footer.sub_menu5.english'|translate}}</li>
+                    <li>{{'footer.sub_menu5.arabic'|translate}}</li>                        
+                  </ul> 
+              </div>
+               
+             </div>
+            
+            
+        </div>
+
+        <hr>
+    </div>
+    <div class="content_2_3">
+        <ul>
+            <li><a href="#" class="font_link">{{'footer.sub_menu6.menu1'|translate}}</a></li>
+            <li><a href="#" class="font_link">{{'footer.sub_menu6.menu2'|translate}}</a></li>
+            <li><a href="#" class="font_link">{{'footer.sub_menu6.menu3'|translate}}</a></li>
+            <li><a href="#" class="font_link">{{'footer.sub_menu6.menu4'|translate}}</a></li>
+            <li><a href="#" class="font_link">{{'footer.sub_menu6.menu5'|translate}}</a></li>
+            <li><a href="#" class="font_link">{{'footer.sub_menu6.menu6'|translate}}</a></li>
+            <li><a href="#" class="font_link">{{'footer.sub_menu6.menu7'|translate}}</a></li>
+            <li><a href="#" class="font_link">{{'footer.sub_menu6.menu8'|translate}}</a></li>
+         </ul> 
+
+         <div class="reserved_text">{{'footer.reserve'|translate}}</div>
+    </div>
+  </div>
+  <app-dropdownlist></app-dropdownlist>
+</div>
+
+

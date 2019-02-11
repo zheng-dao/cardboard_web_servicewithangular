@@ -1,0 +1,48 @@
+
+
+
+.header1{    
+      padding: 24px 0;
+      width: 100%;
+      // background-color:$thickblue;       
+  
+  
+  .logo{
+      text-align: right;
+  }
+  
+  .log-menu-section{
+      padding-left: 30%;  
+      a.nav-item.nav-link{
+          padding-right:20px;
+          padding-left:20px;
+      } 
+      a:hover{
+          background-color: $thingreen;
+          border-radius: 20px;
+          color: $linkblue;
+          box-shadow: 1px 1px 5px rgb(34, 39, 109);
+      } 
+  
+      span{
+          color:$thinblue;
+          font-size: $text_link_font_size;
+          line-height: $text_link_lineheight;
+          margin: 0 5px;
+          font-family: 'galano_grotesque_alt_regular';
+          padding-top:5px;
+      }
+      span:first{
+          margin-left: 20px;
+      }
+      span.lang_selected{
+          color:$thingreen;
+          cursor: pointer;
+      }    
+      span:last-child{
+          cursor:pointer;
+      }
+  }
+  
+}
+  

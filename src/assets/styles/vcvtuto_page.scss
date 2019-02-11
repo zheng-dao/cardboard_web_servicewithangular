@@ -1,0 +1,119 @@
+
+.vcvtuto_page{
+    width:100%;
+    padding: 120px 18%;
+    background-image: url('assets/images/vcvtuto/bg.png');
+    background-size: 100% 100%;
+    .content{
+        background-image: url('assets/images/vcvtuto/bg2.png');
+       background-size: 100% 100%;
+       border-radius: 10px;
+       box-shadow: 0 0 10px black;
+       width: 100%;
+       height: 650px;
+       padding: 160px 7% 0 7%;
+       
+       .content_1{          
+           width:40%;  
+           float:right;
+           .title{
+            @include custom_font($white, 54px, 54px, 'galano_grotesque_alt_extra_bold');
+           }
+           .sub-title{
+               margin-top:5px;
+            @include custom_font($thickgreen, 18px, 16px, 'galano_grotesque_alt_semi_bold');
+           }
+           .description{
+               margin-top: 20px;
+            @include custom_font($white, 16px, 28px, 'galano_grotesque_alt_medium'); 
+            margin-bottom: 35px;
+           }
+           .btn_1{
+            @include button-inverse-variant($thickgreen,18px, $thickblue, 33px, 15px, 40px, $thickblue);
+            box-shadow: 0 1px 7px rgb(37, 24, 49);
+            border:none;
+            img{
+                width: 34px;
+                height:34px;
+                vertical-align: middle;
+                margin-right: 6px;                
+            }
+           }
+           .btn_2{
+            @include button-inverse-variant($white,18px,transparent, 16px, 0px, 0px, transparent);
+            border:none;
+            margin-left: 20px;
+           }
+
+           .container {
+            display:inline-block;                        
+            position: relative;
+            padding-left: 35px;
+            padding-top:6px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            margin-top:18px;
+            @include custom_font($white, 16px,16px,'galano_grotesque_alt_regular');    
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+          }
+          
+          /* Hide the browser's default checkbox */
+          .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+          }
+          
+          /* Create a custom checkbox */
+          .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+            border-radius: 3px;
+          }
+          
+          /* On mouse-over, add a grey background color */
+          .container:hover input ~ .checkmark {
+            background-color: #eee;
+          }
+          
+          /* When the checkbox is checked, add a blue background */
+          .container input:checked ~ .checkmark {
+            background-color: rgb(11,233,222);
+          }
+          
+          /* Create the checkmark/indicator (hidden when not checked) */
+          .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+          }
+          
+          /* Show the checkmark when checked */
+          .container input:checked ~ .checkmark:after {
+            display: block;
+          }
+          
+          /* Style the checkmark/indicator */
+          .container .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+       }
+    }
+}

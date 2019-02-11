@@ -1,0 +1,37 @@
+<div>
+  <div class="header1" [style.background-color]="headerBackground? '#2766FF':'transparent'">
+    <div class="row">     
+      <div class=" col-sm-12 col-md-12 col-lg-6 " >     
+        <nav class="menu_item_list">          
+          <div class="navbar-expand mr-auto" >
+            <div class="navbar-nav" style="padding-left: 12%;">                
+                      <a class="nav-item nav-link " href="#" style="margin-right: 9%;">
+                        <img src="../../../assets/images/logo.png"/>
+                      </a>                 
+                      <a class="nav-item nav-link font_menu" href="#" >{{'header.menu_item_list.home'|translate}}</a>
+                      <a class="nav-item nav-link font_menu" href="#" >{{'header.menu_item_list.find_jobs'|translate}}</a>
+                      <a class="nav-item nav-link font_menu" href="#">{{'header.menu_item_list.create_your_vcv'|translate}}</a> 
+               </div>
+          </div>         
+        </nav>
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-lg-6 ">
+        <nav class="login_menu_item_list">          
+          <div class="navbar-expand mr-auto">
+            <div class="navbar-nav log-menu-section" >               
+                  <a class="nav-item nav-link font_menu" href="#" >{{'header.login_menu_item_list.login'|translate}}</a>
+                  <a class="nav-item nav-link font_menu" routerLink="/signup" >{{'header.login_menu_item_list.register'|translate}}</a>
+                  <a class="nav-item nav-link font_menu" href="#" >{{'header.login_menu_item_list.employer'|translate}}?</a>               
+                  <span [class.lang_selected]="is_en" (click)="uselanguage('en')" >Eng</span>
+                  <span>/</span>
+                  <span [class.lang_selected]="is_ar"  (click)="uselanguage('ar')" >Ar</span>    
+            </div>
+          </div>         
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+</div>

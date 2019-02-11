@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="max-width: 1600px; margin: 0 auto; background-size: 100% 100%;" 
+     [style.background]="backgroundImage" 
+     [style.background-size]="backgroundSize">
+  <div>
+      <app-header [headerBackground]="isHeaderBackground"></app-header>
+  </div>
+  
+  <div>   
+    <router-outlet></router-outlet>
+  </div>
+  <div>
+      <app-footer [footerShow]="isFooterShow"></app-footer>
+  </div>
+ 
+</div>
+
+

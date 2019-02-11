@@ -1,0 +1,35 @@
+
+.font_headline1{
+    @include custom_font($thickgray, $text_headline1_font_size, $text_headline1_lineheight, 'galano_grotesque_alt_semi_bold');
+}
+
+.font_headline2{
+    @include custom_font($thickgray, $text_headline2_font_size, $text_headline2_lineheight, 'galano_grotesque_alt_regular');
+}
+
+.font_headline3{
+    @include custom_font($thickgray, $text_headline3_font_size, $text_headline3_lineheight, 'galano_grotesque_alt_regular');
+}
+
+.font_paragraph{
+    @include custom_font($thingray, $text_paragraph_font_size, $text_paragraph_lineheight, 'galano_grotesque_alt_regular');
+}
+
+.font_additional_paragraph{
+    @include custom_font($thingray, $text_additional_paragraph_font_size , $text_additional_paragraph_lineheight, 'galano_grotesque_alt_regular');
+}
+
+.font_link{
+    @include custom_font($linkblue, $text_link_font_size, $text_link_lineheight, 'galano_grotesque_alt_semi_bold');
+}
+
+.font_menu{
+    @include custom_font($white, $text_link_font_size, $text_link_lineheight, 'galano_grotesque_alt_semi_bold');
+}
+
+.font_blue_headline{
+    @include custom_font($thickblue, $text_headline1_font_size, $text_headline1_lineheight, 'galano_grotesque_alt_semi_bold');
+}
+.font_blue_paragraph{
+    @include custom_font($thinblue, $text_paragraph_font_size, $text_paragraph_lineheight, 'galano_grotesque_alt_semi_bold');
+}

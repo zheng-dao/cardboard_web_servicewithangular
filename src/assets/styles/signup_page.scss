@@ -1,0 +1,171 @@
+
+div.signup{
+    width:100%;
+    // background: url(../../assets/images/signup/bg.png);
+    // background-size: 100% 100%;
+    padding : 43px 18%;    
+    .content{
+       width:100%;
+        .input-style{
+            width:100%;
+            background-color: rgba(34,27,68, 0.5);
+            padding-left: 25px;
+            height:60px;
+            border-radius: 30px;           
+            @include custom_font(white , 16px, 19px, 'galano_grotesque_alt_bold');
+            border: none;
+            margin: 6px 0;
+            &:focus{
+                outline: none;
+            }            
+        }
+        hr{
+            width:100%;
+            margin: 28px 0;
+            height: 1px;
+            background-color: rgba(34,27,68, 0.3);
+        }
+        .content_1{
+            width: 100%;
+            text-align: center;            
+            .title{
+                @include custom_font($white, 36px,43px,'galano_grotesque_alt_bold');                
+            }
+            .subtitle{
+                @include custom_font($thickgreen, 16px,19px,'galano_grotesque_alt_regular');                
+            }
+        }
+        form.content_2{
+            background:url('assets/images/signup/bg1.png');
+            border-radius: 10px;
+            background-size: 100% 100%;
+            box-shadow: 0 0 10px gray;
+            width:100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px black;
+            padding:92px 7.5%;
+             margin-top:45px;
+             .content_2_1{
+                 .title{
+                    @include custom_font($thickgreen, 14px,17px,'galano_grotesque_alt_bold');                  
+                    margin-bottom: 23px;
+                   }
+             }
+             .content_2_2{
+                .title{
+                   @include custom_font($thickgreen, 14px,17px,'galano_grotesque_alt_bold');                  
+                   margin-bottom: 23px;
+                }
+                .content_2_2_3{
+
+                    margin-top:40px;
+                    button{
+                        @include button-inverse-variant($thickblue,20px, $thickgreen, 30px, 15px, 40px, $thickgreen);
+                        box-shadow: 0 1px 7px  rgb(37, 24, 49);
+                        float: right;
+                    }
+                    
+                   
+                    .container {
+                        display:inline-block;                        
+                        position: relative;
+                        padding-left: 35px;
+                        padding-top:6px;
+                        margin-bottom: 12px;
+                        cursor: pointer;
+                        margin-top:18px;
+                        @include custom_font($thickgreen, 16px,16px,'galano_grotesque_alt_regular');    
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                      }
+                      
+                      /* Hide the browser's default checkbox */
+                      .container input {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
+                      }
+                      
+                      /* Create a custom checkbox */
+                      .checkmark {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 25px;
+                        width: 25px;
+                        background-color: #eee;
+                        border-radius: 3px;
+                      }
+                      
+                      /* On mouse-over, add a grey background color */
+                      .container:hover input ~ .checkmark {
+                        background-color: #eee;
+                      }
+                      
+                      /* When the checkbox is checked, add a blue background */
+                      .container input:checked ~ .checkmark {
+                        background-color: rgb(11,233,222);
+                      }
+                      
+                      /* Create the checkmark/indicator (hidden when not checked) */
+                      .checkmark:after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+                      }
+                      
+                      /* Show the checkmark when checked */
+                      .container input:checked ~ .checkmark:after {
+                        display: block;
+                      }
+                      
+                      /* Style the checkmark/indicator */
+                      .container .checkmark:after {
+                        left: 9px;
+                        top: 5px;
+                        width: 5px;
+                        height: 10px;
+                        border: solid white;
+                        border-width: 0 3px 3px 0;
+                        -webkit-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                      }
+                }                
+             }
+
+             .content_2_3{
+                margin: 50px 0;
+               .content_2_3_1{
+                   margin:15px 0;
+                   span{
+                    @include custom_font($white, 16px,16px,'galano_grotesque_alt_regular');              
+                   }
+               }
+               .content_2_3_2{
+                   
+                   button{
+                    @include button-inverse-variant($white,18px, $thickblue, 22px, 15px, 40px, $thickblue);
+                    box-shadow: 0 1px 7px rgb(37, 24, 49);
+                    float: right;
+                    border:none;
+                    img{
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 10px;
+                        vertical-align: middle;
+                    }
+                   }
+               }               
+             }
+
+             .content_2_4{
+                @include custom_font($thickgreen, 14px,16px,'galano_grotesque_alt_regular');    
+            }
+        }
+    }
+}

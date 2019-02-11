@@ -1,0 +1,7 @@
+@mixin custom_font($color, $font_size, $line_height, $font_family) {
+    color:$color;
+    font-size: $font_size;
+    line-height: $line_height;
+    font-family:$font_family;
+}
+

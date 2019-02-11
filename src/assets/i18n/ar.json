@@ -1,0 +1,23 @@
+{
+    "header":{
+        "menu_item_list":{
+            "home":"sdfs",
+            "find_jobs": "sfsd sfds",
+            "create_your_vcv":"sfsdf wwe aaa"
+        },
+        
+        "login_menu_item_list":{
+            "login":"aa wew",
+            "register":"asdas",
+            "employer": "sdsdfsdfd"
+        }
+    },
+    "button":{
+        "apply":"aaaaa",
+        "play_video":"bbbb bbbbb",
+        "press":"ccccc",
+        "discover":"ddddd",
+        "view_more":"aaaa eeee",
+        "sign_up":"ssss uu"
+    }
+}

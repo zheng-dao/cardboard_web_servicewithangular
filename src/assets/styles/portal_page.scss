@@ -1,0 +1,600 @@
+
+.portal_content_1.row{
+    width: 100%;
+    max-height: 810px; 
+    height: 810px;  
+    position: relative;
+    margin-right: 0;
+    margin-left: 0;
+    overflow: hidden;
+    ul{ 
+        transition: all 0.8s ease-in-out;
+        list-style: none; 
+        display: table;
+        padding: 0; 
+        li{            
+            img{                
+                width:100%;
+                max-height:810px ;
+                height: 810px;
+                // height:auto ;
+            }    
+        }          
+    }  
+
+    .slider-radio-group {
+        position: absolute;
+        bottom: 35%; 
+        right: 15%;
+        display: inline-flex;
+        flex-direction: column;
+        .slider-radio-button {
+            margin: 5px;
+           font-size:2px;
+           background-color: #4F5A74;
+        }
+    }
+      
+   
+    .des_content_1{
+       position: absolute;
+       left: 10%;
+       top:30%;
+    //    width:31%;
+        .des_content_1_1{
+            @include custom_font($thickblue, $text_headline1_font_size, $text_headline1_lineheight, 'galano_grotesque_alt_semi_bold');
+        }
+        .des_content_1_2{
+            margin-top: 4%;
+            @include custom_font($thinblue, $text_headline2_font_size, 30px, 'galano_grotesque_alt_regular');
+        }
+        .des_content_1_3{
+            margin-top: 8.5%;           
+        }
+    }
+}
+
+.portal_content_2{
+    padding: 110px 10%;
+    .portal_content_2_1_1{
+        // color:$color1;
+        font-size:36px;
+        text-align: center;
+        width:70%; 
+        margin: 0 auto;
+    }
+    .portal_content_2_1_2{
+        // color:$color2;
+        font-size:16px;
+        text-align: center;
+        width:60%; 
+        margin: 0 auto;
+    }
+    .portal_content_2_2{
+        margin-top: 56px;
+        .portal_content_2_2_ui{
+            position: relative;  
+            height: 357px; 
+            margin-bottom: 11px;       
+           img{
+               width:100%;
+               height:100%;               
+           }
+           .tran_back{
+              background-color: rgba(255,255,255,0.8);
+              position: absolute;
+              width: 100%;
+              height: 75px;
+              bottom: 0;
+           }
+           .title{
+            position: absolute;
+            left: 19px;
+            bottom: 36px;
+            color:#4F5A74;
+            font-size: 18px; 
+           }
+           .apply_btn{
+               padding: 13px 44px;
+               text-align: center;
+               background-color: rgba(255,255,255,0.6);
+               position: absolute;
+               right:10px;
+               bottom: 10px;
+               border-radius: 24px;
+               color:#7f6dff;
+               font-size: 16px;
+           }
+        }
+        .portal_content_2_2_teaching{
+            position: relative;  
+            height: 203px;      
+            margin-bottom: 11px;     
+           img{
+               width:100%;
+               height:100%;               
+           }
+           .tran_back{
+              background-color: rgba(255,255,255,0.8);
+              position: absolute;
+              width: 100%;
+              height: 75px;
+              bottom: 0;
+           }
+           .title{
+            position: absolute;
+            left: 19px;
+            bottom: 36px;
+            color:#4F5A74;
+            font-size: 18px; 
+           }
+           .apply_btn{
+               padding: 13px 44px;
+               text-align: center;
+               background-color: rgba(255,255,255,0.6);
+               position: absolute;
+               right:10px;
+               bottom: 10px;
+               border-radius: 24px;
+               color:#7f6dff;
+               font-size: 16px;
+           }
+        }
+
+        .portal_content_2_2_medical{
+            position: relative;  
+            height: 250px; 
+            width:58%;  
+            float:left;   
+            margin-bottom: 11px;     
+           img{
+               width:100%;
+               height:100%;               
+           }
+           .tran_back{
+              background-color: rgba(255,255,255,0.8);
+              position: absolute;
+              width: 100%;
+              height: 75px;
+              bottom: 0;
+           }
+           .title{
+            position: absolute;
+            left: 19px;
+            bottom: 36px;
+            color:#4F5A74;
+            font-size: 18px; 
+           }
+           .apply_btn{
+               padding: 13px 44px;
+               text-align: center;
+               background-color: rgba(255,255,255,0.6);
+               position: absolute;
+               right:10px;
+               bottom: 10px;
+               border-radius: 24px;
+               color:#7f6dff;
+               font-size: 16px;
+           }
+        }
+        .portal_content_2_2_gardening{
+            position: relative;  
+            height: 250px; 
+            width:40%;   
+            float:right;     
+            margin-bottom: 7px;  
+           img{
+               width:100%;
+               height:100%;               
+           }
+           .tran_back{
+              background-color: rgba(255,255,255,0.8);
+              position: absolute;
+              width: 100%;
+              height: 75px;
+              bottom: 0;
+           }
+           .title{
+            position: absolute;
+            left: 19px;
+            bottom: 36px;
+            color:#4F5A74;
+            font-size: 18px; 
+           }
+           .apply_btn{
+               padding: 13px 44px;
+               text-align: center;
+               background-color: rgba(255,255,255,0.6);
+               position: absolute;
+               right:10px;
+               bottom: 10px;
+               border-radius: 24px;
+               color:#7f6dff;
+               font-size: 16px;
+           }
+        }
+        .portal_content_2_2_coca{
+            position: relative;  
+            height: 311px; 
+            width:100%;    
+            float:right;  
+            margin-bottom: 11px;    
+           img{
+               width:100%;
+               height:100%;               
+           }
+           .tran_back{
+              background-color: rgba(255,255,255,0.8);
+              position: absolute;
+              width: 100%;
+              height: 75px;
+              bottom: 0;
+           }
+           .title{
+            position: absolute;
+            left: 19px;
+            bottom: 36px;
+            color:#4F5A74;
+            font-size: 18px; 
+           }
+           .apply_btn{
+               padding: 13px 44px;
+               text-align: center;
+               background-color:rgba(255,255,255,0.6);
+               position: absolute;
+               right:10px;
+               bottom: 10px;
+               border-radius: 24px;
+               color:white;
+               font-size: 16px;
+           }
+        }
+    }    
+}
+
+.portal_content_3{
+    padding: 110px 10%;
+    overflow: hidden;
+    .portal_content_3_1_1{       
+        text-align: center;
+        width:61%; 
+        margin: 0 auto;
+    }
+    .portal_content_3_1_2{       
+        text-align: center;
+        width:43%; 
+        margin: 10px auto;
+    }
+    .portal_content_3_2{
+        margin-top: 60px;       
+        width:80%;
+        margin-left:20%;
+        overflow: hidden;
+        .portal_content_3_2_1{
+            width:20px;
+            height: 348px;
+            float:left;
+            padding: 125px 0;
+            ul{
+                list-style: none;
+                padding: 0;
+                display: table;
+                li:last-child{
+                    margin-top: 22px;
+                }
+                img{
+                    width: 100%;
+                    height:38px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .portal_content_3_2_2{
+            margin-left:96px;           
+            height:348px;  
+            overflow: hidden;          
+            ul{
+                list-style: none;               
+                width: 1000%;
+                display: table;
+                transition: all 0.8s ease-in-out;
+                li{
+                    float:left;                    
+                    height: 348px;
+                    width:273px;
+                    position: relative;
+                    border-radius: 10px;
+                    margin-right: 40px;  
+                    opacity: 0.5;                                
+                    img{
+                        margin: 0 auto;
+                        width: 100%;
+                        height:100%;
+                    }
+                    .description{
+                        width:100%;
+                        height: 124px;
+                        background-color: rgba(255,255,255,0.8);
+                        padding: 27px 28px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        img{
+                            width: 100%;
+                            height: auto;  
+                            cursor: pointer;                          
+                        }
+                        .content{  
+                            p{
+                                margin: 0;
+                            }
+                            p.name{
+                                @include custom_font($thickgray, 20px ,18px , 'galano_grotesque_alt_extra_bold');
+                            }
+                            p.career{
+                                @include custom_font($thinpurple, 14px ,18px , 'galano_grotesque_alt_medium');
+                            }
+                            p.check{
+                                @include custom_font($thickblue, 16px ,24px , 'galano_grotesque_alt_medium'); 
+                            }
+                        }
+                    }
+                }
+                li.selected{
+                    opacity: 1.0;
+                    transform: scaleX(1.2);
+                }
+            }
+        }
+        .portal_content_3_2_3{
+            margin-top: 55px;
+            width: 320px;
+            height:5px;
+            background-color: rgba(150,150,150,0.3);
+            margin-left: 116px;
+            border-radius:2px; 
+            .scroll-bar{
+                width: 40px;
+                height: 5px;
+                background-color: $thickblue;
+                border-radius: 2px;
+                transition: all 0.8s ease-in-out;
+            }
+        }
+    }    
+}
+
+.portal_content_4{
+    padding: 110px 10%;
+    background: url("assets/images/portal_images/portal_content_4_back.png");
+    background-size: 100% 100%;
+    .portal_content_4_1_1{       
+        text-align: center;
+        width:61%; 
+        margin: 0 auto;
+    }
+    .portal_content_4_1_2{       
+        text-align: center;
+        width:43%; 
+        margin: 10px auto;
+    }
+    .portal_content_4_2{
+        margin-top: 60px;       
+        width:54%;
+        margin: 60px auto 0 auto;
+    }    
+}
+
+.portal_content_5{
+    padding: 110px 10%;
+   
+    .portal_content_5_1_1{       
+        text-align: center;
+        width:61%; 
+        margin: 0 auto;
+    }
+    .portal_content_5_1_2{       
+        text-align: center;
+        width:43%; 
+        margin: 10px auto;
+    }
+    .portal_content_5_2{
+        margin-top: 93px;  
+        width:80%;
+        margin: 0 auto;                 
+        .content_5_2_1, .content_5_2_2{
+          width:80%;
+          margin:93px auto 0 auto;  
+          img{
+              width:56%;
+              height:auto;
+              margin: 0 auto;
+          }
+          button{
+              margin-top:77px;
+              margin: 77px auto 0 auto;
+          }
+        }     
+    }    
+}
+
+.portal_content_6{
+    padding: 110px 10%;
+   
+    .portal_content_6_1_1{       
+        text-align: center;
+        width:61%; 
+        margin: 0 auto;
+    }
+    .portal_content_6_1_2{       
+        text-align: center;
+        width:43%; 
+        margin: 10px auto;
+    }
+    .portal_content_6_2{
+        margin-top: 93px;  
+        width:90%;
+        margin:93px auto 0 auto;  
+    } 
+    .portal_content_6_3{
+         text-align: center;
+         margin:93px auto 0 auto;
+    }   
+}
+
+.portal_content_7{
+    padding: 110px 10%;
+    background-color: #9DD0FA;
+   
+    .portal_content_7_1_1{       
+        text-align: center;
+        width:61%; 
+        margin: 0 auto;
+        color: $white;
+    }
+    .portal_content_7_1_2{       
+        text-align: center;
+        width:43%; 
+        margin: 10px auto;
+        color:$white;
+    }
+    .portal_content_7_2{
+       
+        width:80%;
+        margin:43px auto 0 auto;  
+        .country{
+            text-align: center;
+            margin-top: 30px;           
+            .country-name{
+                 @include custom_font($white, 30px, 44px, 'galano_grotesque_alt_semi_bold');
+            }
+            .country-jobs{
+                @include custom_font($thickblue, 18px, 22px, 'galano_grotesque_alt_semi_bold');
+            }
+        }
+    } 
+    .portal_content_7_3{
+        margin: 70px auto 0 auto;
+        text-align: center;
+        button{
+            @include button-inverse-variant($white,18px, transparent, 30px, 15px, 40px, transparent);
+            border: 2px solid $white;
+        }
+    }   
+}
+
+.portal_content_8{    
+    padding: 110px 10%;
+    .portal_content_8_body{
+        background: url("assets/images/portal_images/content_8_back.png");
+        background-size: 100% 100%;
+        padding:70px;
+        img{
+            width: 100%;
+            height: 557px;
+        }  
+        .portal_content_8_2{
+            text-align: center;  
+            padding: 30px 60px;
+            
+           .portal_content_8_2_3{
+                margin-top: 14px;
+           }
+           input{
+              margin-top:23px;
+              background-color: rgb(226, 226, 236);
+
+              line-height: 53px;
+              height: 53px;
+              width: 100%;
+              padding-left:30px; 
+              border: none;
+              border-radius: 30px;
+           }
+           input:focus{
+               outline: none;
+           }
+           .portal_content_8_2_5{
+               margin-top: 25px;
+               button{
+                @include button-inverse-variant($thickblue,20px, $thingreen, 30px, 15px, 40px, $thingreen)
+               }               
+           }
+           .portal_content_8_2_6{
+            margin-top: 17px;
+            }
+            .portal_content_8_2_7{
+                margin-top: 19px;
+                span{
+                    font-size: 25px;
+                    margin-right:30px;
+                }
+            }
+            .portal_content_8_2_8{
+                margin-top: 24px;
+                a{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+}
+
+.portal_content_9{
+    padding: 110px 10%;
+    background-image: url("assets/images/portal_images/content_9_back.png");
+    background-size: 100% 100%;
+   
+    .portal_content_9_1_1{       
+        text-align: center;
+        width:61%; 
+        margin: 0 auto;
+        color: $white;
+    }
+    .portal_content_9_1_2{       
+        text-align: center;
+        width:43%; 
+        margin: 10px auto;
+        color:$white;
+    }
+    .portal_content_9_2{       
+       text-align: center;
+       margin-top: 20px;
+       .download_app_store_btn{
+           width: 197px;
+           height:55px;
+           border-radius: 8px;
+           background-image: url('assets/images/portal_images/download-on-the-app-store-apple.png');
+           background-size: 100% 100%;
+           margin-top:20px;
+           cursor: pointer;
+       }
+       .download_google_store_btn{
+        width: 172px;
+        height:55px;
+        border-radius: 8px;
+        background-image: url('assets/images/portal_images/google-play-download-android-app.png');
+         margin-top: 20px;
+         background-size: 100% 100%;     
+         cursor: pointer;      
+       }
+
+       button:focus{
+           outline: none;           
+       }
+    } 
+
+    .portal_content_9_3{
+        text-align: center;
+        margin-top: 80px;
+        img{
+            width: 50%;
+            height: auto;
+        }
+    }
+   
+}
+
+
