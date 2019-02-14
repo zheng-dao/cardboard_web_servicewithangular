@@ -1,165 +1,162 @@
 {
-    "header":{
-        "menu_item_list":{
-            "home":"Home",
+    "header": {
+        "menu_item_list": {
+            "home": "Home",
             "find_jobs": "Find Jobs",
-            "create_your_vcv":"Create your VCV"
+            "create_your_vcv": "Create your VCV"
         },
-        
-        "login_menu_item_list":{
-            "login":"Log In",
-            "register":"Register",
+        "login_menu_item_list": {
+            "login": "Log In",
+            "register": "Register",
             "employer": "Employer"
         }
     },
-
-    "button":{
-        "apply":"Apply",
-        "play_video":"play video",
-        "press":"press",
-        "discover":"Discover",
-        "view_more":"View More",
-        "sign_up":"Sign Up",
-        "linkedin":"Continue with LinkedIn",
-        "getstart":"GET STARTED",
-        "skip":"skip",
-        "viewthemall":"VIEW THEM ALL",
-        "recordvcv":"Record VCV",
-        "watchoffer":"Watch Offer",
-        "watchvcv":"WATCH VCV"
+    "button": {
+        "apply": "Apply",
+        "apply_now": "Apply now",
+        "play_video": "play video",
+        "press": "press",
+        "discover": "Discover",
+        "view_more": "View More",
+        "sign_up": "Sign Up",
+        "linkedin": "Continue with LinkedIn",
+        "getstart": "GET STARTED",
+        "skip": "skip",
+        "viewthemall": "VIEW THEM ALL",
+        "recordvcv": "Record VCV",
+        "watchoffer": "Watch Offer",
+        "watchvcv": "WATCH VCV"
     },
-    "input":{
-         "firstname":"First Name",
-         "lastname":"Last Name",
-         "email":"Email",
-         "password":"Password",
-         "industry":"Industry",
-         "jobtitle":"Job Title"
+    "input": {
+        "firstname": "First Name",
+        "lastname": "Last Name",
+        "email": "Email",
+        "password": "Password",
+        "industry": "Industry",
+        "jobtitle": "Job Title"
     },
-    "portal":{
-        "slider":{
-            "title":"Create stunning video CVs and land your next job",
-            "sub_title":"Exploring hundreds of companies, receive video andwers for your next job opening"
+    "portal": {
+        "slider": {
+            "title": "Create stunning video CVs and land your next job",
+            "sub_title": "Exploring hundreds of companies, receive video andwers for your next job opening"
         },
-        "content2":{
-            "title":"Trending jobs on NYSM",
-            "sub_title":"Exploring hundreds of job opportunities"
+        "content2": {
+            "title": "Trending jobs on NYSM",
+            "sub_title": "Exploring hundreds of job opportunities"
         },
-        "content3":{
-            "title":"Get inspired See what others have done with NYSM",
-            "sub_title":"At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half"
+        "content3": {
+            "title": "Get inspired See what others have done with NYSM",
+            "sub_title": "At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half"
         },
-        "content4":{
-            "title":"Search 1000's of jobs around you.",
-            "sub_title":"At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half"
+        "content4": {
+            "title": "Search 1000's of jobs around you.",
+            "sub_title": "At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half"
         },
-        "content5":{
-            "title":"Why you should be on NYSM?",
-            "sub_title":"At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half",
-            "title1":"Looking for a job?",
-            "sub_title1":"At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half",
-            "title2":"Looking to hire?",
-            "sub_title2":"At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half"
-        
+        "content5": {
+            "title": "Why you should be on NYSM?",
+            "sub_title": "At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half",
+            "title1": "Looking for a job?",
+            "sub_title1": "At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half",
+            "title2": "Looking to hire?",
+            "sub_title2": "At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half"
         },
-        "content6":{
-            "title":"Who's using NYSM",
-            "sub_title":"At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half"            
+        "content6": {
+            "title": "Who's using NYSM",
+            "sub_title": "At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half"
         },
-        "content7":{
-            "title":"Find Jobs by Country",
-            "sub_title":"At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half"            
+        "content7": {
+            "title": "Find Jobs by Country",
+            "sub_title": "At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half"
         },
-        "content8":{
-            "title":"Sign Up Now",
-            "sub_title":"Make the most of your professional life" ,
-            "first_name":"first name",
+        "content8": {
+            "title": "Sign Up Now",
+            "sub_title": "Make the most of your professional life",
+            "first_name": "first name",
             "last_name": "last_name",
-            "email":"email",
-            "employer":"Employer?"           
+            "email": "email",
+            "employer": "Employer?"
         },
-        "content9":{
-            "title":"Download our App for a greater experience",
-            "sub_title":"At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half"            
-        }   
+        "content9": {
+            "title": "Download our App for a greater experience",
+            "sub_title": "At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half"
+        }
     },
-    "signup_page":{
-     "content1":{
-                    "title":"Create a free Account",
-                    "sub_title":"Make the most of your professional life"
-                },
-     "content2":{
-                     "title1":"PERSONAL INFO",
-                     "title2":"INDUSTRY",
-                     "script1":"Make my profile public to increase my visibility to employers",
-                     "script2":"Or sign up through our trusted social account",
-                     "script3":"By clicking Sign up, you agree to the NYSM User agreement, Privacy Policy, and Cookie"
-                 }
-
-    },
-    "dashboard_page":{
-    "recordbar":"Toufic, you profile is inactive. Please create your VCV to start benefiting form NYSM.",
-     "content1":{
-          "title":"check the best job that works with your VCV"
-      },
-      "content2":{
-          "title1":"Recommended to you",
-          "title2":"Inspiring VCVs"
-      },
-      "content3":{
-          "title1":"Companies Hiring",
-          "title2":"Trending Jobs"
-      },
-      "content4":{
-          "title1":"Job Views",
-          "title2":"Who viewed your Profile",
-          "title3":"Searches on your Profile"
-      }
-    },
-
-    "footer":{
-        "title1":"FIND JOBS",
-        "title2":"About NYSM",
-        "title3":"Follow NYAM",
-        "title4":"NYSM",
-        "title5":"LANGUAGE",
-        "sub_title2":"NYSM is the leading job site in the Middle East and North Africa, connecting job seekers with employers looking to hire. Every day, thousands of new job vacancies are listed on the award-winning platform from the region's top employers.",            
-        "sub_menu4":{
-            "menu1":"About Us",
-            "menu2":"Contact Us",
-            "menu3":"Career"
-        } ,
-        "sub_menu5":{
-            "english":"English",
-            "arabic":"Arabic"
+    "signup_page": {
+        "content1": {
+            "title": "Create a free Account",
+            "sub_title": "Make the most of your professional life"
         },
-        "sub_menu6":{
-            "menu1":"Term of Use",
-            "menu2":"Report a Bug",
-            "menu3":"Abuse",
-            "menu4":"Add Job",
-            "menu5":"Search Box to Your site Fraud",
-            "menu6":"Security",
-            "menu7":"Privacy",
-            "menu8":"Commitment"
+        "content2": {
+            "title1": "PERSONAL INFO",
+            "title2": "INDUSTRY",
+            "script1": "Make my profile public to increase my visibility to employers",
+            "script2": "Or sign up through our trusted social account",
+            "script3": "By clicking Sign up, you agree to the NYSM User agreement, Privacy Policy, and Cookie"
+        }
+    },
+    "dashboard_page": {
+        "recordbar": "Toufic, you profile is inactive. Please create your VCV to start benefiting form NYSM.",
+        "content1": {
+            "title": "check the best job that works with your VCV"
         },
-        "reserve":"© 2017 NYSM - All Rights Reserved"
-    },
+        "content2": {
+            "title1": "Recommended to you",
+            "title2": "Inspiring VCVs"
+        },
+        "content3": {
+            "title1": "Companies Hiring",
+            "title2": "Trending Jobs"
+        },
+        "content4": {
+            "title1": "Job Views",
+            "title2": "Who viewed your Profile",
+            "title3": "Searches on your Profile",
+            "sub_title1": "Total views",
+            "sub_title2": "You have no views on your profile. Record a VCV to get views on your profile.",
+            "sub_title3": "Total searches",
+            "checkbox_label":"Views on your profile for the last six months"
 
-    "vcvtuto_page":{
-        "title":"LEARN",
-        "subtitle":"how to record your first VCV",
-        "description":"Create your stuning video cvc and land your next job, this 3 minute tutorial willtake you through the process and help you get the best experience out of NYSM",
-        "script":"Don't show me again"
+        }
     },
-
-    "information":{
-        "experience":"Experience",
-        "studies":"Studies",
-        "age":"Age",
-        "country":"Country",
-        "languages":"Languages"
+    "footer": {
+        "title1": "FIND JOBS",
+        "title2": "About NYSM",
+        "title3": "Follow NYAM",
+        "title4": "NYSM",
+        "title5": "LANGUAGE",
+        "sub_title2": "NYSM is the leading job site in the Middle East and North Africa, connecting job seekers with employers looking to hire. Every day, thousands of new job vacancies are listed on the award-winning platform from the region's top employers.",
+        "sub_menu4": {
+            "menu1": "About Us",
+            "menu2": "Contact Us",
+            "menu3": "Career"
+        },
+        "sub_menu5": {
+            "english": "English",
+            "arabic": "Arabic"
+        },
+        "sub_menu6": {
+            "menu1": "Term of Use",
+            "menu2": "Report a Bug",
+            "menu3": "Abuse",
+            "menu4": "Add Job",
+            "menu5": "Search Box to Your site Fraud",
+            "menu6": "Security",
+            "menu7": "Privacy",
+            "menu8": "Commitment"
+        },
+        "reserve": "© 2017 NYSM - All Rights Reserved"
+    },
+    "vcvtuto_page": {
+        "title": "LEARN",
+        "subtitle": "how to record your first VCV",
+        "description": "Create your stuning video cvc and land your next job, this 3 minute tutorial willtake you through the process and help you get the best experience out of NYSM",
+        "script": "Don't show me again"
+    },
+    "information": {
+        "experience": "Experience",
+        "studies": "Studies",
+        "age": "Age",
+        "country": "Country",
+        "languages": "Languages"
     }
-
-
 }

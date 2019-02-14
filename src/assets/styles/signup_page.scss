@@ -17,7 +17,11 @@ div.signup{
             margin: 6px 0;
             &:focus{
                 outline: none;
-            }            
+            } 
+            &::placeholder{
+                color:white;
+                font-family: 'galano_grotesque_alt_semi_bold'
+            }       
         }
         hr{
             width:100%;
@@ -60,9 +64,10 @@ div.signup{
 
                     margin-top:40px;
                     button{
-                        @include button-inverse-variant($thickblue,20px, $thickgreen, 30px, 15px, 40px, $thickgreen);
+                        @include button-inverse-variant($thickblue,18px, $thickgreen, 30px, 15px, 40px, $thickgreen);
                         box-shadow: 0 1px 7px  rgb(37, 24, 49);
                         float: right;
+                        font-family: "galano_grotesque_alt_semi_bold";
                     }
                     
                    
@@ -152,6 +157,7 @@ div.signup{
                     @include button-inverse-variant($white,18px, $thickblue, 22px, 15px, 40px, $thickblue);
                     box-shadow: 0 1px 7px rgb(37, 24, 49);
                     float: right;
+                    font-family: 'galano_grotesque_alt_semi_bold';
                     border:none;
                     img{
                         width: 20px;

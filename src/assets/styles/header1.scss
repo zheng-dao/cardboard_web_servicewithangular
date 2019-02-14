@@ -5,7 +5,14 @@
       padding: 24px 0;
       width: 100%;
       // background-color:$thickblue;       
-  
+  .main-menu-section{
+   padding-left: 12%;
+   .nav-item{
+       &:hover{
+           color: white;
+       }
+   } 
+  }
   
   .logo{
       text-align: right;
@@ -26,18 +33,18 @@
   
       span{
           color:$thinblue;
-          font-size: $text_link_font_size;
-          line-height: $text_link_lineheight;
-          margin: 0 5px;
+          font-size: 14px;
+          line-height: 17px;
+          margin: 5px 5px;
           font-family: 'galano_grotesque_alt_regular';
           padding-top:5px;
       }
-      span:first{
+      span:first-of-type{
           margin-left: 20px;
+          cursor: pointer;
       }
       span.lang_selected{
-          color:$thingreen;
-          cursor: pointer;
+          color:$thingreen;         
       }    
       span:last-child{
           cursor:pointer;

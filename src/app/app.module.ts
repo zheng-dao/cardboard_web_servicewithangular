@@ -4,26 +4,32 @@ import {FormsModule , ReactiveFormsModule} from '@angular/forms'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+//header and footer component
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { Header1Component } from './header/header1/header1.component';
 import { Header2Component } from './header/header2/header2.component';
-import {SignupComponent} from './signup/signup.component';
 
 import { MatRadioModule, MatIconModule} from '@angular/material'
 import {MultiSelectAllModule} from '@syncfusion/ej2-angular-dropdowns'
 
 
-import { from } from 'rxjs';
-import { PortalComponent } from './portal/portal.component';
+//pages components
+import {SignupComponent} from './pages/signup/signup.component';
+import { PortalComponent } from './pages/portal/portal.component';
+import { VcvtutoComponent } from './pages/vcvtuto/vcvtuto.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+
 import { DropdownlistComponent } from './widgets/dropdownlist/dropdownlist.component';
 
 // Module for language translate 
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-import { VcvtutoComponent } from './vcvtuto/vcvtuto.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { PagerComponent } from './widgets/pager/pager.component';
+import { LinechartComponent } from './widgets/linechart/linechart.component';
+
 
 
 
@@ -39,7 +45,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DropdownlistComponent,
     SignupComponent,
     VcvtutoComponent,
-    DashboardComponent
+    DashboardComponent,
+    PagerComponent,
+    LinechartComponent
   ],
   imports: [
     FormsModule,

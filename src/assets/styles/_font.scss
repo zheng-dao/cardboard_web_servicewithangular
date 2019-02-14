@@ -24,7 +24,7 @@
 }
 
 .font_menu{
-    @include custom_font($white, $text_link_font_size, $text_link_lineheight, 'galano_grotesque_alt_semi_bold');
+    @include custom_font($white, $text_link_font_size, $text_link_lineheight, 'galano_grotesque_alt_medium');
 }
 
 .font_blue_headline{

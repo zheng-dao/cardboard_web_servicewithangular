@@ -32,6 +32,8 @@
             @include button-inverse-variant($thickgreen,18px, $thickblue, 33px, 15px, 40px, $thickblue);
             box-shadow: 0 1px 7px rgb(37, 24, 49);
             border:none;
+            font-family: 'galano_grotesque_alt_bold';
+            padding-left:20px;
             img{
                 width: 34px;
                 height:34px;
@@ -40,20 +42,20 @@
             }
            }
            .btn_2{
-            @include button-inverse-variant($white,18px,transparent, 16px, 0px, 0px, transparent);
+            @include button-inverse-variant($white,16px,transparent, 16px, 0px, 0px, transparent);
             border:none;
             margin-left: 20px;
+            font-family: 'galano_grotesque_alt_semi_bold';
            }
 
            .container {
             display:inline-block;                        
             position: relative;
             padding-left: 35px;
-            padding-top:6px;
             margin-bottom: 12px;
             cursor: pointer;
             margin-top:18px;
-            @include custom_font($white, 16px,16px,'galano_grotesque_alt_regular');    
+            @include custom_font($white, 12px,28px,'galano_grotesque_alt_regular');    
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;

@@ -2,7 +2,7 @@
     .title{
         @include custom_font(#1C2B4F, 24px , 19px , 'galano_grotesque_alt_bold');
         text-align: center;
-        margin: 30px 0;
+        margin: 50px 0 20px 0;
     }
     .record-video-bar{
         padding:5px 0;
@@ -17,6 +17,12 @@
         }
     }
 
+    .viewthemall{
+               font-family: 'galano_grotesque_alt_semi_bold';
+                font-size: 16px;
+                line-height: 24px;
+    }
+
     .content_1{
         margin: 40px auto 0 auto;
         width:70%;
@@ -26,6 +32,7 @@
         border-radius: 10px;
         padding: 10px 7%;
         .content_1_1{
+            margin-top:40px;
             .inc-mark{
                 // max-width:90px;
                 // max-height:90px;
@@ -53,6 +60,7 @@
                 }
                 .nat-name{
                     @include custom_font(#454545, 16px , 19px , 'galano_grotesque_alt_medium');
+                    opacity: 0.4;
                 }
             }
 
@@ -61,6 +69,7 @@
         .content_1_2{
             text-align: center;
             margin: 20px 0 40px 0;
+           
         }
     }
 
@@ -73,6 +82,8 @@
          background-size: 100% 100%;
          border-radius: 10px;
          padding: 10px 8%;
+           .content_2_1_1{
+             min-height: 446px;
             .content{
                 // box-shadow: 0 1px 3px gray;
                 background: url('assets/images/dashboard/member_bg.png');
@@ -91,6 +102,7 @@
                 .nat-name{
                     @include custom_font(#454545, 14px , 14px , 'galano_grotesque_alt_regular');
                     margin-bottom: 5px;
+                    opacity: 0.4;
                 }
                 .inc-mark{
                     margin-top: 10px;
@@ -115,7 +127,7 @@
                     }
                 }
             }
-
+           }
             .content_2_1_2{
                 text-align: center;
                 margin: 20px 0 40px 0;
@@ -129,8 +141,11 @@
         padding: 10px 0;
         .content_2_2_1{
             padding: 0 7%;
+            margin-top: 70px;
+            min-height: 320px;
             .member-wrapper{
                 padding:0 2px;
+                margin-top:3ß0px;
                 .member{               
                     padding : 0 15px 20px 15px;
                     background: url('assets/images/dashboard/member_bg.png');
@@ -178,7 +193,188 @@
                 } 
             }           
         }
+        .content_2_2_2{
+            text-align: center;
+            margin-top: 20px;
+            app-pager{
+                display: table;
+                margin: 0 auto;
+            }
+        }
+        .content_2_2_3{
+            text-align: center;
+            margin: 20px 0 40px 0;
+        }
        }
     }
+    .content_3{
+        margin: 20px auto 0 auto;
+        width:70%; 
+        .row{
+            margin: 0;
+        } 
+        .content_3_1{ 
+            padding: 0 5px;
+            .content{
+                width:100%;
+                background: url('assets/images/dashboard/content_back.png');
+                background-size: 100% 100%;           
+                padding: 10px 0;
+                border-radius: 15px; 
+                .content_3_1_1{     
+                    margin-top:50px;
+                    min-height: 380px;
+                    .company{
+                      width:65%;
+                      margin: 20px auto;
+                      img{
+                          width:80px;
+                          height: 80px;
+                          margin-right: 10px;
+                          vertical-align: middle;
+                      }
+                      span{
+                          @include custom_font($thickblue,16px,19px, 'galano_grotesque_alt_medium');
+                      }
+                    }
+                }
 
+                .content_3_1_2{
+                    text-align: center;
+                    margin-top: 40px;
+                    app-pager{
+                        display: table;
+                        margin: 0 auto;
+                    }
+                }
+                .content_3_1_3{
+                    text-align: center;
+                    margin: 20px 0 40px 0;
+                }
+            }   
+        } 
+        .content_3_2{
+            padding: 0 5px;
+            .content{   
+                width:100%;             
+                background: url('assets/images/dashboard/content_back.png');
+                background-size: 100% 100%;    
+                border-radius: 15px;       
+                padding: 10px 0;
+
+                .content_3_2_1{
+                   
+                     min-height:504px;
+                    width:90%;
+                    margin: 35px auto;
+                    
+                   .main_body{
+                       height:226px;
+                       border-radius: 10px;
+                       background-repeat: no-repeat;
+                       background-position: center center; 
+                       background-size: cover;
+                       margin-top:10px;
+                       box-shadow: 0 0 20px gray;
+                       overflow: hidden;
+                       position: relative;
+                       .branch_name{
+                         width:100%;
+                         height:59px;
+                         background-color: rgba(255,255,255,0.9);
+                         @include custom_font(#4f5a74, 18px ,18px, 'galano_grotesque_semi_bold');
+                         padding-top:20px;
+                         span{                            
+                             margin-left:20px;
+                         }
+                       }
+                        button{
+                            position: absolute;
+                            left:20px;
+                            bottom: 20px;
+                            background-color: white;
+                            @include custom_font($thickblue, 14px ,17px, 'galano_grotesque_semi_bold');
+                        }
+                        .coca{
+                            background-color:rgba(255,255,255,0.6);
+                            color:white;
+                            left:140px;
+                            box-shadow: 0,2px 10px #1A1A1A;
+                        }                       
+                   }
+                   
+                }
+
+                .content_3_2_2{
+                    text-align: center;
+                    app-pager{
+                        display: table;
+                        margin: 10px auto;
+                    }
+                }
+            }
+        } 
+    }
+
+    .content_4{
+        margin: 20px auto 100px auto;
+       .row{
+           padding: 0;
+        .subtitle{
+            padding-left:10px;
+            margin: 20px 0;
+            .key{
+                @include custom_font(#7f8fa4, 14px, 17px,'galano_grotesque_alt_regular');
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+            .value{
+                @include custom_font($thickblue, 36px, 43px,'galano_grotesque_alt_regular');
+                vertical-align: middle;
+            }                                
+        }
+        .content-body{
+            background-image: url('assets/images/dashboard/content_back.png');
+            background-size: 100% 100%;
+            padding:10px 10px;  
+            min-height: 358px;          
+        }
+        button{
+            display: table;
+            margin: 30px auto;
+        }
+
+        .checkbox-wrapper{
+            margin:20px 0px 10px 10px;                 
+          label{
+            @include custom_font(#354052, 13px, 21px,'galano_grotesque_semi_bold');
+        
+          }
+        }
+        .content_4_1{
+             padding-left:0;            
+        }
+        .content_4_2{
+             padding: 0 5px; 
+             .profile-mark{
+                 width:88%;
+                 margin: 5px auto;
+                 img{
+                     width: 100%;
+                     height: auto;
+                 }
+             }
+             .message{
+                @include custom_font(#8E9DC1, 16px, 20px,'galano_grotesque_alt_regular');
+                
+                width:66%;
+                margin: 10px auto;
+            }
+        }
+        .content_4_3{
+                padding-right: 0;  
+        }
+       }
+       
+    }
 }
