@@ -25,12 +25,12 @@ export class PortalComponent implements OnInit {
     members: any[];
     currentSelectedIndex:number=0;
     currentMarginLeft:number=0;    
-    eactMarginValue:number=313;          // this is value from scss( 273px(width)+20px(margin))
+    eactMarginValue:number=293;          // this is value from scss( 273px(width)+20px(margin))
     eachScrollBarMarginValue: number=0;  // this will be setted as ((portal_content_3_2_3.width -  scrollbar.width)/ members.length)
 
     setCurrentMember(direction:number){  // parameter(direction is 0 if left direction, otherwise 1)
         if(direction===0){
-          if(this.currentSelectedIndex!=this.members.length){
+          if(this.currentSelectedIndex!=this.members.length-1){
                 this.currentSelectedIndex++;
                 this.currentMarginLeft=this.currentMarginLeft-this.eactMarginValue;
           }
@@ -50,7 +50,7 @@ export class PortalComponent implements OnInit {
     }
 
     getScrollBarMarginLeft(){
-      this.eachScrollBarMarginValue= 280/this.members.length;
+      this.eachScrollBarMarginValue= 280/(this.members.length-1);
       var scrollMarginValue=this.currentSelectedIndex * this.eachScrollBarMarginValue;
       return scrollMarginValue.toString()+"px";      
     }

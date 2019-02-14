@@ -9,7 +9,10 @@
             {{"portal.slider.sub_title"|translate}}  
         </div>
         <div class="des_content_1_3">
-            <button class="small_rounded_btn" routerLink="/vcvtutorial"> {{'button.play_video'|translate}}</button>
+            <button class="large_rounded_btn" routerLink="/vcvtutorial">
+                <img src="../../../assets/images/icon/play4.png">
+                 {{'button.play_video'|translate}}
+            </button>
         </div>
     </div>
          
@@ -39,13 +42,13 @@
       <div class="row">
         <div class="col-md-5">
            <div class="portal_content_2_2_ui">
-               <img src="../../assets/images/portal_images/portal_content_2_2_ux_back.png"/>
+               <img src="../../../assets/images/portal_images/portal_content_2_2_ux_back.png"/>
                <div class="tran_back"></div>
                <div class="title">UI/UX</div>
                <button class="apply_btn">{{'button.apply'|translate}}</button>
            </div>
            <div class="portal_content_2_2_teaching">
-              <img src="../../assets/images/portal_images/portal_content_2_2_teaching_back.png"/>
+              <img src="../../../assets/images/portal_images/portal_content_2_2_teaching_back.png"/>
               <div class="tran_back"></div>
               <div class="title">TEACHING</div>
               <button class="apply_btn">{{'button.apply'|translate}}</button>
@@ -53,18 +56,18 @@
         </div>
         <div class="col-md-7" style="padding:0 0px;">           
                 <div class="portal_content_2_2_medical">
-                    <img src="../../assets/images/portal_images/portal_content_2_2_medical_back.png"/>                    
+                    <img src="../../../assets/images/portal_images/portal_content_2_2_medical_back.png"/>                    
                     <div class="title">MEDICAL</div>
                     <button class="apply_btn">{{'button.apply'|translate}}</button>
                  </div>
                  <div class="portal_content_2_2_gardening">
-                    <img src="../../assets/images/portal_images/portal_content_2_2_gardening_back.png"/>                  
+                    <img src="../../../assets/images/portal_images/portal_content_2_2_gardening_back.png"/>                  
                     <div class="title">GARDENING</div>
                     <button class="apply_btn">{{'button.apply'|translate}}</button>
                  </div>
           
                 <div class="portal_content_2_2_coca">
-                    <img src="../../assets/images/portal_images/portal_content_2_2_coca_back.png"/>                    
+                    <img src="../../../assets/images/portal_images/portal_content_2_2_coca_back.png"/>                    
                     <button class="apply_btn">{{'button.apply'|translate}}</button>
                  </div>
            
@@ -74,14 +77,14 @@
   </div>
   <div class="portal_content_3">
       <div class="portal_content_3_1">          
-              <div class="portal_content_3_1_1 font_blue_headline">{{"portal.content3.title"|translate}}</div>
-              <div class="portal_content_3_1_2 font_blue_paragraph">{{"portal.content3.sub_title"|translate}}</div>          
+              <div class="portal_content_3_1_1 ">{{"portal.content3.title"|translate}}</div>
+              <div class="portal_content_3_1_2 ">{{"portal.content3.sub_title"|translate}}</div>          
       </div>
       <div class="portal_content_3_2">
            <div class="portal_content_3_2_1">
                 <ul>
-                    <li><img src="../../assets/images/icon/Arrow_Left.png" (click)="setCurrentMember(0)"  [style.opacity]="currentSelectedIndex===members.length? '0.3':'1.0'"></li>
-                    <li><img src="../../assets/images/icon/Arrow_Right.png"  (click)="setCurrentMember(1)" [style.opacity]="currentSelectedIndex===0? '0.3':'1.0'"></li>
+                    <li><img src="../../../assets/images/icon/Arrow_Left.png" (click)="setCurrentMember(0)"  [style.opacity]="(members.length-currentSelectedIndex)===1? '0.3':'1.0'"></li>
+                    <li><img src="../../../assets/images/icon/Arrow_Right.png"  (click)="setCurrentMember(1)" [style.opacity]="currentSelectedIndex===0? '0.3':'1.0'"></li>
                 </ul>
            </div>
            <div class="portal_content_3_2_2">
@@ -90,7 +93,7 @@
                         <img [src]="member.url">
                         <div class="description">
                             <div class="row">
-                               <div class="col-sm-4"><img src="../../assets/images/icon/play.png"></div>
+                               <div class="col-sm-4"><img src="../../../assets/images/icon/play.png"></div>
                                <div class="col-sm-8">
                                     <div class="content">
                                             <p class="name">{{member.name}}</p>
@@ -110,10 +113,10 @@
   </div>
   <div class="portal_content_4 " >
       <div class="portal_content_4_1 " >  
-            <div class="portal_content_4_1_1 font_blue_headline" style="color:white">
+            <div class="portal_content_4_1_1 " >
                 {{"portal.content4.title"|translate}}
             </div>
-            <div class="portal_content_4_1_2 font_blue_paragraph" style="color:white"> 
+            <div class="portal_content_4_1_2 " > 
                 {{"portal.content4.sub_title"|translate}}
             </div>
       </div>
@@ -126,21 +129,21 @@
 
   <div class="portal_content_5">
       <div class="portal_content_5_1">
-                <div class="portal_content_5_1_1 font_blue_headline" >
+                <div class="portal_content_5_1_1 " >
                     {{"portal.content5.title"|translate}}
                 </div>
-                <div class="portal_content_5_1_2 font_blue_paragraph" > 
+                <div class="portal_content_5_1_2 " > 
                     {{"portal.content5.sub_title"|translate}}
                 </div>
       </div>
       <div class="portal_content_5_2 row">
           <div class="col-md-6">
             <div  class="content_5_2_1">
-                <div style="text-align: center; margin-bottom: 77px"><img src="../../assets/images/portal_images/content_5_2_1.png"></div>
-                <div style="text-align: center;" class="font_headline1">
+                <div style="text-align: center; margin-bottom: 77px"><img src="../../../assets/images/portal_images/content_5_2_1.png"></div>
+                <div class="title">
                     {{"portal.content5.title1"|translate}}
                 </div>
-                <div style="text-align: center; margin-top: 20px;" class="font_paragraph">
+                <div class="sub_title">
                     {{"portal.content5.sub_title1"|translate}}
                 </div>
                 <div style="text-align: center;">
@@ -150,11 +153,11 @@
           </div>
           <div class="col-md-6">
                 <div class="content_5_2_2">
-                        <div style="text-align: center; margin-bottom: 77px"><img src="../../assets/images/portal_images/content_5_2_2.png"></div>
-                        <div style="text-align: center;" class="font_headline1">
+                        <div style="text-align: center; margin-bottom: 77px"><img src="../../../assets/images/portal_images/content_5_2_2.png"></div>
+                        <div class="title">
                             {{"portal.content5.title2"|translate}}
                         </div>
-                        <div style="text-align: center; margin-top: 20px;" class="font_paragraph">
+                        <div class="sub_title">
                             {{"portal.content5.sub_title2"|translate}}            
                         </div>
                         <div style="text-align: center;">
@@ -166,10 +169,10 @@
   </div>
   <div class="portal_content_6">
       <div class="portal_content_6_1">
-        <div class="portal_content_6_1_1 font_blue_headline" >
+        <div class="portal_content_6_1_1" >
             {{"portal.content6.title"|translate}}
         </div>
-        <div class="portal_content_6_1_2 font_blue_paragraph" > 
+        <div class="portal_content_6_1_2 " > 
             {{"portal.content6.sub_title"|translate}}
         </div>
       </div>
@@ -207,7 +210,7 @@
   <div class="portal_content_8">
      <div class="row portal_content_8_body">
          <div class="col-sm-12 col-md-5" style="text-align:center;">
-            <img src="../../assets/images/portal_images/content_8_img.png">
+            <img src="../../../assets/images/portal_images/content_8_img.png">
         </div>
          <Form class="col-sm-12 col-md-7 portal_content_8_2">
             <div class="portal_content_8_2_1 font_blue_headline" >
@@ -243,10 +246,10 @@
 
   <div class="portal_content_9">
     <div class="portal_content_9_1">
-      <div class="portal_content_9_1_1 font_blue_headline" >
+      <div class="portal_content_9_1_1 " >
         {{'portal.content9.title'|translate}}
       </div>
-      <div class="portal_content_9_1_2 font_blue_paragraph" > 
+      <div class="portal_content_9_1_2 " > 
         {{'portal.content9.sub_title'|translate}}
       </div>
     </div>
@@ -257,7 +260,7 @@
     </div>
     
     <div class="portal_content_9_3">
-        <img src="../../assets/images/portal_images/iphone.png">
+        <img src="../../../assets/images/portal_images/iphone.png">
     </div>
        
   </div>

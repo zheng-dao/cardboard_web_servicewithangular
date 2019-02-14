@@ -1,0 +1,11 @@
+<ul class="pager_control">
+  <li>
+    <img src="../../../assets/images/icon/pager_arrow_left.png" (click)="setpage(0)" >
+  </li>
+  <li *ngFor="let item of items ; index as i;" >      
+    <mat-icon [ngClass]="{active: i===(currentIndexOfArray-1)}">fiber_manual_record</mat-icon>
+  </li>
+  <li>
+    <img src="../../../assets/images/icon/pager_arrow_right.png" (click)="setpage(1)">
+  </li>
+</ul>

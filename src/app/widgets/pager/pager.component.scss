@@ -1,0 +1,40 @@
+ul.pager_control{
+   padding: 0;
+   list-style: none;
+   display: table;
+   li{
+    float: left;  
+    width:7px;  
+    margin-right:8px;  
+    
+    &:first-of-type{
+        width:33px;
+        margin-right:30px;
+    }
+    &:last-of-type{
+        width:33px;
+        margin-left: 30px;
+    }
+    
+    mat-icon{
+        height: 8px;
+        width:8px;
+        font-size:8px;       
+        color:#454545;
+        opacity: 0.5;
+    }
+    mat-icon.active{
+        transform: scale(2);
+        opacity: 1.0;
+        color:#1A1A1A;       
+    }
+    img{
+        cursor: pointer;
+        width:100%;
+        height: auto;
+    }  
+
+   }
+
+  
+}
