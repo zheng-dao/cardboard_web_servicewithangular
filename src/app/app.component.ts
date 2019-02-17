@@ -9,7 +9,7 @@ import {NavigationStart, Router, Event} from '@angular/router'
  
 })
 export class AppComponent {
-  
+  which_header:boolean=true;// true-header1, false-header2
   title = 'JobSeeker';
    isHeaderBackground:boolean=true;
    isFooterShow:boolean=true;
@@ -22,19 +22,25 @@ export class AppComponent {
     
     this.router.events.subscribe((event:Event)=>{
     if(event instanceof NavigationStart){
-      if(event.url.toString()=="/signup"){
+      if(event.url.toString()=="/"){
+        this.which_header=true;
+      }
+      else if(event.url.toString()=="/signup"){
+        this.which_header=true;
         this.isHeaderBackground=false;
         this.isFooterShow=false;
         this.backgroundImage="url('assets/images/bg.png')";
         this.backgroundSize="100% 100%";
       }
       else if(event.url.toString()=="/vcvtutorial"){
+        this.which_header=true;
         this.isHeaderBackground=true;
         this.isFooterShow=false;
         this.backgroundImage="";
         this.backgroundSize="";
       }
       else{
+        this.which_header=false;
         this.isHeaderBackground=true;
         this.isFooterShow=true;
         this.backgroundImage="";

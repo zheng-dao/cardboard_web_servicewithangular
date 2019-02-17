@@ -9,8 +9,8 @@ import { inputs } from '@syncfusion/ej2-angular-dropdowns/src/drop-down-list/dro
 export class FooterComponent implements OnInit {
 
   @Input() footerShow:boolean;
-
-   countries: any[];
+  // is_show_flag_in_selectbox:boolean=false;
+  countries: any[];
   constructor() { }
   @ViewChild('checkbox')
   public mulObj: MultiSelectComponent;

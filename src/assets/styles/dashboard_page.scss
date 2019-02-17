@@ -5,7 +5,7 @@
         margin: 50px 0 20px 0;
     }
     .record-video-bar{
-        padding:5px 0;
+        padding:10px 0;
         text-align: center;
         background-color: #7AFFEE;
         .description{
@@ -13,7 +13,16 @@
             margin-right: 20px;
         }
         button{
-            @include button-inverse-variant($thickblue,12px, $white, 20px, 10px, 40px, $white)
+            @include button-inverse-variant($thickblue,12px, $white, 20px, 5px, 30px, $white);
+            
+            mat-icon{
+                font-size: 30px; 
+                vertical-align: middle;
+                width: 0;
+                height:0; 
+                margin-right: 5px;  
+                display: inline;          
+             }
         }
     }
 
@@ -348,7 +357,7 @@
             margin:20px 0px 10px 10px;                 
           label{
             @include custom_font(#354052, 13px, 21px,'galano_grotesque_semi_bold');
-        
+            margin-left: 5px;
           }
         }
         .content_4_1{

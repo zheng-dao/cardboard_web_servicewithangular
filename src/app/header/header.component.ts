@@ -6,6 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Input() headerBackground : boolean;
+  @Input() which_header:boolean;
   constructor() { }
 
   ngOnInit() {    

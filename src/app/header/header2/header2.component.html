@@ -1,3 +1,132 @@
-<p>
-  
-</p>
+<div class="header2">
+    <div class="row">
+        <div class=" col-sm-12 col-md-12 col-lg-5 menu_1" style="padding:0px;">
+            <nav class="menu_item_list">
+                <div class="navbar-expand mr-auto">
+                    <div class="navbar-nav main-menu-section">
+                        <a class="nav-item nav-link  logo" href="#" style="margin-right: 15px;">
+                            <img src="../../../assets/images/logo.png" />
+                        </a>
+                        <a class="nav-item nav-link font_menu general" href="#">{{'header.menu_item_list.dashboard'|translate}}</a>
+                        <div class="font_menu">
+                            <div class=" dropdown" (mouseover)="showSubMenu()" (mouseleave)="hideSubMenu($event)"
+                                [style.background-color]="bgColor">
+                                {{'header.menu_item_list.find_jobs'|translate}}
+                            </div>
+
+                            <div class="sub-menu-container">
+                                <ul class="sub-menu" id="sub_menu" [style.display]="is_sub_menu_show?'table':'none'"
+                                    (mouseover)="showSubMenu" (mouseleave)="hideSubMenu($event)">
+                                    <li><a (click)="hideSubMenu($event)">{{'header.sub_menu.advancedsearch'|translate}}</a></li>
+                                    <li><a (click)="hideSubMenu($event)">{{'header.sub_menu.jobsbyrole'|translate}}</a></li>
+                                    <li><a (click)="hideSubMenu($event)">{{'header.sub_menu.jobsbysector'|translate}}</a></li>
+                                    <li><a (click)="hideSubMenu($event)">{{'header.sub_menu.jobsbylocation'|translate}}</a></li>
+                                    <li><a (click)="hideSubMenu($event)">{{'header.sub_menu.jobsbycompanies'|translate}}</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <a class="nav-item nav-link font_menu general" href="#">{{'header.menu_item_list.myapplications'|translate}}</a>
+                        <a class="nav-item nav-link font_menu general" href="#">{{'header.menu_item_list.myvcv'|translate}}</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="col-md-12 col-lg-4  search-container menu_2">
+            <div class="search-wrapper">
+                <input class="job_search_input" type="text" placeholder="{{'input.placeholder1'|translate}}">
+                <div class="country-selectbox-wrapper">
+                    <app-country-select [is_flag_show]="false"></app-country-select>
+                </div>
+                <button>{{'button.findjobs'|translate}}</button>
+            </div>
+
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-3 notification-menu">
+            <ul class="main-container">
+                <li style="margin-top: 12px;" class="menu-item">
+                    <a href="#" class="video_create">
+                        <mat-icon>video_call</mat-icon>
+                        <span>{{'button.createyourvcv'|translate}}</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <div class="noti-control" (mouseover)="showMessageModal()" >
+                        <a href="#" class="noti-menu" >
+                            <img src="../../../assets/images/icon/message.png">
+                            <span class="count">2</span>
+                        </a>
+                        <div class="message-modal" #message_modal [style.display]="is_message_modal_show?'block':'none'">
+                            <div class="pointer"><img src="../../../assets/images/header/notification_pointer.png"></div>
+                            <ul class="message-list">
+                                <li *ngFor="let message of sliceMessages" class="message-item">
+                                    <div class="main-section">
+                                        <div class="message-header">
+                                            <div class="message-photo">
+                                                <img [src]="message.photo" class="photo">
+                                                <img [src]="message.company" class="com-mark">
+                                            </div>
+                                            <div class="message-name">
+                                                <span class="person-name">{{message.name}}</span>
+                                                <span class="com-name">{{message.com_name}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="message-body">
+                                            {{message.message}}
+                                        </div>
+                                    </div>
+                                    <div class="side-section">
+                                        <div class="message-time">{{message.time}}</div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="see-all-section" (click)="seeAllMessages()">
+                                  {{'button.seeall'|translate}}
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <div class="noti-control" (mouseover)="showNotificationModal()">
+                        <a href="#" class="noti-menu">
+                            <img src="../../../assets/images/icon/notification.png">
+                            <span class="count">3</span>
+                        </a>
+                        <div class="message-modal" #notification_modal  [style.display]="is_notification_modal_show?'block':'none'">
+                            <div class="pointer"><img src="../../../assets/images/header/notification_pointer.png"></div>
+                            <ul class="message-list">
+                                <li *ngFor="let notification of sliceNotifications" class="message-item">
+                                    <div class="icon-section">
+                                        <mat-icon>{{notification.noti_icon}}</mat-icon>
+                                    </div>
+                                    <div class="main-nofication-section">
+                                        <div class="noti-header">{{notification.noti_name|uppercase}}</div>
+                                        <div class="noti-body">
+                                            {{notification.noti_message}}
+                                        </div>
+                                        <div class="noti-time">
+                                            {{notification.time}}
+                                        </div>
+                                    </div>
+                                    <div class="side-noti-section">
+                                           <mat-icon>fiber_manual_record</mat-icon> 
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="see-all-section" (click)="seeAllNotification()">
+                                  {{'button.seeall'|translate}}
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="menu-item" style="margin-top:8px;">
+                    <a href="#" class="personal">
+                        <img src="../../../assets/images/icon/man.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

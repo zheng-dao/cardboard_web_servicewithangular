@@ -3,13 +3,24 @@
         "menu_item_list": {
             "home": "Home",
             "find_jobs": "Find Jobs",
-            "create_your_vcv": "Create your VCV"
+            "create_your_vcv": "Create your VCV",
+            "dashboard":"Dashboard",
+            "myapplications":"My Applications",
+            "myvcv":"My VCV"
         },
         "login_menu_item_list": {
             "login": "Log In",
             "register": "Register",
             "employer": "Employer"
+        },
+        "sub_menu":{
+            "advancedsearch":"Advanced Search",
+            "jobsbyrole":"Jobs By Role",
+            "jobsbysector":"Jobs By Sector",
+            "jobsbylocation":"Jobs By Location",
+            "jobsbycompanies":"Jobs By Companies"
         }
+
     },
     "button": {
         "apply": "Apply",
@@ -25,7 +36,10 @@
         "viewthemall": "VIEW THEM ALL",
         "recordvcv": "Record VCV",
         "watchoffer": "Watch Offer",
-        "watchvcv": "WATCH VCV"
+        "watchvcv": "WATCH VCV",
+        "findjobs":"Find Jobs",  
+        "createyourvcv":"CREATE YOUR VCV",
+        "seeall":"See All"
     },
     "input": {
         "firstname": "First Name",
@@ -33,7 +47,8 @@
         "email": "Email",
         "password": "Password",
         "industry": "Industry",
-        "jobtitle": "Job Title"
+        "jobtitle": "Job Title",
+        "placeholder1":"Job title, skills, etc"
     },
     "portal": {
         "slider": {
@@ -50,7 +65,8 @@
         },
         "content4": {
             "title": "Search 1000's of jobs around you.",
-            "sub_title": "At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half"
+            "sub_title": "At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half",
+            "employer": "Employer?"
         },
         "content5": {
             "title": "Why you should be on NYSM?",
@@ -159,4 +175,5 @@
         "country": "Country",
         "languages": "Languages"
     }
+    
 }

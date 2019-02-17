@@ -70,13 +70,11 @@ export class LinechartComponent implements OnInit {
                 }
             }
         });
-        console.log(this.LineChart);
+       
     }
 
-    ngOnDestroy(){
-       
-        console.log(this.LineChart);
-        console.log("des");
+    ngOnDestroy(){       
+        
         if(this.LineChart&& this.LineChart.length>0)
           this.LineChart.forEach((chart, index)=>{
               chart=null;

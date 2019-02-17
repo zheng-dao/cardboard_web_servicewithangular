@@ -69,7 +69,6 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-
   /////////member ////////////
   getAllMembers() {
     this.httpService.getMembers().subscribe(data => {

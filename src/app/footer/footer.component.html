@@ -20,10 +20,11 @@
           </div>
         </li>
         <li>
-          <div>
-              <ejs-multiselect id='multiselect-checkbox' #checkbox [dataSource]='countries' [placeholder]='checkWaterMark' [fields]='checkFields'
+          <div class="country-selectbox-wrapper">
+              <!-- <ejs-multiselect id='multiselect-checkbox' #checkbox [dataSource]='countries' [placeholder]='checkWaterMark' [fields]='checkFields'
               [mode]='mode' [popupHeight]='popHeight' [showDropDownIcon]='true' showSelectAll='true' [filterBarPlaceholder]='filterPlaceholder'>
-              </ejs-multiselect>
+              </ejs-multiselect> -->
+              <app-country-select [is_flag_show]="false"></app-country-select>
           </div> 
         </li>
       </ul>

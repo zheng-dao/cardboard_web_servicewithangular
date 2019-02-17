@@ -29,6 +29,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { PagerComponent } from './widgets/pager/pager.component';
 import { LinechartComponent } from './widgets/linechart/linechart.component';
+import { CountrySelectComponent } from './widgets/country-select/country-select.component';
 
 
 
@@ -47,7 +48,8 @@ import { LinechartComponent } from './widgets/linechart/linechart.component';
     VcvtutoComponent,
     DashboardComponent,
     PagerComponent,
-    LinechartComponent
+    LinechartComponent,
+    CountrySelectComponent
   ],
   imports: [
     FormsModule,

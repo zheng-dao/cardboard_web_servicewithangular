@@ -1,0 +1,341 @@
+.header2{   
+    width: 100%;
+    // background-color:$thickblue;    
+    .row{
+       margin: 0;
+    
+        .main-menu-section{        
+            background-color: $thickblue;
+            padding-left: 7%; 
+            a{  
+                color:white;
+                padding: 32px 0;
+                margin:0 3px;
+            } 
+            .general:hover{
+                border-bottom: 4px solid white;
+                color:white;
+            }
+            .dropdown{
+                color:white;
+                padding: 32px 8px;
+                margin:0 0px;
+                display: table;
+            }
+
+            .dropdown:hover{          
+                color:white;
+                cursor: pointer;
+            }
+
+            .sub-menu-container{
+                position: relative;
+                height: 0;
+                .sub-menu{
+                    z-index: 99999;
+                    position: absolute;
+                    width:900%;
+                    top:-1px;
+                    left:0;
+                    background-color:  #3771FF;
+                    padding:32px 0;
+                    list-style: none;
+                    li{
+                        padding: 0 15px;
+                        display: table;
+                        float:left;  
+                        &:hover{
+                            cursor: pointer;
+                            color:white;
+                        }                  
+                    }
+
+                }
+            }
+            
+        }
+
+        .search-container{
+            padding:25px 0;
+            background-color:$thickblue; 
+            .search-wrapper{
+                width:93%;
+                margin:0 auto;
+                max-width:550px;
+                .job_search_input{
+                    width:44%;
+                    height: 40px;
+                    background-color:#3b74ff;
+                    border-bottom-left-radius: 20px;
+                    border-top-left-radius: 20px;
+                    @include custom_font($white, 14px ,16px , 'galano_grotesque_medium'); 
+                    padding : 0 15px;
+                    float: left; 
+                    border:none;
+                    border-right: 1px solid white;
+
+                    &::placeholder{
+                        color:white;
+                        @include custom_font($white, 14px ,16px , 'galano_grotesque_medium'); 
+                    }  
+                    &:focus{
+                    outline: none;
+                    }         
+                }
+                .country-selectbox-wrapper{
+                    width:34%;
+                    height: 40px;
+                    background-color:#3b74ff;       
+                    @include custom_font($white, 14px ,16px , 'galano_grotesque_medium'); 
+                    
+                    float: left;    
+                }
+                button{
+                    @include custom_font($thickblue, 14px ,16px , 'galano_grotesque_semi_bold'); 
+                    width:21%;
+                    height: 40px;
+                    background-color:white;
+                    border-bottom-right-radius: 20px;
+                    border-top-right-radius: 20px;            
+                    float: left;
+                    cursor: pointer;  
+                    &:focus{
+                        outline:none;
+                    }  
+                }
+            }
+        }
+
+        .notification-menu{
+            text-align: center;
+            background-color: $thickblue;
+            padding-left:0;
+            padding-right:0;            
+            .main-container{
+                padding:18px 0;
+                width:90%;
+                margin: 0 auto;
+                list-style: none;
+                display: table;
+                .menu-item{
+                    display: table;
+                    float:left;
+                    margin:0px 5px 0 5px;
+
+                    .video_create{
+                        @include custom_font(#00ffde, 14px, 17px, 'galano_grotesque_alt_semi_bold');
+                        text-shadow: 1px 1px 5px rgb(9, 39, 116);
+                        mat-icon{
+                           
+                            font-size: 25px;
+                            vertical-align: middle;
+                            margin-right: 10px;
+                            display: inline;
+                        }
+
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
+                    .noti-control{
+                        width: 46px;
+                        height: 46px;
+                        padding-top: 12px;
+                        position: relative;
+                        border-radius: 50%;
+                        .noti-menu{
+                            
+                            img{
+                                width:20px;
+                                height: 22px;
+                            }
+                            .count{
+                                position: absolute;
+                                top:5px;
+                                right:5px;
+                                color:$thickblue;
+                                font-size: 12px;
+                                width:18px;
+                                height: 18px;
+                                border-radius: 50%;
+                                z-index: 99999;
+                                background-color: #11F7F4;
+                            }
+                        }
+                        &:hover{
+                            box-shadow: 0 3px 5px #1A1A1A;
+                        }
+                      .message-modal{
+                          background-color: white;
+                          position:absolute;
+                          top: 55px;
+                          right:-10px;
+                          width:387px;
+                          border-radius: 14px;
+                          box-shadow: 0 0 10px rgb(72, 95, 95);
+                          z-index: 99999;
+                          .pointer{
+                             width:35px;
+                             height:15px;
+                             margin-top:-15px;
+                             margin-left:335px;
+                             img{
+                                 width:100%;
+                                 height:100%;
+                                }
+                             }  
+                          .message-list{
+                              display: table;
+                              padding:14px;
+                              width:100%;
+                              list-style: none;
+                              transition: all ease-in-out 0.5s;
+                             .message-item{
+                                 width:359px;
+                                 height:126px;
+                                 margin-bottom: 5px;
+                                 box-shadow: 0 0 10px gray;
+                                  border-radius: 14px;
+                                  .main-section{
+                                     width:280px;
+                                      height:100%;
+                                      padding:15px 0 15px 15px;
+                                      float: left;
+                                      .message-header{
+                                          display: table;
+                                        .message-photo{
+                                            float:left;
+                                            display: table;
+                                            vertical-align: middle;
+                                            width:32px;
+                                            height: 32px;
+                                            position: relative;
+                                           .photo{
+                                               width:32px;
+                                               height: 32px;
+                                               border-radius: 50%;
+                                           }
+                                           .com-mark{
+                                            width:15px;
+                                            height: 15px;
+                                            border-radius: 50%;
+                                            margin-top:-10px;
+                                            position:absolute;
+                                            top:33px;
+                                            left:9px;
+                                           }
+                                        }
+                                        .message-name{
+                                             float:left;
+                                             width:200px;
+                                             .person-name{
+                                                @include custom_font(#262b37, 18px, 22px, 'galano_grotesque_medium');
+                                                margin-right:10px;
+                                             }
+                                             .com-name{
+                                                @include custom_font($thickblue, 14px, 17px, 'galano_grotesque_medium');                                               
+                                             }
+                                        }
+                                      }
+                                      .message-body{
+                                          padding-right: 10px;
+                                          margin-top:16px;
+                                          @include custom_font(#262b37, 14px, 17px, 'galano_grotesque_alt_regular');  
+                                          text-align: left;                                            
+                                        //   overflow:    hidden;
+                                        //   text-overflow: ellipsis;
+                                        //   white-space: nowrap;
+                                          @include multiLineEllipsis($lineHeight: 17px, $lineCount: 3, $bgColor: white);                                 
+                                      }
+                                  }
+
+                                  .side-section{
+                                      width:79px;
+                                      float: right;
+                                      .message-time{
+                                          padding-top:30px;
+                                        text-align: left;
+                                        @include custom_font(#8E9DC1, 12px, 12px, 'galano_grotesque_alt_medium');
+                                      }
+                                    
+                                  }
+
+
+                                  ////notification
+                                  .icon-section{
+                                      width:20px;
+                                      height: 100%;
+                                      display: table;
+                                       float:left;
+                                      padding-top:45px;
+                                      padding-left:15px;
+                                      margin-right: 10px;
+                                  }
+                                  .main-nofication-section{
+                                      padding: 15px 0 10px 0;
+                                        width:260px;
+                                        height: 100%;
+                                        display:  table;                                   
+                                        text-align: left;
+                                       float:left;
+                                     .noti-header{
+                                         @include custom_font(#8e9dc1, 12px, 12px, 'galano_grotesque_medium');
+                                         margin-bottom: 10px;
+                                        }
+                                     .noti-body{
+                                        @include custom_font(#5d5f63, 14px, 17px, 'galano_grotesque_alt_regular');
+                                        padding-right: 10px;                                       
+                                        text-align: left;  
+                                                             
+                                        @include multiLineEllipsis($lineHeight: 17px, $lineCount: 4, $bgColor: white);                    
+                                     }
+                                     .noti-time{
+                                        @include custom_font(#8e9dc1, 12px, 12px, 'galano_grotesque_alt_medium');
+                                     }
+                                  }
+                                  .side-noti-section{
+                                      width:20px;
+                                      height: 100%;
+                                      display: table;
+                                      float:left;
+                                      mat-icon{
+                                          color:$thickblue;
+                                          font-size: 10px;
+                                          padding-top:50px;
+                                          text-align: right;
+                                      }
+                                  }
+                             } 
+                          }
+                          .see-all-section{
+                              cursor: pointer;
+                              margin-bottom: 20px;
+                              @include custom_font($thickblue, 14px, 16px, 'galano_grotesque_alt_bold');
+                          }
+                        }
+                    }
+                    .personal{
+                        width:35px;
+                        height:35px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                    img{
+                        width:100%;
+                        height: 100%;
+                    }
+                    }
+
+                }
+            }
+
+        }
+
+        @media (max-width:1400px) {       
+            .menu_2{
+                width:100%;
+                text-align: center;            
+            }
+        }
+ 
+    }   
+}

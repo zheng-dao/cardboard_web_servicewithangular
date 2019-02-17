@@ -121,10 +121,19 @@
             </div>
       </div>
       <div class="portal_content_4_2" >
-         <input class="job_search_input">
-         <div></div>
-         <button>{{'button.press'|translate}}</button>
+         <input class="job_search_input" type="text" placeholder="{{'input.placeholder1'|translate}}">
+          <div class="country-selectbox-wrapper">
+            <app-country-select [is_flag_show]="true" ></app-country-select>
+          </div>
+         <button>{{'button.findjobs'|translate}}</button>
       </div>
+      <div class="portal_content_4_3">
+          <button class="large_rounded_btn">
+               <mat-icon>video_call</mat-icon>
+              <span>{{'button.createyourvcv'|translate}}</span>
+          </button>
+      </div>
+      <div class="portal_content_4_4"><a href="#">{{'portal.content4.employer'|translate}}</a></div>
   </div>
 
   <div class="portal_content_5">
