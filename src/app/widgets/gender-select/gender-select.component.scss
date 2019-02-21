@@ -1,0 +1,74 @@
+@import "../../../assets/fonts.scss";
+.gender-select-widget{
+    width:336px;
+    display: inline-block;
+    padding:25px;
+    border-radius: 15px;
+    background-color: white;
+    border: 1px solid #EEEFF4;
+    margin:10px 15px;
+    .title{
+         margin-bottom: 20px;
+        .ico-title{
+            vertical-align: middle; 
+            margin-right:10px;
+        }
+        .text-title{
+            font-size:14px;
+            line-height: 16px;
+            font-family: 'galano_grotesque_alt_bold';
+            color:#273142;
+        }
+        .btn-title{
+            font-size:14px;
+            line-height: 17px;
+            font-family: 'galano_grotesque_semi_bold';
+            color:#8E9DC1;
+            float:right;  
+            margin-top:5px;    
+            cursor:pointer;     
+        }
+    }
+    .select-wrapper{
+       .gender-item{
+            text-align: center;
+            display: inline-block;
+            margin-right:10px;
+
+            .icon-container{
+                width:57px;
+                height:57px;
+                border:1px solid #cfd2d7;
+                background-color: #f5f8fd;
+                border-radius: 3px;
+                cursor: pointer;
+                padding-top:10px;
+                .all_gender{
+                  font-size:20px;
+                }
+                .male_gender{
+                  transform: rotate(-45deg);
+                  font-size:2px;
+                  height:50%;
+                  width:30%;
+                }
+                .female_gender{
+                    font-size:20px;
+                }
+            }
+            .gender-selected{
+                background-color: #2766FF;
+                color:white;
+            }
+            .item-name{
+                margin-top:10px;
+                font-size:12px;
+                line-height: 14px;
+                color:#6B6F81;
+                font-family: 'galano_grotesque_alt_medium';
+            }
+       }
+    }
+    
+    
+}

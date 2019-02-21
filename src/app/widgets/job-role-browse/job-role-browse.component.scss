@@ -1,0 +1,108 @@
+@import "../../../assets/fonts.scss";
+.job-role-browse-widget{
+    width:336px;
+    display: inline-block;
+    padding:25px;
+    border-radius: 15px;
+    background-color: white;
+    margin:10px 15px;
+    border: 1px solid #EEEFF4;
+    .title{
+         margin-bottom: 20px; 
+        .ico-title{
+            vertical-align: middle; 
+            margin-right:10px;
+        }       
+        .text-title{
+            font-size:14px;
+            line-height: 16px;
+            font-family: 'galano_grotesque_alt_bold';
+            color:#273142;
+        }
+        .btn-title{
+            font-size:14px;
+            line-height: 17px;
+            font-family: 'galano_grotesque_semi_bold';
+            color:#8E9DC1;
+            float:right;  
+            margin-top:5px;    
+            cursor:pointer;     
+        }
+    }
+
+    .content-wrapper{
+        .job-ul{
+            padding: 0;
+            display: table;
+            list-style: none;
+            .job-li{
+                margin:10px 0;
+                cursor: pointer;
+                font-size:15px;
+                line-height:18px;
+                font-family: 'galano_grotesque_medium';
+                .name{                  
+                   color:#306CFF;
+                   text-decoration: underline;
+                }
+                .count{                   
+                    color:#859CC2;
+                    text-decoration: underline;
+                 }
+            }
+        }
+        .select-wrapper{
+            width:288px;
+            height:57px;
+            border:1px solid #cfd2d7;
+            background-color: #f5f8fd;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            &::after {
+                content: '\25BC';
+                position: absolute;
+                top: 30%;
+                right: 0;
+                bottom: 0;
+                padding: 0 1em;
+                background: #f5f8fd;
+                pointer-events: none;
+              }
+              select:required:invalid {
+                   color:#859CC2;
+                   font-size:15px;
+                   line-height: 18px;
+                   font-family: 'galano_grotesque_medium';
+              }
+              option[value=""][disabled] {
+                display: none;
+              }
+            .selectbox{       
+               width:100%;
+               height: 100%;
+               border: none;
+               background: transparent;
+               background-image:none;  
+               font-family: 'galano_grotesque_medium';         
+                &:focus{
+                    outline: none;
+                }         
+                .job-title-widget-option{                   
+                    font-size:15px;
+                    line-height: 18px;
+                    font-family: 'galano_grotesque_medium';
+                    .name{                  
+                        color:#306CFF;
+                        text-decoration: underline;
+                     }
+                     .count{                   
+                         color:#859CC2;
+                         text-decoration: underline;
+                      }
+                 }
+            }
+        }
+    }
+    
+}

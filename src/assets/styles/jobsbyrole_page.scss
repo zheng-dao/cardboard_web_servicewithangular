@@ -1,0 +1,220 @@
+.jobsbyrole{
+   width:100%;
+   padding: 79px 15%;
+   .title{
+       text-align: center;
+       @include custom_font(#1c2b4f, 32px, 32px, 'galano_grotesque_alt_bold');
+       margin-bottom: 35px;
+   }
+   .btn{
+       text-align: center;
+       display: block;
+      .large_rounded_btn{
+        @include custom_font(white, 16px, 22px, 'galano_grotesque_semi_bold');
+        margin-top:56px ;
+
+       }
+   }
+   
+   .content_1{
+       width:100%;
+       background-image: url(assets/images/content_back.png);
+       background-size:100% 100%;
+       border-radius: 15px;
+       padding: 60px 4%;
+       .main-content{
+           margin: 0;
+           width:100%;
+           .job-item{
+               min-height:108px;
+               border-radius: 8px;
+               box-shadow: 0 2px 6px gray;
+               margin-bottom: 5px;              
+               overflow: hidden;
+               padding:20px 10px;
+               position: relative;
+               .count{
+                   display: table;
+                   width:54px;                                     
+                   height:54px;
+                   border-radius: 50%;
+                   background-color: $thickblue;
+                   text-align: center;
+                   vertical-align: middle;
+                   @include custom_font(white, 24px, 29px, 'galano_grotesque_alt_bold');
+                   float:left;
+                   padding-top:15px;
+                   margin:10px;
+               }
+               .job-role{
+                   width:70%;
+                   height:auto;
+                   padding-left: 15px;
+                   border-left: 1px solid #8E9DC1;
+                    margin-top:18px;
+                   display: table;
+                   float:left;
+                   .role{
+                    @include custom_font(#454545, 18px, 22px, 'galano_grotesque_alt_medium');  
+                   }
+                   .expert{
+                    @include custom_font(#8E9DC1, 16px, 19px, 'galano_grotesque_alt_regular');  
+                   }
+               }
+               .ratio{
+                   position: absolute;
+                   top:5px;
+                   right:10px;
+                  display: inline-table;
+                  @include custom_font(#8E9DC1, 16px, 19px, 'galano_grotesque_alt_regular');              
+                  mat-icon{
+                      vertical-align: middle;
+                  }
+                }
+
+           }
+           .up-bg{
+               background-image: url('/assets/images/jobsbyrole/up_chart.png');
+               background-repeat: no-repeat;
+               background-position: right bottom;
+           }
+           .down-bg{
+            background-image: url('/assets/images/jobsbyrole/down_chart.png');
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            }
+        }
+   }
+
+   .content_2{
+       margin-top:90px;
+       width:100%;
+       padding: 60px 0;
+       .main-content{
+           margin:0 -10px;
+           width:100%;
+           display: block;
+           .job-item-container{
+               width:20%;
+               padding:0px 10px;
+              
+               display: inline-block;
+               .job-item{
+                //    width:100%;
+                   min-width:150px;
+                   background-image: url('/assets/images/content_back.png');
+                   background-size: 100% 100%;
+                   border-radius: 20px;
+                   overflow: hidden;
+                   text-align: center;
+                   padding:25px 0;
+                   .com-mark{
+                        width:113px;
+                        height:113px;
+                        margin:0 auto;
+                        border-radius: 50%;
+                        box-shadow: 0 1px 3px gray;       
+                       img{
+                          width:100%;
+                          height:100%;                                              
+                       }
+                   }
+                   .com-name{
+                       margin-top:5px;
+                       @include custom_font(#091636, 18px, 22px ,'galano_grotesque_alt_medium');
+                   }
+                   .count{
+                       margin-top:20px;
+                       span{                          
+                           padding:5px 15px;
+                           border-radius: 12px;
+                           background-color: $thickblue;
+                           @include custom_font(white, 16px, 19px ,'galano_grotesque_alt_semi_bold');
+                       }
+                   }
+               }
+           }   
+           
+            @media(max-width:1000px) {
+                .job-item-container{
+                    width:30%;
+                }
+            }
+
+            @media(max-width:600px) {
+                .job-item-container{
+                    width:50%;
+                }
+            }
+          
+       }
+       .large_rounded_btn{
+           background-color: white;
+           color: $thickblue;
+           border:2px solid $thickblue;
+       }
+
+   }
+   .content_3{
+        margin-top:90px;
+        width:100%;
+        padding: 60px 0;
+        .abstract-text{
+            width:70%;
+            margin: 0 auto;
+            @include custom_font(#8E9DC1, 16px, 26px, 'galano_grotesque_alt_regular');
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .main-content{            
+            width:90%;
+            margin:0 auto;
+            display: block;
+            .job-item-container{
+                width:25%;
+                padding:0px 25px;  
+                display: inline-block;
+                .job-item{
+                 //    width:100%;
+                    min-width:150px; 
+                    text-align: center;
+                    padding:25px 0;
+                    .country-photo{                        
+                         margin:0 auto;
+                         border-radius: 50%;                               
+                        img{
+                           width:100%;
+                           height:100%;                                              
+                        }
+                    }
+                    .country-name{
+                        margin-top:10px;
+                        @include custom_font(#4E5A77, 30px, 36px ,'galano_grotesque_alt_bold');
+                    }
+                    .count{
+                        margin-top:10px;
+                        @include custom_font($thickblue, 18px, 22px ,'galano_grotesque_alt_semi_bold');
+                      
+                    }
+                }
+            }     
+            
+
+                @media(max-width:1000px) {
+                    .job-item-container{
+                        width:30%;
+                    }
+                }
+
+                @media(max-width:600px) {
+                    .job-item-container{
+                        width:50%;
+                    }
+                }
+            
+        }
+   }
+
+
+}

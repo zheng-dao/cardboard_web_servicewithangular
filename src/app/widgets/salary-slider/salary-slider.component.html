@@ -1,0 +1,26 @@
+<div class="salary-slider-widget">
+    <div class="title">
+        <img class="ico-title" src="../../../assets/images/icon/ico_6.png">
+        <span class="text-title">{{'searchresult_page.salary'|translate}}</span>
+        <span class="btn-title" (click)="toggleShow()" #showControl>-</span>
+    </div>
+    <div class="slider-wrapper" [style.display]="is_show_wrapper?'block':'none'">
+
+        <div class="dx-number-box-wrapper">
+            <div class="dx-start-number-wrapper">
+                <span class="doller_mark">$</span>
+                <dx-number-box [min]="0.00" [max]="10000.00" [showSpinButtons]="false" [(ngModel)]="sliderStart"></dx-number-box>
+            </div>
+
+            <div class="dx-end-number-wrapper">
+                <span class="doller_mark">$</span>
+                <dx-number-box [min]="0.00" [max]="10000.00" [showSpinButtons]="false" [(ngModel)]="sliderEnd"></dx-number-box>
+            </div>
+        </div>
+
+        <div class="dx-field-value">
+            <dx-range-slider [min]="0.00" [max]="10000.00" [start]="sliderStart" [end]="sliderEnd" (onValueChanged)="setInputValue()" #rangeSlider ></dx-range-slider>
+        </div>
+
+    </div>
+</div>

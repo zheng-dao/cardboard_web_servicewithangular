@@ -1,0 +1,16 @@
+<div class="job-title-widget">
+  <div class="title">
+    <img class="ico-title" src="../../../assets/images/icon/ico_1.png">
+    <span class="text-title">{{'searchresult_page.jobtitles'|translate}}</span>
+    <span class="btn-title"  (click)="allDelete()">{{'searchresult_page.clear'|translate}}</span>
+  </div>
+  <div class="select-wrapper">
+    <select (change)="onChange($event.target.value)" required class="selectbox">
+      <option value="" disabled selected="selected">{{'input.jobtitles_placeholder'|translate}}</option>
+      <option *ngFor="let title of allJobTitles" [value]="title" class="job-title-widget-option">{{title}}</option>
+    </select>
+  </div>
+  <div class="item-button-container" (onDelete)="destroyComponent($event)">
+    <span #itemButtonContainer></span>
+  </div>
+</div>

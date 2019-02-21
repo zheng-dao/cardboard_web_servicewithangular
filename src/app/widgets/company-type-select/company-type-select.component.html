@@ -1,0 +1,27 @@
+<div class="company-type-select-widget">
+  <div class="title">
+    <img class="ico-title" src="../../../assets/images/icon/ico_5.png">
+    <span class="text-title">{{'searchresult_page.company_type'|translate}}</span>
+    <span class="btn-title" (click)="toggleShow()" #showControl>-</span>
+  </div>
+  <div class="select-wrapper" [style.display]="is_show_wrapper?'block':'none'">
+    <ul>
+      <li>
+        <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1" checked>
+        <label for="styled-checkbox-1">{{'input.checkbox_label1'|translate}}</label>
+      </li>
+      <li>
+        <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2">
+        <label for="styled-checkbox-2">{{'input.checkbox_label2'|translate}}</label>
+      </li>
+      <li>
+        <input class="styled-checkbox" id="styled-checkbox-3" type="checkbox" value="value3">
+        <label for="styled-checkbox-3">{{'input.checkbox_label3'|translate}}</label>
+      </li>
+      <li>
+        <input class="styled-checkbox" id="styled-checkbox-4" type="checkbox" value="value4">
+        <label for="styled-checkbox-4">{{'input.checkbox_label4'|translate}}</label>
+      </li>
+    </ul>
+  </div>
+</div>

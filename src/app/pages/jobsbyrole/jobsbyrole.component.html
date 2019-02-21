@@ -1,0 +1,48 @@
+<div class="jobsbyrole">
+  <div class="content_1">
+    <div class="title">{{'jobsbyrole_page.title1'|translate}}</div>
+    <div class="main-content row">
+      <div *ngFor="let job of sliceJobsByRole" class="col-sm-12 col-md-12 col-lg-6" style="padding: 0 11px ;">
+        <div class=" job-item" [ngClass]="job.is_up? 'up-bg':'down-bg'">
+          <div class="count">{{job.count}}</div>
+          <div class="job-role">
+            <div class="role">{{job.role}}</div>
+            <div class="expert">{{job.expert}}</div>
+          </div>
+          <div class="ratio" [style.color]="job.is_up?'#39CA74':'#E62565'">
+            <mat-icon>{{job.is_up? 'keyboard_arrow_up':'keyboard_arrow_down'}}</mat-icon>
+            <span>{{job.ratio+'%'}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn"><button class="large_rounded_btn" (click)="setAllJobsByRole()">{{'button.viewthemall'|translate}}</button></div>
+  </div>
+  <div class="content_2">
+    <div class="title">{{'jobsbyrole_page.title2'|translate}}</div>
+    <div class="main-content">
+      <div class="job-item-container"  *ngFor="let job of sliceJobsByCompanies">
+          <div class="job-item">
+              <div class="com-mark"><img [src]="job.com_mark"></div>
+              <div class="com-name">{{job.com_name}}</div>
+              <div class="count"><span>{{job.count}} {{'jobsbyrole_page.jobs'|translate}}</span></div>
+           </div>
+      </div>     
+    </div>
+    <div class="btn"><button class="large_rounded_btn" (click)="setAllJobsByCompanies()">{{'button.viewthemall'|translate}}</button></div>
+  </div>
+  <div class="content_3">
+    <div class="title">{{'jobsbyrole_page.title3'|translate}}</div>
+    <div class="abstract-text">{{'jobsbyrole_page.abstract_text'|translate}}</div>
+    <div class="main-content">
+        <div class="job-item-container"  *ngFor="let job of sliceJobsByCountries">
+            <div class="job-item">
+                <div class="country-photo"><img [src]="job.country_photo"></div>
+                <div class="country-name">{{job.country_name}}</div>
+                <div class="count">{{job.count}} {{'jobsbyrole_page.jobs'|translate}}</div>
+             </div>
+        </div>     
+      </div>
+      <div class="btn"><button class="large_rounded_btn" (click)="setAllJobsByCountries()">{{'button.viewthemall'|translate}}</button></div>
+  </div>
+</div>

@@ -4,6 +4,7 @@ import {FormsModule , ReactiveFormsModule} from '@angular/forms'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {DxRangeSliderModule, DxNumberBoxModule} from 'devextreme-angular';
 
 //header and footer component
 import { HeaderComponent } from './header/header.component';
@@ -23,14 +24,31 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 import { DropdownlistComponent } from './widgets/dropdownlist/dropdownlist.component';
 
-// Module for language translate 
-import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { PagerComponent } from './widgets/pager/pager.component';
 import { LinechartComponent } from './widgets/linechart/linechart.component';
 import { CountrySelectComponent } from './widgets/country-select/country-select.component';
-
+import { JobsbyroleComponent } from './pages/jobsbyrole/jobsbyrole.component';
+import {SearchresultComponent} from './pages/searchresult/searchresult.component';
+import {ItembuttonComponent} from './widgets/itembutton/itembutton.component';
+// Module for language translate 
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { JobTitlesSelectComponent } from './widgets/job-titles-select/job-titles-select.component';
+import { LocationsSelectComponent } from './widgets/locations-select/locations-select.component';
+import { GenderSelectComponent } from './widgets/gender-select/gender-select.component';
+import { LanguageSelectComponent } from './widgets/language-select/language-select.component';
+import { CompanyTypeSelectComponent } from './widgets/company-type-select/company-type-select.component';
+import {SalarySliderComponent} from './widgets/salary-slider/salary-slider.component';
+import { CareerComponent } from './widgets/career/career.component';
+import { EmploymentTypeComponent } from './widgets/employment-type/employment-type.component';
+import { SpecialtyComponent } from './widgets/specialty/specialty.component';
+import { IndustryComponent } from './widgets/industry/industry.component';
+import { DateModifiedComponent } from './widgets/date-modified/date-modified.component';
+import { JobRoleBrowseComponent } from './widgets/job-role-browse/job-role-browse.component';
+import { JobIndustryBrowseComponent } from './widgets/job-industry-browse/job-industry-browse.component';
+import { AreaBrowseComponent } from './widgets/area-browse/area-browse.component'
 
 
 
@@ -49,7 +67,24 @@ import { CountrySelectComponent } from './widgets/country-select/country-select.
     DashboardComponent,
     PagerComponent,
     LinechartComponent,
-    CountrySelectComponent
+    CountrySelectComponent,
+    JobsbyroleComponent,
+    SearchresultComponent,
+    ItembuttonComponent,
+    JobTitlesSelectComponent,
+    LocationsSelectComponent,
+    GenderSelectComponent,
+    LanguageSelectComponent,
+    CompanyTypeSelectComponent,
+    SalarySliderComponent,
+    CareerComponent,
+    EmploymentTypeComponent,
+    SpecialtyComponent,
+    IndustryComponent,
+    DateModifiedComponent,
+    JobRoleBrowseComponent,
+    JobIndustryBrowseComponent,
+    AreaBrowseComponent
   ],
   imports: [
     FormsModule,
@@ -60,6 +95,8 @@ import { CountrySelectComponent } from './widgets/country-select/country-select.
     MatRadioModule,
     MatIconModule,
     MultiSelectAllModule,
+    DxRangeSliderModule,
+    DxNumberBoxModule,
     // configure the imports
     HttpClientModule,
     TranslateModule.forRoot({
@@ -74,6 +111,7 @@ import { CountrySelectComponent } from './widgets/country-select/country-select.
   providers: [
    
   ],
+  entryComponents:[ItembuttonComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,85 @@
+.search-result{
+    width:100%;
+    padding:65px 5%;
+    .search-bar{
+       min-width:350px;
+       margin-top:18px;       
+       width:26%;
+       background-image: url('/assets/images/content_back.png');
+       background-size: 100%;
+       border-radius: 15px;
+       overflow: hidden; 
+       border: 2px solid #EEEFF4;  
+       //slider widget css---start
+       .dx-texteditor.dx-editor-outlined{
+            border: none;
+        }
+       .dx-field-value{
+            width:100%;
+            .dx-slider-range.dx-slider-range-visible{
+                border:1px solid #2766FF;
+                background-color: #2766FF;
+            }
+            .dx-slider-bar{
+                height:10px;
+                border-radius: 5px;
+            }
+            .dx-slider-handle{
+                margin-top:-10px;
+                border:1px solid #EDEEF3;
+                background-color: white;
+            }
+            .dx-slider-range{
+                height:10px;
+            }
+       
+        }
+
+         //slider widget css-----end
+
+         .search-tab-container{
+             width:90%;
+             margin:10px auto;
+             .search-tab{
+                 width:50%;
+                 padding :20px ;
+                 display: inline-block;
+                 border-bottom:2px solid #8E9DC1;
+                 text-align: center;
+                 font-size: 22px;
+                 font-family: "galano_grotesque_medium";
+                 cursor: pointer;
+             }
+             .tab-selected{
+                 color:#2766FF;
+                 border-bottom: 2px solid #2766FF;
+             }
+             
+         }
+
+        
+        .subject-container{
+            width:80%;
+            margin : 20px auto;
+            .subject{                    
+                font-size: 20px;
+                line-height: 24px;
+                font-family: "galano_grotesque_medium";
+                color:#1D1F22;
+            }
+            .reset{
+                margin-top:5px;
+                float:right;
+                font-size: 14px;
+                line-height:17px;
+                font-family: "galano_grotesque_semi_bold";
+                color:#FF2D55;
+                cursor:pointer;
+            }
+        }
+        
+
+        
+    } 
+
+}

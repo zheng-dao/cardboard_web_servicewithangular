@@ -1,0 +1,25 @@
+<div class="job-role-browse-widget">
+  <div class="title">
+    <img class="ico-title" src="../../../assets/images/icon/ico_1.png">
+    <span class="text-title">{{'searchresult_page.date_modified'|translate}}</span>
+    <span class="btn-title" (click)="toggleShow()" #showControl>-</span>
+  </div>
+  <div class="content-wrapper" [style.display]="is_show_wrapper?'block':'none'">
+    <ul class="job-ul" >
+      <li class="job-li" (click)="onBrowseByJobRole(item.role)" *ngFor="let item of sliceJobRolesForView">
+        <span class="name">{{item.role}}</span>
+        <span class="count">{{'('+item.count+')'}}</span>
+      </li>
+    </ul>
+    <div class="select-wrapper">
+      <select (change)="onBrowseByJobRole($event.target.value)" required class="selectbox">
+        <option value="" disabled selected="selected">{{'input.more'|translate}}</option>
+        <option *ngFor="let item of sliceJobRolesForSelectbox" [value]="item.role" class="job-title-widget-option">
+          <span class="name">{{item.role}}</span>
+          <span class="count">{{'('+item.count+')'}}</span>
+        </option>
+      </select>
+    </div>
+
+  </div>
+</div>

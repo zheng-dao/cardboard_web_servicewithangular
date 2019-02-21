@@ -1,0 +1,84 @@
+@import "../../../assets/fonts.scss";
+.salary-slider-widget{
+    width:336px;
+    display: inline-block;
+    padding:25px;
+    border-radius: 15px;
+    background-color: white;
+    margin:10px 15px;
+    border: 1px solid #EEEFF4;
+    .title{
+         margin-bottom: 20px;
+        .ico-title{
+            vertical-align: middle; 
+            margin-right:10px;
+        }
+        .text-title{
+            font-size:14px;
+            line-height: 16px;
+            font-family: 'galano_grotesque_alt_bold';
+            color:#273142;
+        }
+        .btn-title{
+            font-size:14px;
+            line-height: 17px;
+            font-family: 'galano_grotesque_semi_bold';
+            color:#8E9DC1;
+            float:right;  
+            margin-top:5px;    
+            cursor:pointer;     
+        }
+    }
+    .slider-wrapper{
+
+        .dx-field-value{
+            width:100%;
+            .dx-slider-range.dx-slider-range-visible{
+                border:1px solid #2766FF;
+                background-color: #2766FF;
+            }
+            .dx-slider-bar{
+                height:10px;
+                border-radius: 5px;
+            }
+            .dx-slider-handle{
+                margin-top:-10px;
+                border:1px solid #EDEEF3;
+                background-color: white;
+            }
+            .dx-slider-range{
+                height:10px;
+            }
+        }
+        .dx-number-box-wrapper{
+            width:100%;
+            padding:10px 0;
+            .dx-start-number-wrapper{
+                width:100px;
+                display: table;
+                float: left;
+                position: relative;
+                padding-left: 18px;
+                border:1px solid #ddd;
+                border-radius: 4px;
+            }
+            .dx-end-number-wrapper{
+                width:100px;
+                display: table;
+                float: right;
+                position: relative;
+                padding-left: 18px;
+                border:1px solid #ddd;
+                border-radius: 4px;
+            }
+            .doller_mark{
+                position: absolute;
+                left: 12px;
+                top:5px;
+                z-index: 99999;
+            }
+        }
+    }
+    
+    
+}

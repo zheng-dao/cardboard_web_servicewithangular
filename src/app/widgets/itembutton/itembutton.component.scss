@@ -1,0 +1,30 @@
+@import '../../../assets/fonts.scss';
+.item-button{
+    padding:5px 5px 5px 8px;
+    border-radius: 20px;
+    background-color: #2766ff;
+    margin:3px;
+    &:focus{
+       outline: none
+    }
+    span{
+       // @include custom-font(white, 14px 14px ,'galano_grotesque_medium');
+       color:white;
+       font-size: 14px;
+       line-height: 14px;
+       font-family: 'galano_grotesque_medium'; 
+    }
+   mat-icon{
+     color:white;
+     font-size: 24px;
+     line-height: 24px;
+    
+     border-radius: 10px;
+     vertical-align: middle;
+     &:hover{
+         cursor: pointer;
+     }
+   }
+
+   
+}

@@ -1,0 +1,29 @@
+@import "../../../assets/fonts.scss";
+.area-browse-widget{
+    width:336px;
+    display: inline-block;
+    padding:25px;
+    border-radius: 15px;
+    background-color: white;
+    margin:10px 15px;
+    border: 1px solid #EEEFF4;
+    .title{
+         margin-bottom: 20px;        
+        .text-title{
+            font-size:14px;
+            line-height: 16px;
+            font-family: 'galano_grotesque_alt_bold';
+            color:#273142;
+        }
+        .btn-title{
+            font-size:14px;
+            line-height: 17px;
+            font-family: 'galano_grotesque_semi_bold';
+            color:#8E9DC1;
+            float:right;  
+            margin-top:5px;    
+            cursor:pointer;     
+        }
+    }
+    
+}

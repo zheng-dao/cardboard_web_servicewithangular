@@ -39,7 +39,10 @@
         "watchvcv": "WATCH VCV",
         "findjobs":"Find Jobs",  
         "createyourvcv":"CREATE YOUR VCV",
-        "seeall":"See All"
+        "seeall":"See All",
+        "search":"search",
+        "load_more":"Load More"
+
     },
     "input": {
         "firstname": "First Name",
@@ -48,8 +51,16 @@
         "password": "Password",
         "industry": "Industry",
         "jobtitle": "Job Title",
-        "placeholder1":"Job title, skills, etc"
-    },
+        "placeholder1":"Job title, skills, etc",
+        "jobtitles_placeholder":"job, title, company, or keyword",
+        "locations_placeholder":"Town, city or Postcode",
+        "more":"more",
+        "checkbox_label1":"Employer(Private Sector)",
+        "checkbox_label2":"Employer(Public Sector)",
+        "checkbox_label3":"Non-Profit Organization",
+        "checkbox_label4":"Recuritment Agency"
+
+    },    
     "portal": {
         "slider": {
             "title": "Create stunning video CVs and land your next job",
@@ -166,7 +177,44 @@
         "title": "LEARN",
         "subtitle": "how to record your first VCV",
         "description": "Create your stuning video cvc and land your next job, this 3 minute tutorial willtake you through the process and help you get the best experience out of NYSM",
-        "script": "Don't show me again"
+        "script": "Don't show me again"       
+    },
+    "jobsbyrole_page":{
+        "title1":"Jobs By Role",
+        "title2":"Find Jobs By Company",
+        "title3":"Find Jobs By Country",
+        "abstract_text":"At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half",
+        "jobs":"Jobs"
+    },
+    "searchresult_page":{
+        "search":"search",
+        "browse":"browse",
+        "advancedsearch":"Advanced Search",
+        "reset":"Reset",
+        "clear":"Clear",
+        "jobtitles":"Job titles",       
+        "locations":"Locations",
+        "gender":"Gender",
+        "any":"any",
+        "man":"man",
+        "woman":"woman",
+        "language":"Language",
+        "all":"All",
+        "en":"En",
+        "ar":"Ar",
+        "fr":"Fr",
+        "company_type":"Company Type",
+        "salary":"salary",
+        "career":"Career",
+        "employment_type":"Employment Type",
+        "specialty":"Specialty",
+        "industry":"Industry",
+        "date_modified":"Date Modified",
+        "job_role":"job Role",
+        "job_industry":"job_Industry",
+        "area":"Area",
+        "jobs_found":"Jobs Found",
+        "sort_by":"Sort By"
     },
     "information": {
         "experience": "Experience",
