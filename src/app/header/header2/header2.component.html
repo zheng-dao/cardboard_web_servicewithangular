@@ -17,11 +17,11 @@
                             <div class="sub-menu-container">
                                 <ul class="sub-menu" id="sub_menu" [style.display]="is_sub_menu_show?'table':'none'"
                                     (mouseover)="showSubMenu" (mouseleave)="hideSubMenu($event)">
-                                    <li><a (click)="hideSubMenu($event)">{{'header.sub_menu.advancedsearch'|translate}}</a></li>
-                                    <li><a (click)="hideSubMenu($event)">{{'header.sub_menu.jobsbyrole'|translate}}</a></li>
-                                    <li><a (click)="hideSubMenu($event)">{{'header.sub_menu.jobsbysector'|translate}}</a></li>
-                                    <li><a (click)="hideSubMenu($event)">{{'header.sub_menu.jobsbylocation'|translate}}</a></li>
-                                    <li><a (click)="hideSubMenu($event)">{{'header.sub_menu.jobsbycompanies'|translate}}</a></li>
+                                    <li><a>{{'header.sub_menu.advancedsearch'|translate}}</a></li>
+                                    <li><a  routerLink="/jobsbyrole">{{'header.sub_menu.jobsbyrole'|translate}}</a></li>
+                                    <li><a routerLink="/findJobsBySector">{{'header.sub_menu.jobsbysector'|translate}}</a></li>
+                                    <li><a routerLink="/findJobsByLocation">{{'header.sub_menu.jobsbylocation'|translate}}</a></li>
+                                    <li><a >{{'header.sub_menu.jobsbycompanies'|translate}}</a></li>
                                 </ul>
                             </div>
 

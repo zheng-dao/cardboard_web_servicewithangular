@@ -1,7 +1,9 @@
 .search-result{
     width:100%;
     padding:65px 5%;
-    .search-bar{
+    display: table;
+    .search-bar{ 
+       float:left;            
        min-width:350px;
        margin-top:18px;       
        width:26%;
@@ -10,6 +12,7 @@
        border-radius: 15px;
        overflow: hidden; 
        border: 2px solid #EEEFF4;  
+       
        //slider widget css---start
        .dx-texteditor.dx-editor-outlined{
             border: none;
@@ -78,8 +81,158 @@
             }
         }
         
-
+       .submit{
+        text-align: center;
+          margin: 20px auto 50px auto;
+          button{
+              padding-left: 80px;
+              padding-right:80px;
+          }
+         
+       }
         
     } 
+    
+
+    .job-result{
+          float:right;
+          width:71%;
+        .title{
+            .main-title{
+                @include custom-font(#333333, 32px, 52px, 'galano_grotesque_alt_bold' );
+                margin-right:20px;
+            }
+            .all-job-count{
+                @include custom-font(#90A5D7, 16px, 52px, 'galano_grotesque_alt_regular' );
+            }
+        }
+
+        .content-container{
+            width:100%;
+            display: table;
+            .item-wrapper{
+                position: relative;
+
+                width:48%;
+                margin:10px;
+                display: table;
+                float:left;
+                background-image: url('/assets/images/content_back.png');
+                background-size:100% 100%;
+                border-radius: 15px;
+                border:1px solid #EEEFF4;
+                padding:25px 15px;
+                .item-content{
+                    width:100%;
+                    .item-side{
+                        width:138px;                        
+                        display:table;
+                        float:left;
+                        img{
+                            width:118px;
+                            height:118px;
+                            border-radius: 50%;
+                            box-shadow: 0 2px 3px gray;
+                            margin:0 10px 10px 10px;
+                        }
+                        button{
+                            padding:5px 8px;
+                           mat-icon{
+                               vertical-align: middle;
+                               color:white;
+                               font-size: 20px;
+                           } 
+                            span{
+                                @include custom-font(white, 16px, 16px, 'galano_grotesque_alt_medium' );
+                            }
+                        }                        
+                    }
+                    .item-body{
+                        width:60%;
+                        display: table;
+                        float:right;
+                        .career-time{
+                            margin-bottom: 10px;  
+                            .career{
+                                @include custom-font($thickblue, 18px, 22px, 'galano_grotesque_semi_bold' );
+                                margin-right:8px;  
+                                margin-bottom: 10px;                      
+                            }
+                            .time{
+                                @include custom-font(#8E9DC1, 10px, 10px, 'galano_grotesque_alt_medium' );                              
+                            }    
+                        }
+                       
+                        .com-name{
+                            @include custom-font(#15181D, 14px, 14px, 'galano_grotesque_alt_medium' );                              
+                            margin-bottom: 10px;  
+                        }
+                        .com-content{
+                            @include custom-font(#536BA5, 12px, 15px, 'galano_grotesque_alt_regular' );  
+                            height:30px;
+                            @include multiLineEllipsis($lineHeight: 15px, $lineCount: 2, $bgColor: white);
+                            margin-bottom: 20px; 
+                              text-justify: inter-word;             
+                        }
+                        .location{
+                            @include custom-font(#354052, 14px, 15px, 'galano_grotesque_alt_regular' );
+                            margin-bottom: 10px;  
+                            img{
+                                margin-right:5px;
+                                vertical-align: middle;
+                            }
+                        }
+                        .com-type{
+                            @include custom-font(#354052, 14px, 15px, 'galano_grotesque_alt_regular' );
+                            margin-bottom: 10px;  
+                            img{
+                                margin-right:5px;
+                                vertical-align: middle;
+                            }
+                        }
+                        .salary{
+                            @include custom-font(#354052, 14px, 15px, 'galano_grotesque_alt_regular' );
+                            img{
+                                margin-right:5px;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+
+                .ico-wrapper{
+                  position: absolute;
+                  top:10px;
+                  right:7px;
+                  img{
+                      margin-left:4px;
+                  }
+                  .heart{
+                      margin-top:4px;
+                  }
+                }
+            }
+            @media(max-width:1550px){
+                .item-wrapper{
+                    width:100%;            
+                }
+            }
+        }
+         .load-more{
+             margin-top:50px;
+             text-align: center;
+             button{
+                 margin:0 auto;
+             }
+
+         }
+
+    }
+
+    @media(max-width:1550px){
+        .job-result{
+            width:50%;            
+        }
+    }
 
 }

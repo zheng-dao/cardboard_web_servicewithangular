@@ -39,6 +39,13 @@ export class AppComponent {
         this.backgroundImage="";
         this.backgroundSize="";
       }
+      else if(event.url.toString()=="/emailconfirm"){
+        this.which_header=true;
+        this.isHeaderBackground=true;
+        this.isFooterShow=false;
+        this.backgroundImage="";
+        this.backgroundSize="";
+      }
       else{
         this.which_header=false;
         this.isHeaderBackground=true;

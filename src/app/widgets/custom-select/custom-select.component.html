@@ -1,0 +1,12 @@
+<div class="cu-select-wrapper">
+  <select (change)="onChange($event.target.value)" required class="selectbox">
+    <option value="" disabled selected="selected">{{placeholder}}</option>
+    <option *ngFor="let data of datas" [value]="data" class="cu-option">{{data}}</option>
+  </select>
+  <div class="mark-icon">
+    <mat-icon  [svgIcon]="icon"></mat-icon>
+  </div>
+  <div class="direction-icon">
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </div>  
+</div>

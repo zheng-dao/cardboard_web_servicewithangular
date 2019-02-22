@@ -1,0 +1,16 @@
+<svg id="Group_10" data-name="Group 10" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #273142;
+      }
+    </style>
+  </defs>
+  <path id="Shape"  d="M6.094,8.969H0V0H6.094V8.968ZM3.515,3.281v.937h.938V3.281Zm-1.875,0v.937h.938V3.281ZM3.515,1.406v.938h.938V1.406Zm-1.875,0v.938h.938V1.406Z" transform="translate(9.906 7.031)"/>
+  <rect id="Rectangle-path"  width="4.219" height="1.406" transform="translate(10.844 4.688)"/>
+  <rect id="Rectangle-path-2" data-name="Rectangle-path"  width="2.344" height="3.75" transform="translate(11.781)"/>
+  <rect id="Rectangle-path-3" data-name="Rectangle-path"  width="1.938" height="7.563" transform="translate(7.031 8.438)"/>
+  <path id="Shape-2" data-name="Shape" d="M6.094,8.969H0V0H6.094V8.968ZM3.515,3.281v.937h.938V3.281Zm-1.875,0v.937h.938V3.281ZM3.515,1.406v.938h.938V1.406Zm-1.875,0v.938h.938V1.406Z" transform="translate(0 7.031)"/>
+  <rect id="Rectangle-path-4" data-name="Rectangle-path"  width="4.219" height="1.406" transform="translate(0.938 4.688)"/>
+  <rect id="Rectangle-path-5" data-name="Rectangle-path"  width="2.344" height="3.75" transform="translate(1.875)"/>
+</svg>

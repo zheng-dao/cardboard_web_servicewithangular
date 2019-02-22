@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { JobsByRoleModel, JobsByCompaniesModel, JobsByCountryModel } from '../models/jobsbyrole'
-
+import {JobsBySectorModel, JobTitlesModel} from '../models/findJobBySector';
+import {JobByCityModel,JobByLocationModel, JobForInterModel} from '../models/findJobByLocation';
 @Injectable({
   providedIn: 'root'
 })
@@ -23,4 +24,19 @@ export class FindjobService {
     return this.http.get<JobsByCountryModel[]>("/assets/JsonData/jobsbyrole/jobsbycountry.json");
   }
 
+  getJobsBySector(): Observable<JobsBySectorModel[]> {
+    return this.http.get<JobsBySectorModel[]>("/assets/JsonData/findJobsBySector/jobsbysector.json");
+  }
+
+  getJobTitles():Observable<JobTitlesModel[]>{
+    return this.http.get<JobTitlesModel[]>("/assets/JsonData/findJobsBySector/jobtitles.json");
+  }
+
+  getJobByLocation(): Observable<JobByLocationModel[]>{
+    return this.http.get<JobByLocationModel[]>("/assets/JsonData/findJobsByLocation/jobsbycity.json");
+  }
+
+  getJobForInternational():Observable<JobForInterModel[]>{
+    return this.http.get<JobForInterModel[]>("/assets/JsonData/findJobsByLocation/jobsForInternational.json");
+  }
 }

@@ -21,6 +21,10 @@
       <app-specialty></app-specialty>
       <app-industry></app-industry>
       <app-date-modified></app-date-modified>
+      <div class="submit">
+        <button class="large_rounded_btn">{{'button.search'|translate}}</button>
+      </div>
+
     </form>
     <form class="browse-form" [style.display]="!is_show?'block':'none'">
       <div class="subject-container">
@@ -33,8 +37,42 @@
       <app-area-browse></app-area-browse>
     </form>
   </div>
-  <div class="search-result">
-    <div class="title"></div>
+  <div class="job-result">
+    <div class="title">
+      <span class="main-title">Designer Jobs In U.A.E</span>
+      <span class="all-job-count">{{allCounts}} {{'searchresult_page.jobs_found'|translate}}</span>
+    </div>
+    <div class="content-container">
+      <div class="item-wrapper" *ngFor="let job of sliceJobsForView">
+        <div class="item-content">
+            <div class="item-side">
+              <div><img src="{{job.com_mark}}"></div>
+              <div>
+                <button class="small_rounded_btn">
+                  <mat-icon>play_arrow</mat-icon>
+                  <span>{{'button.watchoffer'|translate}}</span>
+                </button>
+              </div>
+            </div>
+            <div class="item-body">
+                <div class="career-time">
+                  <span class="career">{{job.career}}</span>
+                  <span class="time">posted {{job.time}}</span>
+                </div>
+                <div class="com-name">{{job.com_name}}</div>
+                <div class="com-content">{{job.content}}</div>
+                <div class="location"><img src="/assets/images/icon/ico_2.png"><span>{{job.location}}</span></div>
+                <div class="com-type"><img src="/assets/images/icon/ico_4.png"><span>{{job.com_type}}</span></div>
+                <div class="salary"><img src="/assets/images/icon/ico_5.png"><span>${{job.low_salary}} to ${{job.high_salary}} per annum</span></div>
+            </div>
+        </div>
+        <span class="ico-wrapper">
+           <img class="" src="assets/images/icon/ico_7.png"><img>
+           <img class="heart" src="assets/images/icon/ico_8.png"><img>
+        </span>
+      </div>
+    </div>
 
+    <div class="load-more"><button [style.display]="allJobs.length>18? 'table':'none'" class="large_rounded_btn">{{'button.loadmore'|translate}}</button></div>
   </div>
 </div>

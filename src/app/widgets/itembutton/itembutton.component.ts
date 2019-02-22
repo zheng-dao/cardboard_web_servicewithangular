@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
-import { EventEmitter } from 'events';
+
 // Interface for connection between child and parent
 export interface myinterface {
   remove(index: number);

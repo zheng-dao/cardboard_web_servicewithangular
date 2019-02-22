@@ -216,6 +216,23 @@
         "jobs_found":"Jobs Found",
         "sort_by":"Sort By"
     },
+    "emailconfirm_page":{
+          "title":"Email Confirmation",
+          "abstruct":"We have sent email to fayezabdallah@gmail.com to confirm the validity of our email address. After receiving the email, follow the link provided to complete your registration.",
+          "link_alarm":"If you haven’t got any mail.",
+          "link":"Resend confirmation Email"
+    },
+    "jobfindbysector_page":{
+        "jobs":"jobs",
+        "title2":"Most Common Job Titles"
+    },
+    "jobfindbylocation_page":{
+        "jobs":"jobs",
+        "title1":"Find Jobs by Location",
+        "abstract_text":"At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half",
+        "title2":"Find Jobs by City",
+        "international":"International"
+    },
     "information": {
         "experience": "Experience",
         "studies": "Studies",

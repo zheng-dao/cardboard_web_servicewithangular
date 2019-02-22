@@ -5,6 +5,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {DxRangeSliderModule, DxNumberBoxModule} from 'devextreme-angular';
+import { MatRadioModule, MatIconModule} from '@angular/material'
+import {MultiSelectAllModule} from '@syncfusion/ej2-angular-dropdowns'
+
+// Module for language translate 
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 //header and footer component
 import { HeaderComponent } from './header/header.component';
@@ -12,16 +18,12 @@ import { FooterComponent } from './footer/footer.component';
 import { Header1Component } from './header/header1/header1.component';
 import { Header2Component } from './header/header2/header2.component';
 
-import { MatRadioModule, MatIconModule} from '@angular/material'
-import {MultiSelectAllModule} from '@syncfusion/ej2-angular-dropdowns'
-
 
 //pages components
 import {SignupComponent} from './pages/signup/signup.component';
 import { PortalComponent } from './pages/portal/portal.component';
 import { VcvtutoComponent } from './pages/vcvtuto/vcvtuto.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-
 import { DropdownlistComponent } from './widgets/dropdownlist/dropdownlist.component';
 
 
@@ -32,9 +34,7 @@ import { CountrySelectComponent } from './widgets/country-select/country-select.
 import { JobsbyroleComponent } from './pages/jobsbyrole/jobsbyrole.component';
 import {SearchresultComponent} from './pages/searchresult/searchresult.component';
 import {ItembuttonComponent} from './widgets/itembutton/itembutton.component';
-// Module for language translate 
-import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
 import { JobTitlesSelectComponent } from './widgets/job-titles-select/job-titles-select.component';
 import { LocationsSelectComponent } from './widgets/locations-select/locations-select.component';
 import { GenderSelectComponent } from './widgets/gender-select/gender-select.component';
@@ -48,7 +48,11 @@ import { IndustryComponent } from './widgets/industry/industry.component';
 import { DateModifiedComponent } from './widgets/date-modified/date-modified.component';
 import { JobRoleBrowseComponent } from './widgets/job-role-browse/job-role-browse.component';
 import { JobIndustryBrowseComponent } from './widgets/job-industry-browse/job-industry-browse.component';
-import { AreaBrowseComponent } from './widgets/area-browse/area-browse.component'
+import { AreaBrowseComponent } from './widgets/area-browse/area-browse.component';
+import {EmailconfirmComponent} from './pages/emailconfirm/emailconfirm.component';
+import { FindJobsBySectorComponent } from './pages/find-jobs-by-sector/find-jobs-by-sector.component';
+import { CustomSelectComponent } from './widgets/custom-select/custom-select.component';
+import { FindJobsByLocationComponent } from './pages/find-jobs-by-location/find-jobs-by-location.component';
 
 
 
@@ -84,7 +88,11 @@ import { AreaBrowseComponent } from './widgets/area-browse/area-browse.component
     DateModifiedComponent,
     JobRoleBrowseComponent,
     JobIndustryBrowseComponent,
-    AreaBrowseComponent
+    AreaBrowseComponent,
+    EmailconfirmComponent,
+    FindJobsBySectorComponent,
+    CustomSelectComponent,
+    FindJobsByLocationComponent
   ],
   imports: [
     FormsModule,

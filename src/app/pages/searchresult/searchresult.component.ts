@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JobSearchResultService } from '../../httpService/job-search-result.service';
 
 @Component({
   selector: 'app-searchresult',
@@ -7,14 +8,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchresultComponent implements OnInit {
 
-  is_show:boolean=true;// true:search tab, false:browse tab
-  constructor() { }
+  is_show: boolean = true;// true:search tab, false:browse tab
+ 
+  // is_show_load_more_button:boolean=false;
+
+  allJobs: any[] = [];
+  sliceJobsForView: any[] = [];
+  sliceJobsForBrowse: any[] = [];
+  allCounts:number=0;
+
+  constructor(private http: JobSearchResultService) {}
 
   ngOnInit() {
-    this.is_show=true;
+    this.is_show = true;
+    this.getAllJobs();
   }
 
-  setShow(index:boolean){
-     this.is_show=index;
+  setShow(index: boolean) {
+    this.is_show = index;
   }
+
+  //get all Jobs by searching 
+
+  getAllJobs() {
+    this.http.getJobs().subscribe(data => {
+       this.allJobs=data;
+       this.sliceJobsForView=this.allJobs.slice(0, 18);
+       this.sliceJobsForBrowse=this.allJobs.slice(0,12);
+       this.allCounts=2134;      
+    });
+  }
+
+
 }

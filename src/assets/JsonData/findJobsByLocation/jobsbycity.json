@@ -1,0 +1,123 @@
+[
+   
+    {
+        "country_name": "Oman",
+        "flag": "/assets/images/flag/oman.png",
+        "total_count": 139,
+        "cities": [
+            {
+                "name": "Muscat",
+                "count": 77
+            },
+            {
+                "name": "Salalah",
+                "count": 2
+            },
+            {
+                "name": "Sahar",
+                "count": 3
+            },
+            {
+                "name": "Sur",
+                "count": 1
+            }
+        ]
+    },
+       
+    {
+        "country_name": "Oman",
+        "flag": "/assets/images/flag/oman.png",
+        "total_count": 139,
+        "cities": [
+            {
+                "name": "Muscat",
+                "count": 77
+            },
+            {
+                "name": "Salalah",
+                "count": 2
+            },
+            {
+                "name": "Sahar",
+                "count": 3
+            },
+            {
+                "name": "Sur",
+                "count": 1
+            }
+        ]
+    },
+       
+    {
+        "country_name": "Oman",
+        "flag": "/assets/images/flag/oman.png",
+        "total_count": 139,
+        "cities": [
+            {
+                "name": "Muscat",
+                "count": 77
+            },
+            {
+                "name": "Salalah",
+                "count": 2
+            },
+            {
+                "name": "Sahar",
+                "count": 3
+            },
+            {
+                "name": "Sur",
+                "count": 1
+            }
+        ]
+    },
+       
+    {
+        "country_name": "Oman",
+        "flag": "/assets/images/flag/oman.png",
+        "total_count": 139,
+        "cities": [
+            {
+                "name": "Muscat",
+                "count": 77
+            },
+            {
+                "name": "Salalah",
+                "count": 2
+            },
+            {
+                "name": "Sahar",
+                "count": 3
+            },
+            {
+                "name": "Sur",
+                "count": 1
+            }
+        ]
+    },
+       
+    {
+        "country_name": "Oman",
+        "flag": "/assets/images/flag/oman.png",
+        "total_count": 139,
+        "cities": [
+            {
+                "name": "Muscat",
+                "count": 77
+            },
+            {
+                "name": "Salalah",
+                "count": 2
+            },
+            {
+                "name": "Sahar",
+                "count": 3
+            },
+            {
+                "name": "Sur",
+                "count": 1
+            }
+        ]
+    }
+    
+]
