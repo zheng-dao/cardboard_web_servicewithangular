@@ -1,0 +1,6 @@
+{
+    "apps":[{
+            "name":"NYSM JobSeeker",
+            "script":"ng serve --disable-host-check"
+    }]
+}
