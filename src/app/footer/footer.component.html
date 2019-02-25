@@ -20,12 +20,10 @@
           </div>
         </li>
         <li>
-          <div class="country-selectbox-wrapper">
-              <!-- <ejs-multiselect id='multiselect-checkbox' #checkbox [dataSource]='countries' [placeholder]='checkWaterMark' [fields]='checkFields'
-              [mode]='mode' [popupHeight]='popHeight' [showDropDownIcon]='true' showSelectAll='true' [filterBarPlaceholder]='filterPlaceholder'>
-              </ejs-multiselect> -->
-              <app-country-select [is_flag_show]="false"></app-country-select>
-          </div> 
+          <div class="country-selectbox-wrapper"> 
+              <app-custom-select class="location-select" [placeholder]="'select location'" [datas]="country_list"
+              [icon_index]="0"></app-custom-select>
+            </div> 
         </li>
       </ul>
        
@@ -33,7 +31,7 @@
   </div>
   <div class="content_2">
     <div class="content_2_1">
-         <div class="title_in_footer"> {{'footer.title1'|translate}}</div>
+         <div class="title_in_footer"> {{'fo_title_find_jobs'|translate|uppercase}}</div>
           <div class="row">
             <div class="col-sm-12 col-md-4 col-lg-2 country" *ngFor="let country of countries"  >
               <img [src]="country.url"><a href="#">Jobs in {{country.name}}</a>
@@ -45,37 +43,37 @@
         <div class="row">
             <div class="col-sm-12 col-md-8 " > 
               <div class="content_2_2_1">
-                  <div class="title_in_footer">{{'footer.title2'|translate}}</div> 
+                  <div class="title_in_footer">{{'fo_title_about_nysm'|translate|uppercase}}</div> 
                   <div  class="description_nysm"> 
-                    {{'footer.sub_title2'|translate}}
+                    {{'fo_subject_nysm_is_the'|translate}}
                   </div>       
               </div>      
               <div class="content_2_2_2">
-                  <div class="title_in_footer">{{'footer.title3'|translate}}</div> 
+                  <div class="title_in_footer">{{'fo_title_follow_nysm'|translate|uppercase}}</div> 
                    <ul>
-                     <li><a href="#"><img src="../../assets/images/social_icon/Facebook.png"></a></li>
-                     <li><a href="#"><img src="../../assets/images/social_icon/Twitter.png"></a></li>
-                     <li><a href="#"><img src="../../assets/images/social_icon/youtube.png"></a></li>
-                     <li><a href="#"><img src="../../assets/images/social_icon/Google_Plus.png"></a></li>
-                     <li><a href="#"><img src="../../assets/images/social_icon/Instagram.png"></a></li>
+                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                     <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                     <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                    </ul> 
               </div> 
             </div>
             <div class="col-sm-12  col-md-2"></div>
             <div class="col-sm-12 col-md-2 " > 
               <div class="content_2_2_3"> 
-                  <div class="title_in_footer">{{'footer.title4'|translate}}</div> 
+                  <div class="title_in_footer">{{'fo_title_nysm'|translate|uppercase}}</div> 
                   <ul>
-                    <li><a href="#">{{'footer.sub_menu4.menu1'|translate}}</a></li>
-                    <li><a href="#">{{'footer.sub_menu4.menu2'|translate}}</a></li>
-                    <li><a href="#">{{'footer.sub_menu4.menu3'|translate}}</a></li>                 
+                    <li><a href="#">{{'fo_menu_about_us'|translate}}</a></li>
+                    <li><a href="#">{{'fo_menu_contact_us'|translate}}</a></li>
+                    <li><a href="#">{{'fo_menu_career'|translate}}</a></li>                 
                   </ul> 
               </div>
               <div class="content_2_2_4"> 
                   <div class="title_in_footer">LANGUAGE</div> 
                   <ul>
-                    <li>{{'footer.sub_menu5.english'|translate}}</li>
-                    <li>{{'footer.sub_menu5.arabic'|translate}}</li>                        
+                    <li>{{'fo_menu_english'|translate}}</li>
+                    <li>{{'fo_menu_arabic'|translate}}</li>                        
                   </ul> 
               </div>
                
@@ -88,20 +86,20 @@
     </div>
     <div class="content_2_3">
         <ul>
-            <li><a href="#" class="font_link">{{'footer.sub_menu6.menu1'|translate}}</a></li>
-            <li><a href="#" class="font_link">{{'footer.sub_menu6.menu2'|translate}}</a></li>
-            <li><a href="#" class="font_link">{{'footer.sub_menu6.menu3'|translate}}</a></li>
-            <li><a href="#" class="font_link">{{'footer.sub_menu6.menu4'|translate}}</a></li>
-            <li><a href="#" class="font_link">{{'footer.sub_menu6.menu5'|translate}}</a></li>
-            <li><a href="#" class="font_link">{{'footer.sub_menu6.menu6'|translate}}</a></li>
-            <li><a href="#" class="font_link">{{'footer.sub_menu6.menu7'|translate}}</a></li>
-            <li><a href="#" class="font_link">{{'footer.sub_menu6.menu8'|translate}}</a></li>
+            <li><a href="#" class="font_link">{{'fo_menu_terms_of_use'|translate}}</a></li>
+            <li><a href="#" class="font_link">{{'fo_menu_report_a_bug'|translate}}</a></li>
+            <li><a href="#" class="font_link">{{'fo_menu_abuse'|translate}}</a></li>
+            <li><a href="#" class="font_link">{{'fo_menu_add_job'|translate}}</a></li>
+            <li><a href="#" class="font_link">{{'fo_menu_search_box_to'|translate}}</a></li>
+            <li><a href="#" class="font_link">{{'fo_menu_security'|translate}}</a></li>
+            <li><a href="#" class="font_link">{{'fo_menu_privacy'|translate}}</a></li>
+            <li><a href="#" class="font_link">{{'fo_menu_commitment'|translate}}</a></li>
          </ul> 
 
-         <div class="reserved_text">{{'footer.reserve'|translate}}</div>
+         <div class="reserved_text">{{'fo_script_reverse'|translate}}</div>
     </div>
   </div>
-  <app-dropdownlist></app-dropdownlist>
+  <!-- <app-dropdownlist></app-dropdownlist> -->
 </div>
 
 

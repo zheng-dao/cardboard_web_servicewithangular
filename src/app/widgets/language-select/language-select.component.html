@@ -1,28 +1,28 @@
 <div class="language-select-widget">
     <div class="title">
       <img class="ico-title" src="../../../assets/images/icon/ico_4.png">
-      <span class="text-title">{{'searchresult_page.language'|translate}}</span>
+      <span class="text-title">{{'widget_language'|translate}}</span>
       <span class="btn-title" (click)="toggleShow()" #showControl>-</span>    
     </div>
     <div class="select-wrapper" [style.display]="is_show_wrapper?'block':'none'">
       <div class="language-item">
         <div class="icon-container" [ngClass]="{'language-selected':language_select==1}" (click)="self_select(1)">
-         {{'searchresult_page.all'|translate}}
+         {{'widget_all'|translate}}
         </div>       
       </div>
       <div class="language-item">
         <div class="icon-container" [ngClass]="{'language-selected':language_select==2}"   (click)="self_select(2)">
-            {{'searchresult_page.en'|translate}}
+            {{'widget_en'|translate}}
         </div>       
       </div>
       <div class="language-item">
         <div class="icon-container" [ngClass]="{'language-selected':language_select==3}"  (click)="self_select(3)">
-            {{'searchresult_page.ar'|translate}}
+            {{'widget_ar'|translate}}
         </div>        
       </div>
       <div class="language-item">
           <div class="icon-container" [ngClass]="{'language-selected':language_select==4}"  (click)="self_select(4)">
-              {{'searchresult_page.fr'|translate}}
+              {{'widget_fr'|translate}}
           </div>        
         </div>
     </div>

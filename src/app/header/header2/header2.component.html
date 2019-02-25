@@ -7,38 +7,37 @@
                         <a class="nav-item nav-link  logo" href="#" style="margin-right: 15px;">
                             <img src="../../../assets/images/logo.png" />
                         </a>
-                        <a class="nav-item nav-link font_menu general" href="#">{{'header.menu_item_list.dashboard'|translate}}</a>
+                        <a class="nav-item nav-link font_menu general" href="#">{{'he_menu_dashboard'|translate}}</a>
                         <div class="font_menu">
-                            <div class=" dropdown" (mouseover)="showSubMenu()" (mouseleave)="hideSubMenu($event)"
+                            <div class=" dropdown" (click)="toggleSubMenu()"
                                 [style.background-color]="bgColor">
-                                {{'header.menu_item_list.find_jobs'|translate}}
+                                {{'he_menu_find_jobs'|translate}}
                             </div>
 
                             <div class="sub-menu-container">
-                                <ul class="sub-menu" id="sub_menu" [style.display]="is_sub_menu_show?'table':'none'"
-                                    (mouseover)="showSubMenu" (mouseleave)="hideSubMenu($event)">
-                                    <li><a>{{'header.sub_menu.advancedsearch'|translate}}</a></li>
-                                    <li><a  routerLink="/jobsbyrole">{{'header.sub_menu.jobsbyrole'|translate}}</a></li>
-                                    <li><a routerLink="/findJobsBySector">{{'header.sub_menu.jobsbysector'|translate}}</a></li>
-                                    <li><a routerLink="/findJobsByLocation">{{'header.sub_menu.jobsbylocation'|translate}}</a></li>
-                                    <li><a >{{'header.sub_menu.jobsbycompanies'|translate}}</a></li>
+                                <ul class="sub-menu" id="sub_menu" [style.display]="is_sub_menu_show?'table':'none'">
+                                    <li><a routerLink="/advancedJobSearch" (click)="hideSubMenu()">{{'he_menu_advanced_search'|translate}}</a></li>
+                                    <li><a  routerLink="/jobsbyrole" (click)="hideSubMenu()">{{'he_menu_jobs_by_role'|translate}}</a></li>
+                                    <li><a routerLink="/findJobsBySector" (click)="hideSubMenu()">{{'he_menu_jobs_by_sector'|translate}}</a></li>
+                                    <li><a routerLink="/findJobsByLocation" (click)="hideSubMenu()">{{'he_menu_jobs_by_location'|translate}}</a></li>
+                                    <li><a routerLink="/findJobsByCompany" (click)="hideSubMenu()">{{'he_menu_jobs_by_companies'|translate}}</a></li>
                                 </ul>
                             </div>
 
                         </div>
-                        <a class="nav-item nav-link font_menu general" href="#">{{'header.menu_item_list.myapplications'|translate}}</a>
-                        <a class="nav-item nav-link font_menu general" href="#">{{'header.menu_item_list.myvcv'|translate}}</a>
+                        <a class="nav-item nav-link font_menu general" href="#">{{'he_menu_my_application'|translate}}</a>
+                        <a class="nav-item nav-link font_menu general" href="#">{{'he_menu_my_vcv'|translate}}</a>
                     </div>
                 </div>
             </nav>
         </div>
         <div class="col-md-12 col-lg-4  search-container menu_2">
             <div class="search-wrapper">
-                <input class="job_search_input" type="text" placeholder="{{'input.placeholder1'|translate}}">
+                <input class="job_search_input" type="text" placeholder="{{'in_job_title_skills_etc'|translate}}">
                 <div class="country-selectbox-wrapper">
                     <app-country-select [is_flag_show]="false"></app-country-select>
                 </div>
-                <button>{{'button.findjobs'|translate}}</button>
+                <button>{{'btn_find_jobs'|translate}}</button>
             </div>
 
         </div>
@@ -47,7 +46,7 @@
                 <li style="margin-top: 12px;" class="menu-item">
                     <a href="#" class="video_create">
                         <mat-icon>video_call</mat-icon>
-                        <span>{{'button.createyourvcv'|translate}}</span>
+                        <span>{{'btn_create_your_vcv'|translate}}</span>
                     </a>
                 </li>
                 <li class="menu-item">
@@ -81,7 +80,7 @@
                                 </li>
                             </ul>
                             <div class="see-all-section" (click)="seeAllMessages()">
-                                  {{'button.seeall'|translate}}
+                                  {{'btn_see_all'|translate}}
                             </div>
                         </div>
 
@@ -115,7 +114,7 @@
                                 </li>
                             </ul>
                             <div class="see-all-section" (click)="seeAllNotification()">
-                                  {{'button.seeall'|translate}}
+                                  {{'btn_see_all'|translate}}
                             </div>
                         </div>
 

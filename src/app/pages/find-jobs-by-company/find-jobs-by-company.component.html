@@ -1,0 +1,26 @@
+<div class="find-jobs-by-company">
+  <div class="content-1">
+    <div class="title">Companies Hiring in U.A.E</div>
+    <div class="select-wrapper row">
+      <div class="col-sm-12 col-md-6">
+        <app-custom-select class="country-select" [placeholder]="'select Country'" [datas]="country_list" [icon_index]="1"></app-custom-select>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <app-custom-select class="industry-select" [placeholder]="'select Industry'" [datas]="industry_list"
+          [icon_index]="2"></app-custom-select>
+      </div>
+    </div>
+  </div>
+  <div class="content-2">
+    <div class="company-container">
+      <div class="job-item-container" *ngFor="let job of sliceJobsByCompanies">
+        <div class="job-item">
+          <div class="com-mark"><img [src]="job.com_mark"></div>
+          <div class="com-name">{{job.com_name}}</div>
+          <div class="count"><span>{{job.count}} {{'page_fjbr_script_jobs'|translate}}</span></div>
+        </div>
+      </div>
+      <div class="btn-wrapper"><button class="large_rounded_btn" (click)="setAllJobsByCompanies()">{{'btn_view_them_all'|translate}}</button></div>
+    </div>
+  </div>
+</div>

@@ -11,12 +11,13 @@ export class CountrySelectComponent implements OnInit {
 
    countries:CountryModel[]=[];
    url="assets/JsonData/country.json";
+
     // output data 
-   selected_country_flag:string="#";
+   selected_country_flag:string="";
    selected_country_name:string="";
+
    //control 
-   @Input() is_flag_show:boolean;
-    
+    @Input() is_flag_show:boolean;    
     is_country_list_show:boolean;
     is_mat_icon_less_show:boolean=false;
 
@@ -31,22 +32,23 @@ export class CountrySelectComponent implements OnInit {
 
       if(this.countries.length>0){
         this.selected_country_flag=this.countries[0].flag;
-        this.selected_country_name=this.countries[1].name;
+        this.selected_country_name=this.countries[0].name;
       }
 
       this.is_country_list_show=false;
     });
   }
+
   setCountry(index:number){
   
-    for(var i=0;i<this.checkboxRef['_results'].length;i++){
-      var itemRef= this.checkboxRef['_results'][i];
-      if(i===index)
-        itemRef.nativeElement.checked=true;
-      else
-         itemRef.nativeElement.checked=false;
-    }
-
+    // for(var i=0;i<this.checkboxRef['_results'].length;i++){
+    //   var itemRef= this.checkboxRef['_results'][i];
+    //   if(i===index)
+    //     itemRef.nativeElement.checked=true;
+    //   else
+    //      itemRef.nativeElement.checked=false;
+    // }
+    this.selected_index=index;
     this.selected_country_flag=this.countries[index].flag;
     this.selected_country_name=this.countries[index].name;
   }
@@ -55,6 +57,8 @@ export class CountrySelectComponent implements OnInit {
     this.is_country_list_show=!this.is_country_list_show;
     this.is_mat_icon_less_show=!this.is_mat_icon_less_show;
   }
-
+  
+  //
+  selected_index:number=0;
 
 }

@@ -53,7 +53,9 @@ import {EmailconfirmComponent} from './pages/emailconfirm/emailconfirm.component
 import { FindJobsBySectorComponent } from './pages/find-jobs-by-sector/find-jobs-by-sector.component';
 import { CustomSelectComponent } from './widgets/custom-select/custom-select.component';
 import { FindJobsByLocationComponent } from './pages/find-jobs-by-location/find-jobs-by-location.component';
-
+import { FindJobsByCompanyComponent } from './pages/find-jobs-by-company/find-jobs-by-company.component';
+import { AdvancedJobSearchComponent } from './pages/advanced-job-search/advanced-job-search.component';
+import { CheckboxGroupComponent } from './widgets/checkbox-group/checkbox-group.component';
 
 
 
@@ -92,7 +94,11 @@ import { FindJobsByLocationComponent } from './pages/find-jobs-by-location/find-
     EmailconfirmComponent,
     FindJobsBySectorComponent,
     CustomSelectComponent,
-    FindJobsByLocationComponent
+    FindJobsByLocationComponent,
+    FindJobsByCompanyComponent,
+    AdvancedJobSearchComponent,
+    CheckboxGroupComponent 
+ 
   ],
   imports: [
     FormsModule,

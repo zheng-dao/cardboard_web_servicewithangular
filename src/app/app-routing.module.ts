@@ -9,6 +9,9 @@ import { SearchresultComponent } from './pages/searchresult/searchresult.compone
 import { EmailconfirmComponent } from './pages/emailconfirm/emailconfirm.component';
 import { FindJobsBySectorComponent } from './pages/find-jobs-by-sector/find-jobs-by-sector.component';
 import { FindJobsByLocationComponent } from './pages/find-jobs-by-location/find-jobs-by-location.component';
+import { FindJobsByCompanyComponent } from './pages/find-jobs-by-company/find-jobs-by-company.component';
+import { AdvancedJobSearchComponent } from './pages/advanced-job-search/advanced-job-search.component';
+
 const routes: Routes = [
   { path: '', component: PortalComponent },
   { path: 'signup', component: SignupComponent },
@@ -18,7 +21,9 @@ const routes: Routes = [
   { path: 'searchresult', component: SearchresultComponent },
   { path: 'emailconfirm', component: EmailconfirmComponent },
   { path: 'findJobsBySector', component: FindJobsBySectorComponent },
-  { path: 'findJobsByLocation', component: FindJobsByLocationComponent}
+  { path: 'findJobsByLocation', component: FindJobsByLocationComponent},
+  { path: 'findJobsByCompany', component : FindJobsByCompanyComponent},
+  { path: 'advancedJobSearch', component : AdvancedJobSearchComponent}
 ];
 
 @NgModule({

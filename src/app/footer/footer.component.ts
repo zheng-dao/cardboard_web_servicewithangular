@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import {MultiSelectComponent} from '@syncfusion/ej2-angular-dropdowns'
-import { inputs } from '@syncfusion/ej2-angular-dropdowns/src/drop-down-list/dropdownlist.component';
+
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -11,7 +11,11 @@ export class FooterComponent implements OnInit {
   @Input() footerShow:boolean;
   // is_show_flag_in_selectbox:boolean=false;
   countries: any[];
+  country_list:string[];
+
   constructor() { }
+
+
   @ViewChild('checkbox')
   public mulObj: MultiSelectComponent;
 
@@ -46,6 +50,8 @@ export class FooterComponent implements OnInit {
       {url:"../assets/images/flag/ksa.png", name:"KSA",code:"q"},
       {url:"../assets/images/flag/kuweit.png", name:"Kuweit",code:"r"}
     ];
+
+    this.country_list=["Algeria", "Iran","India","Jordan","Iraq","Kuweit"];
 
     this.mode = 'CheckBox';
     this.filterPlaceholder = 'Search countries';

@@ -1,0 +1,11 @@
+<div class="checkbox-group">
+  <ul>
+    <li *ngFor="let label of labels; index as i;">
+      <input #input
+       class="styled-checkbox" [id]="id+i" 
+       type="checkbox" value=""  
+      (click)="onClick(label, $event.target.value, i)">
+      <label [for]="id+i">{{label|translate}}</label>
+    </li>   
+  </ul>
+</div>

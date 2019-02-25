@@ -31,7 +31,28 @@
                     width:320px;
                     background-color: #306cff;
                     border-radius: 25px;
-                    box-shadow: 0 0 20px rgb(39, 37, 37);
+                    // box-shadow: 0 0 20px rgb(39, 37, 37);
+                    .location-select{
+                        width:100%;
+                        .cu-select-wrapper{
+                            box-shadow: 0 1px 10px #29458b;
+                            background-color: #306cff;
+                            select:required:invalid {
+                                opacity: 0.5;
+                            }
+                            .selectbox{
+                                color:white;
+
+                            }
+                            .mark-icon{
+                                color:white;
+                            }
+                            .direction-icon{
+                                color:white;
+                                background-color:#306cff; 
+                            }
+                        }
+                    }
                 }
             }
 
@@ -87,6 +108,9 @@
                          margin-right: 10px;
                          a{
                              cursor: pointer;
+                             i{
+                                 color:#A1B3DF;
+                             }
                          }
                     }
                 }

@@ -1,276 +1,277 @@
-<div class="portal"> 
-   <div class="portal_content_1 row"> 
-    
-    <div class="des_content_1 col-sm-12 col-md-4" >
-        <div  class="des_content_1_1" >
-            {{"portal.slider.title"|translate}}
-        </div>
-        <div class="des_content_1_2" >
-            {{"portal.slider.sub_title"|translate}}  
-        </div>
-        <div class="des_content_1_3">
-            <button class="large_rounded_btn" routerLink="/vcvtutorial">
-                <img src="../../../assets/images/icon/play4.png">
-                 {{'button.play_video'|translate}}
-            </button>
-        </div>
-    </div>
-         
-   
-    <ul [style.margin-top]="setMargintop()">
-        <li *ngFor="let image of images ; index as i" class="slide" >
-            <img  [src]="image.url" >
-        </li>
-    </ul>
-    
-    <!-- <mat-radio-group class="slider-radio-group" [(ngModel)]="currentIndex" >
-            <mat-radio-button class="slider-radio-button" *ngFor="let index of indexes" [value]="index">             
-            </mat-radio-button>
-    </mat-radio-group> -->
-     <div class="slider-radio-group"  >
-            <input class="slider-radio-button" *ngFor="let index of indexes" (click)="setCurrentIndex(index)" type="radio" name="slider"[checked]="index===0">
-     </div>
-    
-  </div>
+<div class="portal">
+    <div class="portal_content_1 row">
 
-  <div class="portal_content_2">
-    <div class="portal_content_2_1">
-        <div class="portal_content_2_1_1">{{"portal.content2.title"|translate}}</div>
-        <div class="portal_content_2_1_2">{{"portal.content2.sub_title"|translate}}</div>
-    </div>
-    <div class="portal_content_2_2">
-      <div class="row">
-        <div class="col-md-5">
-           <div class="portal_content_2_2_ui">
-               <img src="../../../assets/images/portal_images/portal_content_2_2_ux_back.png"/>
-               <div class="tran_back"></div>
-               <div class="title">UI/UX</div>
-               <button class="apply_btn">{{'button.apply'|translate}}</button>
-           </div>
-           <div class="portal_content_2_2_teaching">
-              <img src="../../../assets/images/portal_images/portal_content_2_2_teaching_back.png"/>
-              <div class="tran_back"></div>
-              <div class="title">TEACHING</div>
-              <button class="apply_btn">{{'button.apply'|translate}}</button>
-           </div>
+        <div class="des_content_1 col-sm-12 col-md-4">
+            <div class="des_content_1_1">
+                {{"page_portal_title1"|translate}}
+            </div>
+            <div class="des_content_1_2">
+                {{"page_portal_subject1"|translate}}
+            </div>
+            <div class="des_content_1_3">
+                <button class="large_rounded_btn" routerLink="/vcvtutorial">
+                    <img src="../../../assets/images/icon/play4.png">
+                    {{'btn_play_video'|translate}}
+                </button>
+            </div>
         </div>
-        <div class="col-md-7" style="padding:0 0px;">           
-                <div class="portal_content_2_2_medical">
-                    <img src="../../../assets/images/portal_images/portal_content_2_2_medical_back.png"/>                    
-                    <div class="title">MEDICAL</div>
-                    <button class="apply_btn">{{'button.apply'|translate}}</button>
-                 </div>
-                 <div class="portal_content_2_2_gardening">
-                    <img src="../../../assets/images/portal_images/portal_content_2_2_gardening_back.png"/>                  
-                    <div class="title">GARDENING</div>
-                    <button class="apply_btn">{{'button.apply'|translate}}</button>
-                 </div>
-          
-                <div class="portal_content_2_2_coca">
-                    <img src="../../../assets/images/portal_images/portal_content_2_2_coca_back.png"/>                    
-                    <button class="apply_btn">{{'button.apply'|translate}}</button>
-                 </div>
-           
+
+
+        <div class="slider-wrapper">
+            <div *ngFor="let image of slider_Images ; index as i;" class="slider" [style.opacity]="i==currentIndex? '1.0':'0'">
+                <img [src]="image.url">
+            </div>
         </div>
-      </div>
+
+        <div class="slider-radio-group">
+            <mat-icon class="slider-radio-button" *ngFor="let index of slider_Indexes" (click)="setCurrentIndex(index)"
+                [style.color]="index==currentIndex? '#026585':'#15ABDD'">lens</mat-icon>
+        </div>
+
     </div>
-  </div>
-  <div class="portal_content_3">
-      <div class="portal_content_3_1">          
-              <div class="portal_content_3_1_1 ">{{"portal.content3.title"|translate}}</div>
-              <div class="portal_content_3_1_2 ">{{"portal.content3.sub_title"|translate}}</div>          
-      </div>
-      <div class="portal_content_3_2">
-           <div class="portal_content_3_2_1">
+
+    <div class="portal_content_2">
+        <div class="portal_content_2_1">
+            <div class="portal_content_2_1_1">{{"page_portal_title2"|translate}}</div>
+            <div class="portal_content_2_1_2">{{"page_portal_subject2"|translate}}</div>
+        </div>
+        <div class="portal_content_2_2">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="portal_content_2_2_ui">
+                        <img src="../../../assets/images/portal_images/portal_content_2_2_ux_back.png" />
+                        <div class="tran_back"></div>
+                        <div class="title">UI/UX</div>
+                        <button class="apply_btn">{{'btn_apply'|translate}}</button>
+                    </div>
+                    <div class="portal_content_2_2_teaching">
+                        <img src="../../../assets/images/portal_images/portal_content_2_2_teaching_back.png" />
+                        <div class="tran_back"></div>
+                        <div class="title">TEACHING</div>
+                        <button class="apply_btn">{{'btn_apply'|translate}}</button>
+                    </div>
+                </div>
+                <div class="col-md-7" style="padding:0 0px;">
+                    <div class="portal_content_2_2_medical">
+                        <img src="../../../assets/images/portal_images/portal_content_2_2_medical_back.png" />
+                        <div class="title">MEDICAL</div>
+                        <button class="apply_btn">{{'btn_apply'|translate}}</button>
+                    </div>
+                    <div class="portal_content_2_2_gardening">
+                        <img src="../../../assets/images/portal_images/portal_content_2_2_gardening_back.png" />
+                        <div class="title">GARDENING</div>
+                        <button class="apply_btn">{{'btn_apply'|translate}}</button>
+                    </div>
+
+                    <div class="portal_content_2_2_coca">
+                        <img src="../../../assets/images/portal_images/portal_content_2_2_coca_back.png" />
+                        <button class="apply_btn">{{'btn_apply'|translate}}</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portal_content_3">
+        <div class="portal_content_3_1">
+            <div class="portal_content_3_1_1 ">{{"page_portal_title3"|translate}}</div>
+            <div class="portal_content_3_1_2 ">{{"page_portal_subject3"|translate}}</div>
+        </div>
+        <div class="portal_content_3_2">
+            <div class="portal_content_3_2_1">
                 <ul>
-                    <li><img src="../../../assets/images/icon/Arrow_Left.png" (click)="setCurrentMember(0)"  [style.opacity]="(members.length-currentSelectedIndex)===1? '0.3':'1.0'"></li>
-                    <li><img src="../../../assets/images/icon/Arrow_Right.png"  (click)="setCurrentMember(1)" [style.opacity]="currentSelectedIndex===0? '0.3':'1.0'"></li>
+                    <li><img src="../../../assets/images/icon/Arrow_Left.png" (click)="setCurrentMember(0)"
+                            [style.opacity]="(members.length-currentSelectedIndex)===1? '0.3':'1.0'"></li>
+                    <li><img src="../../../assets/images/icon/Arrow_Right.png" (click)="setCurrentMember(1)"
+                            [style.opacity]="currentSelectedIndex===0? '0.3':'1.0'"></li>
                 </ul>
-           </div>
-           <div class="portal_content_3_2_2">
+            </div>
+            <div class="portal_content_3_2_2">
                 <ul [style.margin-left]="currentMarginLeft+'px'">
-                    <li *ngFor="let member of members;  index as i" [class]="setselected(i)"  >
+                    <li *ngFor="let member of members;  index as i" [class]="setselected(i)">
                         <img [src]="member.url">
                         <div class="description">
                             <div class="row">
-                               <div class="col-sm-4"><img src="../../../assets/images/icon/play.png"></div>
-                               <div class="col-sm-8">
+                                <div class="col-sm-4"><img src="../../../assets/images/icon/play.png"></div>
+                                <div class="col-sm-8">
                                     <div class="content">
-                                            <p class="name">{{member.name}}</p>
-                                            <p class="career">{{member.career}}</p>
-                                            <p class="check">check out {{member.name}}'s VCV</p>
+                                        <p class="name">{{member.name}}</p>
+                                        <p class="career">{{member.career}}</p>
+                                        <p class="check">check out {{member.name}}'s VCV</p>
                                     </div>
-                               </div>
+                                </div>
                             </div>
                         </div>
                     </li>
                 </ul>
-           </div>             
-           <div class="portal_content_3_2_3">
-              <div class="scroll-bar"  [style.margin-left]= "getScrollBarMarginLeft()"></div>
-           </div>
-        </div>     
-  </div>
-  <div class="portal_content_4 " >
-      <div class="portal_content_4_1 " >  
-            <div class="portal_content_4_1_1 " >
-                {{"portal.content4.title"|translate}}
             </div>
-            <div class="portal_content_4_1_2 " > 
-                {{"portal.content4.sub_title"|translate}}
+            <div class="portal_content_3_2_3">
+                <div class="scroll-bar" [style.margin-left]="getScrollBarMarginLeft()"></div>
             </div>
-      </div>
-      <div class="portal_content_4_2" >
-         <input class="job_search_input" type="text" placeholder="{{'input.placeholder1'|translate}}">
-          <div class="country-selectbox-wrapper">
-            <app-country-select [is_flag_show]="true" ></app-country-select>
-          </div>
-         <button>{{'button.findjobs'|translate}}</button>
-      </div>
-      <div class="portal_content_4_3">
-          <button class="large_rounded_btn">
-               <mat-icon>video_call</mat-icon>
-              <span>{{'button.createyourvcv'|translate}}</span>
-          </button>
-      </div>
-      <div class="portal_content_4_4"><a href="#">{{'portal.content4.employer'|translate}}</a></div>
-  </div>
+        </div>
+    </div>
+    <div class="portal_content_4 ">
+        <div class="portal_content_4_1 ">
+            <div class="portal_content_4_1_1 ">
+                {{"page_portal_title4"|translate}}
+            </div>
+            <div class="portal_content_4_1_2 ">
+                {{"page_portal_subject4"|translate}}
+            </div>
+        </div>
+        <div class="portal_content_4_2">
+            <input class="job_search_input" type="text" placeholder="{{'in_job_title_skills_etc'|translate}}">
+            <div class="country-selectbox-wrapper">
+                <app-country-select [is_flag_show]="true"></app-country-select>
+            </div>
+            <button>{{'btn_find_jobs'|translate}}</button>
+        </div>
+        <div class="portal_content_4_3">
+            <button class="large_rounded_btn">
+                <mat-icon>video_call</mat-icon>
+                <span>{{'btn_create_your_vcv'|translate}}</span>
+            </button>
+        </div>
+        <div class="portal_content_4_4"><a href="#">{{'page_portal_script_employer'|translate}}</a></div>
+    </div>
 
-  <div class="portal_content_5">
-      <div class="portal_content_5_1">
-                <div class="portal_content_5_1_1 " >
-                    {{"portal.content5.title"|translate}}
-                </div>
-                <div class="portal_content_5_1_2 " > 
-                    {{"portal.content5.sub_title"|translate}}
-                </div>
-      </div>
-      <div class="portal_content_5_2 row">
-          <div class="col-md-6">
-            <div  class="content_5_2_1">
-                <div style="text-align: center; margin-bottom: 77px"><img src="../../../assets/images/portal_images/content_5_2_1.png"></div>
-                <div class="title">
-                    {{"portal.content5.title1"|translate}}
-                </div>
-                <div class="sub_title">
-                    {{"portal.content5.sub_title1"|translate}}
-                </div>
-                <div style="text-align: center;">
-                        <button class="large_rounded_btn" routerLink="/jobsbyrole">{{'button.discover'|translate}}</button>
+    <div class="portal_content_5">
+        <div class="portal_content_5_1">
+            <div class="portal_content_5_1_1 ">
+                {{"page_portal_title5"|translate}}
+            </div>
+            <div class="portal_content_5_1_2 ">
+                {{"page_portal_subject5"|translate}}
+            </div>
+        </div>
+        <div class="portal_content_5_2 row">
+            <div class="col-md-6">
+                <div class="content_5_2_1">
+                    <div style="text-align: center; margin-bottom: 77px"><img src="../../../assets/images/portal_images/content_5_2_1.png"></div>
+                    <div class="title">
+                        {{"page_portal_title_looking_for_job"|translate}}
+                    </div>
+                    <div class="sub_title">
+                        {{"page_portal_subject_looking_for_job"|translate}}
+                    </div>
+                    <div style="text-align: center;">
+                        <button class="large_rounded_btn" routerLink="/jobsbyrole">{{'btn_discover'|translate}}</button>
+                    </div>
                 </div>
             </div>
-          </div>
-          <div class="col-md-6">
+            <div class="col-md-6">
                 <div class="content_5_2_2">
-                        <div style="text-align: center; margin-bottom: 77px"><img src="../../../assets/images/portal_images/content_5_2_2.png"></div>
-                        <div class="title">
-                            {{"portal.content5.title2"|translate}}
-                        </div>
-                        <div class="sub_title">
-                            {{"portal.content5.sub_title2"|translate}}            
-                        </div>
-                        <div style="text-align: center;">
-                                <button class="large_rounded_btn">{{'button.discover'|translate}}</button>
-                        </div>                        
-                </div>
-          </div>
-      </div>
-  </div>
-  <div class="portal_content_6">
-      <div class="portal_content_6_1">
-        <div class="portal_content_6_1_1" >
-            {{"portal.content6.title"|translate}}
-        </div>
-        <div class="portal_content_6_1_2 " > 
-            {{"portal.content6.sub_title"|translate}}
-        </div>
-      </div>
-      <div class="portal_content_6_2">
-          <div class="row">
-              <div class="col-sm-4 col-md-2" *ngFor="let mark of marks" style=" text-align: center; margin-top: 40px; "><img [src]="mark.url"></div>
-          </div>         
-      </div>
-      <div class="portal_content_6_3">
-         <button class="large_rounded_btn">Is your company hiring? Join 40,000 employers on NYSM</button>
-       </div>  
-  </div>
-  <div class="portal_content_7">
-      <div class="portal_content_7_1">
-        <div class="portal_content_7_1_1 font_blue_headline" >
-            {{"portal.content7.title"|translate}}
-        </div>
-        <div class="portal_content_7_1_2 font_blue_paragraph" > 
-            {{"portal.content7.sub_title"|translate}}
-        </div>
-      </div>
-      <div class="portal_content_7_2">
-         <div class="row">
-             <div class="col-sm-6 col-md-3 country" *ngFor="let country of countries" >
-                  <div><img [src]="country.url"></div>
-                  <div class="country-name">{{country.name}}</div>
-                  <div class="country-jobs">{{country.jobs}} Jobs</div>
-             </div> 
-         </div>
-      </div>
-      <div class="portal_content_7_3">
-        <button class="large_rounded_btn">{{'button.view_more'|translate}}</button>
-      </div>  
-  </div>
-  <div class="portal_content_8">
-     <div class="row portal_content_8_body">
-         <div class="col-sm-12 col-md-5" style="text-align:center;">
-            <img src="../../../assets/images/portal_images/content_8_img.png">
-        </div>
-         <Form class="col-sm-12 col-md-7 portal_content_8_2">
-            <div class="portal_content_8_2_1 font_blue_headline" >
-                {{"portal.content8.title"|translate}}
-            </div>
-            <div class="portal_content_8_2_2 font_paragraph" > 
-                {{"portal.content8.sub_title"|translate}}
-            </div>
-            <div class="row portal_content_8_2_3">
-                <div class="col-sm-12 col-md-6">
-                    <Input type="text"  placeholder="{{'portal.content8.first_name'|translate}}">
-                </div>
-                <div class="col-sm-12 col-md-6">
-                    <Input type="text"  placeholder="{{'portal.content8.last_name'|translate}}">
+                    <div style="text-align: center; margin-bottom: 77px"><img src="../../../assets/images/portal_images/content_5_2_2.png"></div>
+                    <div class="title">
+                        {{"page_portal_title_looking_to_hire"|translate}}
+                    </div>
+                    <div class="sub_title">
+                        {{"page_portal_subject_looking_to_hire"|translate}}
+                    </div>
+                    <div style="text-align: center;">
+                        <button class="large_rounded_btn">{{'btn_discover'|translate}}</button>
+                    </div>
                 </div>
             </div>
-            <div class="portal_content_8_2_4">
-                <input  type="email" placeholder="{{'portal.content8.email'|translate}}">
+        </div>
+    </div>
+    <div class="portal_content_6">
+        <div class="portal_content_6_1">
+            <div class="portal_content_6_1_1">
+                {{"page_portal_title6"|translate}}
             </div>
-            <div class="portal_content_8_2_5">
-                <button >{{'button.sign_up'|translate}}</button>
+            <div class="portal_content_6_1_2 ">
+                {{"page_portal_subject6"|translate}}
             </div>
-            <div class="portal_content_8_2_6">_______ or ________</div>
-            <div class="portal_content_8_2_7">
-                <button class="large_rounded_btn" routerLink="/dashboard"><span >In </span> Continue with Linkedin</button>
+        </div>
+        <div class="portal_content_6_2">
+            <div class="row">
+                <div class="col-sm-4 col-md-2" *ngFor="let mark of marks" style=" text-align: center; margin-top: 40px; "><img
+                        [src]="mark.url"></div>
             </div>
-            <div class="portal_content_8_2_8">
-                <a href="#"> {{'portal.content8.employer'|translate}}</a>
+        </div>
+        <div class="portal_content_6_3">
+            <button class="large_rounded_btn">Is your company hiring? Join 40,000 employers on NYSM</button>
+        </div>
+    </div>
+    <div class="portal_content_7">
+        <div class="portal_content_7_1">
+            <div class="portal_content_7_1_1 font_blue_headline">
+                {{"page_portal_title7"|translate}}
             </div>
-        </Form>
-     </div>
-  </div>
-
-  <div class="portal_content_9">
-    <div class="portal_content_9_1">
-      <div class="portal_content_9_1_1 " >
-        {{'portal.content9.title'|translate}}
-      </div>
-      <div class="portal_content_9_1_2 " > 
-        {{'portal.content9.sub_title'|translate}}
-      </div>
+            <div class="portal_content_7_1_2 font_blue_paragraph">
+                {{"page_portal_subject7"|translate}}
+            </div>
+        </div>
+        <div class="portal_content_7_2">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 country" *ngFor="let country of countries">
+                    <div><img [src]="country.url"></div>
+                    <div class="country-name">{{country.name}}</div>
+                    <div class="country-jobs">{{country.jobs}} Jobs</div>
+                </div>
+            </div>
+        </div>
+        <div class="portal_content_7_3">
+            <button class="large_rounded_btn">{{'btn_view_more'|translate}}</button>
+        </div>
+    </div>
+    <div class="portal_content_8">
+        <div class="row portal_content_8_body">
+            <div class="col-sm-12 col-md-5" style="text-align:center;">
+                <img src="../../../assets/images/portal_images/content_8_img.png">
+            </div>
+            <Form class="col-sm-12 col-md-7 portal_content_8_2">
+                <div class="portal_content_8_2_1 font_blue_headline">
+                    {{"page_portal_title8"|translate}}
+                </div>
+                <div class="portal_content_8_2_2 font_paragraph">
+                    {{"page_portal_subject8"|translate}}
+                </div>
+                <div class="row portal_content_8_2_3">
+                    <div class="col-sm-12 col-md-6">
+                        <Input type="text" placeholder="{{'in_first_name'|translate}}">
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <Input type="text" placeholder="{{'in_last_name'|translate}}">
+                    </div>
+                </div>
+                <div class="portal_content_8_2_4">
+                    <input type="email" placeholder="{{'in_email'|translate}}">
+                </div>
+                <div class="portal_content_8_2_5">
+                    <button>{{'btn_sign_up'|translate}}</button>
+                </div>
+                <div class="portal_content_8_2_6">_______ or ________</div>
+                <div class="portal_content_8_2_7">
+                    <button class="large_rounded_btn" routerLink="/dashboard"><i class="fa fa-linkedin" style="margin-right:10px;"></i>Continue
+                        with Linkedin</button>
+                </div>
+                <div class="portal_content_8_2_8">
+                    <a href="#"> {{'page_portal_script_employer'|translate}}</a>
+                </div>
+            </Form>
+        </div>
     </div>
 
-    <div class="portal_content_9_2">
-          <button class="download_app_store_btn"></button>
-          <button class="download_google_store_btn"></button>
+    <div class="portal_content_9">
+        <div class="portal_content_9_1">
+            <div class="portal_content_9_1_1 ">
+                {{'page_portal_title9'|translate}}
+            </div>
+            <div class="portal_content_9_1_2 ">
+                {{'page_portal_subject9'|translate}}
+            </div>
+        </div>
+
+        <div class="portal_content_9_2">
+            <button class="download_app_store_btn"></button>
+            <button class="download_google_store_btn"></button>
+        </div>
+
+        <div class="portal_content_9_3">
+            <img src="../../../assets/images/portal_images/iphone.png">
+        </div>
+
     </div>
-    
-    <div class="portal_content_9_3">
-        <img src="../../../assets/images/portal_images/iphone.png">
-    </div>
-       
-  </div>
 </div>

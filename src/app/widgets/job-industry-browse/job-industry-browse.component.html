@@ -1,7 +1,7 @@
 <div class="job-industry-browse-widget">
   <div class="title">
     <img class="ico-title" src="../../../assets/images/icon/ico_1.png">
-    <span class="text-title">{{'searchresult_page.job_industry'|translate}}</span>
+    <span class="text-title">{{'widget_job_industry'|translate}}</span>
     <span class="btn-title" (click)="toggleShow()" #showControl>-</span>
   </div>
   <div class="content-wrapper" [style.display]="is_show_wrapper?'block':'none'">
@@ -13,7 +13,7 @@
       </ul>
       <div class="select-wrapper">
         <select (change)="onBrowseByJobIndustry($event.target.value)" required class="selectbox">
-          <option value="" disabled selected="selected">{{'input.more'|translate}}</option>
+          <option value="" disabled selected="selected">{{'in_more'|translate}}</option>
           <option *ngFor="let item of sliceJobIndustriesForSelectbox" [value]="item.industry" class="job-title-widget-option">
             <span class="name">{{item.industry}}</span>
             <span class="count">{{'('+item.count+')'}}</span>

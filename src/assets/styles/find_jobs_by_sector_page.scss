@@ -78,9 +78,17 @@
 
                 .item-title{
                     @include custom_font(#022672, 16px , 16px , 'galano_grotesque_alt_bold'); 
-                    height:32px;
-                    vertical-align: middle;
+                    height:32px;                   
                     margin-top:15px;
+                    position: relative;
+                    width:100%;
+                    p{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);  
+                    }
                 }
                 .item-count{
                     margin-top:20px;

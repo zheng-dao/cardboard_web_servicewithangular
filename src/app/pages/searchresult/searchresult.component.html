@@ -2,13 +2,13 @@
 
   <div class="search-bar">
     <div class="search-tab-container">
-      <div class="search-tab" [ngClass]="{'tab-selected':is_show}" (click)="setShow(true)">{{'searchresult_page.search'|translate}}</div>
-      <div class="search-tab" [ngClass]="{'tab-selected':!is_show}" (click)="setShow(false)">{{'searchresult_page.browse'|translate}}</div>
+      <div class="search-tab" [ngClass]="{'tab-selected':is_show}" (click)="setShow(true)">{{'page_search_result_tab_search'|translate}}</div>
+      <div class="search-tab" [ngClass]="{'tab-selected':!is_show}" (click)="setShow(false)">{{'page_search_result_tab_browse'|translate}}</div>
     </div>
     <form class="search-form" [style.display]="is_show?'block':'none'">
       <div class="subject-container">
-        <span class="subject">{{'searchresult_page.advancedsearch'|translate}}</span>
-        <span class="reset">{{'searchresult_page.reset'|translate|uppercase}}</span>
+        <span class="subject">{{'page_search_result_script_advanced_search'|translate}}</span>
+        <span class="reset">{{'page_search_result_script_reset'|translate|uppercase}}</span>
       </div>
       <app-job-titles-select></app-job-titles-select>
       <app-locations-select></app-locations-select>
@@ -22,14 +22,14 @@
       <app-industry></app-industry>
       <app-date-modified></app-date-modified>
       <div class="submit">
-        <button class="large_rounded_btn">{{'button.search'|translate}}</button>
+        <button class="large_rounded_btn">{{'btn_search'|translate}}</button>
       </div>
 
     </form>
     <form class="browse-form" [style.display]="!is_show?'block':'none'">
       <div class="subject-container">
-        <span class="subject">{{'searchresult_page.advancedsearch'|translate}}</span>
-        <span class="reset">{{'searchresult_page.reset'|translate|uppercase}}</span>
+        <span class="subject">{{'page_search_result_script_advanced_search'|translate}}</span>
+        <span class="reset">{{'page_search_result_script_reset'|translate|uppercase}}</span>
       </div>
       <app-locations-select></app-locations-select>
       <app-job-role-browse></app-job-role-browse>
@@ -40,7 +40,7 @@
   <div class="job-result">
     <div class="title">
       <span class="main-title">Designer Jobs In U.A.E</span>
-      <span class="all-job-count">{{allCounts}} {{'searchresult_page.jobs_found'|translate}}</span>
+      <span class="all-job-count">{{allCounts}} {{'page_search_result_script_jobs_found'|translate}}</span>
     </div>
     <div class="content-container">
       <div class="item-wrapper" *ngFor="let job of sliceJobsForView">
@@ -50,7 +50,7 @@
               <div>
                 <button class="small_rounded_btn">
                   <mat-icon>play_arrow</mat-icon>
-                  <span>{{'button.watchoffer'|translate}}</span>
+                  <span>{{'btn_watch_offer'|translate}}</span>
                 </button>
               </div>
             </div>

@@ -18,7 +18,7 @@
             }
             .dropdown{
                 color:white;
-                padding: 32px 8px;
+                padding: 32px 8px 33px 8px;
                 margin:0 0px;
                 display: table;
             }
@@ -26,6 +26,7 @@
             .dropdown:hover{          
                 color:white;
                 cursor: pointer;
+                border-bottom: 4px solid white;
             }
 
             .sub-menu-container{

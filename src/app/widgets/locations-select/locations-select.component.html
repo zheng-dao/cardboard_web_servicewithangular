@@ -1,12 +1,12 @@
 <div class="locations-widget">
   <div class="title">
     <img class="ico-title" src="../../../assets/images/icon/ico_2.png">
-    <span class="text-title">{{'searchresult_page.locations'|translate}}</span>
-    <span class="btn-title" (click)="allDelete()">{{'searchresult_page.clear'|translate}}</span>
+    <span class="text-title">{{'widget_locations'|translate}}</span>
+    <span class="btn-title" (click)="allDelete()">{{'widget_clear'|translate}}</span>
   </div>
   <div class="select-wrapper">
     <select (change)="onChange($event.target.value)" required class="selectbox">
-      <option value="" disabled selected="selected">{{'input.locations_placeholder'|translate}}</option>
+      <option value="" disabled selected="selected">{{'in_town_city_or'|translate}}</option>
       <option *ngFor="let country of allCountries" [value]="country.name" class="location-widget-option">{{country.name}}</option>
     </select>
   </div>

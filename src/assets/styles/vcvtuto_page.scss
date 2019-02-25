@@ -44,78 +44,73 @@
            .btn_2{
             @include button-inverse-variant($white,16px,transparent, 16px, 0px, 0px, transparent);
             border:none;
+            box-shadow: none;
             margin-left: 20px;
             font-family: 'galano_grotesque_alt_semi_bold';
            }
 
-           .container {
-            display:inline-block;                        
+           .styled-checkbox {
+            position: absolute; // take it out of document flow
+            opacity: 0; // hide it
+            
+            & + label {
             position: relative;
-            padding-left: 35px;
-            margin-bottom: 12px;
             cursor: pointer;
-            margin-top:18px;
-            @include custom_font($white, 12px,28px,'galano_grotesque_alt_regular');    
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-          }
-          
-          /* Hide the browser's default checkbox */
-          .container input {
+            padding: 0px;
+            color:white;
+            opacity: 0.8;
+            font-family: 'galano_grotesque_alt_regular';
+            font-size: 16px;
+            }
+        
+            // Box.
+            & + label:before {
+            content: '';
+            margin-right: 10px;
+            margin-top:-3px;
+            display: inline-block;
+            vertical-align: text-top;
+            width: 20px;
+            height: 20px;
+            background: #0ab6cb;
+            border:1px solid white;
+            border-radius: 4px;
+            }
+        
+            // Box hover
+            &:hover + label:before {
+            // background: #f35429;
+            }
+            
+            // Box focus
+            &:focus + label:before {
+            // box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+            }
+        
+            // Box checked
+            &:checked + label:before {
+            background: #0ab6cb;
+            }                        
+                    
+            // Checkmark. Could be replaced with an image
+            &:checked + label:after {
+            content: '';
             position: absolute;
-            opacity: 0;
-            cursor: pointer;
-            height: 0;
-            width: 0;
-          }
-          
-          /* Create a custom checkbox */
-          .checkmark {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 25px;
-            width: 25px;
-            background-color: #eee;
-            border-radius: 3px;
-          }
-          
-          /* On mouse-over, add a grey background color */
-          .container:hover input ~ .checkmark {
-            background-color: #eee;
-          }
-          
-          /* When the checkbox is checked, add a blue background */
-          .container input:checked ~ .checkmark {
-            background-color: rgb(11,233,222);
-          }
-          
-          /* Create the checkmark/indicator (hidden when not checked) */
-          .checkmark:after {
-            content: "";
-            position: absolute;
-            display: none;
-          }
-          
-          /* Show the checkmark when checked */
-          .container input:checked ~ .checkmark:after {
-            display: block;
-          }
-          
-          /* Style the checkmark/indicator */
-          .container .checkmark:after {
-            left: 9px;
-            top: 5px;
-            width: 5px;
-            height: 10px;
-            border: solid white;
-            border-width: 0 3px 3px 0;
-            -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
+            left: 5px;
+            top: 9px;
+            background: white;
+            width: 2px;
+            height: 2px;
+            box-shadow: 
+                2px 0 0 white,
+                4px 0 0 white,
+                4px -2px 0 white,
+                4px -4px 0 white,
+                4px -6px 0 white,
+                4px -8px 0 white;
             transform: rotate(45deg);
-          }
+            }
+        }
        }
     }
 }

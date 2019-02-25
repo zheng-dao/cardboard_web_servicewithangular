@@ -1,7 +1,7 @@
 <div class="gender-select-widget">
   <div class="title">
     <img class="ico-title" src="../../../assets/images/icon/ico_3.png">
-    <span class="text-title">{{'searchresult_page.gender'|translate}}</span>
+    <span class="text-title">{{'widget_gender'|translate}}</span>
     <span class="btn-title" (click)="toggleShow()" #showControl>-</span>    
   </div>
   <div class="select-wrapper" [style.display]="is_show_wrapper?'block':'none'">
@@ -9,19 +9,19 @@
       <div class="icon-container" [ngClass]="{'gender-selected':gender_select==1}" (click)="self_select(1)">
         <mat-icon class="all_gender" svgIcon="all_gender"></mat-icon>
       </div>
-      <div class="item-name">{{'searchresult_page.any'|translate}}</div>
+      <div class="item-name">{{'widget_any'|translate|uppercase}}</div>
     </div>
     <div class="gender-item">
       <div class="icon-container" [ngClass]="{'gender-selected':gender_select==2}"   (click)="self_select(2)">
         <mat-icon class="male_gender" svgIcon="male_gender"></mat-icon>
       </div>
-      <div class="item-name">{{'searchresult_page.man'|translate}}</div>
+      <div class="item-name">{{'widget_man'|translate|uppercase}}</div>
     </div>
     <div class="gender-item">
       <div class="icon-container" [ngClass]="{'gender-selected':gender_select==3}"  (click)="self_select(3)">
         <mat-icon class="female_gender" svgIcon="female_gender"></mat-icon>
       </div>
-      <div class="item-name">{{'searchresult_page.woman'|translate}}</div>
+      <div class="item-name">{{'widget_woman'|translate|uppercase}}</div>
     </div>
   </div>
 </div>
