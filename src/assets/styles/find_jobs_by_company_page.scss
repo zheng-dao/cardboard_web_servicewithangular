@@ -1,18 +1,17 @@
 .find-jobs-by-company{
     width:100%;    
-    .content-1{
-       width:70%;
+    .content-1{      
        margin:74px auto;   
-        padding:60px 5% 0 5%;
+        padding:60px 0;
         .title{
-            @include custom_font(#1C2B4F, 32px , 19px , 'galano_grotesque_alt_bold'); 
+            @include custom_font(#1C2B4F, 32px , 32px , 'galano_grotesque_alt_bold'); 
             margin-bottom:60px;
             text-align: center;
         }      
-        .select-wrapper{
-            width:70%;
-            margin:0 auto ;
-            .country-select{
+        .select-wrapper{ 
+           
+            .country-select{ 
+               
                 .cu-select-wrapper{
                     box-shadow: 0 3px 5px #7296f0;
                     background-color: #306cff;
@@ -33,6 +32,7 @@
                 }
             }
             .industry-select{
+               
                 .cu-select-wrapper{
                     box-shadow: 0 3px 5px gray;
                     background-color: white;
@@ -63,7 +63,7 @@
         background-color: #f5f8ff;
         padding:60px 0;
        .company-container{
-           width:70%;
+          
            margin:0 auto;
            display: block;
            .job-item-container{

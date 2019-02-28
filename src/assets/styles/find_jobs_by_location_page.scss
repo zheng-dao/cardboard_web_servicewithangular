@@ -1,7 +1,7 @@
 .find-jobs-by-location{
     width:100%;    
     .content-1{
-       width:70%;
+       
        margin:74px auto;
         padding:60px 3%;
         .title{
@@ -11,7 +11,7 @@
         }   
 
         .abstract-text{
-            width:70%;
+           
             margin: 0 auto;
             @include custom_font(#8E9DC1, 16px, 26px, 'galano_grotesque_alt_regular');
             text-align: center;
@@ -78,7 +78,7 @@
     }
     
      .content-2{
-       width:70%;
+      
        margin: 0px auto 50px auto;
        padding: 80px 0 0 0;
        
@@ -160,8 +160,7 @@
         }
      }
 
-     .content-3{
-        width:70%;       
+     .content-3{        
         padding: 60px 7%;
         background-image: url('/assets/images/content_back.png');
         background-size: 100% 100%;

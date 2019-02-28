@@ -8,8 +8,10 @@ import {IconService} from '../../httpService/icon.service';
 })
 export class SearchresultComponent implements OnInit {
 
+
+  // tab show or hidden
   is_show: boolean = true;// true:search tab, false:browse tab
- 
+   
   // is_show_load_more_button:boolean=false;
 
   allJobs: any[] = [];
@@ -39,6 +41,6 @@ export class SearchresultComponent implements OnInit {
        this.allCounts=2134;      
     });
   }
-
+  
 
 }

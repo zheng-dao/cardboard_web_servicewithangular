@@ -1,11 +1,12 @@
 @import "../../../assets/fonts.scss";
 .salary-slider-widget{
-    width:336px;
-    display: inline-block;
+    max-width:336px;
+    display: block;
+    
     padding:25px;
     border-radius: 15px;
     background-color: white;
-    margin:10px 15px;
+    margin:10px auto;
     border: 1px solid #EEEFF4;
     .title{
          margin-bottom: 20px;
@@ -34,8 +35,8 @@
             cursor:pointer;     
         }
     }
-    .slider-wrapper{
-
+    .slider-wrapper{   
+        width:100%;     
         .dx-field-value{
             width:100%;
             .dx-slider-range.dx-slider-range-visible{

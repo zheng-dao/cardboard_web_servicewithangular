@@ -68,24 +68,21 @@
 }
 
 .portal_content_2{
-    padding: 110px 15%;
-    .portal_content_2_1_1{
+    padding: 110px 0;
+    .title{
         // color:$color1;
-       @include custom_font($thickblue, 36px,43px ,"galano_grotesque_alt_bold");
-        text-align: center;
-        width:70%; 
-        margin: 0 auto;
+        @include custom_font($thickblue, 36px,43px ,"galano_grotesque_alt_bold");
+          text-align:center;
+       
     }
-    .portal_content_2_1_2{
+    .subject{
         // color:$color2;
         @include custom_font(#8e9dc1, 16px,16px ,"galano_grotesque_alt_regular");
-        text-align: center;
-        width:60%; 
+        text-align: center;       
         margin: 10px auto;
     }
     .portal_content_2_2{
-        margin-top: 56px;
-       
+        margin-top: 56px;       
         .apply_btn{
             padding: 10px 35px;
             text-align: center;
@@ -101,7 +98,6 @@
 
         .title{
             position: absolute;
-
             font-family: "galano_grotesque_semi_bold";
             left: 19px;
             bottom: 20px;
@@ -173,15 +169,14 @@
     padding: 110px 0;
     overflow: hidden;
     background-color: #F2F6FF;
-    .portal_content_3_1_1{       
-        text-align: center;
-        width:70%; 
+    .title{       
+        text-align: center;       
         @include custom_font($thickblue, 32px,50px ,"galano_grotesque_bold");
-        margin: 0 auto;
+       
     }
-    .portal_content_3_1_2{       
+    .subject{       
         text-align: center;
-        width:50%; 
+       
         @include custom_font(#8e9dc1, 16px,24px ,"galano_grotesque_alt_regular");
         margin: 10px auto;
     }
@@ -315,23 +310,19 @@
     padding: 110px 0;
     background: url("assets/images/portal_images/portal_content_4_back.png");
     background-size: 100% 100%;
-    .portal_content_4_1_1{       
-        text-align: center;
-        width:61%; 
-        margin: 0 auto;
+    .title{       
+        text-align: center;      
+       
         @include custom_font($white, 38px ,46px , 'galano_grotesque_alt_bold');   
     }
-    .portal_content_4_1_2{       
-        text-align: center;
-        width:47%; 
+    .subject{       
+        text-align: center;       
         margin: 10px auto;
         @include custom_font($white, 16px ,26px , 'galano_grotesque_alt_regular'); 
     }
     .portal_content_4_2{
-        margin-top: 60px;       
-        width:54%;
-        height: 70px;
-        margin: 60px auto 0 auto;
+        margin-top: 60px;  
+        height: 70px;       
        
         .job_search_input{
             width:49%;
@@ -411,28 +402,27 @@
 }
 
 .portal_content_5{
-    padding: 110px 10%;
+    padding: 110px 0%;
 
-    .portal_content_5_1_1{       
+    .title{       
         text-align: center;
-        width:70%; 
+        
         @include custom_font($thickblue, 32px,50px ,"galano_grotesque_bold");
         margin: 0 auto;
     }
-    .portal_content_5_1_2{       
+    .subject{       
         text-align: center;
-        width:50%; 
+        
         @include custom_font(#8e9dc1, 16px,24px ,"galano_grotesque_alt_regular");
         margin: 10px auto;
     }
 
     .portal_content_5_2{
-        margin-top: 93px;  
-        width:80%;
-        margin: 0 auto;                 
+        margin-top: 53px; 
+                      
         .content_5_2_1, .content_5_2_2{
-          width:80%;
-          margin:93px auto 0 auto;  
+         text-align: center;
+          margin:63px auto 0 auto;  
 
           img{
               width:56%;
@@ -459,17 +449,15 @@
 }
 
 .portal_content_6{
-    padding: 110px 10%;
+    padding: 110px 0;
    
-    .portal_content_6_1_1{       
-        text-align: center;
-        width:61%; 
+    .title{       
+        text-align: center;       
         margin: 0 auto;
         @include custom_font($thickblue, 36px , 43px , 'galano_grotesque_alt_bold');
     }
-    .portal_content_6_1_2{       
-        text-align: center;
-        width:50%; 
+    .subject{       
+        text-align: center;       
         margin: 10px auto;
         @include custom_font(#8e9dc1, 16px,24px ,"galano_grotesque_alt_regular");
     }
@@ -488,25 +476,22 @@
 }
 
 .portal_content_7{
-    padding: 110px 10%;
+    padding: 110px 0;
     background-color: #9DD0FA;
    
-    .portal_content_7_1_1{       
-        text-align: center;
-        width:61%; 
-        margin: 0 auto;
-        color: $white;
+    .title{       
+        text-align: center;       
+        margin: 0 auto;       
+        @include custom_font(white,  36px , 43px , 'galano_grotesque_alt_bold');
     }
-    .portal_content_7_1_2{       
-        text-align: center;
-        width:50%; 
+    .subject{       
+        text-align: center;        
         margin: 10px auto;
         color:$white;
         font-family: "galano_grotesque_alt_regular";
     }
-    .portal_content_7_2{
-       
-        width:80%;
+    .portal_content_7_2{       
+        
         margin:43px auto 0 auto;  
         .country{
             text-align: center;
@@ -533,7 +518,7 @@
 }
 
 .portal_content_8{    
-    padding: 110px 10%;
+    padding: 110px 0;
     .portal_content_8_body{
         background: url("assets/images/portal_images/content_8_back.png");
         background-size: 100% 100%;
@@ -596,20 +581,18 @@
 }
 
 .portal_content_9{
-    padding: 110px 10%;
+    padding: 110px 0%;
     background-image: url("assets/images/portal_images/content_9_back.png");
     background-size: 100% 100%;
    
-    .portal_content_9_1_1{       
-        text-align: center;
-        width:61%; 
+    .title{       
+        text-align: center;       
         margin: 0 auto;
         @include custom_font(white, 36px , 43px, 'galano_grotesque_alt_bold');
 
     }
-    .portal_content_9_1_2{       
-        text-align: center;
-        width:50%; 
+    .subject{       
+        text-align: center;        
         margin: 10px auto;
         @include custom_font(white, 16px , 24px, 'galano_grotesque_alt_regular');
     }

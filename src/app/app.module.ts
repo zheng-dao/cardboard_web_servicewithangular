@@ -24,7 +24,7 @@ import {SignupComponent} from './pages/signup/signup.component';
 import { PortalComponent } from './pages/portal/portal.component';
 import { VcvtutoComponent } from './pages/vcvtuto/vcvtuto.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { DropdownlistComponent } from './widgets/dropdownlist/dropdownlist.component';
+
 
 
 import {HttpClient, HttpClientModule} from '@angular/common/http';
@@ -68,7 +68,6 @@ import { JobOfferComponent } from './pages/job-offer/job-offer.component';
     Header1Component,
     Header2Component,
     PortalComponent,
-    DropdownlistComponent,
     SignupComponent,
     VcvtutoComponent,
     DashboardComponent,

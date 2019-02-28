@@ -9,7 +9,9 @@
       <p class="title">Product Designer at Google</p>
       <p class="location"><span class="city">Dubai</span>-<span>United Arab of Emirates</span></p>
       <p>Posted 4 weeks ago</p>
-      <button class="large_rounded_btn"><mat-icon>play</mat-icon>{{'job_offer_button_watch_offer'|translate}}</button>
+      <button class="large_rounded_btn">
+        <mat-icon>play</mat-icon>{{'job_offer_button_watch_offer'|translate}}
+      </button>
     </div>
     <div class="applicants-container">
       <span class="count">23</span>
@@ -24,10 +26,148 @@
   <div class="job-offer-container">
     <div class="row">
       <div class="col-lg-6 description-container">
-          
+        <p>{{'job_offer_description'|translate}}</p>
+        <p>Product Designer<span>(Full time)</span></p>
+        <p>Google Inc - shekh Al Zayed Road, Dubai</p>
+        <p>$35-45,000+Benefits</p>
+        <p>As the Design Manager for Infrastructure for
+          the Project Management Office (PMO) the candidate
+          will support the Project Management Consultant
+          (PMC) assigned to Early Works and Infrastructure
+          in reviewing designs provided by the AEs and design
+          firms for infrastructure, utilities, and other early works.</p>
+        <div>
+          <p>{{'job_offer_preffered_candidates'|translate}}</p>
+          <table>
+            <tbody>
+              <tr>
+                <td>{{'job_offer_career_level'|translate}}</td>
+                <td>Entry Level</td>
+              </tr>
+              <tr>
+                <td>{{'job_offer_years_of_experience'|translate}}</td>
+                <td>{{'job_offer_min'|translate}}:<span>1</span>
+                  {{'job_offer_max'|translate}}:<span>3</span>
+                </td>
+              </tr>
+              <tr>
+                <td>{{'job_offer_gender'|translate}}</td>
+                <td>Female</td>
+              </tr>
+              <tr>
+                <td>{{'job_offer_nationality'|translate}}</td>
+                <td>Lebanon</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="skills">
+            <p>{{'job_offer_skills'|translate}}</p>
+            <div class="skill-container">
+              <span *ngFor="let skill of skills">
+                {{skill}}
+              </span>
+            </div>
+          </div>
+          <div class="requirements">
+            <p>{{'job_offer_requirements'|translate}}</p>
+            <div>
+              1. Assist in developing comprehensive RFPs for Design-Build and contract document deliverables, and
+              negotiate scope-of-work, design briefs, deliverables, and price with the A/E.
+
+              2. Assist Project Managers in internal and external design and cost issues.
+
+              3. Manage distribution and production of project workload within the team.
+
+              4. Participate in departmental strategic planning.
+
+              5. Lead and manage design and technical functions associated with the Capital program.
+
+              6. To ensure effective communication and negotiation between all client stakeholders.
+
+              7. To make recommendations on design and technical issues.
+
+              8. To encourage and promote the continuous improvement of working methods including collaborative
+              working, partnering, and procurement and project management.
+
+              9. Candidate should be familiar with all Saudi codes and standards, the International Building Code
+              (IBC), OmniClass, UniFormat and MasterFormat Specification classifications, and be familiar with
+              standards as promoted by both the Royal Institute of British Architects (RIBA) and American institute of
+              Architects (AIA). Candidate must be familiar with General Design Criteria and Technical Guidelines,
+              standard drawings and standard guide specifications.
+
+              10. Assists in the oversight and review as necessary of A/E contractor design submittals, specifications,
+              calculations, as initially reviewed by the PMC, and coordinate work of other disciplines and the
+              engineering department of the PMO.
+
+              11. Review the preparation of technical specifications and drawings as needed for bid packages related to
+              the development of various sports venues, etc. for design and construction projects.
+
+              12. Assists in the review of vendor drawings and shop drawings and coordinates with the PMO Engineering
+              Manager the distribution of these reviews among the various disciplines of the PMO Engineering
+              Department.
+
+              13. Performs various engineering calculations, as necessary and/or distributes these tasks to discipline
+              engineers on staff with the PMO.
+
+              14. Performs PMO oversight guidance and potential field inspection and field support, as necessary.
+            </div>
+          </div>
+
+        </div>
       </div>
       <div class="col-lg-6 description-side-container">
-        
+        <div class="button-container">
+          <button class="large_rounded_btn">
+            <i class="fa fa-file-text"></i>
+            {{'job_offer_button_apply'|translate|uppercase}}
+          </button>
+        </div>
+        <div class="button-container">
+          <button class="large_rounded_btn">
+            <i class="fa fa-facebook"></i>
+            {{'job_offer_button_share_facebook'|translate|uppercase}}
+          </button>
+        </div>
+        <div class="button-container">
+          <button class="large_rounded_btn">
+            <i class="fa fa-twitter"></i>
+            {{'job_offer_button_share_twitter'|translate|uppercase}}
+          </button>
+        </div>
+        <div class="button-container">
+          <button class="large_rounded_btn">
+            <i class="fa fa-linkedin"></i>
+            {{'job_offer_button_linkedin'|translate|uppercase}}
+          </button>
+        </div>
+        <p>{{'job_offer_job_url'|translate}}</p>
+        <div class="job-url-display">
+          <div>{{'job_offer_button_copy'|translate}}</div>
+        </div>
+        <div>
+          <input class="styled-checkbox" id="send-me-similar-job" type="checkbox" value="">
+          <label for="send-me-similar-job">{{'job_offer_checkbox_send_me'|translate}}</label>
+        </div>
+        <div>
+          <p>{{'job_offer_more_from'|translate}}<span>Google Inc</span></p>
+          <div *ngFor="let career of careers">
+            <p>
+              <span>{{career.career_name}}</span>
+              <span>({{career.work_time}})</span>
+            </p>
+            <p>{{career.com_info}}</p>
+          </div>
+        </div>
+        <div class="button-container">
+          <button class="large_rounded_btn">
+            <i class="fa fa-file-text"></i>
+            {{'job_offer_button_apply'|translate|uppercase}}
+          </button>
+        </div>
+        <p>
+          <span>{{'job_offer_looking_for'|translate}}</span>
+          <a>{{'job_offer_post_job'|translate}}</a>
+        </p>
       </div>
     </div>
   </div>

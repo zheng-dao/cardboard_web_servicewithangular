@@ -33,7 +33,7 @@
     <div class="content_2_1">
          <div class="title_in_footer"> {{'fo_title_find_jobs'|translate|uppercase}}</div>
           <div class="row">
-            <div class="col-sm-12 col-md-4 col-lg-2 country" *ngFor="let country of countries"  >
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 country" *ngFor="let country of countries"  >
               <img [src]="country.url"><a href="#">Jobs in {{country.name}}</a>
             </div>
           </div>
@@ -99,7 +99,6 @@
          <div class="reserved_text">{{'fo_script_reverse'|translate}}</div>
     </div>
   </div>
-  <!-- <app-dropdownlist></app-dropdownlist> -->
 </div>
 
 

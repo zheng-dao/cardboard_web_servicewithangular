@@ -1,37 +1,35 @@
-<div>
-  <div class="header1" [style.background-color]="headerBackground? '#2766FF':'transparent'">
-    <div class="row">     
-      <div class=" col-sm-12 col-md-12 col-lg-6 " >     
-        <nav class="menu_item_list">          
-          <div class="navbar-expand mr-auto" >
-            <div class="navbar-nav main-menu-section" >                
-                      <a class="nav-item nav-link " href="#" style="margin-right: 9%;">
-                        <img src="../../../assets/images/logo.png"/>
-                      </a>                 
-                      <a class="nav-item nav-link font_menu" href="#" >{{'he_menu_home'|translate}}</a>
-                      <a class="nav-item nav-link font_menu" routerLink="/searchresult">{{'he_menu_find_jobs'|translate}}</a>
-                      <a class="nav-item nav-link font_menu" href="#">{{'he_menu_create_your_vcv'|translate}}</a> 
-               </div>
-          </div>         
-        </nav>
-      </div>
+<div class="header1" [style.background-color]="headerBackground? '#2766FF':'transparent'">
+  <div class="row">
+    <div class=" col-sm-12 col-md-12 col-lg-6 offset-lg-1">
+      <nav class="navbar navbar-expand-lg ">
+        <ul class="navbar-nav main-menu-section">
+          <li class="nav-item "> 
+            <a href="#">
+              <img src="../../../assets/images/logo.png" />
+            </a></li>
+          <li class="nav-item "> <a class="font_menu" href="#">{{'he_menu_home'|translate}}</a></li>
+          <li class="nav-item "> <a class="font_menu" routerLink="/searchresult">{{'he_menu_find_jobs'|translate}}</a></li>
+          <li class="nav-item "> <a class="font_menu" href="#">{{'he_menu_create_your_vcv'|translate}}</a></li>
+        </ul>
 
-      <div class="col-sm-12 col-md-12 col-lg-6 ">
-        <nav class="login_menu_item_list">          
-          <div class="navbar-expand mr-auto">
-            <div class="navbar-nav log-menu-section" >               
-                  <a class="nav-item nav-link font_menu" href="#" >{{'he_menu_login'|translate}}</a>
-                  <a class="nav-item nav-link font_menu" routerLink="/signup" >{{'he_menu_rigister'|translate}}</a>
-                  <a class="nav-item nav-link font_menu" href="#" >{{'he_menu_employer'|translate}}?</a>               
-                  <span [class.lang_selected]="is_en" (click)="uselanguage('en')" >Eng</span>
-                  <span>/</span>
-                  <span [class.lang_selected]="is_ar"  (click)="uselanguage('ar')" >Ar</span>    
-            </div>
-          </div>         
-        </nav>
+      </nav>
+    </div>
 
-      </div>
+    <div class="col-sm-12 col-md-12 col-lg-4 offset-lg-1 ">
+      <nav class="navbar navbar-expand-lg ">
+        <ul class="navbar-nav log-menu-section">
+          <li class="nav-item"> <a class="font_menu" href="#">{{'he_menu_login'|translate}}</a></li>
+          <li class="nav-item"><a class="font_menu" routerLink="/signup">{{'he_menu_rigister'|translate}}</a></li>
+          <li class="nav-item"><a class="font_menu" href="#">{{'he_menu_employer'|translate}}?</a></li>
+          <li class="nav-item">
+            <span [class.lang_selected]="is_en" (click)="uselanguage('en')">Eng</span>
+            <span>/</span>
+            <span [class.lang_selected]="is_ar" (click)="uselanguage('ar')">Ar</span>
+          </li>
+        </ul>
+
+      </nav>
+
     </div>
   </div>
-
 </div>

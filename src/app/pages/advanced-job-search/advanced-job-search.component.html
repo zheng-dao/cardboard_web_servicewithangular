@@ -1,14 +1,18 @@
-<div class="advanced-job-search">
+<div class="advanced-job-search container">
   <div class="content-1">
+
     <div class="title">
       {{'ajs_title'|translate}}
     </div>
     <div class="sub-title">
       {{'ajs_sub_title'|translate}}
     </div>
-    <div class="abstract-text">
-      {{'ajs_subject'|translate}}
+    <div class="row">
+      <div class="abstract-text col-md-6 offset-md-3">
+        {{'ajs_subject'|translate}}
+      </div>
     </div>
+
   </div>
   <div class="content-2">
     <div class="input-wrapper">
@@ -19,8 +23,7 @@
     <div class="selectbox-container row">
       <div class="col-sm-12 col-md-12 col-lg-3 selectbox-wrapper">
         <div class="selectbox-title">{{'ajs_script_job_location'|translate}}</div>
-        <app-custom-select class="location-select" [placeholder]="'select country'" [datas]="location_list"
-          [icon_name]="'flag'"></app-custom-select>
+        <app-custom-select class="location-select" [placeholder]="'select country'" [datas]="location_list" [icon_name]="'flag'"></app-custom-select>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-3 selectbox-wrapper">
         <div class="selectbox-title">{{'ajs_script_job_role'|translate}}</div>
@@ -40,7 +43,7 @@
     <div class="checkbox-group-container row">
       <div class="checkbox-wrapper">
         <div class="checkbox-title">{{'ajs_script_gender'|translate}}</div>
-         <app-checkbox-group [labels]="gender_list" [id]="'gender'" [checkMode]="false"></app-checkbox-group>
+        <app-checkbox-group [labels]="gender_list" [id]="'gender'" [checkMode]="false"></app-checkbox-group>
       </div>
       <div class="checkbox-wrapper">
         <div class="checkbox-title">{{'ajs_script_job_post_language'|translate}}</div>
@@ -62,6 +65,6 @@
     </div>
 
     <div class="divider"> </div>
-     <div style="text-align: center;"><button class="large_rounded_btn">{{'btn_search'|translate|uppercase}}</button></div>
+    <div style="text-align: center;"><button class="large_rounded_btn">{{'btn_search'|translate|uppercase}}</button></div>
   </div>
 </div>

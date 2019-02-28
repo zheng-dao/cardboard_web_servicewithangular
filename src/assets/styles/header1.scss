@@ -1,26 +1,21 @@
-.header1{    
-      padding: 24px 0;
+.header1{         
       width: 100%;
+      padding: 15px 3px;
       // background-color:$thickblue;       
-  .main-menu-section{
-   padding-left: 12%;
+  .main-menu-section{  
    .nav-item{
-       &:hover{
+       padding :8px 10px;
+       a:hover{
            color: white;
+           text-decoration: none;
        }
-   } 
+    } 
   }
   
-  .logo{
-      text-align: right;
-  }
-  
-  .log-menu-section{
-      padding-left: 30%;  
-      a.nav-item.nav-link{
-          padding-right:20px;
-          padding-left:20px;
-      } 
+ 
+  .log-menu-section{ 
+    .nav-item{
+        padding :8px 10px;         
       a:hover{
           background-color: $thingreen;
           border-radius: 20px;
@@ -46,6 +41,7 @@
       span:last-child{
           cursor:pointer;
       }
+    }
   }
   
 }

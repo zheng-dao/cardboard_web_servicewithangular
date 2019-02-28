@@ -30,52 +30,63 @@
 
     </div>
 
-    <div class="portal_content_2">
-        <div class="portal_content_2_1">
-            <div class="portal_content_2_1_1">{{"portal_title2"|translate}}</div>
-            <div class="portal_content_2_1_2">{{"portal_subject2"|translate}}</div>
-        </div>
-        <div class="portal_content_2_2">
+    <div class="portal_content_2 ">
+        <div class="container">
             <div class="row">
-                <div class="col-md-5">
-                    <div class="portal_content_2_2_ui">
-                        <img src="../../../assets/images/portal_images/portal_content_2_2_ux_back.png" />
-                        <div class="tran_back"></div>
-                        <div class="title">UI/UX</div>
-                        <button class="apply_btn">{{'btn_apply'|translate}}</button>
-                    </div>
-                    <div class="portal_content_2_2_teaching">
-                        <img src="../../../assets/images/portal_images/portal_content_2_2_teaching_back.png" />
-                        <div class="tran_back"></div>
-                        <div class="title">TEACHING</div>
-                        <button class="apply_btn">{{'btn_apply'|translate}}</button>
-                    </div>
-                </div>
-                <div class="col-md-7" style="padding:0 0px;">
-                    <div class="portal_content_2_2_medical">
-                        <img src="../../../assets/images/portal_images/portal_content_2_2_medical_back.png" />
-                        <div class="title">MEDICAL</div>
-                        <button class="apply_btn">{{'btn_apply'|translate}}</button>
-                    </div>
-                    <div class="portal_content_2_2_gardening">
-                        <img src="../../../assets/images/portal_images/portal_content_2_2_gardening_back.png" />
-                        <div class="title">GARDENING</div>
-                        <button class="apply_btn">{{'btn_apply'|translate}}</button>
-                    </div>
-
-                    <div class="portal_content_2_2_coca">
-                        <img src="../../../assets/images/portal_images/portal_content_2_2_coca_back.png" />
-                        <button class="apply_btn">{{'btn_apply'|translate}}</button>
-                    </div>
-
+                <div class="col-md-8 offset-md-2">
+                    <div class="title">{{"portal_title2"|translate}}</div>
+                    <div class="subject">{{"portal_subject2"|translate}}</div>
                 </div>
             </div>
         </div>
+        <div class="portal_content_2_2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="portal_content_2_2_ui">
+                            <img src="../../../assets/images/portal_images/portal_content_2_2_ux_back.png" />
+                            <div class="tran_back"></div>
+                            <div class="title">UI/UX</div>
+                            <button class="apply_btn">{{'btn_apply'|translate}}</button>
+                        </div>
+                        <div class="portal_content_2_2_teaching">
+                            <img src="../../../assets/images/portal_images/portal_content_2_2_teaching_back.png" />
+                            <div class="tran_back"></div>
+                            <div class="title">TEACHING</div>
+                            <button class="apply_btn">{{'btn_apply'|translate}}</button>
+                        </div>
+                    </div>
+                    <div class="col-md-7" style="padding:0 0px;">
+                        <div class="portal_content_2_2_medical">
+                            <img src="../../../assets/images/portal_images/portal_content_2_2_medical_back.png" />
+                            <div class="title">MEDICAL</div>
+                            <button class="apply_btn">{{'btn_apply'|translate}}</button>
+                        </div>
+                        <div class="portal_content_2_2_gardening">
+                            <img src="../../../assets/images/portal_images/portal_content_2_2_gardening_back.png" />
+                            <div class="title">GARDENING</div>
+                            <button class="apply_btn">{{'btn_apply'|translate}}</button>
+                        </div>
+
+                        <div class="portal_content_2_2_coca">
+                            <img src="../../../assets/images/portal_images/portal_content_2_2_coca_back.png" />
+                            <button class="apply_btn">{{'btn_apply'|translate}}</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
     <div class="portal_content_3">
-        <div class="portal_content_3_1">
-            <div class="portal_content_3_1_1 ">{{"portal_title3"|translate}}</div>
-            <div class="portal_content_3_1_2 ">{{"portal_subject3"|translate}}</div>
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-6 offset-md-3">
+                    <div class="title">{{"portal_title3"|translate}}</div>
+                    <div class="subject">{{"portal_subject3"|translate}}</div>
+                </div>
+            </div>
         </div>
         <div class="portal_content_3_2">
             <div class="portal_content_3_2_1">
@@ -111,42 +122,45 @@
         </div>
     </div>
     <div class="portal_content_4 ">
-        <div class="portal_content_4_1 ">
-            <div class="portal_content_4_1_1 ">
-                {{"portal_title4"|translate}}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-8 offset-md-2">
+                    <div class="title">{{"portal_title4"|translate}}</div>
+                    <div class="subject">{{"portal_subject4"|translate}}</div>
+                </div>
             </div>
-            <div class="portal_content_4_1_2 ">
-                {{"portal_subject4"|translate}}
+
+            <div class="portal_content_4_2 row">
+                <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1">
+                    <input class="job_search_input" type="text" placeholder="{{'in_job_title_skills_etc'|translate}}">
+                    <div class="country-selectbox-wrapper">
+                        <app-country-select [is_flag_show]="true"></app-country-select>
+                    </div>
+                    <button>{{'btn_find_jobs'|translate}}</button>
+                </div>
             </div>
-        </div>
-        <div class="portal_content_4_2">
-            <input class="job_search_input" type="text" placeholder="{{'in_job_title_skills_etc'|translate}}">
-            <div class="country-selectbox-wrapper">
-                <app-country-select [is_flag_show]="true"></app-country-select>
+            <div class="portal_content_4_3">
+                <button class="large_rounded_btn">
+                    <mat-icon>video_call</mat-icon>
+                    <span>{{'btn_create_your_vcv'|translate}}</span>
+                </button>
             </div>
-            <button>{{'btn_find_jobs'|translate}}</button>
+            <div class="portal_content_4_4"><a href="#">{{'portal_script_employer'|translate}}</a></div>
         </div>
-        <div class="portal_content_4_3">
-            <button class="large_rounded_btn">
-                <mat-icon>video_call</mat-icon>
-                <span>{{'btn_create_your_vcv'|translate}}</span>
-            </button>
-        </div>
-        <div class="portal_content_4_4"><a href="#">{{'portal_script_employer'|translate}}</a></div>
     </div>
 
     <div class="portal_content_5">
-        <div class="portal_content_5_1">
-            <div class="portal_content_5_1_1 ">
-                {{"portal_title5"|translate}}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-8 offset-md-2">
+                    <div class="title">{{"portal_title5"|translate}}</div>
+                    <div class="subject">{{"portal_subject5"|translate}}</div>
+                </div>
             </div>
-            <div class="portal_content_5_1_2 ">
-                {{"portal_subject5"|translate}}
-            </div>
-        </div>
-        <div class="portal_content_5_2 row">
-            <div class="col-md-6">
-                <div class="content_5_2_1">
+
+            <div class="portal_content_5_2 row">
+                <div class="col-sm-12 col-md-6 content_5_2_1">
+
                     <div style="text-align: center; margin-bottom: 77px"><img src="../../../assets/images/portal_images/content_5_2_1.png"></div>
                     <div class="title">
                         {{"portal_title_looking_for_job"|translate}}
@@ -157,10 +171,10 @@
                     <div style="text-align: center;">
                         <button class="large_rounded_btn" routerLink="/jobsbyrole">{{'btn_discover'|translate}}</button>
                     </div>
+
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="content_5_2_2">
+                <div class="col-sm-12 col-md-6 content_5_2_2">
+
                     <div style="text-align: center; margin-bottom: 77px"><img src="../../../assets/images/portal_images/content_5_2_2.png"></div>
                     <div class="title">
                         {{"portal_title_looking_to_hire"|translate}}
@@ -171,23 +185,25 @@
                     <div style="text-align: center;">
                         <button class="large_rounded_btn">{{'btn_discover'|translate}}</button>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
     <div class="portal_content_6">
-        <div class="portal_content_6_1">
-            <div class="portal_content_6_1_1">
-                {{"portal_title6"|translate}}
-            </div>
-            <div class="portal_content_6_1_2 ">
-                {{"portal_subject6"|translate}}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="title">{{"portal_title6"|translate}}</div>
+                    <div class="subject">{{"portal_subject6"|translate}}</div>
+                </div>
             </div>
         </div>
         <div class="portal_content_6_2">
             <div class="row">
                 <div class="col-sm-4 col-md-2" *ngFor="let mark of marks" style=" text-align: center; margin-top: 40px; "><img
-                        [src]="mark.url"></div>
+                        [src]="mark.url">
+                </div>
             </div>
         </div>
         <div class="portal_content_6_3">
@@ -195,28 +211,27 @@
         </div>
     </div>
     <div class="portal_content_7">
-        <div class="portal_content_7_1">
-            <div class="portal_content_7_1_1 font_blue_headline">
-                {{"portal_title7"|translate}}
-            </div>
-            <div class="portal_content_7_1_2 font_blue_paragraph">
-                {{"portal_subject7"|translate}}
-            </div>
-        </div>
-        <div class="portal_content_7_2">
+        <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-md-3 country" *ngFor="let country of countries">
+                <div class="col-md-6 offset-md-3">
+                    <div class="title">{{"portal_title7"|translate}}</div>
+                    <div class="subject">{{"portal_subject7"|translate}}</div>
+                </div>
+            </div>
+
+            <div class="portal_content_7_2 row">
+                <div class="col-sm-6 col-md-6 col-lg-3 country" *ngFor="let country of countries">
                     <div><img [src]="country.url"></div>
                     <div class="country-name">{{country.name}}</div>
                     <div class="country-jobs">{{country.jobs}} Jobs</div>
                 </div>
             </div>
-        </div>
-        <div class="portal_content_7_3">
-            <button class="large_rounded_btn">{{'btn_view_more'|translate}}</button>
+            <div class="portal_content_7_3">
+                <button class="large_rounded_btn">{{'btn_view_more'|translate}}</button>
+            </div>
         </div>
     </div>
-    <div class="portal_content_8">
+    <div class="portal_content_8 container">
         <div class="row portal_content_8_body">
             <div class="col-sm-12 col-md-5" style="text-align:center;">
                 <img src="../../../assets/images/portal_images/content_8_img.png">
@@ -255,12 +270,12 @@
     </div>
 
     <div class="portal_content_9">
-        <div class="portal_content_9_1">
-            <div class="portal_content_9_1_1 ">
-                {{'portal_title9'|translate}}
-            </div>
-            <div class="portal_content_9_1_2 ">
-                {{'portal_subject9'|translate}}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="title">{{"portal_title9"|translate}}</div>
+                    <div class="subject">{{"portal_subject9"|translate}}</div>
+                </div>
             </div>
         </div>
 

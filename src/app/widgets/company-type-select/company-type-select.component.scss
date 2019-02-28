@@ -1,12 +1,12 @@
 @import "../../../assets/fonts.scss";
 .company-type-select-widget{
-    width:336px;
-    display: inline-block;
+    max-width:336px;
+    display: block;
     padding:25px;
     border-radius: 15px;
     background-color: white;
     border: 1px solid #EEEFF4;
-    margin:10px 15px;
+    margin:10px auto;
     .title{
          margin-bottom: 20px;
          .svg-icon{

@@ -1,6 +1,6 @@
 .advanced-job-search{
   width:100%;
-  padding: 110px 8%;
+  padding: 110px 0;
   .content-1{
      width:100%;
      
@@ -14,8 +14,7 @@
         margin-bottom:20px;
         text-align: center;
      }
-     .abstract-text{
-         width:50%;
+     .abstract-text{          
         @include custom_font(#8E9DC1, 16px , 24px , 'galano_grotesque_alt_regular');        
         text-align: center;
         margin:0 auto;
@@ -121,15 +120,20 @@
 
         .checkbox-group-container{
             margin: 0;
-            .checkbox-wrapper{
-                width:20%;
-                display: block;
+            .checkbox-wrapper{               
+                display: table;
                 float:left;
+                margin-right:4%;
                 .checkbox-title{
                     @include custom_font(#898EA2, 14px , 17px , 'galano_grotesque_alt_medium');  
                     margin-bottom:25px;
                 }
+              &:last-of-type{
+                 margin-right: 0;
+              }  
             }
+           
+            
         }
 
         large_rounded_btn{

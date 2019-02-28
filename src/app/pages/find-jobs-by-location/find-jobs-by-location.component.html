@@ -1,7 +1,10 @@
-<div class="find-jobs-by-location">
+<div class="find-jobs-by-location container">
   <div class="content-1">
     <div class="title">{{'fjbl_title1'|translate}}</div>
-    <div class="abstract-text">{{'fjbl_subject1'|translate}}</div>
+    <div class="row">
+        <div class="abstract-text col-md-9 offset-md-3">{{'fjbl_subject1'|translate}}</div>
+    </div>
+    
     <div class="main-content">
       <div class="job-item-container" *ngFor="let job of sliceJobsByCountries">
         <div class="job-item">
