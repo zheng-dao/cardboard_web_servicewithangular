@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
+import {IconService} from '../../httpService/icon.service';
 @Component({
   selector: 'app-gender-select',
   templateUrl: './gender-select.component.html',
@@ -13,22 +12,7 @@ export class GenderSelectComponent implements OnInit {
 
   @ViewChild('showControl') showControl: ElementRef;
 
-  constructor(
-    private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer) {
-    this.matIconRegistry.addSvgIcon(
-      'all_gender',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/icon/all_gender.svg')
-    );
-    this.matIconRegistry.addSvgIcon(
-      'male_gender',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/icon/male_gender.svg')
-    );
-    this.matIconRegistry.addSvgIcon(
-      'female_gender',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/icon/female_gender.svg')
-    );
-  }
+  constructor( private icon :IconService) {  }
 
   ngOnInit() {
   }

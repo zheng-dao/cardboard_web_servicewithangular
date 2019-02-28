@@ -29,7 +29,7 @@
             }
             .dx-slider-handle{
                 margin-top:-10px;
-                border:1px solid #EDEEF3;
+                border:1px solid rgb(217, 218, 221);
                 background-color: white;
             }
             .dx-slider-range{
@@ -177,24 +177,36 @@
                         .location{
                             @include custom-font(#354052, 14px, 15px, 'galano_grotesque_alt_regular' );
                             margin-bottom: 10px;  
-                            img{
-                                margin-right:5px;
-                                vertical-align: middle;
+                            .svg-icon{
+                                vertical-align: middle; 
+                                margin-right:10px;  
+                                color:  #2766FF   ;     
+                                 width:15px !important;  
+                                 height:18px !important; 
+                                 font-size: 11px;            
                             }
                         }
                         .com-type{
                             @include custom-font(#354052, 14px, 15px, 'galano_grotesque_alt_regular' );
                             margin-bottom: 10px;  
-                            img{
-                                margin-right:5px;
-                                vertical-align: middle;
+                            .svg-icon{
+                                vertical-align: middle; 
+                                margin-right:10px;  
+                                color:  #2766FF   ;     
+                                 width:15px !important;  
+                                 height:18px !important; 
+                                 font-size: 11px;            
                             }
                         }
                         .salary{
                             @include custom-font(#354052, 14px, 15px, 'galano_grotesque_alt_regular' );
-                            img{
-                                margin-right:5px;
-                                vertical-align: middle;
+                            .svg-icon{
+                                vertical-align: middle; 
+                                margin-right:10px;  
+                                color:  #2766FF   ;     
+                                 width:15px !important;  
+                                 height:18px !important; 
+                                 font-size: 11px;            
                             }
                         }
                     }
@@ -204,11 +216,21 @@
                   position: absolute;
                   top:10px;
                   right:7px;
-                  img{
-                      margin-left:4px;
+                  mat-icon{
+                    vertical-align: middle; 
+                    margin-right:4px;  
+                     color:  #D4DAE2 ;     
+                             
                   }
-                  .heart{
-                      margin-top:4px;
+                  .icon-export{
+                    width:15px !important;  
+                    height:18px !important; 
+                    font-size: 11px;   
+                  }
+                  .icon-heart{
+                    width:17px !important;  
+                    height:18px !important; 
+                    font-size: 13px; 
                   }
                 }
             }

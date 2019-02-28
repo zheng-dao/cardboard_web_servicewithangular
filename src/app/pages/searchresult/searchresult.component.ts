@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { JobSearchResultService } from '../../httpService/job-search-result.service';
-
+import {IconService} from '../../httpService/icon.service';
 @Component({
   selector: 'app-searchresult',
   templateUrl: './searchresult.component.html',
@@ -17,7 +17,8 @@ export class SearchresultComponent implements OnInit {
   sliceJobsForBrowse: any[] = [];
   allCounts:number=0;
 
-  constructor(private http: JobSearchResultService) {}
+  constructor(private http: JobSearchResultService,
+               private icon:IconService) {}
 
   ngOnInit() {
     this.is_show = true;

@@ -15,20 +15,23 @@
         ul{
             list-style: none;
             padding: 0;
-            display: table;      
+            display: table;  
+            width:100%;    
             content:inherit;
             margin: 0;
             li{
                 float: left;
-                display: inline;
-                margin: 8px 20px;
+                display: table;
+                width:25%;
+                margin: 8px 0px;
+                text-align: center;
                 .span-text{
                     @include custom_font($white, 18px, 36px , 'galano_grotesque_alt_medium') ;  
                     margin-left: 10px;          
                 }
 
                 .country-selectbox-wrapper{
-                    width:320px;
+                    width:100%;
                     background-color: #306cff;
                     border-radius: 25px;
                     // box-shadow: 0 0 20px rgb(39, 37, 37);
@@ -55,7 +58,17 @@
                     }
                 }
             }
-
+            @media(max-width:1600px){
+                li{
+                    width:100%;
+                    text-align: center;
+                    margin: 12px auto;
+                    .country-selectbox-wrapper{
+                      width: 270px; 
+                      margin:12px auto;
+                   }
+                }                  
+            }
            
         }
         
@@ -154,6 +167,8 @@
             ul{
                 list-style:none;
                 display: table;
+                width:100%;
+                padding:0;
                 li{
                     margin: 0 23px;
                     display:inline;
@@ -161,6 +176,14 @@
                         cursor: pointer;                        
                     }
                 }
+                @media(max-width:1600px){
+                    li{
+                        display: block;
+                        text-align: center;
+                        margin:5px 0;
+                    }
+                }
+
             }
             
             .reserved_text{

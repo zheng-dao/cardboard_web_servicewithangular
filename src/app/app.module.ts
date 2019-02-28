@@ -31,7 +31,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { PagerComponent } from './widgets/pager/pager.component';
 import { LinechartComponent } from './widgets/linechart/linechart.component';
 import { CountrySelectComponent } from './widgets/country-select/country-select.component';
-import { JobsbyroleComponent } from './pages/jobsbyrole/jobsbyrole.component';
+import { JobsbyroleComponent } from './pages/find-jobs-by-role/find-jobs-by-role.component';
 import {SearchresultComponent} from './pages/searchresult/searchresult.component';
 import {ItembuttonComponent} from './widgets/itembutton/itembutton.component';
 
@@ -40,7 +40,7 @@ import { LocationsSelectComponent } from './widgets/locations-select/locations-s
 import { GenderSelectComponent } from './widgets/gender-select/gender-select.component';
 import { LanguageSelectComponent } from './widgets/language-select/language-select.component';
 import { CompanyTypeSelectComponent } from './widgets/company-type-select/company-type-select.component';
-import {SalarySliderComponent} from './widgets/salary-slider/salary-slider.component';
+import { SalarySliderComponent} from './widgets/salary-slider/salary-slider.component';
 import { CareerComponent } from './widgets/career/career.component';
 import { EmploymentTypeComponent } from './widgets/employment-type/employment-type.component';
 import { SpecialtyComponent } from './widgets/specialty/specialty.component';
@@ -49,13 +49,14 @@ import { DateModifiedComponent } from './widgets/date-modified/date-modified.com
 import { JobRoleBrowseComponent } from './widgets/job-role-browse/job-role-browse.component';
 import { JobIndustryBrowseComponent } from './widgets/job-industry-browse/job-industry-browse.component';
 import { AreaBrowseComponent } from './widgets/area-browse/area-browse.component';
-import {EmailconfirmComponent} from './pages/emailconfirm/emailconfirm.component';
+import { EmailconfirmComponent} from './pages/emailconfirm/emailconfirm.component';
 import { FindJobsBySectorComponent } from './pages/find-jobs-by-sector/find-jobs-by-sector.component';
 import { CustomSelectComponent } from './widgets/custom-select/custom-select.component';
 import { FindJobsByLocationComponent } from './pages/find-jobs-by-location/find-jobs-by-location.component';
 import { FindJobsByCompanyComponent } from './pages/find-jobs-by-company/find-jobs-by-company.component';
 import { AdvancedJobSearchComponent } from './pages/advanced-job-search/advanced-job-search.component';
 import { CheckboxGroupComponent } from './widgets/checkbox-group/checkbox-group.component';
+import { JobOfferComponent } from './pages/job-offer/job-offer.component';
 
 
 
@@ -97,7 +98,8 @@ import { CheckboxGroupComponent } from './widgets/checkbox-group/checkbox-group.
     FindJobsByLocationComponent,
     FindJobsByCompanyComponent,
     AdvancedJobSearchComponent,
-    CheckboxGroupComponent 
+    CheckboxGroupComponent,
+    JobOfferComponent 
  
   ],
   imports: [

@@ -9,9 +9,14 @@
     border: 1px solid #EEEFF4;
     .title{
          margin-bottom: 20px;
-        .ico-title{
+         .svg-icon{
             vertical-align: middle; 
-            margin-right:10px;
+            margin-right:10px;  
+            color:  #2766FF   ;     
+             width:15px !important;  
+             height:18px !important; 
+             font-size: 11px;
+            
         }
         .text-title{
             font-size:14px;
@@ -43,7 +48,7 @@
             }
             .dx-slider-handle{
                 margin-top:-10px;
-                border:1px solid #EDEEF3;
+                border:1px solid rgb(126, 128, 133);
                 background-color: white;
             }
             .dx-slider-range{

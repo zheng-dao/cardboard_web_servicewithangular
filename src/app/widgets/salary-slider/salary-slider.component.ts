@@ -1,5 +1,6 @@
 import { Component, OnInit ,ElementRef,ViewChild} from '@angular/core';
 import {DxRangeSliderComponent} from 'devextreme-angular';
+import {IconService} from '../../httpService/icon.service';
 @Component({
   selector: 'app-salary-slider',
   templateUrl: './salary-slider.component.html',
@@ -14,7 +15,7 @@ export class SalarySliderComponent implements OnInit {
   sliderEnd:number=10000.00;
   
 
-  constructor() { }
+  constructor(private icon:IconService) { }
 
   ngOnInit() {
   }

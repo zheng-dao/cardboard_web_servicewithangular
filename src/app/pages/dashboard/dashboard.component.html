@@ -1,7 +1,7 @@
 <div class="dashboard-page">
   <div class="record-video-bar">
     <span class="description">
-      {{'page_dashboard_script_toufic_your_profile'|translate}}
+      {{'dashboard_script_toufic_your_profile'|translate}}
     </span>
     <button>
       <mat-icon>video_call</mat-icon>
@@ -9,7 +9,7 @@
     </button>
   </div>
   <div class="content_1">
-    <div class="title">{{'page_dashboard_title1'|translate}}</div>
+    <div class="title">{{'dashboard_title1'|translate}}</div>
     <div class="content_1_1 row">
       <div class="col-sm-12 col-md-4" *ngFor="let job of jobs" style="margin: 15px 0;">
         <div class="inc-mark"><img [src]="job.url"></div>
@@ -28,7 +28,7 @@
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-7">
         <div class="content_2_1">
-          <div class="title">{{'page_dashboard_title2_recommended'|translate}}</div>
+          <div class="title">{{'dashboard_title2_recommended'|translate}}</div>
           <div class=" content_2_1_1 row">
             <div class="col-sm-12 col-md-4" *ngFor="let job of recommendJobs">
               <div class="content">
@@ -49,7 +49,7 @@
       </div>
       <div class="col-sm-12 col-md-12 col-lg-5">
         <div class="content_2_2">
-          <div class="title"> {{'page_dashboard_title2_inspiring'|translate}}</div>
+          <div class="title"> {{'dashboard_title2_inspiring'|translate}}</div>
           <div class="content_2_2_1 row">
             <div class="col-sm-12 col-md-6 member-wrapper" *ngFor="let member of pagedMemberItem">
               <div class="member">
@@ -57,23 +57,23 @@
                 <div class="name">{{member.name}}</div>
                 <div class="career">{{member.career}}</div>
                 <div class="item">
-                  <span>{{'page_dashboard_script_experience'|translate}}:</span>
+                  <span>{{'dashboard_script_experience'|translate}}:</span>
                   <span class="detail"> {{member.experience}}</span>
                 </div>
                 <div class="item">
-                  <span>{{'page_dashboard_script_studies'|translate}}:</span>
+                  <span>{{'dashboard_script_studies'|translate}}:</span>
                   <span class="detail">{{member.studies}}</span>
                 </div>
                 <div class="item">
-                  <span>{{'page_dashboard_script_age'|translate}}:</span>
+                  <span>{{'dashboard_script_age'|translate}}:</span>
                   <span class="detail">{{member.age}}</span>
                 </div>
                 <div class="item">
-                  <span>{{'page_dashboard_script_country'|translate}}:</span>
+                  <span>{{'dashboard_script_country'|translate}}:</span>
                   <span class="detail">{{member.country}}</span>
                 </div>
                 <div class="item">
-                  <span>{{'page_dashboard_script_languages'|translate}}:</span>
+                  <span>{{'dashboard_script_languages'|translate}}:</span>
                   <span class="detail">{{member.languages}}</span>
                 </div>
                 <div class="watch-button">
@@ -96,7 +96,7 @@
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-4 content_3_1">
         <div class="content">
-          <div class="title">{{'page_dashboard_title3_companies'|translate}}</div>
+          <div class="title">{{'dashboard_title3_companies'|translate}}</div>
           <div class="content_3_1_1">
             <div class="company" *ngFor="let company of pagedCompanyItem">
               <img [src]="company.url" class="photo">
@@ -113,7 +113,7 @@
       </div>
       <div class="col-sm-12 col-md-12 col-lg-8 content_3_2">
         <div class="content">
-          <div class="title">{{'page_dashboard_title3_trending'|translate}}</div>
+          <div class="title">{{'dashboard_title3_trending'|translate}}</div>
           <div class="row content_3_2_1">
             <div class="col-md-6" *ngFor="let jobBranch of pagedJobBranchItem " style="padding: 8px;">
               <div class="main_body" [style.background-image]="'url('+jobBranch.url+')'">
@@ -132,9 +132,9 @@
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-4 content_4_1">
           <div class="content-body">
-            <div class="title">{{'page_dashboard_title4_job_view'|translate}}</div>
+            <div class="title">{{'dashboard_title4_job_view'|translate}}</div>
             <div class="subtitle">
-              <span class="key">{{'page_dashboard_script_total_views'|translate}}</span>
+              <span class="key">{{'dashboard_script_total_views'|translate}}</span>
               <span class="value">{{totalViews}}</span>
             </div>
             <app-linechart *ngIf="xJobChartData.length>0" [xdata]="xJobChartData" [ydata]="yJobChartData" [height]="jobChartHeight" [color]="jobChartColor"></app-linechart>
@@ -147,21 +147,21 @@
         </div>
         <div class="col-sm-12 col-md-12 col-lg-4 content_4_2">
           <div class="content-body">
-            <div class="title">{{'page_dashboard_title4_who_viewed'|translate}}</div>
+            <div class="title">{{'dashboard_title4_who_viewed'|translate}}</div>
             <div class="profile-mark">
               <img src="../../../assets/images/dashboard/profile.png">
             </div>
             <div class="message">
-                  {{'page_dashboard_script_you_have_no'|translate}}
+                  {{'dashboard_script_you_have_no'|translate}}
             </div>
             <div><button class="large_rounded_btn viewthemall">{{'btn_view_them_all'|translate}}</button></div>
           </div>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-4 content_4_3">
           <div class="content-body">
-            <div class="title">{{'page_dashboard_title4_searches'|translate}}</div>
+            <div class="title">{{'dashboard_title4_searches'|translate}}</div>
             <div class="subtitle">
-              <span class="key">{{'page_dashboard_script_total_searches'|translate}}</span>
+              <span class="key">{{'dashboard_script_total_searches'|translate}}</span>
               <span class="value">{{totalSearches}}</span>
             </div>
             <app-linechart *ngIf="xSearchChartData.length>0"  [xdata]="xSearchChartData" [ydata]="ySearchChartData" [height]="searchChartHeight" [color]="searchChartColor"></app-linechart>

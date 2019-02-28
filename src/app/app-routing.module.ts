@@ -4,7 +4,7 @@ import { PortalComponent } from './pages/portal/portal.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { VcvtutoComponent } from './pages/vcvtuto/vcvtuto.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { JobsbyroleComponent } from './pages/jobsbyrole/jobsbyrole.component';
+import { JobsbyroleComponent } from './pages/find-jobs-by-role/find-jobs-by-role.component';
 import { SearchresultComponent } from './pages/searchresult/searchresult.component';
 import { EmailconfirmComponent } from './pages/emailconfirm/emailconfirm.component';
 import { FindJobsBySectorComponent } from './pages/find-jobs-by-sector/find-jobs-by-sector.component';

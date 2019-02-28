@@ -1,13 +1,13 @@
 <div class="advanced-job-search">
   <div class="content-1">
     <div class="title">
-      {{'page_ajs_title'|translate}}
+      {{'ajs_title'|translate}}
     </div>
     <div class="sub-title">
-      {{'page_ajs_sub_title'|translate}}
+      {{'ajs_sub_title'|translate}}
     </div>
     <div class="abstract-text">
-      {{'page_ajs_subject'|translate}}
+      {{'ajs_subject'|translate}}
     </div>
   </div>
   <div class="content-2">
@@ -18,47 +18,50 @@
     <div class="divider"></div>
     <div class="selectbox-container row">
       <div class="col-sm-12 col-md-12 col-lg-3 selectbox-wrapper">
-        <div class="selectbox-title">{{'page_ajs_script_job_location'|translate}}</div>
+        <div class="selectbox-title">{{'ajs_script_job_location'|translate}}</div>
         <app-custom-select class="location-select" [placeholder]="'select country'" [datas]="location_list"
-          [icon_index]="2"></app-custom-select>
+          [icon_name]="'flag'"></app-custom-select>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-3 selectbox-wrapper">
-        <div class="selectbox-title">{{'page_ajs_script_job_role'|translate}}</div>
-        <app-custom-select class="role-select" [placeholder]="'select role'" [datas]="role_list" [icon_index]="2"></app-custom-select>
+        <div class="selectbox-title">{{'ajs_script_job_role'|translate}}</div>
+        <app-custom-select class="role-select" [placeholder]="'select role'" [datas]="role_list" [icon_name]="'business'"></app-custom-select>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-3 selectbox-wrapper">
-        <div class="selectbox-title">{{'page_ajs_script_company_industry'|translate}}</div>
+        <div class="selectbox-title">{{'ajs_script_company_industry'|translate}}</div>
         <app-custom-select class="industry-select" [placeholder]="'select industry'" [datas]="industry_list"
-          [icon_index]="2"></app-custom-select>
+          [icon_name]="'com_type'"></app-custom-select>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-3 selectbox-wrapper">
-        <div class="selectbox-title">{{'page_ajs_script_minimum_monthly_salary'|translate}}</div>
-        <app-custom-select class="salary-select" [placeholder]="'select salary'" [datas]="salary_list" [icon_index]="2"></app-custom-select>
+        <div class="selectbox-title">{{'ajs_script_minimum_monthly_salary'|translate}}</div>
+        <app-custom-select class="salary-select" [placeholder]="'select salary'" [datas]="salary_list" [icon_name]="'money'"></app-custom-select>
       </div>
     </div>
     <div class="divider"> </div>
     <div class="checkbox-group-container row">
       <div class="checkbox-wrapper">
-        <div class="checkbox-title">{{'page_ajs_script_gender'|translate}}</div>
+        <div class="checkbox-title">{{'ajs_script_gender'|translate}}</div>
          <app-checkbox-group [labels]="gender_list" [id]="'gender'" [checkMode]="false"></app-checkbox-group>
       </div>
       <div class="checkbox-wrapper">
-        <div class="checkbox-title">{{'page_ajs_script_job_post_language'|translate}}</div>
+        <div class="checkbox-title">{{'ajs_script_job_post_language'|translate}}</div>
         <app-checkbox-group [labels]="job_post_language_list" [id]="'language'" [checkMode]="false"></app-checkbox-group>
       </div>
       <div class="checkbox-wrapper">
-        <div class="checkbox-title">{{'page_ajs_script_company_type'|translate}}</div>
+        <div class="checkbox-title">{{'ajs_script_company_type'|translate}}</div>
         <app-checkbox-group [labels]="company_type_list" [id]="'company'" [checkMode]="false"></app-checkbox-group>
       </div>
       <div class="checkbox-wrapper">
-        <div class="checkbox-title">{{'page_ajs_script_career_level'|translate}}</div>
+        <div class="checkbox-title">{{'ajs_script_career_level'|translate}}</div>
         <app-checkbox-group [labels]="career_level_list" [id]="'career'" [checkMode]="false"></app-checkbox-group>
       </div>
       <div class="checkbox-wrapper">
-        <div class="checkbox-title">{{'page_ajs_script_employment_type'|translate}}</div>
+        <div class="checkbox-title">{{'ajs_script_employment_type'|translate}}</div>
         <app-checkbox-group [labels]="employment_type_list" [id]="'employment'" [checkMode]="false"></app-checkbox-group>
       </div>
 
     </div>
+
+    <div class="divider"> </div>
+     <div style="text-align: center;"><button class="large_rounded_btn">{{'btn_search'|translate|uppercase}}</button></div>
   </div>
 </div>

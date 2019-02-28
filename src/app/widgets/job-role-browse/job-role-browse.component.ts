@@ -1,5 +1,6 @@
 import { Component, OnInit,ViewChild,ElementRef } from '@angular/core';
 import {CommonService} from '../../httpService/common.service';
+import {IconService} from '../../httpService/icon.service';
 @Component({
   selector: 'app-job-role-browse',
   templateUrl: './job-role-browse.component.html',
@@ -13,7 +14,8 @@ export class JobRoleBrowseComponent implements OnInit {
   sliceJobRolesForView: any[]=[];
   sliceJobRolesForSelectbox:any[]=[];
 
-  constructor( private httpService: CommonService) { }
+  constructor( private httpService: CommonService,
+               private icon:IconService) { }
 
   ngOnInit() {
     this.getAllJobRoles();

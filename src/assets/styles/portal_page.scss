@@ -523,7 +523,10 @@
         margin: 70px auto 0 auto;
         text-align: center;
         button{
-            @include button-inverse-variant($white,18px, transparent, 30px, 15px, 40px, transparent);
+            
+             color:white;
+             background: transparent;
+             font-size: 18px;
             border: 2px solid $white;
         }
     }   
@@ -562,9 +565,10 @@
            }
            .portal_content_8_2_5{
                margin-top: 25px;
-               button{
-                @include button-inverse-variant($thickblue,20px, $thingreen, 30px, 15px, 40px, $thingreen);
+               button{               
                 font-family: "galano_grotesque_alt_semi_bold";
+                color:$thickblue;
+                background-color: $thingreen;            
                }               
            }
            .portal_content_8_2_6{
@@ -616,7 +620,7 @@
            width: 197px;
            height:55px;
            border-radius: 8px;
-           background-image: url('assets/images/portal_images/download-on-the-app-store-apple.png');
+           background-image: url('assets/images/portal_images/download_app_store.png');
            background-size: 100% 100%;
            margin-top:20px;
            margin-right:5px;
@@ -626,7 +630,7 @@
         width: 172px;
         height:55px;
         border-radius: 8px;
-        background-image: url('assets/images/portal_images/google-play-download-android-app.png');
+        background-image: url('assets/images/portal_images/download_google_play.png');
          margin-top: 20px;
          background-size: 100% 100%;     
          cursor: pointer;      

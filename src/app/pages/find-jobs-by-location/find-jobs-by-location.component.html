@@ -1,13 +1,13 @@
 <div class="find-jobs-by-location">
   <div class="content-1">
-    <div class="title">{{'page_fjbl_title1'|translate}}</div>
-    <div class="abstract-text">{{'page_fjbl_subject1'|translate}}</div>
+    <div class="title">{{'fjbl_title1'|translate}}</div>
+    <div class="abstract-text">{{'fjbl_subject1'|translate}}</div>
     <div class="main-content">
       <div class="job-item-container" *ngFor="let job of sliceJobsByCountries">
         <div class="job-item">
           <div class="country-photo"><img [src]="job.country_photo"></div>
           <div class="country-name">{{job.country_name}}</div>
-          <div class="count">{{job.count}} {{'page_fjbr_script_jobs'|translate}}</div>
+          <div class="count">{{job.count}} {{'fjbr_script_jobs'|translate}}</div>
         </div>
       </div>
     </div>
@@ -15,7 +15,7 @@
   </div>
 
   <div class="content-2">
-    <div class="title">{{'page_fjbl_title2'|translate}}</div>
+    <div class="title">{{'fjbl_title2'|translate}}</div>
     <div class="job-by-location-container" *ngFor="let item of allJobsByLocations">
       <div class="side-container">
         <div class="flag">
@@ -23,7 +23,7 @@
         </div>
         <div class="loca-info">
           <div class="country-name">{{item.country_name}}</div>
-          <div class="total-count">{{item.total_count}}{{'page_fjbl_script_jobs'|translate}}</div>
+          <div class="total-count">{{item.total_count}}{{'fjbl_script_jobs'|translate}}</div>
         </div>
       </div>
       <div class="job-city-container">
@@ -41,8 +41,8 @@
       
         <div class="side-container">          
           <div class="loca-info">
-            <div class="country-name">{{'page_fjbl_script_international'|translate}}</div>
-            <div class="total-count">{{all_counts}}{{'page_fjbl_script_jobs'|translate}}</div>
+            <div class="country-name">{{'fjbl_script_international'|translate}}</div>
+            <div class="total-count">{{all_counts}}{{'fjbl_script_jobs'|translate}}</div>
           </div>
           <div class=""><button class="large_rounded_btn">{{'btn_view_them_all'|translate}}</button></div>
         </div>

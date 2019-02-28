@@ -3,23 +3,23 @@
     <div class="title">Most Common Job in U.A.E</div>
     <div class="select-wrapper row">
       <div class="col-sm-12 col-md-6">
-        <app-custom-select class="country-select" [placeholder]="'select Country'" [datas]="country_list" [icon_index]="1"></app-custom-select>
+        <app-custom-select class="country-select" [placeholder]="'select Country'" [datas]="country_list" [icon_name]="'flag'"></app-custom-select>
       </div>
       <div class="col-sm-12 col-md-6">
-        <app-custom-select class="city-select" [placeholder]="'select City'" [datas]="city_list" [icon_index]="2"></app-custom-select>
+        <app-custom-select class="city-select" [placeholder]="'select City'" [datas]="city_list" [icon_name]="'house'"></app-custom-select>
       </div>
     </div>
     <div class="row content-1-body">
       <div class="col-sm-6 col-md-3 item-wrapper" *ngFor="let job of sliceJobs">
         <div class="item-photo"><img [src]="job.photo"></div>
         <div class="item-title"><p>{{job.title|uppercase}}</p></div>
-        <div class="item-count"><span>{{job.count}}{{'page_fjbs_script_jobs'|translate|uppercase}}</span></div>
+        <div class="item-count"><span>{{job.count}}{{'fjbs_script_jobs'|translate|uppercase}}</span></div>
       </div>
     </div>
     <div style="text-align: center;" ><button class="large_rounded_btn" (click)="onViewAllJob()">{{'btn_view_them_all'|translate}}</button></div>
   </div>
   <div class="content-2">
-    <div class="title">{{'page_fjbs_title2'|translate}}</div>
+    <div class="title">{{'fjbs_title2'|translate}}</div>
     <div class="job-field-container" *ngFor="let jobField of allJobField">
       <div class="job-field-side">
            <div class="job-field-name">{{jobField.eachData.field}}</div>

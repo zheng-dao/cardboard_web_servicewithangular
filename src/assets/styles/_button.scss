@@ -5,7 +5,7 @@
     @include button-inverse-variant($white,20px, $thickblue, 10px, 15px, 40px, $thickblue)
 }
 .large_rounded_btn{
-@include button-inverse-variant($white,20px, $thickblue, 30px, 15px, 40px, $thickblue)
+    @include button-inverse-variant($white,20px, $thickblue, 30px, 15px, 40px, $thickblue)
 }
 
 .small_flat_btn{
