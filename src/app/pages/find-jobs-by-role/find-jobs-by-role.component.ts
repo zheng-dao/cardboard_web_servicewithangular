@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FindjobService } from '../../httpService/findjob.service'
 @Component({
   selector: 'app-jobsbyrole',
-  templateUrl: './jobsbyrole.component.html',
-  styleUrls: ['./jobsbyrole.component.scss']
+  templateUrl: './find-jobs-by-role.component.html',
+  styleUrls: ['./find-jobs-by-role.component.scss']
 })
 export class JobsbyroleComponent implements OnInit {
 

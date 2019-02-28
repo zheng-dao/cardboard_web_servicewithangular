@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JobsbyroleComponent } from './jobsbyrole.component';
+import { JobsbyroleComponent } from './find-jobs-by-role.component';
 
 describe('JobsbyroleComponent', () => {
   let component: JobsbyroleComponent;

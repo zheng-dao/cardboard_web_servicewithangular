@@ -1,6 +1,6 @@
 <div class="jobsbyrole">
   <div class="content_1">
-    <div class="title">{{'page_fjbr_title1'|translate}}</div>
+    <div class="title">{{'fjbr_title1'|translate}}</div>
     <div class="main-content row">
       <div *ngFor="let job of sliceJobsByRole" class="col-sm-12 col-md-12 col-lg-6" style="padding: 0 11px ;">
         <div class=" job-item" [ngClass]="job.is_up? 'up-bg':'down-bg'">
@@ -19,27 +19,27 @@
     <div class="btn"><button class="large_rounded_btn" (click)="setAllJobsByRole()">{{'btn_view_them_all'|translate}}</button></div>
   </div>
   <div class="content_2">
-    <div class="title">{{'page_fjbr_title2'|translate}}</div>
+    <div class="title">{{'fjbr_title2'|translate}}</div>
     <div class="main-content">
       <div class="job-item-container"  *ngFor="let job of sliceJobsByCompanies">
           <div class="job-item">
               <div class="com-mark"><img [src]="job.com_mark"></div>
               <div class="com-name">{{job.com_name}}</div>
-              <div class="count"><span>{{job.count}} {{'page_fjbr_script_jobs'|translate}}</span></div>
+              <div class="count"><span>{{job.count}} {{'fjbr_script_jobs'|translate}}</span></div>
            </div>
       </div>     
     </div>
     <div class="btn"><button class="large_rounded_btn" (click)="setAllJobsByCompanies()">{{'btn_view_them_all'|translate}}</button></div>
   </div>
   <div class="content_3">
-    <div class="title">{{'page_fjbr_title3'|translate}}</div>
-    <div class="abstract-text">{{'page_fjbr_subject3'|translate}}</div>
+    <div class="title">{{'fjbr_title3'|translate}}</div>
+    <div class="abstract-text">{{'fjbr_subject3'|translate}}</div>
     <div class="main-content">
         <div class="job-item-container"  *ngFor="let job of sliceJobsByCountries">
             <div class="job-item">
                 <div class="country-photo"><img [src]="job.country_photo"></div>
                 <div class="country-name">{{job.country_name}}</div>
-                <div class="count">{{job.count}} {{'page_fjbr_script_jobs'|translate}}</div>
+                <div class="count">{{job.count}} {{'fjbr_script_jobs'|translate}}</div>
              </div>
         </div>     
       </div>
