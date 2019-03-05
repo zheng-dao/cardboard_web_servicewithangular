@@ -11,6 +11,8 @@ import { FindJobsBySectorComponent } from './pages/find-jobs-by-sector/find-jobs
 import { FindJobsByLocationComponent } from './pages/find-jobs-by-location/find-jobs-by-location.component';
 import { FindJobsByCompanyComponent } from './pages/find-jobs-by-company/find-jobs-by-company.component';
 import { AdvancedJobSearchComponent } from './pages/advanced-job-search/advanced-job-search.component';
+import { JobOfferComponent } from './pages/job-offer/job-offer.component';
+import { CompanyProfileComponent } from './pages/company-profile/company-profile.component';
 
 const routes: Routes = [
   { path: '', component: PortalComponent },
@@ -23,7 +25,9 @@ const routes: Routes = [
   { path: 'findJobsBySector', component: FindJobsBySectorComponent },
   { path: 'findJobsByLocation', component: FindJobsByLocationComponent},
   { path: 'findJobsByCompany', component : FindJobsByCompanyComponent},
-  { path: 'advancedJobSearch', component : AdvancedJobSearchComponent}
+  { path: 'advancedJobSearch', component : AdvancedJobSearchComponent},
+  {path: 'jobOffer', component:JobOfferComponent},
+  {path: 'companyProfile', component:CompanyProfileComponent}
 ];
 
 @NgModule({

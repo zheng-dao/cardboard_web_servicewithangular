@@ -1,16 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule , ReactiveFormsModule} from '@angular/forms'
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {DxRangeSliderModule, DxNumberBoxModule} from 'devextreme-angular';
-import { MatRadioModule, MatIconModule} from '@angular/material'
-import {MultiSelectAllModule} from '@syncfusion/ej2-angular-dropdowns'
-
+import { DxRangeSliderModule, DxNumberBoxModule } from 'devextreme-angular';
+import {
+  MatRadioModule,
+  MatIconModule,
+  MatButtonModule,
+  MatChipsModule
+} from '@angular/material'
+import { MultiSelectAllModule } from '@syncfusion/ej2-angular-dropdowns';
+import {AgmCoreModule, GoogleMapsAPIWrapper} from '@agm/core';
 // Module for language translate 
-import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 //header and footer component
 import { HeaderComponent } from './header/header.component';
@@ -20,27 +25,27 @@ import { Header2Component } from './header/header2/header2.component';
 
 
 //pages components
-import {SignupComponent} from './pages/signup/signup.component';
+import { SignupComponent } from './pages/signup/signup.component';
 import { PortalComponent } from './pages/portal/portal.component';
 import { VcvtutoComponent } from './pages/vcvtuto/vcvtuto.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 
 
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PagerComponent } from './widgets/pager/pager.component';
 import { LinechartComponent } from './widgets/linechart/linechart.component';
 import { CountrySelectComponent } from './widgets/country-select/country-select.component';
 import { JobsbyroleComponent } from './pages/find-jobs-by-role/find-jobs-by-role.component';
-import {SearchresultComponent} from './pages/searchresult/searchresult.component';
-import {ItembuttonComponent} from './widgets/itembutton/itembutton.component';
+import { SearchresultComponent } from './pages/searchresult/searchresult.component';
+import { ItembuttonComponent } from './widgets/itembutton/itembutton.component';
 
 import { JobTitlesSelectComponent } from './widgets/job-titles-select/job-titles-select.component';
 import { LocationsSelectComponent } from './widgets/locations-select/locations-select.component';
 import { GenderSelectComponent } from './widgets/gender-select/gender-select.component';
 import { LanguageSelectComponent } from './widgets/language-select/language-select.component';
 import { CompanyTypeSelectComponent } from './widgets/company-type-select/company-type-select.component';
-import { SalarySliderComponent} from './widgets/salary-slider/salary-slider.component';
+import { SalarySliderComponent } from './widgets/salary-slider/salary-slider.component';
 import { CareerComponent } from './widgets/career/career.component';
 import { EmploymentTypeComponent } from './widgets/employment-type/employment-type.component';
 import { SpecialtyComponent } from './widgets/specialty/specialty.component';
@@ -49,7 +54,7 @@ import { DateModifiedComponent } from './widgets/date-modified/date-modified.com
 import { JobRoleBrowseComponent } from './widgets/job-role-browse/job-role-browse.component';
 import { JobIndustryBrowseComponent } from './widgets/job-industry-browse/job-industry-browse.component';
 import { AreaBrowseComponent } from './widgets/area-browse/area-browse.component';
-import { EmailconfirmComponent} from './pages/emailconfirm/emailconfirm.component';
+import { EmailconfirmComponent } from './pages/emailconfirm/emailconfirm.component';
 import { FindJobsBySectorComponent } from './pages/find-jobs-by-sector/find-jobs-by-sector.component';
 import { CustomSelectComponent } from './widgets/custom-select/custom-select.component';
 import { FindJobsByLocationComponent } from './pages/find-jobs-by-location/find-jobs-by-location.component';
@@ -57,6 +62,7 @@ import { FindJobsByCompanyComponent } from './pages/find-jobs-by-company/find-jo
 import { AdvancedJobSearchComponent } from './pages/advanced-job-search/advanced-job-search.component';
 import { CheckboxGroupComponent } from './widgets/checkbox-group/checkbox-group.component';
 import { JobOfferComponent } from './pages/job-offer/job-offer.component';
+import { CompanyProfileComponent } from './pages/company-profile/company-profile.component';
 
 
 
@@ -98,35 +104,41 @@ import { JobOfferComponent } from './pages/job-offer/job-offer.component';
     FindJobsByCompanyComponent,
     AdvancedJobSearchComponent,
     CheckboxGroupComponent,
-    JobOfferComponent 
- 
+    JobOfferComponent,
+    CompanyProfileComponent
+
   ],
   imports: [
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,     
+    BrowserAnimationsModule,
     MatRadioModule,
     MatIconModule,
+    MatChipsModule,
+    MatButtonModule,
     MultiSelectAllModule,
     DxRangeSliderModule,
     DxNumberBoxModule,
     // configure the imports
     HttpClientModule,
     TranslateModule.forRoot({
-      loader:{
-        provide:TranslateLoader,
+      loader: {
+        provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps:[HttpClient]
+        deps: [HttpClient]
       }
-    })
-    
+    }),
+
+    //google-map
+   AgmCoreModule.forRoot({apiKey:''}),
+
   ],
   providers: [
-   
+     GoogleMapsAPIWrapper
   ],
-  entryComponents:[ItembuttonComponent],
+  entryComponents: [ItembuttonComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

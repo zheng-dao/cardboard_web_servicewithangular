@@ -16,7 +16,7 @@ export class Header2Component implements OnInit {
   sliceMessages: any[];
   is_message_modal_show: boolean = false;
   @ViewChild('message_modal') messageModal: ElementRef;
-
+  
   /// notification control
   allNotifications: any[];
   sliceNotifications: any[];
@@ -31,6 +31,9 @@ export class Header2Component implements OnInit {
     if (!this.notificationModal.nativeElement.contains(event.target))
       this.hideNotificationModal();
   }
+
+  //navbar 
+  @ViewChild('header2') header2:ElementRef;
 
   constructor(private httpService: MessageService,
     private eRef: ElementRef) { }
@@ -91,5 +94,18 @@ export class Header2Component implements OnInit {
   }
   hideNotificationModal() {
     this.is_notification_modal_show = false;
+  }
+
+
+  ////////////////////menu show and hide (toggle)////////////////
+
+  toggleHeaderMenu() {
+    let nativeheader = this.header2.nativeElement;
+    if (nativeheader.className === "row") {
+      nativeheader.className += " responsive";
+    }
+    else {
+      nativeheader.className = "row";
+    }
   }
 }

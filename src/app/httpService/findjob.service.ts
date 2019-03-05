@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { JobsByRoleModel, JobsByCompaniesModel, JobsByCountryModel } from '../models/jobsbyrole'
 import {JobsBySectorModel, JobTitlesModel} from '../models/findJobBySector';
 import {JobByCityModel,JobByLocationModel, JobForInterModel,} from '../models/findJobByLocation';
-
+import {JobForCompanyModel} from '../models/jobOffer';
 @Injectable({
   providedIn: 'root'
 })
@@ -40,5 +40,7 @@ export class FindjobService {
   getJobForInternational():Observable<JobForInterModel[]>{
     return this.http.get<JobForInterModel[]>("/assets/JsonData/findJobsByLocation/jobsForInternational.json");
   }
- 
+  getJobSimilarForCompany():Observable<JobForCompanyModel[]>{
+    return this.http.get<JobForCompanyModel[]>("/assets/JsonData/jobForCompany.json");
+  }
 }

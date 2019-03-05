@@ -72,5 +72,31 @@ export class IconService {
         'heart',
         this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/icon/ico_heart.svg')
       ); 
+
+      //////////////////////////
+      this.matIconRegistry.addSvgIcon(
+        'company_video',
+        this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/icon/company_video.svg')
+      ); 
+      this.matIconRegistry.addSvgIcon(
+        'founded_house',
+        this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/icon/founded_house.svg')
+      ); 
+      this.matIconRegistry.addSvgIcon(
+        'plane',
+        this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/icon/plane.svg')
+      ); 
+      this.matIconRegistry.addSvgIcon(
+        'telephone',
+        this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/icon/telephone.svg')
+      ); 
+      this.matIconRegistry.addSvgIcon(
+        'unlocked_key',
+        this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/icon/unlocked_key.svg')
+      ); 
+      this.matIconRegistry.addSvgIcon(
+        'website',
+        this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/icon/website.svg')
+      ); 
     }
 }
