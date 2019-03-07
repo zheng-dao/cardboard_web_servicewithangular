@@ -104,7 +104,7 @@ export class PortalComponent implements OnInit {
     ];
 
     // auto slider 
-     this.startAutoSlider();
+    // this.startAutoSlider();
   }
 
 }

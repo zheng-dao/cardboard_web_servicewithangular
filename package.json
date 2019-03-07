@@ -26,6 +26,7 @@
     "@ngx-translate/http-loader": "^4.0.0",
     "@syncfusion/ej2-angular-buttons": "^16.4.52",
     "@syncfusion/ej2-angular-dropdowns": "^16.4.52",
+    "angular-d3-charts": "^5.0.0",
     "angular-image-slider": "0.0.8",
     "bootstrap": "^4.2.1",
     "chart.js": "^2.7.3",

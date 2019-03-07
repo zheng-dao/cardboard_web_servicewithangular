@@ -119,10 +119,12 @@
         }
 
         .checkbox-group-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             margin: 0;
             .checkbox-wrapper{               
-                display: table;
-                float:left;
+                display: table;                
                 margin-right:4%;
                 .checkbox-title{
                     @include custom_font(#898EA2, 14px , 17px , 'galano_grotesque_alt_medium');  

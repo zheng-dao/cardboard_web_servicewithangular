@@ -93,21 +93,22 @@
        .main-content{
            margin:0 -10px;
            width:100%;
-           display: block;
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
            .job-item-container{
-               width:20%;
-               padding:0px 10px;
+               width:206px;
+               height:245px;
+               padding:0px 10px;            
               
-               display: inline-block;
                .job-item{
-                //    width:100%;
-                   min-width:150px;
-                   background-image: url('/assets/images/content_back.png');
-                   background-size: 100% 100%;
+                    background-color: #F6F7FC;
+                    box-shadow: 0 0 6px rgba(rgb(150, 141, 141), 0.7);
                    border-radius: 20px;
                    overflow: hidden;
                    text-align: center;
                    padding:25px 0;
+                   cursor:pointer;
                    .com-mark{
                         width:113px;
                         height:113px;
@@ -131,6 +132,10 @@
                            background-color: $thickblue;
                            @include custom_font(white, 16px, 19px ,'galano_grotesque_alt_semi_bold');
                        }
+                   }
+
+                   &:focus{
+                       outline: none;
                    }
                }
            }   
@@ -168,18 +173,17 @@
         }
 
         .main-content{            
-            width:90%;
+            
             margin:0 auto;
-            display: block;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
             .job-item-container{
-                width:25%;
-                padding:0px 25px;  
-                display: inline-block;
-                .job-item{
-                 //    width:100%;
-                    min-width:150px; 
-                    text-align: center;
-                    padding:25px 0;
+                width:200px;
+                margin:20px 25px; 
+                
+                .job-item{                                  
+                    text-align: center;                  
                     .country-photo{                        
                          margin:0 auto;
                          border-radius: 50%;                               
@@ -201,17 +205,7 @@
             }     
             
 
-                @media(max-width:1000px) {
-                    .job-item-container{
-                        width:30%;
-                    }
-                }
-
-                @media(max-width:600px) {
-                    .job-item-container{
-                        width:50%;
-                    }
-                }
+                
             
         }
    }

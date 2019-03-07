@@ -1,34 +1,47 @@
-import { Component, OnInit, Input } from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header1',
   templateUrl: './header1.component.html',
-  styleUrls: ['./header1.component.scss']  
+  styleUrls: ['./header1.component.scss']
 })
 export class Header1Component implements OnInit {
-  
- @Input() headerBackground:boolean;
+
+  @Input() headerBackground: boolean;
 
   logCheck: boolean;
 
-  is_en:boolean=true;
-  is_ar:boolean=false;
-  
-  constructor(private translate:TranslateService){
+  is_en: boolean = true;
+  is_ar: boolean = false;
+
+  @ViewChild('header1') header1: ElementRef;
+
+  constructor(private translate: TranslateService) {
     translate.setDefaultLang('en');
   }
-  uselanguage(s:string){
+  uselanguage(s: string) {
     this.translate.use(s);
-    if(s==='en'){
-      this.is_en=true;
-      this.is_ar=false;
+    if (s === 'en') {
+      this.is_en = true;
+      this.is_ar = false;
     }
-    else{
-      this.is_en=false;
-      this.is_ar=true;
+    else {
+      this.is_en = false;
+      this.is_ar = true;
     }
   }
 
-  ngOnInit() {  }
+  ngOnInit() { }
+
+  toggleHeaderMenu() {
+    let nativeheader = this.header1.nativeElement;
+    if (nativeheader.className === "row") {
+      nativeheader.className += " responsive";
+    }
+    else {
+      nativeheader.className = "row";
+    }
+  }
+
 }

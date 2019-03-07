@@ -72,6 +72,10 @@ export class IconService {
         'heart',
         this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/icon/ico_heart.svg')
       ); 
+      this.matIconRegistry.addSvgIcon(
+        'video_play',
+        this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/icon/video_play.svg')
+      ); 
 
       //////////////////////////
       this.matIconRegistry.addSvgIcon(
@@ -97,6 +101,10 @@ export class IconService {
       this.matIconRegistry.addSvgIcon(
         'website',
         this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/icon/website.svg')
+      ); 
+      this.matIconRegistry.addSvgIcon(
+        'address_book',
+        this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/icon/address_book.svg')
       ); 
     }
 }

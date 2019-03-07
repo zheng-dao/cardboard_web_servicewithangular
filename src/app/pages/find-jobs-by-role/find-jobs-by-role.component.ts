@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FindjobService } from '../../httpService/findjob.service'
+import { FindjobService } from '../../httpService/findjob.service';
 @Component({
   selector: 'app-jobsbyrole',
   templateUrl: './find-jobs-by-role.component.html',

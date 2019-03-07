@@ -19,8 +19,8 @@
 
   <div class="content-2">
     <div class="title">{{'fjbl_title2'|translate}}</div>
-    <div class="job-by-location-container" *ngFor="let item of allJobsByLocations">
-      <div class="side-container">
+    <div class="job-by-location-container row" *ngFor="let item of allJobsByLocations">
+      <div class="side-container col-md-4 ">
         <div class="flag">
           <img [src]="item.flag">
         </div>
@@ -29,7 +29,7 @@
           <div class="total-count">{{item.total_count}}{{'fjbl_script_jobs'|translate}}</div>
         </div>
       </div>
-      <div class="job-city-container">
+      <div class="job-city-container col-md-8 ">
         <div class="city-wrapper">
             <div *ngFor="let city of item.cities" class="city">
                 <span>{{city.name}}</span>
@@ -40,16 +40,16 @@
     </div>
   </div>
 
-  <div class="content-3">    
+  <div class="content-3 row">    
       
-        <div class="side-container">          
+        <div class="side-container col-lg-4">          
           <div class="loca-info">
             <div class="country-name">{{'fjbl_script_international'|translate}}</div>
             <div class="total-count">{{all_counts}}{{'fjbl_script_jobs'|translate}}</div>
           </div>
           <div class=""><button class="large_rounded_btn">{{'btn_view_them_all'|translate}}</button></div>
         </div>
-        <div class="job-per-country-container">
+        <div class="job-per-country-container col-lg-8">
           <div *ngFor="let country of allJobsForInternational" class="city-wrapper">
             <span>{{country.name}}</span>
             <span>({{country.count}})</span>

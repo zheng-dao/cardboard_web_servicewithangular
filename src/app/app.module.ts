@@ -13,6 +13,7 @@ import {
 } from '@angular/material'
 import { MultiSelectAllModule } from '@syncfusion/ej2-angular-dropdowns';
 import {AgmCoreModule, GoogleMapsAPIWrapper} from '@agm/core';
+import { DoughnutChartComponent} from 'angular-d3-charts';
 // Module for language translate 
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -63,6 +64,7 @@ import { AdvancedJobSearchComponent } from './pages/advanced-job-search/advanced
 import { CheckboxGroupComponent } from './widgets/checkbox-group/checkbox-group.component';
 import { JobOfferComponent } from './pages/job-offer/job-offer.component';
 import { CompanyProfileComponent } from './pages/company-profile/company-profile.component';
+import { CustomDonutChartComponent } from './widgets/custom-donut-chart/custom-donut-chart.component';
 
 
 
@@ -105,7 +107,10 @@ import { CompanyProfileComponent } from './pages/company-profile/company-profile
     AdvancedJobSearchComponent,
     CheckboxGroupComponent,
     JobOfferComponent,
-    CompanyProfileComponent
+    CompanyProfileComponent,
+    DoughnutChartComponent,
+    CustomDonutChartComponent,
+
 
   ],
   imports: [

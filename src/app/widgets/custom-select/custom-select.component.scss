@@ -8,16 +8,7 @@
     position: relative;
     padding-left:45px;    
       margin:0 auto;
-    // &::after {
-    //     content: '';
-    //     position: absolute;
-    //     top: 30%;
-    //     right: 0;
-    //     bottom: 0;
-    //     padding: 0 1em;
-    //     background: #f5f8fd;
-    //     pointer-events: none;
-    //   }
+   
       select:required:invalid {
            color:#859CC2;
            font-size:15px;

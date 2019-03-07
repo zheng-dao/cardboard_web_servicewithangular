@@ -95,9 +95,12 @@
     .job-result{
          
         .title{
+            margin-left:10px;
+            margin-top:10px;
             .main-title{
                 @include custom-font(#333333, 32px, 52px, 'galano_grotesque_alt_bold' );
                 margin-right:20px;
+
             }
             .all-job-count{
                 @include custom-font(#90A5D7, 16px, 52px, 'galano_grotesque_alt_regular' );
@@ -105,10 +108,14 @@
         }
 
         .content-container{
-            width:100%;           
+            width:100%;  
+            margin-right:0px;
+            margin-left:0px;         
             .item-wrapper{
                 position: relative;
                 margin:10px 0;
+                width:506px;
+                height:234px;
                 display: table;                
                 background-image: url('/assets/images/content_back.png');
                 background-size:100% 100%;

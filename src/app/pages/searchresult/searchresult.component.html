@@ -1,6 +1,6 @@
 <div class="search-result ">
   <div class="row">
-    <div class="search-bar col-sm-12 col-md-6 col-lg-4 col-xl-3 ">
+    <div class="search-bar col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 ">
       <div class="search-tab-container">
         <div class="search-tab" [ngClass]="{'tab-selected':is_show}" (click)="setShow(true)">{{'search_result_tab_search'|translate}}</div>
         <div class="search-tab" [ngClass]="{'tab-selected':!is_show}" (click)="setShow(false)">{{'search_result_tab_browse'|translate}}</div>
@@ -49,7 +49,7 @@
               <div class="item-side">
                 <div><img src="{{job.com_mark}}"></div>
                 <div>
-                  <button class="small_rounded_btn">
+                  <button class="small_rounded_btn" routerLink="/jobOffer">
                     <mat-icon>play_arrow</mat-icon>
                     <span>{{'btn_watch_offer'|translate}}</span>
                   </button>

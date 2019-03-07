@@ -1,5 +1,5 @@
-<div class="header1" [style.background-color]="headerBackground? '#2766FF':'transparent'">
-  <div class="row">
+<div class="header1" [style.background-color]="headerBackground? '#2766FF':'transparent'" >
+  <div class="row" #header1>
     <div class=" col-sm-12 col-md-12 col-lg-6 offset-lg-1">
       <nav class="navbar navbar-expand-lg ">
         <ul class="navbar-nav main-menu-section">
@@ -32,4 +32,6 @@
 
     </div>
   </div>
+
+  <i class="fa fa-bars nav_toggle_btn" (click)="toggleHeaderMenu()"></i>
 </div>
