@@ -1,0 +1,441 @@
+.my-applications{
+    .my-applications-container{
+        .title{
+            @include custom_font(#333333, 32px , 47px , 'galano_grotesque_alt_semi_bold');
+            margin:80px auto;
+            text-align: center;            
+        }
+        .tab-container{
+            display :flex;
+            justify-content: center;
+            div{
+                margin: 0 5px;
+                text-align: center;
+                cursor:pointer;
+                width:130px;
+                height:40px;                
+                box-sizing: border-box;
+                @include custom_font(#B0B0B1, 18px , 28px , 'galano_grotesque_alt_semi_bold');
+             &:hover{
+                border-bottom:1px solid $thickblue;
+             }
+            }
+            .select{
+                border-bottom:1px solid $thickblue;
+                color:rgb(71, 63, 63); 
+            }
+
+        }
+        .opened-jobs-container, .closed-jobs-container{
+            width:100%;   
+                  
+             border-radius: 10px;
+             box-shadow: 0 0 10px rgba(180,180,180,0.7);
+             padding:50px;
+             display:flex;
+             justify-content: center;
+             flex-wrap: wrap;
+             .job{
+                 width:520px;
+                 height:258px;
+                 margin:10px;
+                 border-radius: 10px;
+                 background-color: #F9FAFE;
+                 box-shadow: 0 0 5px rgba(180,180,180,0.7);
+                 padding:15px;
+                 display: flex;                 
+                 .left-side{
+                     width:140px;
+                     height:100%;
+                     margin-right:10px;
+                     text-align: center;
+                     img{
+                         width:100px;
+                         height:100px;
+                         border-radius: 50%;
+                         box-shadow: 0 2px 5px rgba(150,150,150,0.7);
+                         margin-top:-30px;
+                     }
+                     .com-name{
+                         margin-top:20px;
+                        @include custom_font(#15181D, 14px , 14px , 'galano_grotesque_alt_medium');
+                     }
+                     .divider{
+                         width:74px;
+                         height:0;
+                         border-bottom: 1px solid rgb(189, 185, 185);
+                         margin: 20px auto 40px auto;
+                     }
+                     app-semi-circle-chart{                        
+                         width:100%;
+                     }
+                 }
+                 .right-side{
+                     width:340px;
+                     height:100%;
+                     .header-section{
+                         margin-top:5px;
+                         display: flex;
+                         justify-content: space-between;
+                         border-bottom: 1px solid rgb(201, 194, 194);
+                         margin-bottom:10px;
+                         .header-career{
+                             width:270px;
+                            .career{
+                                @include custom_font($thickblue, 20px , 24px , 'galano_grotesque_semi_bold');
+                                 margin-bottom: 4px;
+                            } 
+                            .time{
+                                @include custom_font(#8E9DC1, 10px , 10px , 'galano_grotesque_alt_medium');
+                                margin-bottom: 4px;
+                            }
+                         }
+                         .control-btn-container{
+                             width:130px;
+                             display: flex;
+                             justify-content: center;
+                            .icon{
+                                margin:3px;
+                                width:30px;
+                                height:30px;
+                                border-radius: 15px;
+                                box-shadow: 0 2px 3px rgba(150,150,150,0.7);
+                                color:gray;
+                                background-color: white;
+                               padding:0 9px;
+                               cursor:pointer;
+                                mat-icon{                                  
+                                    width:12px;
+                                    height:20px;
+                                }
+                            } 
+                            .icon.heart{
+                                 background-color:$thickblue;
+                                 color: white;
+                            }
+                         }
+                     }
+                     .job-status-section{
+                         display: flex;
+                         justify-content: space-between;
+                         height:48px;
+                         .job-status{
+                             width:220px;
+                             height: 100%;
+                            .post-status{
+                                @include custom_font(#15181D, 14px , 20px , 'galano_grotesque_alt_medium');
+                                margin-bottom: 5px;
+                            }
+                            .status{
+                                @include custom_font(#04B9A1, 12px , 15px , 'galano_grotesque_alt_semi_bold');
+                                margin-bottom: 5px;
+                            }
+                         }
+                         .follow_btn{
+                            background-color:white;
+                            height:40px;
+                            width:105px;
+                            text-align: center;
+                            border-radius: 20px;                          
+                            @include custom_font($thickblue, 16px , 36px , 'galano_grotesque_alt_medium');                      
+                            border: 2px solid $thickblue;
+                         }  
+                     }
+
+                    .location, .com-type, .salary{
+                        @include custom-font(#354052, 12px, 15px, 'galano_grotesque_alt_medium' );
+                        margin-bottom: 5px;  
+                        .svg-icon{
+                            vertical-align: middle; 
+                            margin-right:10px;  
+                            color:  #2766FF   ;     
+                             width:15px !important;  
+                             height:18px !important; 
+                             font-size: 11px;            
+                        }
+                    }
+                    .mat-chip-list-container{
+                         margin-top:25px;
+                        .offer-deactivate{
+                            font-family: 'galano_grotesque_alt_medium' ;
+                            font-size: 14px;
+                            
+                            .offer{
+                                color:white;
+                            }
+                            .deactivate{
+                                border:1px solid gray;
+                                color:gray;
+                                margin-left: 40px;
+                            }
+                        }
+                    }
+                 }
+             }
+        }
+        .saved-jobs-container{
+            width:100%;           
+             border-radius: 10px;
+             box-shadow: 0 0 10px rgba(180,180,180,0.7);
+             padding:50px;
+             display:flex;
+             justify-content: center;
+             flex-wrap: wrap;
+             .job{
+                 width:570px;
+                 height:250px;
+                 margin:10px;
+                 border-radius: 10px;
+                 background-color: #F9FAFE;
+                 box-shadow: 0 0 5px rgba(180,180,180,0.7);
+                 padding:15px;
+                 display: flex;  
+                 align-items: center;   
+                 justify-content: space-between;            
+                 .left-side{
+                     width:100px;
+                     height:100px;
+                     margin-right:10px;
+                     text-align: center;
+                     margin-left:-60px;
+                     img{
+                         width:100%;
+                         height:100%;
+                         border-radius: 50%;
+                         box-shadow: 0 2px 5px rgba(150,150,150,0.7);
+                        
+                     }
+                 }
+                 .right-side{
+                     width:470px;
+                     height:100%;
+                     .header-section{
+                         margin-top:5px;
+                         display: flex;
+                         justify-content: space-between;
+                         border-bottom: 1px solid rgb(201, 194, 194);
+                         margin-bottom:10px;
+                         .header-career{
+                             width:270px;
+                            .career{
+                                @include custom_font($thickblue, 20px , 24px , 'galano_grotesque_semi_bold');
+                                 margin-bottom: 4px;
+                            } 
+                            .com-name{
+                                margin:5px 0;
+                               @include custom_font(#15181D, 14px , 14px , 'galano_grotesque_alt_medium');
+                            }
+                            .time{
+                                @include custom_font(#8E9DC1, 10px , 10px , 'galano_grotesque_alt_medium');
+                                margin-bottom: 4px;
+                            }
+                         }
+                         .control-btn-container{
+                             width:130px;
+                             display: flex;
+                             justify-content: center;
+                            .icon{
+                                margin:3px;
+                                width:30px;
+                                height:30px;
+                                border-radius: 15px;
+                                box-shadow: 0 2px 3px rgba(150,150,150,0.7);
+                                color:gray;
+                                background-color: white;
+                               padding:0 9px;
+                               cursor:pointer;
+                                mat-icon{                                  
+                                    width:12px;
+                                    height:20px;
+                                }
+                            } 
+                            .icon.heart{
+                                 background-color:$thickblue;
+                                 color: white;
+                            }
+                         }
+                     }
+                     .job-detail-section{
+                         display: flex;
+                         justify-content: space-between;
+                         .job-detail-left{
+
+                           .job-status{
+                                width:220px;                              
+                                .post-status{
+                                    @include custom_font(#15181D, 14px , 20px , 'galano_grotesque_alt_medium');
+                                    margin-bottom: 0px;
+                                }
+                                .status{
+                                    @include custom_font(#04B9A1, 12px , 15px , 'galano_grotesque_alt_semi_bold');
+                                    margin-bottom: 5px;
+                                }
+                            }
+                            .location, .com-type, .salary{
+                                @include custom-font(#354052, 12px, 15px, 'galano_grotesque_alt_medium' );
+                                margin-bottom: 5px; 
+                                margin-right: 10px;                               
+                                align-items: center; 
+                                .svg-icon{
+                                    vertical-align: middle; 
+                                    margin-right:10px;  
+                                    color:  #2766FF   ;     
+                                     width:15px !important;  
+                                     height:18px !important; 
+                                     font-size: 11px;            
+                                }
+                            }
+                            .mat-chip-list-container{
+                                margin-top:0px;
+                               .offer-deactivate{
+                                   font-family: 'galano_grotesque_alt_medium' ;
+                                   font-size: 14px;
+                                   
+                                   .offer{
+                                       color:white;
+                                   }
+                                   .deactivate{
+                                       border:1px solid gray;
+                                       color:gray;
+                                       margin-left: 8px;
+                                   }
+                               }
+                           }
+
+                         }  
+                         .job-detail-right{
+                            text-align: center;
+                            width:144px;
+                            .apply_btn{
+                                background-color:white;
+                                height:30px;
+                                width:105px;
+                                text-align: center;
+                                border-radius: 15px;                          
+                                @include custom_font($thickblue, 16px , 28px , 'galano_grotesque_alt_medium');                      
+                                border: 2px solid $thickblue;
+                             }  
+                         }                       
+                       
+                     }
+                 }
+             }
+        }
+    }
+    .job-relevancy-container{
+        margin:80px auto 60px auto;
+        .title{
+            text-align: center;
+            @include custom_font(#1c2b4f, 32px, 32px, 'galano_grotesque_alt_bold');
+            margin-bottom: 35px;
+        }
+
+        .main-content{
+            margin: 0;
+            width:100%;
+            .job-item{
+                min-height:108px;
+                border-radius: 8px;
+                box-shadow: 0 2px 6px gray;
+                margin-bottom: 5px;              
+                overflow: hidden;
+                padding:20px 10px;
+                position: relative;
+                .count{
+                    display: table;
+                    width:54px;                                     
+                    height:54px;
+                    border-radius: 50%;
+                    background-color: $thickblue;
+                    text-align: center;
+                    vertical-align: middle;
+                    @include custom_font(white, 24px, 29px, 'galano_grotesque_alt_bold');
+                    float:left;
+                    padding-top:15px;
+                    margin:10px;
+                }
+                .job-role{
+                    width:70%;
+                    height:auto;
+                    padding-left: 15px;
+                    border-left: 1px solid #8E9DC1;
+                     margin-top:18px;
+                    display: table;
+                    float:left;
+                    .role{
+                     @include custom_font(#454545, 18px, 22px, 'galano_grotesque_alt_medium');  
+                    }
+                    .expert{
+                     @include custom_font(#8E9DC1, 16px, 19px, 'galano_grotesque_alt_regular');  
+                    }
+                }
+                .ratio{
+                    position: absolute;
+                    top:5px;
+                    right:10px;
+                   display: inline-table;
+                   @include custom_font(#8E9DC1, 16px, 19px, 'galano_grotesque_alt_regular');              
+                   mat-icon{
+                       vertical-align: middle;
+                   }
+                 }
+ 
+            }
+            .up-bg{
+                background-image: url('/assets/images/jobsbyrole/up_chart.png');
+                background-repeat: no-repeat;
+                background-position: right bottom;
+            }
+            .down-bg{
+             background-image: url('/assets/images/jobsbyrole/down_chart.png');
+             background-repeat: no-repeat;
+             background-position: right bottom;
+             }
+         }
+        .btn{
+            display: block;
+            margin-top: 80px;
+        }
+    }
+
+
+    @media(min-width:1200px){
+        .container{
+          .opened-jobs-container,.closed-jobs-container , .saved-jobs-container{
+             width:110%;
+            margin-left:-5%;
+           }
+           .saved-jobs-container{
+            .job{
+                width:830px;
+                height:233px;
+                .left-side{
+                    width:160px;
+                    height:160px;                    
+                    margin-left:-100px;                    
+                }
+                .right-side{
+                    width:687px; 
+                    .job-detail-section{                       
+                        .job-detail-left{                          
+                           .location, .com-type, .salary{                              
+                               display: inline-flex;
+                           }
+                           .mat-chip-list-container{
+                               margin-top:25px;
+                           }
+                        }  
+                        .job-detail-right{
+                           text-align: center;
+                           width:130px;                             
+                           
+                        }  
+                    }
+                }
+            }
+           }
+
+        }
+      
+    }
+}
