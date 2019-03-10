@@ -1,0 +1,222 @@
+<div class="my-applications">
+  <div class="my-applications-container container">
+    <div class="title">{{'my_app_my_applications'|translate}}</div>
+    <div class="tab-container">
+      <div (click)="setSelected(0)" #tab [class]="selected_tab_index==0? 'select': ''">{{'my_app_opened_jobs'|translate}}</div>
+      <div (click)="setSelected(1)" #tab [class]="selected_tab_index==1? 'select': ''">{{'my_app_closed_jobs'|translate}}</div>
+      <div (click)="setSelected(2)" #tab [class]="selected_tab_index==2? 'select': ''">{{'my_app_saved_jobs'|translate}}(3)</div>
+    </div>
+    <div class="opened-jobs-container" [style.display]="selected_tab_index==0? 'flex': 'none'">
+
+      <div class="job" *ngFor="let job of OpenedJobs">
+        <div class="left-side">
+          <img [src]="job.com_mark" class="com-mark">
+          <p class="com-name">{{job.com_name}}</p>
+          <div class="divider"></div>
+          <app-semi-circle-chart [percentage]="job.percent" [grad]="'grad1'"></app-semi-circle-chart>
+        </div>
+        <div class="right-side">
+          <div class="header-section">
+            <div class="header-career">
+              <p class="career">{{job.career}}</p>
+              <p class="time">{{job.time}}</p>
+            </div>
+            <div class="control-btn-container">
+              <div class="icon">
+                <mat-icon svgIcon="plane"></mat-icon>
+              </div>
+              <div class="icon">
+                <mat-icon svgIcon="export"></mat-icon>
+              </div>
+              <div class="icon heart">
+                <mat-icon svgIcon="heart"></mat-icon>
+              </div>
+            </div>
+          </div>
+          <div class="job-status-section">
+            <div class="job-status">
+              <p class="post-status">{{'my_app_job_post_status'|translate}}</p>
+              <p class="status">{{'my_app_active'|translate}}</p>
+            </div>
+            <button class="follow_btn">{{'my_app_button_follow_up'|translate}}</button>
+          </div>
+          <p class="location ">
+            <mat-icon svgIcon="location" class="svg-icon"></mat-icon><span>{{job.location}}</span>
+          </p>
+          <p class="com-type">
+            <mat-icon svgIcon="com_type" class="svg-icon"></mat-icon><span>{{job.com_type}}</span>
+          </p>
+          <p class="salary">
+            <mat-icon svgIcon="salary" class="svg-icon"></mat-icon>
+            <span>${{job.low_salary}} to
+              ${{job.high_salary}}
+              per annum
+            </span>
+          </p>
+          <div class="mat-chip-list-container">
+            <mat-chip-list class="offer-deactivate">
+              <mat-chip color="primary" class="offer" selected>
+                <mat-icon>play_arrow</mat-icon>
+                {{'my_app_button_watch_offer_again'|translate}}
+              </mat-chip>
+              <mat-chip class="deactivate">
+                {{'my_app_button_deactivate_job'|translate}}
+              </mat-chip>
+            </mat-chip-list>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+    <div class="closed-jobs-container" [style.display]="selected_tab_index==1? 'flex': 'none'">
+      <div class="job" *ngFor="let job of ClosedJobs">
+        <div class="left-side">
+          <img [src]="job.com_mark" class="com-mark">
+          <p class="com-name">{{job.com_name}}</p>
+          <div class="divider"></div>
+          <app-semi-circle-chart [percentage]="job.percent" [grad]="'grad2'"></app-semi-circle-chart>
+        </div>
+        <div class="right-side">
+          <div class="header-section">
+            <div class="header-career">
+              <p class="career">{{job.career}}</p>
+              <p class="time">{{job.time}}</p>
+            </div>
+            <div class="control-btn-container">
+              <div class="icon">
+                <mat-icon svgIcon="plane"></mat-icon>
+              </div>
+              <div class="icon">
+                <mat-icon svgIcon="export"></mat-icon>
+              </div>
+              <div class="icon heart">
+                <mat-icon svgIcon="heart"></mat-icon>
+              </div>
+            </div>
+          </div>
+          <div class="job-status-section">
+            <div class="job-status">
+              <p class="post-status">{{'my_app_job_post_status'|translate}}</p>
+              <p class="status">{{'my_app_active'|translate}}</p>
+            </div>
+            <button class="follow_btn">{{'my_app_button_follow_up'|translate}}</button>
+          </div>
+          <p class="location ">
+            <mat-icon svgIcon="location" class="svg-icon"></mat-icon><span>{{job.location}}</span>
+          </p>
+          <p class="com-type">
+            <mat-icon svgIcon="com_type" class="svg-icon"></mat-icon><span>{{job.com_type}}</span>
+          </p>
+          <p class="salary">
+            <mat-icon svgIcon="salary" class="svg-icon"></mat-icon>
+            <span>${{job.low_salary}} to
+              ${{job.high_salary}}
+              per annum
+            </span>
+          </p>
+          <div class="mat-chip-list-container">
+            <mat-chip-list class="offer-deactivate">
+              <mat-chip color="primary" class="offer" selected>
+                <mat-icon>play_arrow</mat-icon>
+                {{'my_app_button_watch_offer_again'|translate}}
+              </mat-chip>
+              <mat-chip class="deactivate">
+                {{'my_app_button_deactivate_job'|translate}}
+              </mat-chip>
+            </mat-chip-list>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="saved-jobs-container" [style.display]="selected_tab_index==2? 'flex': 'none'">
+      <div class="job" *ngFor="let job of SavedJobs">
+        <div class="left-side">
+          <img [src]="job.com_mark" class="com-mark">
+        </div>
+        <div class="right-side">
+          <div class="header-section">
+            <div class="header-career">
+              <p class="career">{{job.career}}</p>
+              <p class="com-name">{{job.com_name}}</p>
+              <p class="time">{{job.time}}</p>
+            </div>
+            <div class="control-btn-container">
+              <div class="icon">
+                <mat-icon svgIcon="plane"></mat-icon>
+              </div>
+              <div class="icon">
+                <mat-icon svgIcon="export"></mat-icon>
+              </div>
+              <div class="icon heart">
+                <mat-icon svgIcon="heart"></mat-icon>
+              </div>
+            </div>
+          </div>
+          <div class="job-detail-section">
+            <div class="job-detail-left">
+              <div class="job-status">
+                <p class="post-status">{{'my_app_job_post_status'|translate}}</p>
+                <p class="status">{{'my_app_saved'|translate}}</p>
+              </div>
+              <p class="location ">
+                <mat-icon svgIcon="location" class="svg-icon"></mat-icon><span>{{job.location}}</span>
+              </p>
+              <p class="com-type">
+                <mat-icon svgIcon="com_type" class="svg-icon"></mat-icon><span>{{job.com_type}}</span>
+              </p>
+              <p class="salary">
+                <mat-icon svgIcon="salary" class="svg-icon"></mat-icon>
+                <span>${{job.low_salary}} to
+                  ${{job.high_salary}}
+                  per annum
+                </span>
+              </p>
+              <div class="mat-chip-list-container">
+                <mat-chip-list class="offer-deactivate">
+                  <mat-chip color="primary" class="offer" selected>
+                    <mat-icon>play_arrow</mat-icon>
+                    {{'my_app_button_watch_offer_again'|translate}}
+                  </mat-chip>
+                  <mat-chip class="deactivate">
+                    {{'my_app_button_deactivate_job'|translate}}
+                  </mat-chip>
+                </mat-chip-list>
+              </div>
+            </div>
+            <div class="job-detail-right">
+              <app-semi-circle-chart [percentage]="job.percent" [grad]="'grad3'"></app-semi-circle-chart>
+              <button class="apply_btn">{{'my_app_button_apply'|translate}}</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="job-relevancy-container container">
+    <div class="title">
+      {{'my_app_jobs_by_vcv'|translate}}
+    </div>
+    <div class="main-content row">
+      <div *ngFor="let job of sliceJobsByRole" class="col-sm-12 col-md-12 col-lg-6" style="padding: 0 11px ;">
+        <div class=" job-item" [ngClass]="job.is_up? 'up-bg':'down-bg'">
+          <div class="count">{{job.count}}</div>
+          <div class="job-role">
+            <div class="role">{{job.role}}</div>
+            <div class="expert">{{job.expert}}</div>
+          </div>
+          <div class="ratio" [style.color]="job.is_up?'#39CA74':'#E62565'">
+            <mat-icon>{{job.is_up? 'keyboard_arrow_up':'keyboard_arrow_down'}}</mat-icon>
+            <span>{{job.ratio+'%'}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn"><button class="large_rounded_btn" (click)="setAllJobsByRole()">{{'btn_view_them_all'|translate}}</button></div>
+ 
+  </div>
+</div>
