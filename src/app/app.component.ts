@@ -10,7 +10,7 @@ import {NavigationStart, Router, Event} from '@angular/router'
 })
 export class AppComponent {
   which_header:boolean=true;// true-header1, false-header2
-  title = 'JobSeeker';
+   title = 'JobSeeker';
    isHeaderBackground:boolean=true;
    isFooterShow:boolean=true;
    backgroundImage:String="";
@@ -53,8 +53,7 @@ export class AppComponent {
         this.backgroundImage="";
         this.backgroundSize="";
       }
-
-    }
+     }
     });
 
   }

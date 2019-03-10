@@ -57,7 +57,7 @@ export class JobsbyroleComponent implements OnInit {
    getAllJobsByCountries() {
      this.httpService.getJobsByCountries().subscribe(data => {
        this.allJobsByCountries = data;
-       this.sliceJobsByCountries = this.allJobsByCountries.slice(0, 8);
+       this.sliceJobsByCountries = this.allJobsByCountries.slice(0, 6);
      });
    }
 

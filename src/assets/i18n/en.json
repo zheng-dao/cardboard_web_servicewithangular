@@ -268,6 +268,21 @@
     "com_profile_info_industry":"Industry",
     "com_profile_info_founded":"Founded",
     "com_profile_info_type":"Type",
-    "com_profile_info_website":"Website"
+    "com_profile_info_website":"Website",
 
+    "my_app_opened_jobs":"Opened Jobs",
+    "my_app_my_applications":"My Applications",
+    "my_app_closed_jobs":"Closed Jobs",
+    "my_app_saved_jobs":"Saved Jobs",
+    "my_app_button_follow_up":"Follow Up",
+    "my_app_button_watch_offer_again":"Watch offer again",
+    "my_app_button_deactivate_job":"Deactivate Job",
+    "my_app_jobs_by_vcv":"Jobs By VCV Relevancy",
+    "my_app_button_view_them_all":"view them all",
+    "my_app_button_apply":"Apply",
+    "my_app_vcv_relevancy":"vcv_relevancy",
+    "my_app_job_post_status":"Job Post Status",
+    "my_app_active":"active",
+    "my_app_closed":"closed",
+    "my_app_saved":"saved"
 }

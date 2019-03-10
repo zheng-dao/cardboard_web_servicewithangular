@@ -65,6 +65,8 @@ import { CheckboxGroupComponent } from './widgets/checkbox-group/checkbox-group.
 import { JobOfferComponent } from './pages/job-offer/job-offer.component';
 import { CompanyProfileComponent } from './pages/company-profile/company-profile.component';
 import { CustomDonutChartComponent } from './widgets/custom-donut-chart/custom-donut-chart.component';
+import { MyApplicationComponent } from './pages/my-application/my-application.component';
+import { SemiCircleChartComponent } from './widgets/semi-circle-chart/semi-circle-chart.component';
 
 
 
@@ -110,6 +112,8 @@ import { CustomDonutChartComponent } from './widgets/custom-donut-chart/custom-d
     CompanyProfileComponent,
     DoughnutChartComponent,
     CustomDonutChartComponent,
+    MyApplicationComponent,
+    SemiCircleChartComponent,
 
 
   ],
