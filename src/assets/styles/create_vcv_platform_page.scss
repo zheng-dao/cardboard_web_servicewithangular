@@ -1,0 +1,48 @@
+.create-vcv-platform{
+    padding:70px 0;
+   .title{
+     text-align: center;
+     margin:30px 0 10px 0;
+     @include custom_font(#333333, 32px , 47px , 'galano_grotesque_alt_semi_bold');
+   }
+   .subtitle{
+     text-align: center;
+     max-width: 500px;
+     margin:30px auto;
+     @include custom_font(rgb(185, 185, 230), 22px , 28px , 'galano_grotesque_alt_light');
+   }
+   .get-started-container{       
+       margin: 60px  auto;
+       padding:70px;
+       max-width: 500px;
+        text-align: center;
+       box-shadow: 0 0 40px rgba(rgb(221, 211, 238), 0.5);
+       border-radius: 20px;  
+       img{
+           width:290px;
+           height:300px;
+          margin:50px auto;
+       }  
+       
+   }
+   .upload{
+       text-align: center;
+       width:400px;
+       margin:0 auto;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+        i{
+            color: $thickblue;
+            margin-right:10px;
+            font-size:25px;
+        }
+       a{
+        @include custom_font($thickblue, 14px , 14px , 'galano_grotesque_alt_medium');
+        text-decoration: underline;
+        cursor: pointer;
+       }
+       
+   }
+
+}
