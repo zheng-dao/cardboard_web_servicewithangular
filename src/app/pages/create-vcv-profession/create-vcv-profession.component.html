@@ -1,0 +1,47 @@
+<div class="create-vcv-profession">
+  <p class="title">{{'create_profession_title'|translate}}</p>
+  <p class="subject">{{'create_profession_subject'|translate}}</p>
+  <div class="container">
+    <div class=" profession-container ">
+      <div class="profession-header">
+        <div class="container-title">
+          <mat-icon svgIcon="business"></mat-icon>
+          <span>{{'create_profession_profession'|translate}}</span>
+        </div>
+        <i class="fa  fa-angle-up ctrl" (click)="onDisplaySet($event)"></i>
+      </div>
+      <div class="profession-body" #listContainer>
+        <ul class="profession-list" #list style="margin-top:0;">
+          <li *ngFor="let profession of sliceProfessions; index as i" (mouseenter)="onMouseEnter($event.target)" (mouseleave)="onMouseLeave($event.target)">
+            <div class="profession-name">
+              <i class="fa fa-circle"></i>
+              <span>{{profession.name}}</span>
+            </div>
+            <div class="checkbox-container">
+              <div class="checkbox-item">
+                <input class="styled-checkbox" [id]="'junior'+i" type="checkbox" value="junior" (click)="onClick( $event.target)" [(ngModel)]="profession.junior">
+                <label [for]="'junior'+i">{{'create_profession_junior'|translate}}</label>
+              </div>
+              <div class="checkbox-item">
+                <input class="styled-checkbox" [id]="'senior'+i" type="checkbox" value="senior" (click)="onClick($event.target)" [(ngModel)]="profession.senior">
+                <label [for]="'senior'+i">{{'create_profession_senior'|translate}}</label>
+              </div>
+              <div class="checkbox-item">
+                <input class="styled-checkbox" [id]="'executive'+i" type="checkbox" value="executive" (click)="onClick($event.target)" [(ngModel)]="profession.executive">
+                <label [for]="'executive'+i">{{'create_profession_executive'|translate}}</label>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="pagination-container">
+      <div class="pagination">
+        <i class="fa fa-circle selected" (click)="setPagination(0)"></i>
+        <i class="fa fa-circle" (click)="setPagination(1)"></i>
+        <i class="fa fa-circle" (click)="setPagination(2)"></i>
+      </div>     
+      <button class="large_rounded_btn" routerLink="/createVCVTheme">{{'create_profession_button_next'|translate|uppercase}}</button>
+    </div>
+  </div>
+</div>

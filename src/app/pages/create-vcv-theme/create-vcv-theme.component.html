@@ -1,0 +1,23 @@
+<div class="create-vcv-theme">
+  <p class="title">{{'create_theme_title'|translate}}</p>
+  <p class="subject">{{'create_theme_subject'|translate}}</p>
+  <div class="container ">
+    <div class="theme-container">
+      <div class="theme-list">
+        <div class="theme" *ngFor="let theme of sliceThemes">
+          <img [src]="theme.style">
+          <p class="theme-name">{{theme.name}}</p>
+        </div>
+      </div>
+      <div class="pagination-container">
+        <div class="pagination">
+          <i class="fa fa-circle selected" (click)="setPagination(0)"></i>
+          <i class="fa fa-circle" (click)="setPagination(1)"></i>
+          <i class="fa fa-circle" (click)="setPagination(2)"></i>
+        </div>
+        <button class="large_rounded_btn">{{'create_theme_button_next'|translate|uppercase}}</button>
+      </div>
+    </div>
+
+  </div>
+</div>
