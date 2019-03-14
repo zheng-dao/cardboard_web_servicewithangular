@@ -14,7 +14,11 @@ import { AdvancedJobSearchComponent } from './pages/advanced-job-search/advanced
 import { JobOfferComponent } from './pages/job-offer/job-offer.component';
 import { CompanyProfileComponent } from './pages/company-profile/company-profile.component';
 import { MyApplicationComponent } from './pages/my-application/my-application.component'; 
-
+import { MyvcvComponent } from './pages/myvcv/myvcv.component';
+import { CreateVcvPlatformComponent } from './pages/create-vcv-platform/create-vcv-platform.component';
+import { CreateVcvProfessionComponent } from './pages/create-vcv-profession/create-vcv-profession.component';
+import { CreateVcvThemeComponent } from './pages/create-vcv-theme/create-vcv-theme.component';
+import { ProfileAnalyticsComponent } from './pages/profile-analytics/profile-analytics.component';
 const routes: Routes = [
   { path: '', component: PortalComponent },
   { path: 'signup', component: SignupComponent },
@@ -29,7 +33,12 @@ const routes: Routes = [
   { path: 'advancedJobSearch', component : AdvancedJobSearchComponent},
   { path: 'jobOffer', component:JobOfferComponent},
   { path: 'companyProfile', component:CompanyProfileComponent},
-  { path: 'myApplications', component:MyApplicationComponent}
+  { path: 'myApplications', component:MyApplicationComponent},
+  { path: 'myVCV', component:MyvcvComponent},
+  { path: 'createVCVPlatform', component:CreateVcvPlatformComponent},
+  { path: 'createVCVProfession', component:CreateVcvProfessionComponent},
+  { path: 'createVCVTheme', component:CreateVcvThemeComponent},
+  { path: 'profileAnalytics', component:ProfileAnalyticsComponent}
 ]; 
 
 

@@ -67,6 +67,12 @@ import { CompanyProfileComponent } from './pages/company-profile/company-profile
 import { CustomDonutChartComponent } from './widgets/custom-donut-chart/custom-donut-chart.component';
 import { MyApplicationComponent } from './pages/my-application/my-application.component';
 import { SemiCircleChartComponent } from './widgets/semi-circle-chart/semi-circle-chart.component';
+import { MyvcvComponent } from './pages/myvcv/myvcv.component';
+import { CircleChartComponent } from './widgets/circle-chart/circle-chart.component';
+import { CreateVcvPlatformComponent } from './pages/create-vcv-platform/create-vcv-platform.component';
+import { CreateVcvProfessionComponent } from './pages/create-vcv-profession/create-vcv-profession.component';
+import { CreateVcvThemeComponent } from './pages/create-vcv-theme/create-vcv-theme.component';
+import { ProfileAnalyticsComponent } from './pages/profile-analytics/profile-analytics.component';
 
 
 
@@ -114,6 +120,12 @@ import { SemiCircleChartComponent } from './widgets/semi-circle-chart/semi-circl
     CustomDonutChartComponent,
     MyApplicationComponent,
     SemiCircleChartComponent,
+    MyvcvComponent,
+    CircleChartComponent,
+    CreateVcvPlatformComponent,
+    CreateVcvProfessionComponent,
+    CreateVcvThemeComponent,
+    ProfileAnalyticsComponent,
 
 
   ],

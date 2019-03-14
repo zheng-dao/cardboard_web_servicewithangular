@@ -106,5 +106,9 @@ export class IconService {
         'address_book',
         this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/icon/address_book.svg')
       ); 
+      this.matIconRegistry.addSvgIcon(
+        'image',
+        this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/icon/image.svg')
+      );
     }
 }

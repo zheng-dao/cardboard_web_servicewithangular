@@ -8,37 +8,37 @@
       <span>{{'btn_record_vcv'|translate}}</span>
     </button>
   </div>
-  <div class="content_1 container">
-    <div class="title">{{'dashboard_title1'|translate}}</div>
-    <div class="content_1_1 row">
-      <div class="col-sm-12 col-md-4" *ngFor="let job of jobs" style="margin: 15px 0;">
-        <div class="inc-mark"><img [src]="job.url"></div>
-        <div class="des">
-          <div class="career">{{job.career}}</div>
-          <div class="inc-name">{{job.inc_name}}</div>
-          <div class="nat-name">{{job.nat_name}}</div>
+  <div class="container">
+    <div class="content_1">
+      <div class="title">{{'dashboard_title1'|translate}}</div>
+      <div class="content_1_1">
+        <div class="job-item" *ngFor="let job of jobs" style="margin: 15px 0;">
+          <div class="inc-mark"><img [src]="job.url"></div>
+          <div class="des">
+            <div class="career">{{job.career}}</div>
+            <div class="inc-name">{{job.inc_name}}</div>
+            <div class="nat-name">{{job.nat_name}}</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="content_1_2">
-      <button class="large_rounded_btn viewthemall ">{{'btn_view_them_all'|translate}}</button>
+      <div class="content_1_2">
+        <button class="large_rounded_btn viewthemall ">{{'btn_view_them_all'|translate}}</button>
+      </div>
     </div>
   </div>
-  <div class="content_2 container">
-    <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-7">
+  <div class="container">
+    <div class="row content_2">
+      <div class="col-sm-12 col-md-12 col-lg-7 ">
         <div class="content_2_1">
           <div class="title">{{'dashboard_title2_recommended'|translate}}</div>
-          <div class=" content_2_1_1 row">
-            <div class="col-sm-12 col-md-4" *ngFor="let job of recommendJobs">
-              <div class="content">
-                <div class="career">{{job.career}}</div>
-                <div class="inc-name">{{job.inc_name}}</div>
-                <div class="nat-name">{{job.nat_name}}</div>
-                <div class="inc-mark"><img [src]="job.url"></div>
-                <div class="watchBtn">
-                  <button><img src="../../../assets/images/icon/play2.png">{{'btn_watch_offer'|translate}}</button>
-                </div>
+          <div class=" content_2_1_1">
+            <div class="content" *ngFor="let job of recommendJobs">
+              <div class="career">{{job.career}}</div>
+              <div class="inc-name">{{job.inc_name}}</div>
+              <div class="nat-name">{{job.nat_name}}</div>
+              <div class="inc-mark"><img [src]="job.url"></div>
+              <div class="watchBtn">
+                <button><i class="fa fa-play"></i>{{'btn_watch_offer'|translate}}</button>
               </div>
             </div>
           </div>
@@ -50,8 +50,8 @@
       <div class="col-sm-12 col-md-12 col-lg-5">
         <div class="content_2_2">
           <div class="title"> {{'dashboard_title2_inspiring'|translate}}</div>
-          <div class="content_2_2_1 row">
-            <div class="col-sm-12 col-md-6 member-wrapper" *ngFor="let member of pagedMemberItem">
+          <div class="content_2_2_1">
+            <div class="member-wrapper" *ngFor="let member of pagedMemberItem">
               <div class="member">
                 <img [src]="member.photoUrl" class="photo">
                 <div class="name">{{member.name}}</div>
@@ -92,57 +92,62 @@
       </div>
     </div>
   </div>
-  <div class="content_3 container">
-    <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-4 content_3_1">
-        <div class="content">
-          <div class="title">{{'dashboard_title3_companies'|translate}}</div>
-          <div class="content_3_1_1">
-            <div class="company" *ngFor="let company of pagedCompanyItem">
-              <img [src]="company.url" class="photo">
-              <span>{{company.inc_name}}</span>
-            </div>
-          </div>
-          <div class="content_3_1_2">
-            <app-pager [currentIndexOfArray]="CompanyPager.currentIndexOfArray" (setpager)="setCompanyPager($event)"></app-pager>
-          </div>
-          <div class="content_3_1_3">
-            <button class="large_rounded_btn viewthemall">{{'btn_view_them_all'|translate}}</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-12 col-lg-8 content_3_2">
-        <div class="content">
-          <div class="title">{{'dashboard_title3_trending'|translate}}</div>
-          <div class="row content_3_2_1">
-            <div class="col-md-6" *ngFor="let jobBranch of pagedJobBranchItem " style="padding: 8px;">
-              <div class="main_body" [style.background-image]="'url('+jobBranch.url+')'">
-                <div *ngIf="jobBranch.branch!=''" class="branch_name"><span>{{jobBranch.branch}}</span></div>
-                <div><button class="small_rounded_btn" [ngClass]="jobBranch.branch ===''?'coca':''">{{'btn_apply'|translate}}</button></div>
+  <div class="container">
+    <div class="content_3 ">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-4 content_3_1">
+          <div class="content">
+            <div class="title">{{'dashboard_title3_companies'|translate}}</div>
+            <div class="content_3_1_1">
+              <div class="company" *ngFor="let company of pagedCompanyItem">
+                <img [src]="company.url" class="photo">
+                <span>{{company.inc_name}}</span>
               </div>
             </div>
+            <div class="content_3_1_2">
+              <app-pager [currentIndexOfArray]="CompanyPager.currentIndexOfArray" (setpager)="setCompanyPager($event)"></app-pager>
+            </div>
+            <div class="content_3_1_3">
+              <button class="large_rounded_btn viewthemall">{{'btn_view_them_all'|translate}}</button>
+            </div>
           </div>
-          <div class="content_3_2_2">
-            <app-pager [currentIndexOfArray]="jobBranchPager.currentIndexOfArray" (setpager)="setJobBranchPager($event)"></app-pager>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-8 content_3_2">
+          <div class="content">
+            <div class="title">{{'dashboard_title3_trending'|translate}}</div>
+            <div class="content_3_2_1">
+              <div *ngFor="let jobBranch of pagedJobBranchItem " style="padding: 8px;">
+                <div class="main_body" [style.background-image]="'url('+jobBranch.url+')'">
+                  <div *ngIf="jobBranch.branch!=''" class="branch_name"><span>{{jobBranch.branch}}</span></div>
+                  <div><button class="small_rounded_btn" [ngClass]="jobBranch.branch ===''?'coca':''">{{'btn_apply'|translate}}</button></div>
+                </div>
+              </div>
+            </div>
+            <div class="content_3_2_2">
+              <app-pager [currentIndexOfArray]="jobBranchPager.currentIndexOfArray" (setpager)="setJobBranchPager($event)"></app-pager>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="container">
     <div class="content_4">
       <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-4 content_4_1">
+        <div class="col-sm-12 col-md-12 col-lg-4">
           <div class="content-body">
             <div class="title">{{'dashboard_title4_job_view'|translate}}</div>
             <div class="subtitle">
               <span class="key">{{'dashboard_script_total_views'|translate}}</span>
               <span class="value">{{totalViews}}</span>
             </div>
-            <app-linechart *ngIf="xJobChartData.length>0" [xdata]="xJobChartData" [ydata]="yJobChartData" [height]="jobChartHeight" [color]="jobChartColor"></app-linechart>
+            <app-linechart *ngIf="xJobChartData.length>0" [xdata]="xJobChartData" [ydata]="yJobChartData" [height]="jobChartHeight"
+              [color]="jobChartColor"></app-linechart>
             <div class="checkbox-wrapper">
               <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="">
               <label for="styled-checkbox-1">{{'ch_general_views_on_your'|translate}}</label>
             </div>
-            <div><button class="large_rounded_btn viewthemall">{{'btn_view_them_all'|translate}}</button></div>
+            <div><button class="large_rounded_btn viewthemall" routerLink="/profileAnalytics">{{'btn_view_them_all'|translate}}</button></div>
           </div>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-4 content_4_2">
@@ -152,26 +157,28 @@
               <img src="../../../assets/images/dashboard/profile.png">
             </div>
             <div class="message">
-                  {{'dashboard_script_you_have_no'|translate}}
+              {{'dashboard_script_you_have_no'|translate}}
             </div>
             <div><button class="large_rounded_btn viewthemall">{{'btn_view_them_all'|translate}}</button></div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-4 content_4_3">
+        <div class="col-sm-12 col-md-12 col-lg-4">
           <div class="content-body">
             <div class="title">{{'dashboard_title4_searches'|translate}}</div>
             <div class="subtitle">
               <span class="key">{{'dashboard_script_total_searches'|translate}}</span>
               <span class="value">{{totalSearches}}</span>
             </div>
-            <app-linechart *ngIf="xSearchChartData.length>0"  [xdata]="xSearchChartData" [ydata]="ySearchChartData" [height]="searchChartHeight" [color]="searchChartColor"></app-linechart>
+            <app-linechart *ngIf="xSearchChartData.length>0" [xdata]="xSearchChartData" [ydata]="ySearchChartData"
+              [height]="searchChartHeight" [color]="searchChartColor"></app-linechart>
             <div class="checkbox-wrapper">
               <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="">
               <label for="styled-checkbox-2">{{'ch_general_views_on_your'|translate}}</label>
             </div>
-            <div><button class="large_rounded_btn viewthemall">{{'btn_view_them_all'|translate}}</button></div>
+            <div><button class="large_rounded_btn viewthemall" routerLink="/profileAnalytics">{{'btn_view_them_all'|translate}}</button></div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
