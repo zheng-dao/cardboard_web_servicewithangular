@@ -1,0 +1,39 @@
+<div class="profile-analytics">
+  <p class="title">{{'profile_analytics_title'|translate}}</p>
+  <div class="container">
+    <div class="analytics-container">
+      <div class="analytics">
+        <div class="explain-container">
+          <div class="explain">
+            <p class="explain-title">{{'profile_analytics_job_views'|translate}}</p>
+            <p class="script">{{'profile_analytics_script_views'|translate}}</p>
+          </div>
+          <span>{{totalViews}}</span>
+        </div>
+        <app-linechart *ngIf="xJobChartData.length>0" [xdata]="xJobChartData" [ydata]="yJobChartData" [height]="jobChartHeight"
+          [color]="jobChartColor"></app-linechart>
+        <div class="checkbox-wrapper">
+          <input class="styled-checkbox" id="styled-checkbox-view" type="checkbox" value="">
+          <label for="styled-checkbox-view">{{'ch_general_views_on_your'|translate}}</label>
+        </div>
+        <button class="large_rounded_btn viewthemall">{{'profile_analytics_button_apply'|translate|uppercase}}</button>
+      </div>
+      <div class="analytics">
+        <div class="explain-container">
+          <div class="explain">
+            <p class="explain-title">{{'profile_analytics_searches_on'|translate}}</p>
+            <p class="script">{{'profile_analytics_script_searches'|translate}}</p>
+          </div>
+          <span>{{totalSearches}}</span>
+        </div>
+        <app-linechart *ngIf="xSearchChartData.length>0" [xdata]="xSearchChartData" [ydata]="ySearchChartData" [height]="searchChartHeight"
+          [color]="searchChartColor"></app-linechart>
+        <div class="checkbox-wrapper">
+          <input class="styled-checkbox" id="styled-checkbox-search" type="checkbox" value="">
+          <label for="styled-checkbox-search">{{'ch_general_views_on_your'|translate}}</label>
+        </div>
+        <button class="large_rounded_btn viewthemall">{{'profile_analytics_button_apply'|translate|uppercase}}</button>
+      </div>
+    </div>
+  </div>
+</div>
