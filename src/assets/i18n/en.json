@@ -348,6 +348,19 @@
     "profile_analytics_label_searches":"searches on your profile for the last six months",
     "profile_analytics_button_apply":"apply to jobs",
     "profile_analytics_script_views":"Views on your profile in the last 6 months",
-    "profile_analytics_script_searches":"Searches by employers on your profile in the last 6 months"
+    "profile_analytics_script_searches":"Searches by employers on your profile in the last 6 months",
+
+    "chat_placeholder_list_of":"List of Applied Companies",
+    "chat_placeholder_type_your_message":"Type your message...",
+    "chat_tab_all_messages":"All messages",
+    "chat_tab_unread":"Unread",
+    "chat_tab_important":"Important",
+    "chat_show_full_profile":"Show full profile",
+    "chat_position":"Position",
+    "chat_Email":"Email",
+    "chat_phone_number":"Phone number",
+    "chat_birth":"Date of birth",
+    "chat_gender":"Gender",
+    "chat_language":"Language"    
 
 }

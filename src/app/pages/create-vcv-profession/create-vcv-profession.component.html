@@ -12,7 +12,7 @@
       </div>
       <div class="profession-body" #listContainer>
         <ul class="profession-list" #list style="margin-top:0;">
-          <li *ngFor="let profession of sliceProfessions; index as i" (mouseenter)="onMouseEnter($event.target)" (mouseleave)="onMouseLeave($event.target)">
+          <li *ngFor="let profession of professions; index as i" (mouseenter)="onMouseEnter($event.target)" (mouseleave)="onMouseLeave($event.target)">
             <div class="profession-name">
               <i class="fa fa-circle"></i>
               <span>{{profession.name}}</span>

@@ -11,7 +11,7 @@ export class CustomSelectComponent implements OnInit {
 
   // placeholder data
    @Input() placeholder: string;
-
+  
   //option data
    @Input() datas: string[];
 

@@ -22,7 +22,7 @@ export class PortalComponent implements OnInit {
         this.currentIndex++;
       else
         this.currentIndex = 0;       
-    }, 4000);
+    }, 3000);
   }
 
   // personal slider operation 
@@ -104,7 +104,7 @@ export class PortalComponent implements OnInit {
     ];
 
     // auto slider 
-    // this.startAutoSlider();
+     this.startAutoSlider();
   }
 
 }

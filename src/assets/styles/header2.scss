@@ -1,5 +1,7 @@
 .header2{   
     width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     background-color:$thickblue;        
    
         .main-menu-section{
@@ -105,8 +107,7 @@
         }
 
         .notification-menu{
-            text-align: center;
-            background-color: $thickblue;
+            text-align: center;            
             padding-left:0;
             padding-right:0;            
             .main-container{

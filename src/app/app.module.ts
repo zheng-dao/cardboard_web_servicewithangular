@@ -14,6 +14,8 @@ import {
 import { MultiSelectAllModule } from '@syncfusion/ej2-angular-dropdowns';
 import {AgmCoreModule, GoogleMapsAPIWrapper} from '@agm/core';
 import { DoughnutChartComponent} from 'angular-d3-charts';
+import {NgScrollbarModule} from 'ngx-scrollbar';
+
 // Module for language translate 
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -73,6 +75,7 @@ import { CreateVcvPlatformComponent } from './pages/create-vcv-platform/create-v
 import { CreateVcvProfessionComponent } from './pages/create-vcv-profession/create-vcv-profession.component';
 import { CreateVcvThemeComponent } from './pages/create-vcv-theme/create-vcv-theme.component';
 import { ProfileAnalyticsComponent } from './pages/profile-analytics/profile-analytics.component';
+import { ChatComponent } from './pages/chat/chat.component';
 
 
 
@@ -126,6 +129,7 @@ import { ProfileAnalyticsComponent } from './pages/profile-analytics/profile-ana
     CreateVcvProfessionComponent,
     CreateVcvThemeComponent,
     ProfileAnalyticsComponent,
+    ChatComponent,
 
 
   ],
@@ -142,6 +146,7 @@ import { ProfileAnalyticsComponent } from './pages/profile-analytics/profile-ana
     MultiSelectAllModule,
     DxRangeSliderModule,
     DxNumberBoxModule,
+    NgScrollbarModule,
     // configure the imports
     HttpClientModule,
     TranslateModule.forRoot({

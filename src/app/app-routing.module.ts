@@ -19,6 +19,7 @@ import { CreateVcvPlatformComponent } from './pages/create-vcv-platform/create-v
 import { CreateVcvProfessionComponent } from './pages/create-vcv-profession/create-vcv-profession.component';
 import { CreateVcvThemeComponent } from './pages/create-vcv-theme/create-vcv-theme.component';
 import { ProfileAnalyticsComponent } from './pages/profile-analytics/profile-analytics.component';
+import { ChatComponent } from './pages/chat/chat.component';
 const routes: Routes = [
   { path: '', component: PortalComponent },
   { path: 'signup', component: SignupComponent },
@@ -38,7 +39,8 @@ const routes: Routes = [
   { path: 'createVCVPlatform', component:CreateVcvPlatformComponent},
   { path: 'createVCVProfession', component:CreateVcvProfessionComponent},
   { path: 'createVCVTheme', component:CreateVcvThemeComponent},
-  { path: 'profileAnalytics', component:ProfileAnalyticsComponent}
+  { path: 'profileAnalytics', component:ProfileAnalyticsComponent},
+  { path: 'chat', component:ChatComponent}
 ]; 
 
 

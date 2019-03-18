@@ -13,11 +13,12 @@
         width:100%;       
         height:600px;       
         .slider{   
-            transition: all 0.8s ease-in-out;            
+           
             width:100%; 
             height:100%;  
             position: relative;             
             img{  
+                transition: all 0.8s ease-in-out;            
                 position: absolute;
               top:0%;
               left: 50%;
@@ -33,9 +34,9 @@
 
     .slider-radio-group {
         position: absolute;
-        bottom: 35%; 
-        right: 15%;
-        display: inline-flex;
+        bottom: 35px; 
+        right: 15px;
+      
         flex-direction: column;
         .slider-radio-button {
             margin: 0px;
@@ -108,7 +109,20 @@ Bootstrap 4 breakpoints
         .subject{
            font-size: 17px;
         }
-       }
+    }
+    .slider-radio-group {
+        position: absolute;
+        bottom: 35%; 
+        right: 15%;
+        display: inline-flex;
+        flex-direction: column;
+        .slider-radio-button {
+            margin: 0px;
+           font-size:10px;  
+           cursor: pointer;       
+        }
+    }
+
   }
    
   /* Large devices (desktops, 992px and up) */

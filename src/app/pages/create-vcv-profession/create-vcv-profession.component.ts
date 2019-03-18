@@ -13,52 +13,53 @@ export class CreateVcvProfessionComponent implements OnInit {
   currentPage:number=0;
   selectedIndex:number=0;
  
-  public professions=[
-    {name:"Designer", junior:false, senior:false, executive:false},
-    {name:"Developer", junior:false, senior:false, executive:false},
-    {name:"Physician", junior:false, senior:false, executive:false},
-    {name:"Teacher", junior:false, senior:false, executive:false},
-    {name:"Technician", junior:false, senior:false, executive:false},
-    {name:"Accountant", junior:false, senior:false, executive:false},
-    {name:"Pharmacist", junior:false, senior:false, executive:false},
-    {name:"Laborer", junior:false, senior:false, executive:false},
-    {name:"Lawyer", junior:false, senior:false, executive:false},
-    {name:"Engineer", junior:false, senior:false, executive:false},
-    {name:"Dietitian", junior:false, senior:false, executive:false},
-    {name:"Psychologist", junior:false, senior:false, executive:false},
-    {name:"Pharmacist", junior:false, senior:false, executive:false},
-    {name:"Laborer", junior:false, senior:false, executive:false},
-    {name:"Lawyer", junior:false, senior:false, executive:false},
-    {name:"Engineer", junior:false, senior:false, executive:false},
-    {name:"Physician", junior:false, senior:false, executive:false},
-    {name:"Teacher", junior:false, senior:false, executive:false},
-    {name:"Technician", junior:false, senior:false, executive:false},
-    {name:"Accountant", junior:false, senior:false, executive:false},
-    {name:"Pharmacist", junior:false, senior:false, executive:false},
-    {name:"Laborer", junior:false, senior:false, executive:false},
-    {name:"Lawyer", junior:false, senior:false, executive:false},
-    {name:"Lawyer", junior:false, senior:false, executive:false},
-    {name:"Engineer", junior:false, senior:false, executive:false},
-    {name:"Dietitian", junior:false, senior:false, executive:false},
-    {name:"Psychologist", junior:false, senior:false, executive:false},
-    {name:"Pharmacist", junior:false, senior:false, executive:false},
-    {name:"Laborer", junior:false, senior:false, executive:false},
-    {name:"Lawyer", junior:false, senior:false, executive:false},
-    {name:"Engineer", junior:false, senior:false, executive:false},
-    {name:"Physician", junior:false, senior:false, executive:false},
-    {name:"Teacher", junior:false, senior:false, executive:false},
-    {name:"Technician", junior:false, senior:false, executive:false},
-    {name:"Accountant", junior:false, senior:false, executive:false},
-    {name:"Pharmacist", junior:false, senior:false, executive:false},
-    {name:"Laborer", junior:false, senior:false, executive:false},
-    {name:"Lawyer", junior:false, senior:false, executive:false}
-  ];
-
+  public professions:any[];
   public sliceProfessions:any[];
   constructor() { }
 
   ngOnInit() {
-    this.sliceProfessions=this.professions.slice(0, 11);
+    // this.sliceProfessions=this.professions.slice(0, 11);
+    this.professions=[
+      {name:"Designer", junior:false, senior:false, executive:false},
+      {name:"Developer", junior:false, senior:false, executive:false},
+      {name:"Physician", junior:false, senior:false, executive:false},
+      {name:"Teacher", junior:false, senior:false, executive:false},
+      {name:"Technician", junior:false, senior:false, executive:false},
+      {name:"Accountant", junior:false, senior:false, executive:false},
+      {name:"Pharmacist", junior:false, senior:false, executive:false},
+      {name:"Laborer", junior:false, senior:false, executive:false},
+      {name:"Lawyer", junior:false, senior:false, executive:false},
+      {name:"Engineer", junior:false, senior:false, executive:false},
+      {name:"Dietitian", junior:false, senior:false, executive:false},
+      {name:"Psychologist", junior:false, senior:false, executive:false},
+      {name:"Pharmacist", junior:false, senior:false, executive:false},
+      {name:"Laborer", junior:false, senior:false, executive:false},
+      {name:"Lawyer", junior:false, senior:false, executive:false},
+      {name:"Engineer", junior:false, senior:false, executive:false},
+      {name:"Physician", junior:false, senior:false, executive:false},
+      {name:"Teacher", junior:false, senior:false, executive:false},
+      {name:"Technician", junior:false, senior:false, executive:false},
+      {name:"Accountant", junior:false, senior:false, executive:false},
+      {name:"Pharmacist", junior:false, senior:false, executive:false},
+      {name:"Laborer", junior:false, senior:false, executive:false},
+      {name:"Lawyer", junior:false, senior:false, executive:false},
+      {name:"Lawyer", junior:false, senior:false, executive:false},
+      {name:"Engineer", junior:false, senior:false, executive:false},
+      {name:"Dietitian", junior:false, senior:false, executive:false},
+      {name:"Psychologist", junior:false, senior:false, executive:false},
+      {name:"Pharmacist", junior:false, senior:false, executive:false},
+      {name:"Laborer", junior:false, senior:false, executive:false},
+      {name:"Lawyer", junior:false, senior:false, executive:false},
+      {name:"Engineer", junior:false, senior:false, executive:false},
+      {name:"Physician", junior:false, senior:false, executive:false},
+      {name:"Teacher", junior:false, senior:false, executive:false},
+      {name:"Technician", junior:false, senior:false, executive:false},
+      {name:"Accountant", junior:false, senior:false, executive:false},
+      {name:"Pharmacist", junior:false, senior:false, executive:false},
+      {name:"Laborer", junior:false, senior:false, executive:false},
+      {name:"Lawyer", junior:false, senior:false, executive:false}
+    ];
+  
   }
 
   onDisplaySet(event){ 

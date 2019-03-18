@@ -18,8 +18,8 @@
 
 
         <div class="slider-wrapper">
-            <div *ngFor="let image of slider_Images ; index as i;" class="slider" [style.display]="i==currentIndex? 'block':'none'">
-                <img [src]="image.url">
+            <div class="slider" >
+                <img [src]="image.url" *ngFor="let image of slider_Images ; index as i;" [style.opacity]="i==currentIndex? '1.0':'0'">
             </div>
         </div>
 
