@@ -34,7 +34,6 @@ import { VcvtutoComponent } from './pages/vcvtuto/vcvtuto.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 
-
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PagerComponent } from './widgets/pager/pager.component';
 import { LinechartComponent } from './widgets/linechart/linechart.component';
@@ -76,6 +75,26 @@ import { CreateVcvProfessionComponent } from './pages/create-vcv-profession/crea
 import { CreateVcvThemeComponent } from './pages/create-vcv-theme/create-vcv-theme.component';
 import { ProfileAnalyticsComponent } from './pages/profile-analytics/profile-analytics.component';
 import { ChatComponent } from './pages/chat/chat.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { TermComponent } from './pages/term/term.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import {Teleprompter1Component} from './teleprompter/teleprompter1/teleprompter1.component'
+import {StatusBarComponent} from './widgets/status-bar/status-bar.component';
+import { Teleprompter2Component } from './teleprompter/teleprompter2/teleprompter2.component';
+import { RecordLoadingComponent } from './widgets/record-loading/record-loading.component';
+import { Teleprompter3Component } from './teleprompter/teleprompter3/teleprompter3.component';
+import { Teleprompter4Component } from './teleprompter/teleprompter4/teleprompter4.component';
+import { Teleprompter5Component } from './teleprompter/teleprompter5/teleprompter5.component';
+import { Teleprompter6Component } from './teleprompter/teleprompter6/teleprompter6.component';
+import { Teleprompter7Component } from './teleprompter/teleprompter7/teleprompter7.component';
+import { VcvVideoEditComponent } from './vcv/vcv-video-edit/vcv-video-edit.component';
+import { VcvVideoFx1Component } from './vcv/vcv-video-fx1/vcv-video-fx1.component';
+import { VcvVideoFx2Component } from './vcv/vcv-video-fx2/vcv-video-fx2.component';
+import { VcvVideoFx3Component } from './vcv/vcv-video-fx3/vcv-video-fx3.component';
+import { VcvVideoFx4Component } from './vcv/vcv-video-fx4/vcv-video-fx4.component';
+import { VcvVideoFx5Component } from './vcv/vcv-video-fx5/vcv-video-fx5.component';
+import { VcvVideoFx6Component } from './vcv/vcv-video-fx6/vcv-video-fx6.component';
+
 
 
 
@@ -130,14 +149,32 @@ import { ChatComponent } from './pages/chat/chat.component';
     CreateVcvThemeComponent,
     ProfileAnalyticsComponent,
     ChatComponent,
-
-
+    AboutUsComponent,
+    TermComponent,
+    ContactUsComponent,   
+    Teleprompter1Component,
+    StatusBarComponent,
+    Teleprompter2Component,
+    RecordLoadingComponent,
+    Teleprompter3Component,
+    Teleprompter4Component,
+    Teleprompter5Component,
+    Teleprompter6Component,
+    Teleprompter7Component,
+    VcvVideoEditComponent,
+    VcvVideoFx1Component,
+    VcvVideoFx2Component,
+    VcvVideoFx3Component,
+    VcvVideoFx4Component,
+    VcvVideoFx5Component,
+    VcvVideoFx6Component
   ],
+  
   imports: [
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,  
     BrowserAnimationsModule,
     MatRadioModule,
     MatIconModule,

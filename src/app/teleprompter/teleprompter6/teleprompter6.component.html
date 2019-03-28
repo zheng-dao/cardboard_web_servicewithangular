@@ -1,0 +1,20 @@
+<div class="teleprompter">
+  <app-status-bar [states]="state_list"></app-status-bar>
+  <div class="teleprompter-container ">
+    <div class="container teleprompter3">
+      <p class="title">{{'teleprompter6_title'|translate}}</p>
+      <div class="loading-container">
+        <div class="loading">
+          <app-record-loading [second]="loading_time" (nextNavigation)="onNextNavigation()"></app-record-loading>
+        </div>
+        <button class="skip" routerLink="/teleprompter/teleprompter4">
+          {{'teleprompter6_button_skip'|translate}}
+        </button>
+      </div>
+      <div class="divider"></div>
+      <div class="recording-state">
+        {{'teleprompter6_not_recording'|translate}}
+      </div>
+    </div>
+  </div>
+</div>

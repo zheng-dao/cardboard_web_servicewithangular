@@ -1,0 +1,23 @@
+<div class="teleprompter">
+  <app-status-bar [states]="state_list"></app-status-bar>
+  <div class="video-recoder-container">
+    <video #video class="video-display" controls autoplay playsinline ></video>
+    <div class="top-header">
+      <div class="container top-header-content">
+        <div class="left-header">
+          <span class="title">{{'teleprompter7_title'|translate}}</span>
+          <div class="loading">
+            <!-- <app-record-loading [second]="loading_time" (nextNavigation)="onNextNavigation()"></app-record-loading> -->
+          </div>
+        </div>
+        <button class="skip">
+          {{'teleprompter7_button_skip_question'|translate}}
+        </button>
+      </div>
+    </div>
+    <div class="recording-state">
+      {{'teleprompter7_recording'|translate}}
+    </div>
+
+  </div>
+</div>  

@@ -1,0 +1,31 @@
+<div class="teleprompter">
+  <app-status-bar [states]="state_list"></app-status-bar>
+  <div class="teleprompter-container">
+    <div class="container teleprompter1">
+      <p class="script">{{'teleprompter1_our_teleprompter'|translate|uppercase}}</p>
+      <p class="title">{{'teleprompter1_title'|translate}}</p>
+      <p class="subject">{{'teleprompter1_subject'|translate}}</p>
+      <div class="theme-list">
+        <div class="theme" *ngFor="let theme of sliceThemes">
+          <img [src]="theme.style">
+          <p class="theme-name">{{theme.name}}</p>
+        </div>
+      </div>
+      <div style="text-align: center">
+        <button class="load-more">
+         {{'teleprompter1_button_load_more'|translate}}
+        </button>
+      </div>
+      <div style="text-align: center">
+          <button class="large_rounded_btn start_btn" routerLink="/teleprompter/teleprompter2">
+              <mat-icon>video_call</mat-icon>
+            <span>{{'teleprompter1_button_start'|translate}}</span>
+          </button>
+      </div>
+
+      <div class="recording-state">
+        {{'teleprompter1_not_recording'|translate}}
+      </div>
+    </div>
+  </div>
+</div>

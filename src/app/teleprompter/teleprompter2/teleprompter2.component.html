@@ -1,0 +1,23 @@
+<div class="teleprompter">
+  <app-status-bar [states]="state_list"></app-status-bar>
+  <div class="teleprompter-container ">
+    <div class="container teleprompter2">
+      <p class="question">{{'teleprompter2_question1'|translate}} </p>
+      <p class="title">{{'teleprompter2_title'|translate}}</p>
+      <div style="text-align: center">
+        <button class="large_rounded_btn answer_btn" routerLink="/teleprompter/teleprompter3">
+          <span>{{'teleprompter2_button_answer'|translate}}</span>
+        </button>
+      </div>
+      <div style="text-align: center">
+        <button class="skip">
+          {{'teleprompter2_button_skip'|translate}}
+        </button>
+      </div>
+      <div class="divider"></div>
+      <div class="recording-state">
+        {{'teleprompter2_not_recording'|translate}}
+      </div>
+    </div>
+  </div>
+</div>

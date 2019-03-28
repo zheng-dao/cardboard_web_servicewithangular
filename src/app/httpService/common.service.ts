@@ -17,7 +17,7 @@ export class CommonService {
 
   //get countries
   getCountries(): Observable<CountryModel[]> {
-    return this.http.get<CountryModel[]>("/assets/JsonData/country.json");
+    return this.http.get<CountryModel[]>("/assets/JsonData/country.json");    
   }
 
   //get job roles

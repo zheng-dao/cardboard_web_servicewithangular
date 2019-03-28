@@ -361,6 +361,60 @@
     "chat_phone_number":"Phone number",
     "chat_birth":"Date of birth",
     "chat_gender":"Gender",
-    "chat_language":"Language"    
+    "chat_language":"Language"   ,
+    
+    "about_us_about_us":"About us",
+    "about_us_mission":"Mission",
+    "about_us_nysm_people":"NYSM, people matters",
+
+    "term_terms_conditions":"Terms & Conditions",
+
+    "contact_us_contact_us":"Contact Us",
+    "contact_us_reach_out":"Reach out for any inquiry",
+    "contact_us_placeholder_full_name":"Full Name",
+    "contact_us_placeholder_your_email":"Your Email",
+    "contact_us_placeholder_comment":"Your Comment",
+    "contact_us_button_submit":"submit",
+    "contact_us_send_us_email":"Send us an email at",
+    "contact_us_call_us_on":"Call us on",
+    
+    "teleprompter_status_bar_post_to_profile":"Post to Profile",
+
+    "teleprompter1_our_teleprompter":"our teleprompter will help you build your vcv",
+    "teleprompter1_title":"We will ask you a few questions and feel free to answer them your way",
+    "teleprompter1_subject":"Make sure you have the right lighting, you can place your phone somewhere that gives a nice angle",
+    "teleprompter1_button_load_more":"Load More",
+    "teleprompter1_button_start":"Start",
+    "teleprompter1_not_recording":"not recording",
+
+    "teleprompter2_title":"Hi there, can you share your name, profession and location",
+    "teleprompter2_question1":"Question1",
+    "teleprompter2_button_answer":"Answer",
+    "teleprompter2_button_skip":"Skip",
+    "teleprompter2_not_recording":"not recording",
+      
+    "teleprompter3_title":"Recording will start in",
+    "teleprompter3_button_skip":"Skip",
+    "teleprompter3_not_recording":"not recording",
+
+    "teleprompter4_title":"Recording will end in ",
+    "teleprompter4_button_skip_question":"Skip Question",
+    "teleprompter4_recording":"Recording",
+
+    "teleprompter5_title":"Share with us some of your most proud achievements.",
+    "teleprompter5_question2":"Question2",
+    "teleprompter5_button_answer":"Answer",
+    "teleprompter5_button_skip":"Skip",
+    "teleprompter5_not_recording":"not recording",
+      
+    "teleprompter6_title":"Recording will start in",
+    "teleprompter6_button_skip":"Skip",
+    "teleprompter6_not_recording":"not recording",
+
+    "teleprompter7_title":"Recording will end in ",
+    "teleprompter7_button_skip_question":"Skip Question",
+    "teleprompter7_recording":"Recording",
+
+    "vcv_edit_done":"Done"
 
 }
