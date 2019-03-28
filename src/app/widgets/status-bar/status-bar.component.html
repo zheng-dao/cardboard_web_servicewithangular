@@ -1,0 +1,16 @@
+<div class="status-bar">
+ <div class="status-list">
+   <div class="user-photo">
+     <img src="{{user}}">
+   </div>
+   <div class="status" 
+   *ngFor="let state of states; index as i" >
+      <i class="fa fa-minus"></i>
+      <div class="status-number" >{{i+1}}</div>
+   </div>
+   <i class="fa fa-minus last-icon" ></i>
+   <div class="post-to-profile">
+     {{'teleprompter_status_bar_post_to_profile'|translate}}
+   </div>
+ </div>
+</div>

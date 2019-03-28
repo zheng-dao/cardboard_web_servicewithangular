@@ -1,0 +1,27 @@
+.single-chart {
+    width: 100%;   
+  }
+  
+  .circular-chart {
+    display: block;   
+  }
+  
+
+  
+  .loading-circle {
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: square;      
+    animation-timing-function: ease-in-out;
+  }
+  
+ 
+
+  .second{
+    fill: white;
+    stroke-width:5;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    text-anchor: middle;
+}
+

@@ -1,0 +1,68 @@
+@import "../../../assets/fonts.scss";
+.status-bar{
+    .status-list{
+        width:100%;
+        height:55px;
+        background-color: #2657CD;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        .user-photo{
+            width:40px;
+            height:40px;
+            border-radius: 50%;
+            border: 2px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2px;
+            img{
+                width:100%;
+                height:100%;
+                border-radius: 50%;
+            }
+        }
+        .status{
+            width:53px;
+            height:30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left:6px;
+            margin-right:6px;
+            i{
+                font-size: 18px;   
+                color:white;             
+            }
+            div.status-number{
+                font-size: 12px;
+                line-height: 24px;
+                border-radius: 13px;
+                width:25px;
+                height:25px;
+                text-align: center;
+                border:2px dashed white;
+                color:white;
+            }
+        }
+
+        i.last-icon{
+            font-size: 16px;   
+           color:white; 
+           margin-right: 6px;  
+           margin-left:6px;   
+        }
+        .post-to-profile{
+          display: inline;
+          padding: 0 30px;
+          border-radius: 20px;
+          border:2px solid  white;
+          font-family: 'galano_grotesque_alt_semi_bold';
+          font-size: 16px;
+          line-height: 36px;
+          color:white;
+          cursor: pointer;
+          margin-left:6px;
+        }
+    }
+}
