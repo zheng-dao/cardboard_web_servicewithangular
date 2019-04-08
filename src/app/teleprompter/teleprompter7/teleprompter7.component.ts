@@ -17,7 +17,7 @@ export class Teleprompter7Component implements OnInit {
   state_list: any[];
   loading_time:number = 12;
   recordRTC:any;
-   
+  recording_start: Boolean = false;
 
 
   @ViewChild('video') video: ElementRef;
@@ -67,12 +67,19 @@ export class Teleprompter7Component implements OnInit {
   }
   errorCallback(errer){
     console.log(errer)
-    
+    alert("Please connect camera to your computer!")    
   }
 
   onStoppedCallback(){
-     console.log("stopped")
+
+    this.video.nativeElement.muted = true
+     console.log("recording stopped!")
+     
      console.log(this.recordRTC.getBlob());
      console.log(this.recordRTC.toURL());
+  }
+
+  onStartRecording(){
+    this.recording_start = true
   }
 }

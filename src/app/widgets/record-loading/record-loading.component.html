@@ -1,13 +1,13 @@
 <div class="single-chart">
     <svg viewBox="0 0 36 36" class="circular-chart"> 
-      <path class="loading-circle" id="my-circle"
-       stroke-dasharray ="100,100" stroke="#00FFE1" 
+      <path class="loading-circle" [id]="path_id"
+       [attr.stroke-dasharray] = "loading_percent_string" stroke="#00FFE1" 
         d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
       />  
       <animate xlink:href="#my-circle" attributeType="CSS"  attributeName="stroke-dasharray" from="0" to="100" 
       [attr.dur]="second+1"/>
-      <text x="17" y="24" id="loading_time" class="second" stroke-width="5"></text> 
+      <text x="17" y="24" #loading_time_element class="second" stroke-width="5"></text> 
     </svg>   
   </div>

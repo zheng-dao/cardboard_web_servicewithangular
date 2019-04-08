@@ -7,8 +7,9 @@
         <div class="left-header">
           <span class="title">{{'teleprompter7_title'|translate}}</span>
           <div class="loading">
-            <!-- <app-record-loading [second]="loading_time" (nextNavigation)="onNextNavigation()"></app-record-loading> -->
+            <app-record-loading [second]="loading_time" (nextNavigation)="onNextNavigation()" [is_start]="recording_start"></app-record-loading>
           </div>
+          <span style="color:white; font-size: 23px; margin-left:20px;" (click)="onStartRecording()">Recording Start</span>
         </div>
         <button class="skip">
           {{'teleprompter7_button_skip_question'|translate}}

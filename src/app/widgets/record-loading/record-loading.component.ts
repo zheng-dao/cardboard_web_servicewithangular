@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import {interval} from 'rxjs'
+import { inputs } from '@syncfusion/ej2-angular-dropdowns/src/auto-complete/autocomplete.component';
 
 @Component({
   selector: 'app-record-loading',
@@ -9,14 +10,33 @@ import {interval} from 'rxjs'
 export class RecordLoadingComponent implements OnInit {
 
  @Input() second: number;
+ @Input() is_start: Boolean;
  @Output() nextNavigation = new EventEmitter();
+  path_id:string = ""
+  loading_percent_string:string = "0,100";
+
+  @ViewChild('loading_time_element') loading_time_element:ElementRef
  
   constructor() { }
 
-  ngOnInit() { 
+  ngOnInit() {      
+      this.loading_time_element.nativeElement.textContent = this.second.toString();    
+     
+  }
+
+  ngAfterViewInit() {
     
-      var current_time_txt = document.getElementById("loading_time"); 
-      current_time_txt.textContent = this.second.toString();   
+  }
+
+  ngOnChanges(){
+    if(this.is_start == false){
+      this.loading_percent_string = "0, 100"
+    }
+    else{   // loading start
+      this.loading_percent_string = "100, 100"
+      
+       this.path_id = "my-circle"
+
       var time_value=0;
       // start timer 
       const secondsCounter=interval(1000);
@@ -26,35 +46,17 @@ export class RecordLoadingComponent implements OnInit {
           n=n+1 ; 
           i=this.second-n ;    
         } 
-        current_time_txt.textContent = i.toString();
+        this.loading_time_element.nativeElement.textContent = i.toString();
       })
     // end timer
       setTimeout(()=>{
         subscribe.unsubscribe();
         this.nextNavigation.emit();
       },(this.second+1)*1000);
-     
+
+    }
   }
 
-  ngAfterViewInit() {
-  //   var current_time_txt = document.getElementById("loading_time");    
-  //   var time_value=0;
-  //   // start timer 
-  //   const secondsCounter=interval(1000);
-  //   const subscribe=secondsCounter.subscribe(n=>{  
-  //     let i=0 
-  //     if(n<this.second)  {        
-  //       i=this.second-n     
-  //     } 
-  //     current_time_txt.textContent = i.toString();
-  //   })
-  // // end timer
-  //   setTimeout(()=>{
-  //     subscribe.unsubscribe();
-  //     this.nextNavigation.emit();
-  //   },(this.second+1)*1000);
 
-
-  }
  
 }
