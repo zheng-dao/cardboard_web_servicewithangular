@@ -7,70 +7,54 @@
 .footer{
     width: 100%;
     .content_1{
-        width:100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-wrap: wrap;
         background-image: url('assets/images/footer_back.png');
         background-size: 100% 100%;
-        padding: 40px 14%;
-       
-        ul{
-            list-style: none;
-            padding: 0;
-            display: table;  
-            width:100%;    
-            content:inherit;
-            margin: 0;
-            li{
-                float: left;
-                display: table;
-                width:25%;
-                margin: 8px 0px;
+        padding: 40px 0;
+            .connect-item{
+               display: inline-block;               
+                margin: 15px 20px;
                 text-align: center;
                 .span-text{
                     @include custom_font($white, 18px, 36px , 'galano_grotesque_alt_medium') ;  
                     margin-left: 10px;          
-                }
-
-                .country-selectbox-wrapper{
+                }               
+            }
+            .country-selectbox-wrapper{
+                width:288px;
+                background-color: #306cff;
+                border-radius: 25px;
+                margin: 15px 20px;
+                text-align: center;
+                // box-shadow: 0 0 20px rgb(39, 37, 37);
+                .location-select{
                     width:100%;
-                    background-color: #306cff;
-                    border-radius: 25px;
-                    // box-shadow: 0 0 20px rgb(39, 37, 37);
-                    .location-select{
-                        width:100%;
-                        .cu-select-wrapper{
-                            box-shadow: 0 1px 10px #29458b;
-                            background-color: #306cff;
-                            select:required:invalid {
-                                opacity: 0.5;
-                            }
-                            .selectbox{
-                                color:white;
+                    .cu-select-wrapper{
+                        box-shadow: 0 1px 10px #29458b;
+                        background-color: #306cff;
+                        select:required:invalid {
+                            opacity: 0.5;
+                        }
+                        .selectbox{
+                            color:white;
 
-                            }
-                            .mark-icon{
-                                color:white;
-                            }
-                            .direction-icon{
-                                color:white;
-                                background-color:#306cff; 
-                            }
+                        }
+                        .mark-icon{
+                            color:white;
+                        }
+                        .direction-icon{
+                            color:white;
+                            background-color:#306cff; 
                         }
                     }
                 }
             }
-            @media(max-width:1600px){
-                li{
-                    width:100%;
-                    text-align: center;
-                    margin: 12px auto;
-                    .country-selectbox-wrapper{
-                      width: 270px; 
-                      margin:12px auto;
-                   }
-                }                  
-            }
+       
            
-        }
+       
         
     }
     .content_2{
@@ -116,7 +100,7 @@
                     padding: 0;
                     display: table;
                     li{
-                         float: left;
+                        
                          display: inline;
                          margin-right: 10px;
                          a{

@@ -1,251 +1,314 @@
 .search-result{
-    width:100%;
-    padding:65px 5%;
+    width:100%;   
     display: table;
-   
-    .search-bar{     
-       margin-top:18px; 
-       margin-bottom: 18px;      
-       background-image: url('/assets/images/content_back.png');
-       background-size: 100%;
-       border-radius: 15px;
-       overflow: hidden; 
-       border: 2px solid #EEEFF4;  
-       z-index: 10000;
-       //slider widget css---start
-       .dx-texteditor.dx-editor-outlined{
-            border: none;
-        }
-       .dx-field-value{
-            width:100%;
-            .dx-slider-range.dx-slider-range-visible{
-                border:1px solid #2766FF;
-                background-color: #2766FF;
-            }
-            .dx-slider-bar{
-                height:10px;
-                border-radius: 5px;
-            }
-            .dx-slider-handle{
-                margin-top:-10px;
-                border:1px solid rgb(217, 218, 221);
-                background-color: white;
-            }
-            .dx-slider-range{
-                height:10px;
-            }
+    padding: 65px 0;
+    position: relative;
+    .search-bar-control{
+        position: absolute;
+         top:20px;
+         left:10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 3px 3px rgba(#354052, 0.3);
+        cursor: pointer;
+        font-size: 30px;
+        color: #627086;
+        display: flex;
+        justify-content: center;
+        align-items: center;
        
-        }
+    }
+    .search-result-body{   
+         display: flex;
+         justify-content: center;
 
-         //slider widget css-----end
-
-         .search-tab-container{
-             width:90%;
-             margin:10px auto;
-             .search-tab{
-                 width:50%;
-                 padding :20px ;
-                 display: inline-block;
-                 border-bottom:2px solid #8E9DC1;
-                 text-align: center;
-                 font-size: 22px;
-                 font-family: "galano_grotesque_medium";
-                 cursor: pointer;
-             }
-             .tab-selected{
-                 color:#2766FF;
-                 border-bottom: 2px solid #2766FF;
-             }
-             
-         }
-
-        
-        .subject-container{
-            width:80%;
-            margin : 20px auto;
-            .subject{                    
-                font-size: 20px;
-                line-height: 24px;
-                font-family: "galano_grotesque_medium";
-                color:#1D1F22;
-            }
-            .reset{
-                margin-top:5px;
-                float:right;
-                font-size: 14px;
-                line-height:17px;
-                font-family: "galano_grotesque_semi_bold";
-                color:#FF2D55;
-                cursor:pointer;
-            }
-        }
-        
-       .submit{
-        text-align: center;
-          margin: 20px auto 50px auto;
-          button{
-              padding-left: 80px;
-              padding-right:80px;
-          }
-         
-       }
-        
-    } 
-  
-    .job-result{
-         
-        .title{
-            margin-left:10px;
-            margin-top:10px;
-            .main-title{
-                @include custom-font(#333333, 32px, 52px, 'galano_grotesque_alt_bold' );
-                margin-right:20px;
-
-            }
-            .all-job-count{
-                @include custom-font(#90A5D7, 16px, 52px, 'galano_grotesque_alt_regular' );
-            }
-        }
-
-        .content-container{
-            width:100%;  
-            margin-right:0px;
-            margin-left:0px;         
-            .item-wrapper{
-                position: relative;
-                margin:10px 0;
-                width:506px;
-                height:234px;
-                display: table;                
-                background-image: url('/assets/images/content_back.png');
-                background-size:100% 100%;
-                border-radius: 15px;
-                border:1px solid #EEEFF4;
-                padding:25px 15px;
-                .item-content{
+        .search-bar{  
+            flex-grow: 0;   
+            margin-top:18px; 
+            margin-bottom: 18px;      
+            background-image: url('/assets/images/content_back.png');
+            background-size: 100%;
+            border-radius: 15px;
+            transition: all ease-in-out 0.5s;
+            width: 370px;
+            margin-left: -372px;
+            opacity: 0;
+            border: 2px solid #EEEFF4;  
+            z-index: 10000;
+            box-sizing: border-box;
+            display: table;
+            //slider widget css---start
+            .dx-texteditor.dx-editor-outlined{
+                    border: none;
+                }
+            .dx-field-value{
                     width:100%;
-                    .item-side{
-                        width:30%;                        
-                        display:table;
-                        float:left;
-                        img{
-                            max-width:118px;
-                            width:100%;
-                            height:auto;
-                            border-radius: 50%;
-                            box-shadow: 0 2px 3px gray;
-                            margin:0 10px 10px 10px;
-                        }
-                        button{
-                            padding:5px 8px;
-                           mat-icon{
-                               vertical-align: middle;
-                               color:white;
-                               font-size: 20px;
-                           } 
-                            span{
-                                @include custom-font(white, 16px, 16px, 'galano_grotesque_alt_medium' );
-                            }
-                        }                        
+                    .dx-slider-range.dx-slider-range-visible{
+                        border:1px solid #2766FF;
+                        background-color: #2766FF;
                     }
-                    .item-body{
-                        width:60%;
-                        display: table;
-                        float:right;
-                        .career-time{
-                            margin-bottom: 10px;  
-                            .career{
-                                @include custom-font($thickblue, 18px, 22px, 'galano_grotesque_semi_bold' );
-                                margin-right:8px;  
-                                margin-bottom: 10px;                      
-                            }
-                            .time{
-                                @include custom-font(#8E9DC1, 10px, 10px, 'galano_grotesque_alt_medium' );                              
-                            }    
-                        }
-                       
-                        .com-name{
-                            @include custom-font(#15181D, 14px, 14px, 'galano_grotesque_alt_medium' );                              
-                            margin-bottom: 10px;  
-                        }
-                        .com-content{
-                            @include custom-font(#536BA5, 12px, 15px, 'galano_grotesque_alt_regular' );  
-                            height:30px;
-                            @include multiLineEllipsis($lineHeight: 15px, $lineCount: 2, $bgColor: white);
-                            margin-bottom: 20px; 
-                              text-justify: inter-word;             
-                        }
-                        .location{
-                            @include custom-font(#354052, 14px, 15px, 'galano_grotesque_alt_regular' );
-                            margin-bottom: 10px;  
-                            .svg-icon{
-                                vertical-align: middle; 
-                                margin-right:10px;  
-                                color:  #2766FF   ;     
-                                 width:15px !important;  
-                                 height:18px !important; 
-                                 font-size: 11px;            
-                            }
-                        }
-                        .com-type{
-                            @include custom-font(#354052, 14px, 15px, 'galano_grotesque_alt_regular' );
-                            margin-bottom: 10px;  
-                            .svg-icon{
-                                vertical-align: middle; 
-                                margin-right:10px;  
-                                color:  #2766FF   ;     
-                                 width:15px !important;  
-                                 height:18px !important; 
-                                 font-size: 11px;            
-                            }
-                        }
-                        .salary{
-                            @include custom-font(#354052, 14px, 15px, 'galano_grotesque_alt_regular' );
-                            .svg-icon{
-                                vertical-align: middle; 
-                                margin-right:10px;  
-                                color:  #2766FF   ;     
-                                 width:15px !important;  
-                                 height:18px !important; 
-                                 font-size: 11px;            
-                            }
-                        }
+                    .dx-slider-bar{
+                        height:10px;
+                        border-radius: 5px;
                     }
+                    .dx-slider-handle{
+                        margin-top:-10px;
+                        border:1px solid rgb(217, 218, 221);
+                        background-color: white;
+                    }
+                    .dx-slider-range{
+                        height:10px;
+                    }
+            
                 }
 
-                .ico-wrapper{
-                  position: absolute;
-                  top:10px;
-                  right:7px;
-                  mat-icon{
-                    vertical-align: middle; 
-                    margin-right:4px;  
-                     color:  #D4DAE2 ;     
-                             
-                  }
-                  .icon-export{
-                    width:15px !important;  
-                    height:18px !important; 
-                    font-size: 11px;   
-                  }
-                  .icon-heart{
-                    width:17px !important;  
-                    height:18px !important; 
-                    font-size: 13px; 
-                  }
+                //slider widget css-----end
+
+                .search-tab-container{
+                    width:90%;
+                    margin:10px auto;
+                    .search-tab{
+                        width:50%;
+                        padding :20px ;
+                        display: inline-block;
+                        border-bottom:2px solid #8E9DC1;
+                        text-align: center;
+                        font-size: 22px;
+                        font-family: "galano_grotesque_medium";
+                        cursor: pointer;
+                    }
+                    .tab-selected{
+                        color:#2766FF;
+                        border-bottom: 2px solid #2766FF;
+                    }
+                    
+                }
+
+                
+                .subject-container{
+                    width:80%;
+                    margin : 20px auto;
+                    .subject{                    
+                        font-size: 20px;
+                        line-height: 24px;
+                        font-family: "galano_grotesque_medium";
+                        color:#1D1F22;
+                    }
+                    .reset{
+                        margin-top:5px;
+                        float:right;
+                        font-size: 14px;
+                        line-height:17px;
+                        font-family: "galano_grotesque_semi_bold";
+                        color:#FF2D55;
+                        cursor:pointer;
+                    }
+                }
+                
+            .submit{
+                text-align: center;
+                margin: 20px auto 50px auto;
+                button{
+                    padding-left: 80px;
+                    padding-right:80px;
+                }
+                
+            }
+            
+        } 
+    
+        .job-result{
+            display: flex;
+            justify-content: flex-start;
+            flex-grow: 1;
+            flex-direction: column;
+            .title{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-left:10px;
+                margin-top:10px;
+                text-align: center;
+                .main-title{
+                    @include custom-font(#333333, 32px, 52px, 'galano_grotesque_alt_bold' );
+                    margin-right:20px;
+
+                }
+                .all-job-count{
+                    @include custom-font(#90A5D7, 16px, 52px, 'galano_grotesque_alt_regular' );
                 }
             }
-           
+
+            .content-container{
+                width:100%;  
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;        
+                .item-wrapper{
+                    position: relative;
+                    margin:10px 10px;
+                    width:470px;
+
+                    height:234px;
+                    display: table;                
+                    background-image: url('/assets/images/content_back.png');
+                    background-size:100% 100%;
+                    border-radius: 15px;
+                    border:1px solid #EEEFF4;
+                    padding:25px 15px;
+                    .item-content{
+                        width:100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        
+                        .item-side{
+                            width:142px; 
+                            height:162px;                       
+                            display:table;                       
+                            img{
+                                max-width:118px;
+                                width:100%;
+                                height:auto;
+                                border-radius: 50%;
+                                box-shadow: 0 2px 3px gray;
+                                margin:0 10px 10px 10px;
+                            }
+                            button{
+                                padding:5px 8px;
+                            mat-icon{
+                                vertical-align: middle;
+                                color:white;
+                                font-size: 20px;
+                            } 
+                                span{
+                                    @include custom-font(white, 16px, 16px, 'galano_grotesque_alt_medium' );
+                                }
+                            }                        
+                        }
+                        .item-body{
+                            width:284px;
+                            display: table;
+                            height: 182px;
+                            .career-time{
+                                margin-bottom: 10px;  
+                                .career{
+                                    @include custom-font($thickblue, 18px, 22px, 'galano_grotesque_semi_bold' );
+                                    margin-right:8px;  
+                                    margin-bottom: 10px;                      
+                                }
+                                .time{
+                                    @include custom-font(#8E9DC1, 10px, 10px, 'galano_grotesque_alt_medium' );                              
+                                }    
+                            }
+                        
+                            .com-name{
+                                @include custom-font(#15181D, 14px, 14px, 'galano_grotesque_alt_medium' );                              
+                                margin-bottom: 10px;  
+                            }
+                            .com-content{
+                                @include custom-font(#536BA5, 12px, 15px, 'galano_grotesque_alt_regular' );  
+                                height:30px;
+                                @include multiLineEllipsis($lineHeight: 15px, $lineCount: 2, $bgColor: white);
+                                margin-bottom: 20px; 
+                                text-justify: inter-word;             
+                            }
+                            .location{
+                                @include custom-font(#354052, 14px, 15px, 'galano_grotesque_alt_regular' );
+                                margin-bottom: 10px;  
+                                .svg-icon{
+                                    vertical-align: middle; 
+                                    margin-right:10px;  
+                                    color:  #2766FF   ;     
+                                    width:15px !important;  
+                                    height:18px !important; 
+                                    font-size: 11px;            
+                                }
+                            }
+                            .com-type{
+                                @include custom-font(#354052, 14px, 15px, 'galano_grotesque_alt_regular' );
+                                margin-bottom: 10px;  
+                                .svg-icon{
+                                    vertical-align: middle; 
+                                    margin-right:10px;  
+                                    color:  #2766FF   ;     
+                                    width:15px !important;  
+                                    height:18px !important; 
+                                    font-size: 11px;            
+                                }
+                            }
+                            .salary{
+                                @include custom-font(#354052, 14px, 15px, 'galano_grotesque_alt_regular' );
+                                .svg-icon{
+                                    vertical-align: middle; 
+                                    margin-right:10px;  
+                                    color:  #2766FF   ;     
+                                    width:15px !important;  
+                                    height:18px !important; 
+                                    font-size: 11px;            
+                                }
+                            }
+                        }
+                    }
+
+                    .ico-wrapper{
+                    position: absolute;
+                    top:10px;
+                    right:7px;
+                    mat-icon{
+                        vertical-align: middle; 
+                        margin-right:4px;  
+                        color:  #D4DAE2 ;     
+                                
+                    }
+                    .icon-export{
+                        width:15px !important;  
+                        height:18px !important; 
+                        font-size: 11px;   
+                    }
+                    .icon-heart{
+                        width:17px !important;  
+                        height:18px !important; 
+                        font-size: 13px; 
+                    }
+                    }
+                }
+            
+            }
+            .load-more{
+                margin-top:50px;
+                text-align: center;
+                button{
+                    margin:0 auto;
+                }
+
+            }
+
         }
-         .load-more{
-             margin-top:50px;
-             text-align: center;
-             button{
-                 margin:0 auto;
-             }
-
-         }
-
     }
 
+    @media screen and (max-width : 1550px){
+        .search-bar.responsive{
+            margin-left: 0;
+            opacity: 1;
+        }
+    }
+
+    @media screen and (min-width : 1550px){
+        .search-bar-control{
+          display: none;
+        }
+        .search-result-body{
+           
+            .search-bar{
+                margin-left: 0;
+                opacity: 1;
+            }
+            .search-bar.responsive{
+                margin-left: 0;
+                opacity: 1;
+            }
+        }
+    }
 }

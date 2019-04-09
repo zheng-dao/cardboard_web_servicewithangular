@@ -16,6 +16,7 @@ export class Header2Component implements OnInit {
   sliceMessages: any[];
   is_message_modal_show: boolean = false;
   @ViewChild('message_modal') messageModal: ElementRef;
+  @ViewChild('sub_menu') sub_menu : ElementRef;
   
   /// notification control
   allNotifications: any[];
@@ -40,20 +41,22 @@ export class Header2Component implements OnInit {
   ngOnInit() {
     this.getMessages();
     this.getNotifications();
+    
   }
 
 
   showSubMenu() {
-    this.is_sub_menu_show = true;
+    this.sub_menu.nativeElement.style.display = "block"
     this.bgColor = "#3771FF";
   }
-  hideSubMenu() {
-    this.is_sub_menu_show = false;
-    this.bgColor = "";
+  hideSubMenu(){
+   this.sub_menu.nativeElement.style.display = "none"
+    this.bgColor = "";  
+    console.log( this.is_sub_menu_show );  
   }
 
   toggleSubMenu() {   
-    if (this.is_sub_menu_show == true)
+    if (this.sub_menu.nativeElement.style.display  == "block")
       this.hideSubMenu();
     else
       this.showSubMenu();
@@ -70,8 +73,18 @@ export class Header2Component implements OnInit {
     this.sliceMessages = this.allMessages.slice(0, this.allMessages.length);
   }
 
-  showMessageModal() {
+  showMessageModal() {  
+    
+    if(document.body.clientWidth < 1350){
+      console.log("small")
+      this.messageModal.nativeElement.className = "message-modal message-position-right";
+    }
+    else{
+      console.log("large")
+      this.messageModal.nativeElement.className = "message-modal message-position-left";
+    }
     this.is_message_modal_show = true;
+    this.is_notification_modal_show = false
   }
   hideMessageModal() {
     this.is_message_modal_show = false;
@@ -90,7 +103,14 @@ export class Header2Component implements OnInit {
   }
 
   showNotificationModal() {
+    if(document.body.clientWidth < 1350){
+      this.notificationModal.nativeElement.className = "message-modal message-position-right";
+    }
+    else{
+      this.notificationModal.nativeElement.className = "message-modal message-position-left";
+    }
     this.is_notification_modal_show = true;
+    this.is_message_modal_show = false
   }
   hideNotificationModal() {
     this.is_notification_modal_show = false;
@@ -101,11 +121,11 @@ export class Header2Component implements OnInit {
 
   toggleHeaderMenu() {
     let nativeheader = this.header2.nativeElement;
-    if (nativeheader.className === "row") {
+    if (nativeheader.className === "headerbody") {
       nativeheader.className += " responsive";
     }
     else {
-      nativeheader.className = "row";
+      nativeheader.className = "headerbody";
     }
   }
 }

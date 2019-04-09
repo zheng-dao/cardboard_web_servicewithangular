@@ -3,11 +3,16 @@
     margin-left: 0;
     margin-right: 0;
     background-color:$thickblue;        
-   
+    .headerbody{
+      padding : 0 30px;
         .main-menu-section{
           padding-top:0px;
-          padding-bottom:0px;                        
-          .nav-item{
+          padding-bottom:0px;   
+          ul{
+              padding: 0;
+              margin: 0;
+              list-style: none;
+           .nav-item{
              padding: 32px 0;
              margin:  0 8px;             
                 a{  
@@ -33,25 +38,10 @@
                     color:white;
                     text-decoration: none;
                 }
-                .sub_menu{
-                    z-index: 99999;
-                    position: absolute;
-                    width:250%;
-                    top:93px;
-                    left:0;                           
-                    background-color:  #3771FF;                    
-                    list-style: none;
-                    padding:0;
-                    li{
-                        padding:15px 15px;                        
-                        display: table;                       
-                        &:hover{
-                            cursor: pointer;
-                            color:white;
-                        }                  
-                    }
-                }  
+               
             }
+          }                     
+           
         }
         
 
@@ -62,6 +52,7 @@
             .search-wrapper{
                 width:100%;               
                 max-width:550px;
+                
                 .job_search_input{
                     width:44%;
                     height: 40px;
@@ -119,26 +110,29 @@
                 .menu-item{
                     display: table;
                     float:left;
-                    margin:0px 5px 0 5px;
+                    margin:0px 2px 0 2px;
 
                     .video_create{
-                        @include custom_font(#00ffde, 14px, 17px, 'galano_grotesque_alt_semi_bold');
-                        text-shadow: 1px 1px 5px rgb(9, 39, 116);
-                        mat-icon{
+                       
+                            @include custom_font(#00ffde, 14px, 17px, 'galano_grotesque_alt_semi_bold');
+                            text-shadow: 1px 1px 5px rgb(9, 39, 116);
                            
+                       
+                        mat-icon{
                             font-size: 25px;
                             vertical-align: middle;
-                            margin-right: 10px;
+                            margin-right: 0px;
                             display: inline;
                         }
 
                         &:hover{
                             text-decoration: none;
                         }
+
                     }
                     .noti-control{
-                        width: 46px;
-                        height: 46px;
+                        width: 40px;
+                        height: 40px;
                         padding-top: 12px;
                         position: relative;
                         border-radius: 50%;
@@ -157,32 +151,20 @@
                                 width:18px;
                                 height: 18px;
                                 border-radius: 50%;
-                                z-index: 99999;
+                                z-index: 1000;
                                 background-color: #11F7F4;
                             }
                         }
                         &:hover{
                             box-shadow: 0 3px 5px #1A1A1A;
                         }
-                      .message-modal{
-                          background-color: white;
-                          position:absolute;
-                          top: 55px;
-                          right:-10px;
+                        .message-modal{
+                          background-color: white;                          
                           width:387px;
                           border-radius: 14px;
                           box-shadow: 0 0 10px rgb(72, 95, 95);
                           z-index: 99999;
-                          .pointer{
-                             width:35px;
-                             height:15px;
-                             margin-top:-15px;
-                             margin-left:335px;
-                             img{
-                                 width:100%;
-                                 height:100%;
-                                }
-                             }  
+                          
                           .message-list{
                               display: table;
                               padding:14px;
@@ -312,6 +294,37 @@
                               @include custom_font($thickblue, 14px, 16px, 'galano_grotesque_alt_bold');
                           }
                         }
+                        .message-position-left{
+                          position:absolute;
+                          top: 55px;
+                          right:-10px;
+                          .pointer{
+                            width:35px;
+                            height:15px;
+                            margin-top:-15px;
+                            margin-left:335px;
+                            img{
+                                width:100%;
+                                height:100%;
+                               }
+                            }  
+                        }
+                        .message-position-right{
+                            position:absolute;
+                            top: 55px;
+                            left:-10px;
+                            .pointer{
+                                width:35px;
+                                height:15px;
+                                margin-top:-15px;
+                                margin-left:15px;
+                                img{
+                                    width:100%;
+                                    height:100%;
+                                   }
+                            }  
+                        }
+
                     }
                     .personal{
                         width:35px;
@@ -329,7 +342,7 @@
 
         }
 
-       
+    }   
         .nav_toggle_btn{
             position: absolute;
              cursor:pointer;
@@ -338,49 +351,116 @@
              display: none;
              color:white;
              font-size: 30px;
-            }
-            @media screen and (max-width: 1200px) {
-                .row{
-                    .main-menu-section{
-                        li:not(:first-child) {display: none;}
-                    }                
-                    .search-container{
-                        .search-wrapper{
-                            display: none;
-                        }
+        }
+        @media screen and (max-width: 1350px) {
+            .headerbody{
+                .main-menu-section{                   
+                    li:not(:first-child) {display: none;}
+                    
+                }                
+                .search-container{
+                      display: none;
+                    .search-wrapper{
+                        display: none;
                     }
-                    .notification-menu{
-                        .main-container{
-                            display: none;
-                        }
-                    }
-
                 }
-                .nav_toggle_btn {          
-                    display: block;
-                }  
-            }
-        
-            @media screen and (max-width:1200px) {        
-                .row.responsive{
-                    .main-menu-section{
-                        .nav-item {
-                            display: block;
-                            padding: 8px 0;
-                        }
-                    }                
-                    .search-container{
-                        .search-wrapper{
-                            display: block;
-                        }
+                .notification-menu{
+                    
+                    ul.main-container{
+                        padding: 0;
+                        display: none;
                     }
-                    .notification-menu{
-                        .main-container{
-                            display: block;
-                        }
-                    }
-
                 }
+
             }
+            .nav_toggle_btn {          
+                display: block;
+            }  
+        }
+    
+        @media screen and (max-width:1350px) {        
+            .headerbody.responsive{
+                .main-menu-section{
+                    
+                    .nav-item:not(:first-child) {
+                        display: block;
+                        padding: 8px 0;
+                        .sub_menu{
+                            z-index: 99999;
+                            position: absolute;
+                            width:220px;
+                            top:40px;
+                            left:0;                           
+                            background-color:  #3771FF;                    
+                            list-style: none;
+                            padding:0;
+                            li{
+                                padding:15px 15px;                        
+                                display: table;                       
+                                &:hover{
+                                    cursor: pointer;
+                                    color:white;
+                                }                  
+                            }
+                        }  
+                    }
+                }                
+                .search-container{  
+                    display :block;                 
+                    .search-wrapper{
+                        display: table;
+                    }
+                }
+                .notification-menu{  
+                    padding-bottom: 20px;                  
+                    ul.main-container{  
+                        padding: 0;
+                        margin: 0;                        
+                        display: table;
+                    }
+                }
+
+            }
+        }
+        @media screen and  (min-width :1350px){
+            .headerbody{
+                display: flex;      
+                align-items: center;
+                justify-content: space-around;
+                .main-menu-section{                   
+                    width: 620px;
+                    li{
+                        display: inline-block;
+                        .sub_menu{
+                            z-index: 99999;
+                            position: absolute;
+                            width:220px;
+                            top:93px;
+                            left:0;                           
+                            background-color:  #3771FF;                    
+                            list-style: none;
+                            padding:0;
+                            li{
+                                padding:15px 15px;                        
+                                display: table;                       
+                                &:hover{
+                                    cursor: pointer;
+                                    color:white;
+                                }                  
+                            }
+                        }  
+                    }
+                }                
+                .search-container{
+                   width:513px;
+                  
+                }
+                .notification-menu{
+                    width:200px;
+                   
+                }
+
+            }
+        }
     
 }

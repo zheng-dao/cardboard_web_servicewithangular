@@ -36,11 +36,11 @@ export class Header1Component implements OnInit {
 
   toggleHeaderMenu() {
     let nativeheader = this.header1.nativeElement;
-    if (nativeheader.className === "row") {
+    if (nativeheader.className === "headerbody") {
       nativeheader.className += " responsive";
     }
     else {
-      nativeheader.className = "row";
+      nativeheader.className = "headerbody";
     }
   }
 

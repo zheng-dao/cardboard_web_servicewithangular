@@ -1,6 +1,9 @@
 <div class="search-result ">
-  <div class="row">
-    <div class="search-bar col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 ">
+  <div class="search-bar-control" (click)="toggleShowSearchBar()">
+    <i class="fa  fa-chevron-right" #searchBarControl></i>
+  </div>
+  <div class="search-result-body ">
+    <div class="search-bar" #searchBar>
       <div class="search-tab-container">
         <div class="search-tab" [ngClass]="{'tab-selected':is_show}" (click)="setShow(true)">{{'search_result_tab_search'|translate}}</div>
         <div class="search-tab" [ngClass]="{'tab-selected':!is_show}" (click)="setShow(false)">{{'search_result_tab_browse'|translate}}</div>
@@ -37,50 +40,49 @@
         <app-area-browse></app-area-browse>
       </form>
     </div>
-    <div class="job-result col-sm-12 col-md-6 col-lg-8 col-xl-9">
+    <div class="job-result container">
       <div class="title">
         <span class="main-title">Designer Jobs In U.A.E</span>
         <span class="all-job-count">{{allCounts}} {{'search_result_script_jobs_found'|translate}}</span>
       </div>
-      <div class="content-container row">
-        <div class=" col-sm-12 col-md-12 col-lg-12 col-xl-6" *ngFor="let job of sliceJobsForView">
-          <div class="item-wrapper">
-            <div class="item-content">
-              <div class="item-side">
-                <div><img src="{{job.com_mark}}"></div>
-                <div>
-                  <button class="small_rounded_btn" routerLink="/jobOffer">
-                    <mat-icon>play_arrow</mat-icon>
-                    <span>{{'btn_watch_offer'|translate}}</span>
-                  </button>
-                </div>
-              </div>
-              <div class="item-body">
-                <div class="career-time">
-                  <span class="career">{{job.career}}</span>
-                  <span class="time">posted {{job.time}}</span>
-                </div>
-                <div class="com-name">{{job.com_name}}</div>
-                <div class="com-content">{{job.content}}</div>
-                <div class="location">
-                  <mat-icon svgIcon="location" class="svg-icon"></mat-icon><span>{{job.location}}</span>
-                </div>
-                <div class="com-type">
-                  <mat-icon svgIcon="com_type" class="svg-icon"></mat-icon><span>{{job.com_type}}</span>
-                </div>
-                <div class="salary">
-                  <mat-icon svgIcon="salary" class="svg-icon"></mat-icon><span>${{job.low_salary}} to
-                    ${{job.high_salary}}
-                    per annum</span>
-                </div>
+      <div class="content-container">
+        <div class="item-wrapper" *ngFor="let job of sliceJobsForView">
+          <div class="item-content">
+            <div class="item-side">
+              <div><img src="{{job.com_mark}}"></div>
+              <div>
+                <button class="small_rounded_btn" routerLink="/jobOffer">
+                  <mat-icon>play_arrow</mat-icon>
+                  <span>{{'btn_watch_offer'|translate}}</span>
+                </button>
               </div>
             </div>
-            <span class="ico-wrapper">
-              <mat-icon class="icon-export" svgIcon="export"></mat-icon>
-              <mat-icon class="icon-heart" svgIcon="heart"></mat-icon>
-            </span>
+            <div class="item-body">
+              <div class="career-time">
+                <span class="career">{{job.career}}</span>
+                <span class="time">posted {{job.time}}</span>
+              </div>
+              <div class="com-name">{{job.com_name}}</div>
+              <div class="com-content">{{job.content}}</div>
+              <div class="location">
+                <mat-icon svgIcon="location" class="svg-icon"></mat-icon><span>{{job.location}}</span>
+              </div>
+              <div class="com-type">
+                <mat-icon svgIcon="com_type" class="svg-icon"></mat-icon><span>{{job.com_type}}</span>
+              </div>
+              <div class="salary">
+                <mat-icon svgIcon="salary" class="svg-icon"></mat-icon><span>${{job.low_salary}} to
+                  ${{job.high_salary}}
+                  per annum</span>
+              </div>
+            </div>
           </div>
+          <span class="ico-wrapper">
+            <mat-icon class="icon-export" svgIcon="export"></mat-icon>
+            <mat-icon class="icon-heart" svgIcon="heart"></mat-icon>
+          </span>
         </div>
+
       </div>
       <div class="load-more">
         <button [style.display]="allJobs.length>18? 'table':'none'" class="large_rounded_btn">{{'btn_load_more'|translate}}</button>
