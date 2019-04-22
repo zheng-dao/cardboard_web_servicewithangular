@@ -18,8 +18,8 @@
             mat-icon{
                 font-size: 30px; 
                 vertical-align: middle;
-                width: 0;
-                height:0; 
+                // width: 0;
+                // height:0; 
                 margin-right: 5px;  
                 display: inline;          
              }
@@ -384,7 +384,7 @@
        
         .content_4_2{
              padding: 0 5px; 
-             .profile-mark{ 
+            .profile-mark{ 
                  display: flex;
                  justify-content: center; 
                  img{
@@ -392,12 +392,11 @@
                      height: 256px;
                      margin: 5px auto;
                  }
-             }
-             .message{
+            }
+            .message{
                 @include custom_font(#8E9DC1, 16px, 20px,'galano_grotesque_alt_regular');                
                padding: 0 50px;
-               text-align: center;
-              
+               text-align: center;              
             }
         }
        

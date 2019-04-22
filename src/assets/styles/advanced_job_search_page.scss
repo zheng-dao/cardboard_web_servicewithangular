@@ -44,7 +44,7 @@
                 padding-right:50px;
                 background: transparent;
                 &::placeholder{
-                @include custom_font(#C0C4D1, 29px , 35px , 'galano_grotesque_alt_light');  
+                 @include custom_font(#C0C4D1, 29px , 35px , 'galano_grotesque_alt_light');  
                 }
                 &:focus{
                     outline: none;

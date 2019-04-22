@@ -70,11 +70,11 @@
         }
     }
 
- /*
-::::::::::::::::::::::::::::::::::::::::::::::::::::
-Bootstrap 4 breakpoints
-*/
-@media (max-width: 576px) {  
+    /*
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::
+    Bootstrap 4 breakpoints
+    */
+ @media (max-width: 576px) {  
     /*1rem = 16px*/
     .des_content_1{  
       .title{
@@ -86,8 +86,8 @@ Bootstrap 4 breakpoints
      }
    }
 
-/* Small devices (landscape phones, 544px and up) */
-@media (min-width: 576px) {  
+ /* Small devices (landscape phones, 544px and up) */
+ @media (min-width: 576px) {  
    /*1rem = 16px*/
    .des_content_1{  
      .title{

@@ -171,7 +171,7 @@
             <p class="location-title">{{'job_offer_location'|translate}}</p>
             <p class="location">Sheikh Al Zayed Road,Dubai</p>
             <div class="google-map">
-              <agm-map latitude="'51'" longitude="'7.8'" zoom="'5'" >
+              <agm-map latitude="'51'" longitude="'7.8'" zoom="'5'">
                 <agm-marker></agm-marker>
               </agm-map>
             </div>
@@ -241,7 +241,7 @@
   </div>
 
   <div class="similar-job-container">
-    <div class="">
+    <div>
       <div class="title">{{'job_offer_find_similar_jobs'|translate}}</div>
       <ul class="job-container">
         <li *ngFor="let job of sliceSimilarJobs" class="job">
@@ -265,19 +265,19 @@
             <img [src]="job.com_mark">
           </div>
           <div class="watch-offer">
-            <mat-chip color="primary" selected >
+            <mat-chip color="primary" selected>
               <i class="fa fa-play"></i>
               {{'job_offer_button_watch_offer'|translate}}
             </mat-chip>
           </div>
-           <div class="icon-btn-container">
-             <div class="icon-btn" >
-               <mat-icon svgIcon="export"></mat-icon>
-             </div>
-             <div class="icon-btn" >
-               <mat-icon svgIcon="heart"></mat-icon>
-             </div>
-           </div>           
+          <div class="icon-btn-container">
+            <div class="icon-btn">
+              <mat-icon svgIcon="export"></mat-icon>
+            </div>
+            <div class="icon-btn">
+              <mat-icon svgIcon="heart"></mat-icon>
+            </div>
+          </div>
         </li>
       </ul>
 
@@ -285,7 +285,7 @@
         <button class="large_rounded_btn">
           {{'job_offer_button_view_them_all'|translate}}
         </button>
-       </div>
+      </div>
     </div>
   </div>
 </div>

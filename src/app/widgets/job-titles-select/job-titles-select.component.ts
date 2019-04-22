@@ -20,7 +20,6 @@ export class JobTitlesSelectComponent implements myinterface {
 
   @ViewChild('itemButtonContainer', { read: ViewContainerRef }) itemButtonContainer: ViewContainerRef;
 
-
   index: number = 0;
   itemButttonsRefs: ComponentRef<ItembuttonComponent>[] = [];
 
