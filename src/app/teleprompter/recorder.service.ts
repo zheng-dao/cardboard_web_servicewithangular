@@ -12,7 +12,7 @@ export class RecorderService {
 
   // recorded video data
   static recordedBlob ;
-
+  static toUrl;
   // buffer for recordedBlobs
   static recordedVideoSourceBuffer;  
 

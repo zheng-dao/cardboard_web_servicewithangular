@@ -3,7 +3,7 @@ import { GlobalsService } from '../globals.service';
 import { Router } from '@angular/router';
 import { RecorderService } from '../recorder.service';
 import * as RecordRTC from 'recordrtc'
-import adapter from 'webrtc-adapter';
+import * as FileSaver from 'file-saver'
 
 
 
@@ -15,71 +15,90 @@ import adapter from 'webrtc-adapter';
 export class Teleprompter7Component implements OnInit {
 
   state_list: any[];
-  loading_time:number = 12;
-  recordRTC:any;
+  loading_time: number = 12;
+  recordRTC: any;
   recording_start: Boolean = false;
-
+  recording_state: String = "teleprompter7_no_recoding";
+  control_show: String = "none";
 
   @ViewChild('video') video: ElementRef;
 
   constructor(private _global: GlobalsService,
-    private router: Router,
-    private recordService: RecorderService) { }
-
-
-  onNextNavigation() {
-    this.router.navigateByUrl('/VCVMake/VCVVideoEdit');
-  }
+    private router: Router) { }
 
   ngOnInit() {
-    this.state_list = this._global.state_list; 
+    this.state_list = this._global.state_list;
   }
 
-  ngAfterViewInit(){
-     //set the initial state of the video   
-     this.video.nativeElement.muted = false;
-     this.video.nativeElement.controls = true;
+  ngAfterViewInit() {
+    //set the initial state of the video   
+    this.video.nativeElement.muted = false;
+    this.video.nativeElement.controls = true;
 
-     // start Recording
-     let mediaContstraints = {
-        audio: true, video: true
-     };
-     navigator.mediaDevices.getUserMedia(mediaContstraints)
-     .then(this.successCallback.bind(this), this.errorCallback.bind(this));
+    this.InitVideofromCamera()
   }
 
-   // this func returns a MediaStream Object
-  async successCallback(stream:MediaStream){
+  startRecordFromCamera() {
+    console.log("start capture")
+    this.recordRTC.setRecordingDuration(this.loading_time * 1000).onRecordingStopped(this.onStoppedCallback.bind(this));
+    this.recordRTC.startRecording();
+  }
+
+  InitVideofromCamera() {
+    // start Recording
+    let mediaContstraints = {
+      audio: true, video: true
+    };
+    navigator.mediaDevices.getUserMedia(mediaContstraints)
+      .then(this.successCallback.bind(this), this.errorCallback.bind(this));
+  }
+
+
+  // this func returns a MediaStream Object
+  async successCallback(stream: MediaStream) {
     var option = {
-      mimeType: 'video/webm',
-      audioBitsPerSecond : 128000,
+      mimeType: 'video/webm;codecs=h264',
+      audioBitsPerSecond: 128000,
       videoBitsPerSecond: 128000,
       bitsPerSecond: 128000,
-      type:'video'
+      type: 'video'
     };
 
     this.recordRTC = RecordRTC(stream, option);  // this is media recorder    
-    this.video.nativeElement.srcObject = stream;   
-    this.recordRTC.setRecordingDuration(this.loading_time*1000).onRecordingStopped(this.onStoppedCallback.bind(this));
+    this.video.nativeElement.srcObject = stream;
 
-    this.recordRTC.startRecording();
-  
+
+    this.control_show = "inline"
+    console.log("ok")
   }
-  errorCallback(errer){
+
+
+  errorCallback(errer) {
     console.log(errer)
-    alert("Please connect camera to your computer!")    
+    alert("Please connect camera to your computer!")
   }
 
-  onStoppedCallback(){
-
+  onStoppedCallback() {
     this.video.nativeElement.muted = true
-     console.log("recording stopped!")
-     
-     console.log(this.recordRTC.getBlob());
-     console.log(this.recordRTC.toURL());
+    console.log("recording stopped!")
+    console.log(this.recordRTC.getBlob());
+    console.log(this.recordRTC.toURL());
+   
+    RecorderService.recordedVideoSourceBuffer = this.recordRTC.getBlob()
+    RecorderService.toUrl = this.recordRTC.toURL()
+
+    // save recorded blob data into disk
+   FileSaver.saveAs(this.recordRTC.getBlob(), "MyTest.mp4")
+   
+
+    this.router.navigateByUrl('/VCVMake/VCVVideoEdit');
   }
 
-  onStartRecording(){
+  onStartRecording() {
     this.recording_start = true
+    this.recording_state = "teleprompter7_recording"
+    this.startRecordFromCamera()
   }
+
+
 }

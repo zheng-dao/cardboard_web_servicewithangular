@@ -1,23 +1,26 @@
 <div class="teleprompter">
   <app-status-bar [states]="state_list"></app-status-bar>
-  <div class="video-recoder-container">
-    <video #video class="video-display" controls autoplay playsinline ></video>
+  <div class="video-recoder-container">   
     <div class="top-header">
       <div class="container top-header-content">
         <div class="left-header">
           <span class="title">{{'teleprompter7_title'|translate}}</span>
           <div class="loading">
-            <app-record-loading [second]="loading_time" (nextNavigation)="onNextNavigation()" [is_start]="recording_start"></app-record-loading>
+            <app-record-loading [second]="loading_time" [is_start]="recording_start"></app-record-loading>
           </div>
-          <span style="color:white; font-size: 23px; margin-left:20px;" (click)="onStartRecording()">Recording Start</span>
+          <span class="recording-start-text" (click)="onStartRecording()" [style.display]="control_show">{{'teleprompter7_start'|translate|uppercase}}</span>
         </div>
         <button class="skip">
           {{'teleprompter7_button_skip_question'|translate}}
         </button>
-      </div>
+      </div> 
     </div>
-    <div class="recording-state">
-      {{'teleprompter7_recording'|translate}}
+    <div style="margin: 0 auto; padding:20px; width:800px;">
+      <video #video class="video-display" controls autoplay playsinline ></video>
+    </div>
+    
+    <div class="recording-state-container" >
+      <div class="recording-state">{{recording_state|translate}}</div>
     </div>
 
   </div>

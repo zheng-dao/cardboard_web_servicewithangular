@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import {interval} from 'rxjs'
-import { inputs } from '@syncfusion/ej2-angular-dropdowns/src/auto-complete/autocomplete.component';
+import  * as d3 from 'd3'
 
 @Component({
   selector: 'app-record-loading',
@@ -11,17 +11,13 @@ export class RecordLoadingComponent implements OnInit {
 
  @Input() second: number;
  @Input() is_start: Boolean;
- @Output() nextNavigation = new EventEmitter();
-  path_id:string = ""
-  loading_percent_string:string = "0,100";
-
+ 
   @ViewChild('loading_time_element') loading_time_element:ElementRef
  
   constructor() { }
 
   ngOnInit() {      
-      this.loading_time_element.nativeElement.textContent = this.second.toString();    
-     
+      this.loading_time_element.nativeElement.textContent = this.second.toString();         
   }
 
   ngAfterViewInit() {
@@ -30,13 +26,15 @@ export class RecordLoadingComponent implements OnInit {
 
   ngOnChanges(){
     if(this.is_start == false){
-      this.loading_percent_string = "0, 100"
+    
     }
     else{   // loading start
-      this.loading_percent_string = "100, 100"
-      
-       this.path_id = "my-circle"
-
+      d3.select('svg')
+      .select('path')
+      .transition()
+      .attr('stroke-dasharray','100,100')
+      .duration(this.second*1000+1000)
+      .ease(d3.easeLinear)
       var time_value=0;
       // start timer 
       const secondsCounter=interval(1000);
@@ -50,8 +48,7 @@ export class RecordLoadingComponent implements OnInit {
       })
     // end timer
       setTimeout(()=>{
-        subscribe.unsubscribe();
-        this.nextNavigation.emit();
+        subscribe.unsubscribe();       
       },(this.second+1)*1000);
 
     }

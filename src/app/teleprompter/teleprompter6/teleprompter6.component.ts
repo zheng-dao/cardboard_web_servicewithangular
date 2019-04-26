@@ -17,8 +17,10 @@ export class Teleprompter6Component implements OnInit {
     this.state_list=this._global.state_list;
   }
 
-  onNextNavigation(){
-    this.router.navigateByUrl('/teleprompter/teleprompter7');
+  ngAfterViewInit(){
+    setTimeout(()=>{
+      this.router.navigateByUrl('/teleprompter/teleprompter7');
+    },(this.loading_time+1)*1000);
   }
 
 }

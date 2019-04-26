@@ -5,7 +5,7 @@
       <p class="title">{{'teleprompter3_title'|translate}}</p>
       <div class="loading-container">
         <div class="loading">
-            <app-record-loading [second]="loading_time" (nextNavigation)="onNextNavigation()" [is_start]="true" ></app-record-loading>
+            <app-record-loading [second]="loading_time"  [is_start]="true" ></app-record-loading>
         </div>
         <button class="skip" routerLink="/teleprompter/teleprompter4">
             {{'teleprompter3_button_skip'|translate}}
