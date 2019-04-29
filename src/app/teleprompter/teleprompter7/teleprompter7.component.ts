@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { RecorderService } from '../recorder.service';
 import * as RecordRTC from 'recordrtc'
 import * as FileSaver from 'file-saver'
-
+import {HttpClient} from '@angular/common/http';
 
 
 @Component({
@@ -21,13 +21,19 @@ export class Teleprompter7Component implements OnInit {
   recording_state: String = "teleprompter7_no_recoding";
   control_show: String = "none";
 
+  captureProcess:any;
+
+  @ViewChild("canvas") canvas:ElementRef;
   @ViewChild('video') video: ElementRef;
+  captures:any[];
 
   constructor(private _global: GlobalsService,
-    private router: Router) { }
+    private router: Router,
+    private http:HttpClient) { }
 
   ngOnInit() {
     this.state_list = this._global.state_list;
+    this.captures = [];
   }
 
   ngAfterViewInit() {
@@ -42,7 +48,42 @@ export class Teleprompter7Component implements OnInit {
     console.log("start capture")
     this.recordRTC.setRecordingDuration(this.loading_time * 1000).onRecordingStopped(this.onStoppedCallback.bind(this));
     this.recordRTC.startRecording();
+
+    //capture images
+    this.captureProcess = setInterval(() => {
+           var context = this.canvas.nativeElement.getContext("2d").drawImage(this.video.nativeElement, 0, 0,640,480); 
+           this.captures.push(this.canvas.nativeElement.toDataURL("image/png"))
+    }, 500);
   }
+
+  onStoppedCallback() {
+    this.video.nativeElement.muted = true
+    console.log("recording stopped!")
+    // RecorderService.recordedVideoSourceBuffer = this.recordRTC.getBlob()
+    // RecorderService.toUrl = this.recordRTC.toURL()
+    RecorderService.capturedImages = this.captures
+    window.clearInterval(this.captureProcess)
+
+    // save recorded blob data into disk
+   //FileSaver.saveAs(this.recordRTC.getBlob(), "MyTest.mp4")
+   
+   // file upload to my backend server
+   let blob = this.recordRTC.getBlob()
+   let formdata = new FormData();   
+   formdata.append('blob', blob)
+
+   this.http.post('http://localhost:3000/jobseeker/blob/uploadblob',formdata).subscribe(res => {
+     if(res == 'ok'){
+      this.router.navigateByUrl('/VCVMake/VCVVideoEdit');
+     }
+     else{
+       console.log(res)
+     }
+   })
+
+    
+  }
+
 
   InitVideofromCamera() {
     // start Recording
@@ -78,21 +119,7 @@ export class Teleprompter7Component implements OnInit {
     alert("Please connect camera to your computer!")
   }
 
-  onStoppedCallback() {
-    this.video.nativeElement.muted = true
-    console.log("recording stopped!")
-    console.log(this.recordRTC.getBlob());
-    console.log(this.recordRTC.toURL());
-   
-    RecorderService.recordedVideoSourceBuffer = this.recordRTC.getBlob()
-    RecorderService.toUrl = this.recordRTC.toURL()
-
-    // save recorded blob data into disk
-   FileSaver.saveAs(this.recordRTC.getBlob(), "MyTest.mp4")
-   
-
-    this.router.navigateByUrl('/VCVMake/VCVVideoEdit');
-  }
+  
 
   onStartRecording() {
     this.recording_start = true

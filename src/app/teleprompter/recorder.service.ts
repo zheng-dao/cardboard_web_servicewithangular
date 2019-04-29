@@ -15,6 +15,7 @@ export class RecorderService {
   static toUrl;
   // buffer for recordedBlobs
   static recordedVideoSourceBuffer;  
+  static capturedImages: any[]
 
   constructor() { }
 

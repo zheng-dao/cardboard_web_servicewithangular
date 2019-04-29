@@ -10,7 +10,7 @@
                   <img src="/assets/images/com_mark/google.png">
                </div>
                <div>
-                  <button class="large_rounded_btn">{{'com_profile_button_see_all'|translate}}</button>
+                  <button class="large_rounded_btn">{{'com_profile_button_see_all'|translate|uppercase}}</button>
                </div>
                <div class="icon-btn-container">
                   <div class="icon-btn">
@@ -137,7 +137,7 @@
             <div class="col-sm-12 col-md-12 col-lg-9 " style="padding:0;">
                <div class="cultural-insights-content">
                   <div class="item">
-                     <p>{{'com_profile_cause_our'|translate|uppercase}}</p>
+                     <p>{{'com_profile_languages'|translate|uppercase}}</p>
                      <app-custom-donut-chart [outerRadius]="100" [innerRadius]="80" [width]="200" [height]="200" [data]="language_data"
                         [chartID]="'language'">
                      </app-custom-donut-chart>
@@ -178,7 +178,7 @@
             <div class="col-sm-12 col-md-12 col-lg-9 " style="padding:0;">
                <div class="job-listing-content">
 
-                  <div class="item-wrapper" *ngFor="let job of sliceJobsForView">
+                  <div class="item-wrapper" *ngFor="let job of sliceJobsForView" routerLink="/jobOffer">
                      <div class="item-content">
                         <div class="item-side">
                            <mat-icon>play_circle_filled</mat-icon>
@@ -215,13 +215,13 @@
       <div class="title">{{'com_profile_other_companies'|translate}}</div>
       <div class="other-com-list-container">
          <div class="job-item-container" *ngFor="let job of sliceJobsByCompanies">
-            <div class="job-item" routerLink="/companyProfile">
+            <div class="job-item" >
                <div class="com-mark"><img [src]="job.com_mark"></div>
                <div class="com-name">{{job.com_name}}</div>
-               <div class="count"><span>{{job.count}} {{'fjbr_script_jobs'|translate}}</span></div>
+               <div class="count"><span>{{job.count}} {{'com_profile_jobs'|translate|uppercase}}</span></div>
             </div>
          </div>
       </div>
-      <div style="text-align:center;"><button class="large_rounded_btn" (click)="setAllJobsByCompanies()">{{'com_profile_view_them_all'|translate}}</button></div>
+      <div style="text-align:center;"><button class="large_rounded_btn" (click)="setAllJobsByCompanies()">{{'com_profile_view_them_all'|translate|uppercase}}</button></div>
    </div>
 </div>

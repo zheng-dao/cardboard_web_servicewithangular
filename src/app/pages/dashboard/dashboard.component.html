@@ -3,7 +3,7 @@
     <span class="description">
       {{'dashboard_script_toufic_your_profile'|translate}}
     </span>
-    <button>
+    <button routerLink="/createVCVPlatform">
       <mat-icon>video_call</mat-icon>
       <span>{{'btn_record_vcv'|translate}}</span>
     </button>
@@ -108,7 +108,7 @@
               <app-pager [currentIndexOfArray]="CompanyPager.currentIndexOfArray" (setpager)="setCompanyPager($event)"></app-pager>
             </div>
             <div class="content_3_1_3">
-              <button class="large_rounded_btn viewthemall">{{'btn_view_them_all'|translate}}</button>
+              <button class="large_rounded_btn viewthemall" routerLink="/findJobsByCompany">{{'btn_view_them_all'|translate}}</button>
             </div>
           </div>
         </div>

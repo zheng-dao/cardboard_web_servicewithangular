@@ -231,7 +231,7 @@
     "job_offer_benefits":"Benefits",
     "job_offer_health_insurance":"health insurance",
     "job_offer_flexible_hours":"flexible hours",
-    "job_ofer_company_car":"company car",
+    "job_offer_company_car":"company car",
     "job_offer_share_scheme":"share scheme",
     "job_offer_pension_scheme":"pension scheme",
     "job_offer_gym_membership":"gym membership",
@@ -269,6 +269,7 @@
     "com_profile_info_founded":"Founded",
     "com_profile_info_type":"Type",
     "com_profile_info_website":"Website",
+    "com_profile_jobs":"jobs",
 
     "my_app_opened_jobs":"Opened Jobs",
     "my_app_my_applications":"My Applications",

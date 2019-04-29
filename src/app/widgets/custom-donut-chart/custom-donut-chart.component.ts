@@ -25,7 +25,6 @@ export class CustomDonutChartComponent implements OnInit {
   @Input() public middleText: string;
   @Input() public middleTextColor: string;
   @Input() public middleTextFontSize: string;
-  // @Output() public centerImageEvent = new EventEmitter();
 
   public ngOnInit() {
 

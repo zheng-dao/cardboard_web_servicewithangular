@@ -5,7 +5,8 @@
       <div class="video-control-panel-left"></div>
       <div class="video-wrapper">
         <div class="video-display">
-            <video #video class="video-display" controls playsinline ></video>
+            <!-- <video #video class="video-display" controls playsinline ></video> -->
+            <img src={{selectedImageUrl}} style="width:100%; height:100%"/>
         </div>
       </div>
       <div class="video-control-panel-right">
@@ -39,6 +40,10 @@
     </div>
   </div>
   <div class="video-render-panel">
-
+      <ul class="captured-image-list">
+        <li *ngFor="let c of captures; index as i;" (mouseover)="setImage(i)">
+          <img src="{{c}}" height="50" />
+        </li>
+      </ul>
   </div>
 </div>
