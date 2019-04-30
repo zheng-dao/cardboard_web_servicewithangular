@@ -59,27 +59,27 @@ export class Teleprompter7Component implements OnInit {
   onStoppedCallback() {
     this.video.nativeElement.muted = true
     console.log("recording stopped!")
-    // RecorderService.recordedVideoSourceBuffer = this.recordRTC.getBlob()
-    // RecorderService.toUrl = this.recordRTC.toURL()
+    RecorderService.recordedVideoSourceBuffer = this.recordRTC.getBlob()
+    RecorderService.toUrl = this.recordRTC.toURL()
     RecorderService.capturedImages = this.captures
     window.clearInterval(this.captureProcess)
-
+    this.router.navigateByUrl('/VCVMake/VCVVideoEdit');
     // save recorded blob data into disk
    //FileSaver.saveAs(this.recordRTC.getBlob(), "MyTest.mp4")
    
    // file upload to my backend server
-   let blob = this.recordRTC.getBlob()
-   let formdata = new FormData();   
-   formdata.append('blob', blob)
+  //  let blob = this.recordRTC.getBlob()
+  //  let formdata = new FormData();   
+  //  formdata.append('blob', blob)
 
-   this.http.post('http://localhost:3000/jobseeker/blob/uploadblob',formdata).subscribe(res => {
-     if(res == 'ok'){
-      this.router.navigateByUrl('/VCVMake/VCVVideoEdit');
-     }
-     else{
-       console.log(res)
-     }
-   })
+  //  this.http.post('http://localhost:3000/jobseeker/blob/uploadblob',formdata).subscribe(res => {
+  //    if(res == 'ok'){
+  //     this.router.navigateByUrl('/VCVMake/VCVVideoEdit');
+  //    }
+  //    else{
+  //      console.log(res)
+  //    }
+  //  })
 
     
   }
