@@ -94,6 +94,7 @@ import { VcvVideoFx3Component } from './vcv/vcv-video-fx3/vcv-video-fx3.componen
 import { VcvVideoFx4Component } from './vcv/vcv-video-fx4/vcv-video-fx4.component';
 import { VcvVideoFx5Component } from './vcv/vcv-video-fx5/vcv-video-fx5.component';
 import { VcvVideoFx6Component } from './vcv/vcv-video-fx6/vcv-video-fx6.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 
@@ -167,7 +168,8 @@ import { VcvVideoFx6Component } from './vcv/vcv-video-fx6/vcv-video-fx6.componen
     VcvVideoFx3Component,
     VcvVideoFx4Component,
     VcvVideoFx5Component,
-    VcvVideoFx6Component
+    VcvVideoFx6Component,
+    LoginComponent
   ],
   
   imports: [

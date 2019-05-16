@@ -11,10 +11,7 @@ import { NavigationStart, Router, Event } from '@angular/router'
 export class AppComponent {
   which_header: boolean = true;// true-header1, false-header2
   title = 'JobSeeker';
-  isHeaderBackground: boolean = true;
   isFooterShow: boolean = true;
-  backgroundImage: String = "";
-  backgroundSize: String = "";
 
   constructor(private translate: TranslateService,
     private router: Router) {
@@ -27,45 +24,27 @@ export class AppComponent {
         }
         else if (event.url.toString() == "/signup") {
           this.which_header = true;
-          this.isHeaderBackground = false;
           this.isFooterShow = false;
-          this.backgroundImage = "url('assets/images/bg.png')";
-          this.backgroundSize = "100% 100%";
         }
         else if (event.url.toString() == "/vcvtutorial") {
           this.which_header = true;
-          this.isHeaderBackground = true;
           this.isFooterShow = false;
-          this.backgroundImage = "";
-          this.backgroundSize = "";
         }
         else if (event.url.toString() == "/emailconfirm") {
           this.which_header = true;
-          this.isHeaderBackground = true;
           this.isFooterShow = false;
-          this.backgroundImage = "";
-          this.backgroundSize = "";
         }
         else if(event.url.substr(1,12) == "teleprompter"){
           this.which_header = false;
-          this.isHeaderBackground = true;
           this.isFooterShow = false;
-          this.backgroundImage = "";
-          this.backgroundSize = "";
         }
         else if(event.url.substr(1,7)=="VCVMake"){
           this.which_header = false;
-          this.isHeaderBackground = true;
           this.isFooterShow = false;
-          this.backgroundImage = "";
-          this.backgroundSize = "";
         }
         else {
           this.which_header = false;
-          this.isHeaderBackground = true;
           this.isFooterShow = true;
-          this.backgroundImage = "";
-          this.backgroundSize = "";
         }
 
         // in each page navigation scrolling to top 

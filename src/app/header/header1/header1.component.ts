@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class Header1Component implements OnInit {
 
-  @Input() headerBackground: boolean;
+  
 
   logCheck: boolean;
 
