@@ -12,9 +12,9 @@ import {
   MatChipsModule
 } from '@angular/material'
 import { MultiSelectAllModule } from '@syncfusion/ej2-angular-dropdowns';
-import {AgmCoreModule, GoogleMapsAPIWrapper} from '@agm/core';
-import { DoughnutChartComponent} from 'angular-d3-charts';
-import {NgScrollbarModule} from 'ngx-scrollbar';
+import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
+import { DoughnutChartComponent } from 'angular-d3-charts';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 
 // Module for language translate 
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -78,8 +78,8 @@ import { ChatComponent } from './pages/chat/chat.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { TermComponent } from './pages/term/term.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
-import {Teleprompter1Component} from './teleprompter/teleprompter1/teleprompter1.component'
-import {StatusBarComponent} from './widgets/status-bar/status-bar.component';
+import { Teleprompter1Component } from './teleprompter/teleprompter1/teleprompter1.component'
+import { StatusBarComponent } from './widgets/status-bar/status-bar.component';
 import { Teleprompter2Component } from './teleprompter/teleprompter2/teleprompter2.component';
 import { RecordLoadingComponent } from './widgets/record-loading/record-loading.component';
 import { Teleprompter3Component } from './teleprompter/teleprompter3/teleprompter3.component';
@@ -95,9 +95,24 @@ import { VcvVideoFx4Component } from './vcv/vcv-video-fx4/vcv-video-fx4.componen
 import { VcvVideoFx5Component } from './vcv/vcv-video-fx5/vcv-video-fx5.component';
 import { VcvVideoFx6Component } from './vcv/vcv-video-fx6/vcv-video-fx6.component';
 import { LoginComponent } from './pages/login/login.component';
+import { InternationalPhoneNumberModule } from 'ngx-international-phone-number';
+import {
+  SocialLoginModule,
+  AuthServiceConfig,
+  GoogleLoginProvider,
+  FacebookLoginProvider,
+  LinkedInLoginProvider
+} from 'angularx-social-login';
 
-
-
+let config = new AuthServiceConfig([
+  {
+    id: LinkedInLoginProvider.PROVIDER_ID,
+    provider: new LinkedInLoginProvider("npm install --save angularx-social-login")
+  }
+])
+export function provideConfig() {
+  return config;
+}
 
 @NgModule({
   declarations: [
@@ -152,7 +167,7 @@ import { LoginComponent } from './pages/login/login.component';
     ChatComponent,
     AboutUsComponent,
     TermComponent,
-    ContactUsComponent,   
+    ContactUsComponent,
     Teleprompter1Component,
     StatusBarComponent,
     Teleprompter2Component,
@@ -170,13 +185,14 @@ import { LoginComponent } from './pages/login/login.component';
     VcvVideoFx5Component,
     VcvVideoFx6Component,
     LoginComponent
+    
   ],
-  
+
   imports: [
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule,  
+    AppRoutingModule,
     BrowserAnimationsModule,
     MatRadioModule,
     MatIconModule,
@@ -186,8 +202,10 @@ import { LoginComponent } from './pages/login/login.component';
     DxRangeSliderModule,
     DxNumberBoxModule,
     NgScrollbarModule,
+    InternationalPhoneNumberModule,
     // configure the imports
     HttpClientModule,
+    SocialLoginModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -197,16 +215,21 @@ import { LoginComponent } from './pages/login/login.component';
     }),
 
     //google-map
-   AgmCoreModule.forRoot({apiKey:''}),
+    AgmCoreModule.forRoot({ apiKey: '' }),
 
   ],
   providers: [
-     GoogleMapsAPIWrapper
+    GoogleMapsAPIWrapper,
+    {
+      provide: AuthServiceConfig,
+      useFactory: provideConfig
+    }
   ],
   entryComponents: [ItembuttonComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);

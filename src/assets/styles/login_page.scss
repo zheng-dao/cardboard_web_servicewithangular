@@ -12,7 +12,7 @@ div.login-div{
             width:100%;
             background-color: rgba(34,27,68, 0.5);           
             height:56px;
-            border-radius: 28px;           
+            border-radius: 3px;           
             @include custom_font(white , 16px, 19px, 'galano_grotesque_alt_medium');
             border: none;
             margin: 5px auto 20px auto;
@@ -170,6 +170,7 @@ div.login-div{
            justify-content: center;
            align-items: center;
            .social-item{
+               cursor: pointer;
                width:50px;
                height:50px;
                border-radius: 50%;

@@ -26,6 +26,10 @@ export class AppComponent {
           this.which_header = true;
           this.isFooterShow = false;
         }
+        else if (event.url.toString() == "/login"){
+          this.which_header = true;
+          this.isFooterShow = false;
+        }
         else if (event.url.toString() == "/vcvtutorial") {
           this.which_header = true;
           this.isFooterShow = false;

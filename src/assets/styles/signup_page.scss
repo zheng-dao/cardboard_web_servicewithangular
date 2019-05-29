@@ -1,6 +1,7 @@
 
 div.signup{
-    width:100%;   
+    width:100%;  
+    height: 1100px; 
     padding : 43px 0%; 
     background-image: url("/assets/images/signup/bg.png")  ; 
     background-size: 100% 100%;
@@ -11,8 +12,8 @@ div.signup{
         .input-style{
             width:100%;
             background-color: rgba(34,27,68, 0.5);            
-            height:56px;
-            border-radius: 28px;           
+            height:56px; 
+            border-radius: 3px;                   
             @include custom_font(white , 16px, 19px, 'galano_grotesque_alt_medium');
             border: none;
             margin: 15px auto;
@@ -55,12 +56,12 @@ div.signup{
             }
         }
         .sign-up-container{ 
-            background-color: rgba(47, 33, 119, 0.5);
-            width:100%;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(black, 0.5);
-            padding:60px 0;
-             margin-top:45px;
+                background-color: rgba(47, 33, 119, 0.5);
+                width:100%;
+                border-radius: 10px;
+                box-shadow: 0 0 15px rgba(black, 0.5);
+                padding:60px 0;
+                margin-top:45px;
 
              .sign-up-input-container{
                  width: 100%;
@@ -70,16 +71,72 @@ div.signup{
                     @include custom_font($thickgreen, 16px,17px,'galano_grotesque_alt_medium');                  
                     margin-bottom: 23px;
                  }
+                 .alert{
+                     height: 30px;
+                     width: 100%;
+                    @include custom_font(rgb(148, 5, 5), 14px,30px,'galano_grotesque_alt_medium');                  
+                 }
                 .sign-up-button-box{
                     margin-top:40px;
                     text-align: center;
                     button{
-                        width: 250px;
+                        width: 200px;
                         @include button-inverse-variant($thickblue,18px, $thickgreen, 30px, 15px, 40px, $thickgreen);
                         box-shadow: 0 1px 7px  rgb(37, 24, 49);
                         font-family: "galano_grotesque_alt_semi_bold";
                     }                    
-                }                
+                }  
+                
+                // style for phone code input
+                .btn{
+                    background-color: rgba(34,27,68, 0.5);            
+                    height: 56px;
+                    color: white;
+                    
+                    border: 1px solid rgba(34,27,68, 0.5);
+                     .defaultCountry{
+                         width:0;
+                     }
+                    .arrow-down{
+                       border-top: 5px solid #eee;
+                       margin-left: 0px;
+                    }
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                input.form-control{
+                    background-color: rgba(34,27,68, 0.5);            
+                    height: 56px;
+                    color: white;                   
+                    border: 1px solid rgba(34,27,68, 0.5);
+                    &:focus{
+                        outline: none;
+                    }
+                    &::placeholder{
+                        color:white;
+                        font-family: 'galano_grotesque_alt_medium';
+                        opacity: 0.5;
+                    }    
+                }
+
+                .selectdiv{
+                    width: 100%;
+                    .selectbox{
+                        border-radius: 3px;
+                        width: 100%;
+                        background-color: rgba(34,27,68, 0.5);            
+                        height: 56px;
+                        color: white;
+                        border: 1px solid rgba(34,27,68, 0.5);
+                        padding-left: 25px;
+                        &:focus{
+                            outline:none;
+                        }
+                       
+                    }
+                }
+
              }
 
         }

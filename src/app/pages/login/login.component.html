@@ -5,7 +5,7 @@
         <div class="title">{{'login_title'|translate}}</div>
         <div class="subtitle">
           <span class="subtitle-script">{{'login_subject'|translate}}</span>
-          <a><span class="subtitle-sign-up">{{'login_sign_up'|translate}}</span></a>
+          <a routerLink="/signup"><span class="subtitle-sign-up">{{'login_sign_up'|translate}}</span></a>
         </div>
       </div>
       <div class="sign-up-container">
@@ -35,7 +35,7 @@
         <button class="social-item">
           <i class="fa fa-google"></i>
         </button>
-        <button class="social-item">
+        <button class="social-item" (click)="signInWithLinkedin()">
           <i class="fa fa-linkedin"></i>
         </button>
       </div>

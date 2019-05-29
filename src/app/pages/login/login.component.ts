@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { AppGlobals } from 'src/app/Global'
-import { UserService } from 'src/app/httpService/userservice';
+import { AuthenticationService } from 'src/app/service/authenticationService';
 import { HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-
+import {AuthService, LinkedInLoginProvider} from 'angularx-social-login'
 
 @Component({
   selector: 'app-login',
@@ -17,7 +17,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private appGlobals: AppGlobals,
-    private userService: UserService
+    private authService: AuthenticationService,
+    private authSocialService: AuthService
   ) { }
 
   ngOnInit() {
@@ -35,11 +36,12 @@ export class LoginComponent implements OnInit {
 
     let options = { headers : httpHeaders}
 
-    this.userService.getAPIUsers(this.appGlobals.baseAPIUrl, body, httpHeaders)
+    this.authService.getTokenFromServer(this.appGlobals.baseAPIUrl+"/auth/signin", body, httpHeaders)
       .subscribe( res =>{
-         console.log(res._id)
-         console.log(res.email)
-         console.log(res.token)
+         localStorage.setItem("_id", res._id)
+         localStorage.setItem("email", res.email)
+         localStorage.setItem("token", res.token)
+
       },
       (err : HttpErrorResponse)=>{
         if (err.error instanceof Error) {
@@ -52,5 +54,13 @@ export class LoginComponent implements OnInit {
         }
       })
   }
-
+  
+  signInWithLinkedin():void {
+    this.authSocialService.signIn(LinkedInLoginProvider.PROVIDER_ID).then(
+      (userData)=>{
+       console.log(userData)
+    }).catch((err)=>{
+       console.log(err)
+    })
+  }
 }
