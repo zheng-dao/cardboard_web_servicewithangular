@@ -101,13 +101,19 @@ import {
   AuthServiceConfig,
   GoogleLoginProvider,
   FacebookLoginProvider,
-  LinkedInLoginProvider
+  LinkedInLoginProvider,
+  LoginOpt
 } from 'angularx-social-login';
+
+const googleloginOptions: LoginOpt = {
+  scope: 'profile email'
+};
 
 let config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
-    provider: new GoogleLoginProvider("1004140827153-pkalgkfiii5vqhh43ln9n88a92bc9mp9.apps.googleusercontent.com")
+    provider: new GoogleLoginProvider("1004140827153-pkalgkfiii5vqhh43ln9n88a92bc9mp9.apps.googleusercontent.com",
+                          googleloginOptions   )
   }
   
   // {
