@@ -97,23 +97,23 @@ import { VcvVideoFx6Component } from './vcv/vcv-video-fx6/vcv-video-fx6.componen
 import { LoginComponent } from './pages/login/login.component';
 import { InternationalPhoneNumberModule } from 'ngx-international-phone-number';
 import {
-  SocialLoginModule,
+  DynamiSocialLoginModule,
   AuthServiceConfig,
   GoogleLoginProvider,
   FacebookLoginProvider,
-  LinkedInLoginProvider,
-  LoginOpt
-} from 'angularx-social-login';
+  LinkedinLoginProvider
+} from 'ng-dynami-social-login';
 
-const googleloginOptions: LoginOpt = {
-  scope: 'profile email'
-};
+
 
 let config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
-    provider: new GoogleLoginProvider("1004140827153-pkalgkfiii5vqhh43ln9n88a92bc9mp9.apps.googleusercontent.com",
-                          googleloginOptions   )
+    provider: new GoogleLoginProvider("1004140827153-o8ipgj05fq04hs4bmtoje18i2g8cm7rd.apps.googleusercontent.com")
+  },
+  {
+    id: LinkedinLoginProvider.PROVIDER_ID,
+    provider: new LinkedinLoginProvider("818r3reabdri08")
   }
   
   // {
@@ -216,7 +216,7 @@ export function provideConfig() {
     InternationalPhoneNumberModule,
     // configure the imports
     HttpClientModule,
-    SocialLoginModule,
+    DynamiSocialLoginModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

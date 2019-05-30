@@ -2,10 +2,11 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { AppGlobals } from 'src/app/Global'
 import { AuthenticationService } from 'src/app/service/authenticationService';
 import { HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { SocialUser,
+import { 
         AuthService, 
         GoogleLoginProvider,
-        } from 'angularx-social-login';
+        LinkedinLoginProvider
+        } from 'ng-dynami-social-login';
 import {Router, Event, NavigationEnd} from '@angular/router'
 
 @Component({
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   @ViewChild('email') emailInput: ElementRef
   @ViewChild('password') pwdInput: ElementRef
-  private user: SocialUser;
+
 
   constructor(
     private appGlobals: AppGlobals,
@@ -27,10 +28,10 @@ export class LoginComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.socialAuthService.authState.subscribe((user)=>{
-      this.user = user;
-       console.log(user)
-    })
+    // this.socialAuthService.authState.subscribe((user)=>{
+    //   this.user = user;
+    //    console.log(user)
+    // })
   }
 
   signIn() {
@@ -65,10 +66,18 @@ export class LoginComponent implements OnInit {
   }
   
   signInWithLinkedin():void {
-    this.authService.linkedinLogin()    
+    this.socialAuthService.signIn(LinkedinLoginProvider.PROVIDER_ID).then(
+      (userData) =>{
+         console.log(userData)
+      }
+    )
   }
 
   signInWithGoogle():void{
-    this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID)
+    this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID).then(
+      (userData) =>{
+         console.log(userData)
+      }
+    )
   }
 }
