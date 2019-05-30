@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-
+import { AuthenticationService } from 'src/app/service/authenticationService';
 @Component({
   selector: 'app-header1',
   templateUrl: './header1.component.html',
@@ -8,16 +8,17 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class Header1Component implements OnInit {
 
-  
 
-  logCheck: boolean;
+
+  
 
   is_en: boolean = true;
   is_ar: boolean = false;
 
   @ViewChild('header1') header1: ElementRef;
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService,
+    private authService: AuthenticationService) {
     translate.setDefaultLang('en');
   }
   uselanguage(s: string) {
@@ -42,6 +43,18 @@ export class Header1Component implements OnInit {
     else {
       nativeheader.className = "headerbody";
     }
+  }
+
+  logout() {
+    this.authService.signout()
+  }
+// return value-> true: logined, false : logout
+  getLogStatus(){
+     if(localStorage.getItem('token') != undefined){
+        return true;
+     }else{
+        return  false;
+     }
   }
 
 }

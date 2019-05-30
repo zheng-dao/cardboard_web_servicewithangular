@@ -96,6 +96,7 @@ import { VcvVideoFx5Component } from './vcv/vcv-video-fx5/vcv-video-fx5.componen
 import { VcvVideoFx6Component } from './vcv/vcv-video-fx6/vcv-video-fx6.component';
 import { LoginComponent } from './pages/login/login.component';
 import { InternationalPhoneNumberModule } from 'ngx-international-phone-number';
+import {AppGlobals} from './Global';
 import {
   DynamiSocialLoginModule,
   AuthServiceConfig,
@@ -104,22 +105,16 @@ import {
   LinkedinLoginProvider
 } from 'ng-dynami-social-login';
 
+import { NgxLinkedinModule } from 'ngx-linkedin';
 
-
+let appGlobals = new AppGlobals()
+ 
 let config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
-    provider: new GoogleLoginProvider("1004140827153-o8ipgj05fq04hs4bmtoje18i2g8cm7rd.apps.googleusercontent.com")
-  },
-  {
-    id: LinkedinLoginProvider.PROVIDER_ID,
-    provider: new LinkedinLoginProvider("818r3reabdri08")
+    provider: new GoogleLoginProvider(appGlobals.GOOGLE_CLIENT_ID)
   }
-  
-  // {
-  //   id: FacebookLoginProvider.PROVIDER_ID,
-  //   provider: new FacebookLoginProvider("Facebook-App-Id")
-  // }
+
 ])
 export function provideConfig() {
   return config;
@@ -214,6 +209,9 @@ export function provideConfig() {
     DxNumberBoxModule,
     NgScrollbarModule,
     InternationalPhoneNumberModule,
+    NgxLinkedinModule.forRoot({
+      clientId: '818r3reabdri08'
+     }),
     // configure the imports
     HttpClientModule,
     DynamiSocialLoginModule,

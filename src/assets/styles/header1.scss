@@ -14,7 +14,7 @@
                     a:hover{
                         color: white;
                         text-decoration: none;
-                    }
+                    }                    
                  } 
                }
          }
@@ -49,6 +49,10 @@
                       cursor:pointer;
                   }
                               
+                }
+                .logout{
+                    color:white;
+                    cursor:pointer;
                 }
          }
 
@@ -132,7 +136,8 @@
                         box-shadow: 1px 1px 5px rgb(34, 39, 109);   
                         a{
                             color:$thickblue;
-                        }     
+                        }  
+                        color:$thickblue;
                       }
                 }
                }

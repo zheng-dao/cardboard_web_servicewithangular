@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core'
 import {Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot} from '@angular/router'
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {AuthService} from 'ng-dynami-social-login';
 @Injectable({
     providedIn: 'root'
 })
@@ -42,14 +43,15 @@ private static  EQUALS : string = "=";
 
 
     constructor(private router: Router,
-        private _http: HttpClient){}
+        private _http: HttpClient,
+        private socialAuthService: AuthService){}
 
     canActivate(){
         if(!this.isAuthenticated()){
             this.router.navigateByUrl('/login');
             return false;
         }
-        return false;
+        return true;
     }
 
     getTokenFromServer(apiUrl, body, options):Observable<any> {
@@ -62,16 +64,27 @@ private static  EQUALS : string = "=";
     isAuthenticated():boolean{
         const token = localStorage.getItem('token')
         // check whether this token has been expired or not
-        // 
+        if(token!=undefined){
+            return true;
+        }        
         return false;
     }
 
-    linkedinLogin(){
-        //  window.location.href = this.getAuthenticateUrl()
-    //    var linkedWin = window.open(this.getAuthenticateUrl(), 'C-Sharpcorner', 
-    //     'toolbar=no,scrollbars=no,resizable=no,top=100,left=500,width=800,height=650')
-       
+    signout():void{
+        let logType = localStorage.getItem('loginType')
+        if( logType!= undefined){
+           if(logType == "google"){
+               this.socialAuthService.signOut()
+           }
+           localStorage.removeItem('loginType')
+        }
 
+        if(localStorage.getItem('token')!= undefined){
+            localStorage.removeItem('token')
+            localStorage.removeItem('email')
+            localStorage.removeItem('_id')
+        }
+        this.router.navigateByUrl("/")
     }
 
     getAuthenticateUrl(){
