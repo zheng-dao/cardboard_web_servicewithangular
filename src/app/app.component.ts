@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { NavigationStart, Router, Event } from '@angular/router'
+import { NavigationStart, NavigationEnd, Router, Event } from '@angular/router'
 
 @Component({
   selector: 'app-root',
@@ -18,7 +18,8 @@ export class AppComponent {
     translate.setDefaultLang('en');
 
     this.router.events.subscribe((event: Event) => {
-      if (event instanceof NavigationStart) {
+      if (event instanceof NavigationEnd) {       
+         console.log(event.url)
         if (event.url.toString() == "/") {
           this.which_header = true;
         }
@@ -60,6 +61,7 @@ export class AppComponent {
             window.clearInterval(scrollToTop);
         }, 16);
       }
+     
     });
 
   }

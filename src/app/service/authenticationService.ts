@@ -65,4 +65,21 @@ private static  EQUALS : string = "=";
         // 
         return false;
     }
+
+    linkedinLogin(){
+        //  window.location.href = this.getAuthenticateUrl()
+    //    var linkedWin = window.open(this.getAuthenticateUrl(), 'C-Sharpcorner', 
+    //     'toolbar=no,scrollbars=no,resizable=no,top=100,left=500,width=800,height=650')
+       
+
+    }
+
+    getAuthenticateUrl(){
+        return AuthenticationService.AUTHORIZATION_URL+
+         "?"+"response_type="+AuthenticationService.RESPONSE_TYPE_VALUE
+        +"&"+"client_id="+AuthenticationService.API_KEY
+        +"&"+"state="+AuthenticationService.STATE
+        +"&"+"redirect_uri="+AuthenticationService.REDIRECT_URI
+        +"&"+"scope="+AuthenticationService.SCOPE;
+    }
 }

@@ -106,9 +106,14 @@ import {
 
 let config = new AuthServiceConfig([
   {
-    id: LinkedInLoginProvider.PROVIDER_ID,
-    provider: new LinkedInLoginProvider("npm install --save angularx-social-login")
+    id: GoogleLoginProvider.PROVIDER_ID,
+    provider: new GoogleLoginProvider("1004140827153-pkalgkfiii5vqhh43ln9n88a92bc9mp9.apps.googleusercontent.com")
   }
+  
+  // {
+  //   id: FacebookLoginProvider.PROVIDER_ID,
+  //   provider: new FacebookLoginProvider("Facebook-App-Id")
+  // }
 ])
 export function provideConfig() {
   return config;

@@ -2,7 +2,11 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { AppGlobals } from 'src/app/Global'
 import { AuthenticationService } from 'src/app/service/authenticationService';
 import { HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import {AuthService, LinkedInLoginProvider} from 'angularx-social-login'
+import { SocialUser,
+        AuthService, 
+        GoogleLoginProvider,
+        } from 'angularx-social-login';
+import {Router, Event, NavigationEnd} from '@angular/router'
 
 @Component({
   selector: 'app-login',
@@ -13,15 +17,20 @@ export class LoginComponent implements OnInit {
 
   @ViewChild('email') emailInput: ElementRef
   @ViewChild('password') pwdInput: ElementRef
-
+  private user: SocialUser;
 
   constructor(
     private appGlobals: AppGlobals,
     private authService: AuthenticationService,
-    private authSocialService: AuthService
-  ) { }
+    private socialAuthService: AuthService,
+    private router : Router
+    ) { }
 
   ngOnInit() {
+    this.socialAuthService.authState.subscribe((user)=>{
+      this.user = user;
+       console.log(user)
+    })
   }
 
   signIn() {
@@ -56,11 +65,10 @@ export class LoginComponent implements OnInit {
   }
   
   signInWithLinkedin():void {
-    this.authSocialService.signIn(LinkedInLoginProvider.PROVIDER_ID).then(
-      (userData)=>{
-       console.log(userData)
-    }).catch((err)=>{
-       console.log(err)
-    })
+    this.authService.linkedinLogin()    
+  }
+
+  signInWithGoogle():void{
+    this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID)
   }
 }

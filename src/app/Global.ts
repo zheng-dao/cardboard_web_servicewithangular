@@ -5,5 +5,5 @@ import { Injectable } from '@angular/core';
 )
 export class AppGlobals {
     readonly baseAppUrl: string = 'http://localhost:4200/';
-    readonly baseAPIUrl: string = 'https://api.nysm.me/api/v1';
+    readonly baseAPIUrl: string = 'https://api.nysm.me/api/v1';    
 }
