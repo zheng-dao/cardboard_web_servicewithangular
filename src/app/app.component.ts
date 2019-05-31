@@ -1,29 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { NavigationStart, NavigationEnd, Router, Event } from '@angular/router'
-import {NgxSpinnerService} from 'ngx-spinner';
+import { NavigationStart, NavigationEnd, Router, ActivatedRoute, Event } from '@angular/router'
+import { NgxSpinnerService } from 'ngx-spinner';
+import { AppGlobals } from 'src/app/Global';
+import { HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 
 })
-export class AppComponent {
-  static shardApp : AppComponent;  
+export class AppComponent implements OnInit {
+  static shardApp: AppComponent;
   which_header: boolean = true;// true-header1, false-header2
   title = 'JobSeeker';
   isFooterShow: boolean = true;
 
   constructor(private translate: TranslateService,
     private router: Router,
-    private spinner : NgxSpinnerService) {
+    private spinner: NgxSpinnerService,
+    private activateRouter: ActivatedRoute,
+    private appGlobals: AppGlobals,
+    private http: HttpClient) {
     AppComponent.shardApp = this
 
     translate.setDefaultLang('en');
 
     this.router.events.subscribe((event: Event) => {
-      if (event instanceof NavigationEnd) {       
-         
+      if (event instanceof NavigationEnd) {
+
         if (event.url.toString() == "/") {
           this.which_header = true;
         }
@@ -31,7 +38,7 @@ export class AppComponent {
           this.which_header = true;
           this.isFooterShow = false;
         }
-        else if (event.url.toString() == "/login"){
+        else if (event.url.toString() == "/login") {
           this.which_header = true;
           this.isFooterShow = false;
         }
@@ -43,11 +50,11 @@ export class AppComponent {
           this.which_header = true;
           this.isFooterShow = false;
         }
-        else if(event.url.substr(1,12) == "teleprompter"){
+        else if (event.url.substr(1, 12) == "teleprompter") {
           this.which_header = false;
           this.isFooterShow = false;
         }
-        else if(event.url.substr(1,7)=="VCVMake"){
+        else if (event.url.substr(1, 7) == "VCVMake") {
           this.which_header = false;
           this.isFooterShow = false;
         }
@@ -65,16 +72,66 @@ export class AppComponent {
             window.clearInterval(scrollToTop);
         }, 16);
       }
-     
+
+
+
     });
 
   }
 
-  static showSpinner(){
-    AppComponent.shardApp.spinner.show("loading")
-    
+  ngOnInit() {
+    this.activateRouter.queryParams.subscribe((params) => {
+      console.log(params)
+      let code = params['code']
+      let state = params['state']
+      if (state == this.appGlobals.STATE) {
+
+        let body = {}
+
+        let httpHeaders = new HttpHeaders({
+          'Content-Type': 'application/json',
+          'Cache-Control': 'no-cache'
+        })
+
+        let options = { headers: httpHeaders }
+
+        this.http.post<any>(this.appGlobals.getAccessTokenUrl(code), body, options)
+          .subscribe(res => {
+           
+              console.log(res)
+              let access_token = res['access_token'];
+              let access_body = { 'access_token': access_token, 'role': 'jobseeker' };
+              let httpHeaders = new HttpHeaders({
+                'Content-Type': 'application/json',
+                'Cache-Control': 'no-cache'
+              })
+              let options = { headers: httpHeaders }
+              this.http.post<any>(this.appGlobals.baseAPIUrl + "/auth/jobseeker/likedin", access_body, options).subscribe(
+                (res) => {
+                  localStorage.setItem("_id", res._id)
+                  localStorage.setItem("email", res.email)
+                  localStorage.setItem("token", res.token)
+                  localStorage.setItem("loginType", "linkedin")
+                  this.router.navigateByUrl('/dashboard')
+                },
+                (err) => {
+                     console.log(err)
+                });
+
+            
+            },
+            (err: HttpErrorResponse) => {
+              //Backend returns unsuccessful response codes such as 404, 500 etc.	
+            })
+      }
+    });
   }
-  static hideSpinner(){
+
+  static showSpinner() {
+    AppComponent.shardApp.spinner.show("loading")
+
+  }
+  static hideSpinner() {
     AppComponent.shardApp.spinner.hide("loading")
   }
 }

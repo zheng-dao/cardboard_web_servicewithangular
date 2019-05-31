@@ -39,8 +39,8 @@ export class AuthenticationService implements CanActivate{
     signout():void{
         let logType = localStorage.getItem('loginType')
         if( logType!= undefined){
-           if(logType == "google"){
-               this.socialAuthService.signOut()
+           if(logType != "email"){
+               this.socialAuthService.signOut()           
            }
            localStorage.removeItem('loginType')
         }

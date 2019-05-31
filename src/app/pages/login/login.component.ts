@@ -91,7 +91,7 @@ export class LoginComponent implements OnInit {
             this.toast.error("Email is required!", "", { timeOut: 2000 });
           }
 
-        })
+        });
   }
 
   showForgotEmailDialog() {
@@ -219,40 +219,7 @@ export class LoginComponent implements OnInit {
   }
 
   signInWithLinkedin() {
-
-
-    this.socialAuthService.signIn(LinkedinLoginProvider.PROVIDER_ID).then(
-      (userData: SocialUserModel) => {
-
-        let body = { "access_token": userData.idToken }
-
-        let httpHeaders = new HttpHeaders({
-          'Content-Type': 'application/json',
-          'Cache-Control': 'no-cache'
-        });
-        let options = { headers: httpHeaders }
-        this._http.post<any>(this.appGlobals.baseAPIUrl + "/auth/jobseeker/likedin", body, options)
-          .subscribe(res => {
-            localStorage.setItem("_id", res._id)
-            localStorage.setItem("email", res.email)
-            localStorage.setItem("token", res.token)
-            localStorage.setItem("loginType", "google")
-            this.router.navigateByUrl('/dashboard')
-
-          },
-            (err: HttpErrorResponse) => {
-              if (err.error instanceof Error) {
-                //A client-side or network error occurred.				 
-
-              } else {
-                //Backend returns unsuccessful response codes such as 404, 500 etc.				 
-
-              }
-            })
-
-      }
-    );
-
+   window.location.href = this.appGlobals.getAuthorizationUrl();
   }
 
   signInWithGoogle(): void {
