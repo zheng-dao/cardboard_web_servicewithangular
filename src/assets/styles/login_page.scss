@@ -117,7 +117,7 @@ div.login-div{
                 & + label:before {
                 content: '';
                 margin-right: 10px;
-                margin-top:-3px;
+                margin-top:3px;
                 display: inline-block;
                 vertical-align: text-top;
                 width: 20px;
@@ -148,7 +148,7 @@ div.login-div{
                 content: '';
                 position: absolute;
                 left: 5px;
-                top: 6px;
+                top: 11px;
                 background: white;
                 width: 2px;
                 height: 2px;
