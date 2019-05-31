@@ -4,7 +4,8 @@ import { Injectable } from '@angular/core';
     {providedIn: 'root'}
 )
 export class AppGlobals {
-    readonly baseAppUrl: string = 'http://localhost:4200/';
+    
+    readonly baseAppUrl: string = 'https://mycareer.nysm.me';
     readonly baseAPIUrl: string = 'https://api.nysm.me/api/v1';   
 
     // readonly GOOGLE_CLIENT_ID:string = "285836376834-ef97ooolnod6dj1ku9upafm74mpura0s.apps.googleusercontent.com"
