@@ -18,8 +18,10 @@
             <input type="password" [(ngModel)]="password" placeholder="{{'login_placeholder_password'|translate}}"
               class="input-style">
           </div>
-          <input class="styled-checkbox" id="remember" type="checkbox" value="">
-          <label for="remember">{{'login_remember_me'|translate}}</label>
+          <div style="display: flex; align-items: center;">
+            <input class="styled-checkbox" id="remember" type="checkbox" value="">
+            <label for="remember">{{'login_remember_me'|translate}}</label>
+          </div>          
         </div>
         <hr>
         <div class="sign-up-input-container">
