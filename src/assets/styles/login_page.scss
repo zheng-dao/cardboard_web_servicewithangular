@@ -1,6 +1,7 @@
 
 div.login-div{
-    width:100%;   
+    width:100%;  
+    min-height: 1100px;  
     padding : 43px 0%; 
     background-image: url("/assets/images/signup/bg.png")  ; 
     background-size: 100% 100%;
@@ -74,7 +75,7 @@ div.login-div{
                     margin-top:40px;                    
                     display: flex;
                     justify-content: space-around;
-                    
+
                     button{
                         width: 170px;
                         @include button-inverse-variant($thickblue,18px, $thickgreen, 30px, 10px, 40px, $thickgreen);
