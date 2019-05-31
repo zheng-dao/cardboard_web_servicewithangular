@@ -25,7 +25,7 @@ div.signup{
             &::placeholder{
                 color:white;
                 font-family: 'galano_grotesque_alt_medium';
-                opacity: 0.5;
+                opacity: 0.3;
             }       
         }
         hr{
@@ -74,17 +74,23 @@ div.signup{
                  .alert{
                      height: 30px;
                      width: 100%;
-                    @include custom_font(rgb(148, 5, 5), 14px,30px,'galano_grotesque_alt_medium');                  
+                    @include custom_font(rgb(194, 104, 104), 14px,30px,'galano_grotesque_alt_medium');                  
                  }
                 .sign-up-button-box{
                     margin-top:40px;
                     text-align: center;
                     button{
-                        width: 200px;
-                        @include button-inverse-variant($thickblue,18px, $thickgreen, 30px, 15px, 40px, $thickgreen);
+                        width: 170px;
+                        @include button-inverse-variant($thickblue,18px, $thickgreen, 30px, 10px, 40px, $thickgreen);
                         box-shadow: 0 1px 7px  rgb(37, 24, 49);
                         font-family: "galano_grotesque_alt_semi_bold";
-                    }                    
+                    } 
+                    .resend{
+                        cursor: pointer;
+                        @include custom_font($thickgreen, 16px,30px,'galano_grotesque_alt_medium');                  
+                       text-decoration: underline;
+                       
+                    }                   
                 }  
                 
                 // style for phone code input
@@ -116,7 +122,7 @@ div.signup{
                     &::placeholder{
                         color:white;
                         font-family: 'galano_grotesque_alt_medium';
-                        opacity: 0.5;
+                        opacity: 0.3;
                     }    
                 }
 
@@ -130,10 +136,18 @@ div.signup{
                         color: white;
                         border: 1px solid rgba(34,27,68, 0.5);
                         padding-left: 25px;
+                        font-family: 'galano_grotesque_alt_medium';
+                        -sebkit-appearance: none;
+                        -moz-appearance:none;
+                        appearance: none;
+
                         &:focus{
                             outline:none;
                         }
-                       
+                        
+                       option{
+                           padding-left: 25px;
+                       }
                     }
                 }
 

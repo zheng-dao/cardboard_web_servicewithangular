@@ -24,7 +24,7 @@ div.login-div{
             &::placeholder{
                 color:white;
                 font-family: 'galano_grotesque_alt_medium';
-                opacity: 0.5;
+                opacity: 0.3;
             }       
         }
         hr{
@@ -71,15 +71,21 @@ div.login-div{
                     margin-bottom: 23px;
                  }
                 .sign-up-button-box{
-                    margin-top:40px;
+                    margin-top:40px;                    
+                    display: flex;
+                    justify-content: space-around;
                     
-                    text-align: center;
                     button{
-                        width: 250px;
-                        @include button-inverse-variant($thickblue,18px, $thickgreen, 30px, 15px, 40px, $thickgreen);
+                        width: 170px;
+                        @include button-inverse-variant($thickblue,18px, $thickgreen, 30px, 10px, 40px, $thickgreen);
                         box-shadow: 0 1px 7px  rgb(37, 24, 49);
                         font-family: "galano_grotesque_alt_semi_bold";
-                    }                    
+                    }
+                    .resend{
+                        cursor: pointer;
+                        @include custom_font($thickgreen, 16px,30px,'galano_grotesque_alt_medium');                  
+                       text-decoration: underline;                       
+                    }                       
                 }  
                 .forgot-password-test{
                     text-align: right;

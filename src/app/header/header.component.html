@@ -1,6 +1,6 @@
 <div>
   <div>
-    <app-header1 [style.display]="which_header? 'block':'none'"></app-header1 >
-     <app-header2  [style.display]="which_header? 'none': 'block'"></app-header2> 
+    <app-header1 *ngIf="which_header"></app-header1 >
+     <app-header2  *ngIf="!which_header"></app-header2> 
   </div>
 </div>

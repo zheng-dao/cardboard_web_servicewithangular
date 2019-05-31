@@ -8,12 +8,15 @@
           <a routerLink="/signup"><span class="subtitle-sign-up">{{'login_sign_up'|translate}}</span></a>
         </div>
       </div>
-      <div class="sign-up-container">
+      <div *ngIf="wndState == STATE1" class="sign-up-container">
         <div class="sign-up-input-container">
           <div class="input-box">
-            <input type="text" placeholder="{{'login_placeholder_name_email'|translate}}" class="input-style" #email>
-            <p class="forgot-password-test"><a>{{'login_forgot_password'|translate}}</a></p>
-            <input type="password" placeholder="{{'login_placeholder_password'|translate}}" class="input-style" #password>
+            <input type="text" [(ngModel)]="email" placeholder="{{'login_placeholder_email'|translate}}"
+              class="input-style">
+            <p class="forgot-password-test" (click)="showForgotEmailDialog()">
+              <a>{{'login_forgot_password'|translate}}</a></p>
+            <input type="password" [(ngModel)]="password" placeholder="{{'login_placeholder_password'|translate}}"
+              class="input-style">
           </div>
           <input class="styled-checkbox" id="remember" type="checkbox" value="">
           <label for="remember">{{'login_remember_me'|translate}}</label>
@@ -25,10 +28,41 @@
           </div>
         </div>
       </div>
+
+      <div *ngIf="wndState == STATE2" class="sign-up-container">
+        <div class="sign-up-input-container">
+          <input type="text" [(ngModel)]="emailForgot" placeholder="{{'login_placeholder_email'|translate}}"
+            class="input-style">
+          <div class="sign-up-button-box">
+            <button (click)="sendEmail()">{{'login_button_send'| translate}}</button>         
+            <button (click)="cancel()">{{'login_button_cancel'| translate}}</button>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="wndState == STATE3" class="sign-up-container">
+        <div class="sign-up-input-container">
+          <div class="input-box">
+            <input type="text" [(ngModel)]="verificationCode"
+              placeholder="{{'login_placeholder_email_verification_code'|translate}}" class="input-style">
+            <input type="password [(ngModel)]="newPassword"
+              placeholder="{{'login_placeholder_password'|translate}}" class="input-style">
+            <input type="password" [(ngModel)]="passwordConfirm"
+              placeholder="{{'login_placeholder_password_confirm'|translate}}" class="input-style">
+          </div>
+          <div class="sign-up-button-box">
+            <button (click)="sendCodePwdEmail()">{{'login_button_send'| translate}}</button>
+          </div>
+          <div class="sign-up-button-box" style="margin-top: 20px;">
+            <span class="resend" (click)="resendEmail()">{{'login_resend_email'| translate}}</span>
+          </div>
+        </div>
+      </div>
+
       <div class="script">
         -{{'login_or_login_with'|translate}}-
       </div>
-      <div class="social-container">       
+      <div class="social-container">
         <button class="social-item" (click)="signInWithGoogle()">
           <i class="fa fa-google"></i>
         </button>

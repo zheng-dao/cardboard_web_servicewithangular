@@ -7,67 +7,66 @@
         <a routerLink="/login"><span class="subtitle-sign-up">{{'sign_up_log_in'|translate}}</span></a>
       </div>
     </div>
-    <div class="sign-up-container" #phoneContainer >
+    <div *ngIf="signupStep == STAGE1" class="sign-up-container" #phoneContainer>
       <div class="sign-up-input-container">
-        <div class="title" style="text-align: center;">{{'sign_up_phone_title'|translate}}</div>
-        <form name="sample-form" #f="ngForm"  >
+        <input type="text" [(ngModel)]="first_name" placeholder="{{'sign_up_placeholder_first_name'|translate}}"
+          class="input-style">
+        <input type="text" [(ngModel)]="last_name" placeholder="{{'sign_up_placeholder_last_name'|translate}}"
+          class="input-style">
+        <input type="password" [(ngModel)]="password" placeholder="{{'sign_up_placeholder_password'|translate}}"
+          class="input-style">
+        <input type="password" [(ngModel)]="pwdConfirm"
+          placeholder="{{'sign_up_placeholder_password_confirm'|translate}}" class="input-style">
+        <input type="text" [(ngModel)]="email" placeholder="{{'sign_up_placeholder_email'|translate}}"
+          class="input-style">
+        <form name="sample-form" #f="ngForm">
           <international-phone-number [(ngModel)]="phone_code_number"
             placeholder="{{'sign_up_placeholder_phone_number'|translate}}" [maxlength]="20" [required]="true"
             #phoneNumber="ngModel" name="phone_number" [allowedCountries]="">
           </international-phone-number>
-        </form>
-        <p class="alert">{{phoneAlertMessage}}</p>
+        </form>       
         <div class="sign-up-button-box">
-          <button (click)="sendPhoneNumber(phoneNumber)">{{'sign_up_button_next'| translate}}</button>
+          <button (click)="sendEmail(phoneNumber)">{{'sign_up_button_next'| translate}}</button>
         </div>
       </div>
     </div>
-    <div class="sign-up-container" #phoneVerifyContainer>
+    <div *ngIf="signupStep == STAGE2" class="sign-up-container" #phoneVerifyContainer>
       <div class="sign-up-input-container">
-        <div class="title" style="text-align: center;">{{'sign_up_phone_verification_title'|translate}}</div>
+        <div class="title" style="text-align: center;">{{'sign_up_email_verification_title'|translate}}</div>
         <div class="input-box">
-          <input type="text" placeholder="{{'sign_up_placeholder_otp_code'|translate}}" class="input-style">
+          <input type="text" [(ngModel)]="verificationCode"
+            placeholder="{{'sign_up_placeholder_email_verification'|translate}}" class="input-style">
         </div>
-        <p class="alert">{{verificationAlertMessage}}</p>
-      </div>      
-      <div class="sign-up-input-container">
         <div class="sign-up-button-box">
-          <button (click)="sendVerificationCode()">{{'sign_up_button_next'| translate}}</button>
+          <button (click)="sendVerificationCode()">{{'sign_up_button_verify'| translate}}</button>
         </div>
         <div class="sign-up-button-box" style="margin-top: 20px;">
-            <button (click)="back()" >{{'sign_up_button_back'| translate}}</button>
+          <span class="resend" (click)="resendEmail()">{{'sign_up_button_resend'| translate}}</span>
         </div>
       </div>
     </div>
 
-    <div class="sign-up-container" #signUpContainer>
-      <div class="sign-up-input-container">
-        <div class="title">{{'sign_up_personal_info'|translate|uppercase}}</div>
-        <div class="input-box">
-          <input type="text" [(ngModel)]="full_name" placeholder="{{'sign_up_placeholder_full_name'|translate}}" class="input-style">
-          <input type="text" [(ngModel)]="email" placeholder="{{'sign_up_placeholder_email'|translate}}" class="input-style">
-          <input type="password" [(ngModel)] = "password" placeholder="{{'sign_up_placeholder_password'|translate}}" class="input-style">         
-
-        </div>
-      </div>
-      <hr>
+    <div *ngIf="signupStep == STAGE3" class="sign-up-container" #signUpContainer>
       <div class="sign-up-input-container">
         <div class="title">{{'sign_up_industry'|translate|uppercase}}</div>
         <div class="input-box">
-          <input type="text" [(ngModel)]="job_title" placeholder="{{'sign_up_placeholder_job_title'|translate}}" class="input-style">
+          <input type="text" [(ngModel)]="job_title" placeholder="{{'sign_up_placeholder_job_title'|translate}}"
+            class="input-style">
           <div class="selectdiv ">
-              <select  required class="selectbox" [(ngModel)]= "selected_function">
-                  <option value="" disabled selected="selected" style=" opacity: 0.5;">{{'sign_up_placeholder_your_function'|translate}}</option>
-                  <option *ngFor="let function of functions" [value]="function._id" >{{function.displayName}}</option>
-              </select>
+            <select required class="selectbox"  [style.color]="selected_function ==''? 'rgba(255,255,255,0.3)': 'rgba(255,255,255,1.0)' " [(ngModel)]="selected_function">
+              <option value="" disabled selected="selected" style=" opacity: 0.3;">
+                {{'sign_up_placeholder_your_function'|translate}}</option>
+              <option *ngFor="let function of functions" [value]="function._id">{{function.displayName}}</option>
+            </select>
           </div>
-
-          <input type="text" [(ngModel)]="company" placeholder="{{'sign_up_placeholder_company'|translate}}" class="input-style">
-          <div class="selectdiv ">            
-                <select  required class="selectbox" [(ngModel)] = "selected_industry">
-                    <option value="" disabled selected="selected" style=" opacity: 0.5;">{{'sign_up_placeholder_industry'|translate}}</option>
-                    <option *ngFor="let industry of industries" [value]="industry._id" >{{industry.displayName}}</option>
-                </select>            
+          <input type="text" [(ngModel)]="company" placeholder="{{'sign_up_placeholder_company'|translate}}"
+            class="input-style">
+          <div class="selectdiv ">
+            <select required class="selectbox" [style.color]="selected_industry ==''? 'rgba(255,255,255,0.3)': 'rgba(255,255,255,1.0)' " [(ngModel)]="selected_industry">
+              <option value="" disabled selected="selected" style=" opacity: 0.3;">
+                {{'sign_up_placeholder_industry'|translate}}</option>
+              <option *ngFor="let industry of industries" [value]="industry._id">{{industry.displayName}}</option>
+            </select>
           </div>
         </div>
         <div class="sign-up-button-box">

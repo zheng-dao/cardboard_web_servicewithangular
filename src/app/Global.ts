@@ -9,4 +9,5 @@ export class AppGlobals {
 
     // readonly GOOGLE_CLIENT_ID:string = "285836376834-ef97ooolnod6dj1ku9upafm74mpura0s.apps.googleusercontent.com"
     readonly GOOGLE_CLIENT_ID:string = "781760248301-7e4kim4hpvn11rle62h25jrukhpkmg9s.apps.googleusercontent.com"
+    readonly LINKEDIN_API_KEY = "818r3reabdri08"
 }

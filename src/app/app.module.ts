@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {ToastrModule} from 'ngx-toastr'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DxRangeSliderModule, DxNumberBoxModule } from 'devextreme-angular';
@@ -96,16 +97,18 @@ import { VcvVideoFx5Component } from './vcv/vcv-video-fx5/vcv-video-fx5.componen
 import { VcvVideoFx6Component } from './vcv/vcv-video-fx6/vcv-video-fx6.component';
 import { LoginComponent } from './pages/login/login.component';
 import { InternationalPhoneNumberModule } from 'ngx-international-phone-number';
+
 import {AppGlobals} from './Global';
 import {
   DynamiSocialLoginModule,
   AuthServiceConfig,
   GoogleLoginProvider,
-  FacebookLoginProvider,
   LinkedinLoginProvider
 } from 'ng-dynami-social-login';
 
-import { NgxLinkedinModule } from 'ngx-linkedin';
+import {NgxSpinnerModule} from 'ngx-spinner'
+
+//  import { NgxLinkedinModule } from 'ngx-linkedin';
 
 let appGlobals = new AppGlobals()
  
@@ -113,12 +116,18 @@ let config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
     provider: new GoogleLoginProvider(appGlobals.GOOGLE_CLIENT_ID)
+  },
+  {
+    id: LinkedinLoginProvider.PROVIDER_ID,
+    provider: new LinkedinLoginProvider(appGlobals.LINKEDIN_API_KEY)
   }
-
 ])
+
 export function provideConfig() {
   return config;
 }
+
+
 
 @NgModule({
   declarations: [
@@ -190,7 +199,7 @@ export function provideConfig() {
     VcvVideoFx4Component,
     VcvVideoFx5Component,
     VcvVideoFx6Component,
-    LoginComponent
+    LoginComponent,
     
   ],
 
@@ -209,9 +218,9 @@ export function provideConfig() {
     DxNumberBoxModule,
     NgScrollbarModule,
     InternationalPhoneNumberModule,
-    NgxLinkedinModule.forRoot({
-      clientId: '818r3reabdri08'
-     }),
+    // NgxLinkedinModule.forRoot({
+    //   clientId: '818r3reabdri08'
+    //  }),
     // configure the imports
     HttpClientModule,
     DynamiSocialLoginModule,
@@ -222,9 +231,10 @@ export function provideConfig() {
         deps: [HttpClient]
       }
     }),
-
+    ToastrModule.forRoot(),
     //google-map
     AgmCoreModule.forRoot({ apiKey: '' }),
+    NgxSpinnerModule  
 
   ],
   providers: [

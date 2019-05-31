@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { NavigationStart, NavigationEnd, Router, Event } from '@angular/router'
-
+import {NgxSpinnerService} from 'ngx-spinner';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,17 +9,21 @@ import { NavigationStart, NavigationEnd, Router, Event } from '@angular/router'
 
 })
 export class AppComponent {
+  static shardApp : AppComponent;  
   which_header: boolean = true;// true-header1, false-header2
   title = 'JobSeeker';
   isFooterShow: boolean = true;
 
   constructor(private translate: TranslateService,
-    private router: Router) {
+    private router: Router,
+    private spinner : NgxSpinnerService) {
+    AppComponent.shardApp = this
+
     translate.setDefaultLang('en');
 
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {       
-         console.log(event.url)
+         
         if (event.url.toString() == "/") {
           this.which_header = true;
         }
@@ -64,5 +68,13 @@ export class AppComponent {
      
     });
 
+  }
+
+  static showSpinner(){
+    AppComponent.shardApp.spinner.show("loading")
+    
+  }
+  static hideSpinner(){
+    AppComponent.shardApp.spinner.hide("loading")
   }
 }
