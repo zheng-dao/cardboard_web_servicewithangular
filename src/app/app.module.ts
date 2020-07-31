@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import * as firebase from 'firebase';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import {ToastrModule} from 'ngx-toastr'
+import { ToastrModule } from 'ngx-toastr'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DxRangeSliderModule, DxNumberBoxModule } from 'devextreme-angular';
@@ -97,8 +98,9 @@ import { VcvVideoFx5Component } from './vcv/vcv-video-fx5/vcv-video-fx5.componen
 import { VcvVideoFx6Component } from './vcv/vcv-video-fx6/vcv-video-fx6.component';
 import { LoginComponent } from './pages/login/login.component';
 import { InternationalPhoneNumberModule } from 'ngx-international-phone-number';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
-import {AppGlobals} from './Global';
+import { AppGlobals } from './Global';
 import {
   DynamiSocialLoginModule,
   AuthServiceConfig,
@@ -106,12 +108,15 @@ import {
   LinkedinLoginProvider
 } from 'ng-dynami-social-login';
 
-import {NgxSpinnerModule} from 'ngx-spinner'
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { ItemsComponent } from './pages/items/items.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { environment } from 'src/environments/environment';
 
 //  import { NgxLinkedinModule } from 'ngx-linkedin';
 
 let appGlobals = new AppGlobals()
- 
+
 let config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
@@ -200,7 +205,9 @@ export function provideConfig() {
     VcvVideoFx5Component,
     VcvVideoFx6Component,
     LoginComponent,
-    
+    ItemsComponent,
+    ProfileComponent,
+
   ],
 
   imports: [
@@ -234,7 +241,7 @@ export function provideConfig() {
     ToastrModule.forRoot(),
     //google-map
     AgmCoreModule.forRoot({ apiKey: '' }),
-    NgxSpinnerModule  
+    NgxSpinnerModule,
 
   ],
   providers: [
@@ -242,7 +249,8 @@ export function provideConfig() {
     {
       provide: AuthServiceConfig,
       useFactory: provideConfig
-    }
+    },
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   entryComponents: [ItembuttonComponent],
   bootstrap: [AppComponent]

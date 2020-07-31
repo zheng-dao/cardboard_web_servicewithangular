@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-portal',
@@ -10,10 +10,10 @@ export class PortalComponent implements OnInit {
 
   // slider operation
   slider_Images: any[];
-  slider_Indexes: number[];  
+  slider_Indexes: number[];
   currentIndex: number = 0;
   setCurrentIndex(i: number) {
-    this.currentIndex = i;    
+    this.currentIndex = i;
   }
 
   startAutoSlider() {
@@ -21,7 +21,7 @@ export class PortalComponent implements OnInit {
       if (this.currentIndex < 3)
         this.currentIndex++;
       else
-        this.currentIndex = 0;       
+        this.currentIndex = 0;
     }, 3000);
   }
 
@@ -66,11 +66,11 @@ export class PortalComponent implements OnInit {
   marks: any[];
 
   ngOnInit() {
-    this.slider_Images = [{ url: '../assets/images/portal_images/slider1.png' },
-    { url: '../assets/images/portal_images/slider2.png' },
-    { url: '../assets/images/portal_images/slider3.png' },
-    { url: '../assets/images/portal_images/slider4.png' },];
-    this.slider_Indexes = [0, 1, 2, 3];
+    this.slider_Images = [
+      { url: '../assets/images/portal_images/slider2.png' },
+      { url: '../assets/images/portal_images/slider3.png' },
+      { url: '../assets/images/portal_images/slider4.png' },];
+    this.slider_Indexes = [0, 1, 2];
 
     this.marks = [
       { url: '../assets/images/mark/bird.png' },
@@ -87,24 +87,20 @@ export class PortalComponent implements OnInit {
       { url: '../assets/images/mark/huge.png' }
     ];
     this.countries = [
-      { url: "../assets/images/country/uae.png", name: "UAE", jobs: 142 },
-      { url: "../assets/images/country/ksa.png", name: "KSA", jobs: 130 },
-      { url: "../assets/images/country/india.png", name: "INDIA", jobs: 86 },
-      { url: "../assets/images/country/oman.png", name: "OMAN", jobs: 56 },
-      { url: "../assets/images/country/kuwait.png", name: "KUWAIT", jobs: 150 },
-      { url: "../assets/images/country/barain.png", name: "BARAIN", jobs: 110 },
-      { url: "../assets/images/country/lebanon.png", name: "LEBANON", jobs: 144 },
-      { url: "../assets/images/country/qatar.png", name: "QATAR", jobs: 94 },
+      { url: "../assets/images/team/Mark Holt.jpg", name: "Mark Holt", occupation: "CEO/Founder" },
+      { url: "../assets/images/team/Myles Epstein.jpg", name: "Myles Epstein", occupation: "Marketing Director" },
+      { url: "../assets/images/team/JR Desgrottes.jpg", name: "JR Desgrottes", occupation: "Creative Director" },
+      { url: "../assets/images/team/Kevin Huang.jpg", name: "Kevin Huang", occupation: "Lead Engineer" }
     ];
     this.members = [
-      { url: "../assets/images/photo/louliya.png", name: "Louliya Harb", career: "ux developer" },
-      { url: "../assets/images/photo/louliya.png", name: "Louliya Harb", career: "ux developer" },
-      { url: "../assets/images/photo/louliya.png", name: "Louliya Harb", career: "ux developer" },
-      { url: "../assets/images/photo/louliya.png", name: "Louliya Harb", career: "ux developer" }
+      { url: "../assets/images/team/Mark Holt.jpg", name: "Mark Holt", career: "CEO/Founder" },
+      { url: "../assets/images/team/Myles Epstein.jpg", name: "Myles Epstein", career: "Marketing Director" },
+      { url: "../assets/images/team/JR Desgrottes.jpg", name: "JR Desgrottes", career: "Creative Director" },
+      { url: "../assets/images/team/Kevin Huang.jpg", name: "Kevin Huang", career: "Lead Engineer" }
     ];
 
     // auto slider 
-     this.startAutoSlider();
+    this.startAutoSlider();
   }
 
 }

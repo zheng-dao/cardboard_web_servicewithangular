@@ -1,10 +1,11 @@
 
 .portal_content_1.row{
     width: 100%;
-     display: table;   
+    //  display: table;   
     position: relative;
     margin-right: 0;
     margin-left: 0;
+    margin-top: 30px;
     overflow: hidden;
     .slider-wrapper{        
         list-style: none; 
@@ -47,7 +48,7 @@
       
    
     .des_content_1{
-       position: absolute;
+    //    position: absolute;
        left: 0;
        top:30%;
        z-index: 99999;
@@ -508,8 +509,7 @@
         margin: 10px auto;
     }
 
-    .portal_content_5_2{
-        margin-top: 53px; 
+    .portal_content_5_2{ 
                       
         .content_5_2_1, .content_5_2_2{
          text-align: center;
@@ -613,7 +613,7 @@
     .portal_content_8_body{
         background: url("assets/images/portal_images/content_8_back.png");
         background-size: 100% 100%;
-        padding:70px;
+        padding: 70px 0;
         img{
             width: 100%;
             height: 557px;
@@ -635,6 +635,19 @@
               padding-left:30px; 
               border: none;
               border-radius: 30px;
+           }
+           #message {
+            margin-top:23px;
+            background-color: rgb(226, 226, 236);
+
+            line-height: 53px;
+            width: 100%;
+            padding-left:30px; 
+            border: none;
+            border-radius: 30px;
+           }
+           #message:focus {
+               outline: none;
            }
            input:focus{
                outline: none;
@@ -691,7 +704,7 @@
        text-align: center;
        margin-top: 20px;
        .download_app_store_btn{
-           width: 197px;
+           width: 172px;
            height:55px;
            border-radius: 8px;
            background-image: url('assets/images/portal_images/download_app_store.png');

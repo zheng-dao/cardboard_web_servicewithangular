@@ -1,31 +1,27 @@
-<div class="header1"  >
+<div class="header1">
   <div class="headerbody" #header1>
     <div class="headerbody-left">
-      
-        <ul class=" main-menu-section">
-          <li class="nav-item "> 
-            <a routerLink = "/">
-              <img src="../../../assets/images/logo.png" />
-            </a>
-          </li>
-          <li class="nav-item "> <a class="font_menu" routerLink = "/">{{'he_menu_home'|translate}}</a></li>
-          <li class="nav-item "> <a class="font_menu" routerLink="/searchresult">{{'he_menu_find_jobs'|translate}}</a></li>
-          <li class="nav-item "> <a class="font_menu" routerLink="/createVCVPlatform">{{'he_menu_create_your_vcv'|translate}}</a></li>
-        </ul>
+      <ul class="main-menu-section">
+        <li class="nav-item ">
+          <a routerLink="/">
+            <img src="../../../assets/images/logo.png" />
+          </a>
+        </li>
+      </ul>
     </div>
 
-    <div class="headerbody-right">      
-        <ul class="log-menu-section">
-          <li *ngIf="getLogStatus()" class = "nav-item font_menu logout" (click)="logout()" >{{'he_menu_logout'|translate}}</li>
-          <li *ngIf="!getLogStatus()" class="nav-item"><a class="font_menu" routerLink = "/login">{{'he_menu_login'|translate}}</a></li>
-          <li *ngIf="!getLogStatus()" class="nav-item"><a class="font_menu" routerLink="/signup">{{'he_menu_rigister'|translate}}</a></li>
-          <li class="nav-item"><a class="font_menu" href="/">{{'he_menu_employer'|translate}}?</a></li>
-          <li class="nav-item">
-            <span [class.lang_selected]="is_en" (click)="uselanguage('en')">Eng</span>
-            <span>/</span>
-            <span [class.lang_selected]="is_ar" (click)="uselanguage('ar')">Ar</span>
-          </li>
-        </ul>
+    <div class="headerbody-right">
+      <ul class="log-menu-section">
+        <li class="nav-item"><a class="font_menu" routerLink="/">{{'he_menu_home'|translate}}</a></li>
+        <li class="nav-item"><a class="font_menu" routerLink="/aboutUs">{{'he_menu_about'|translate}}</a></li>
+        <li class="nav-item"><a class="font_menu" routerLink="/">{{'he_menu_features'|translate}}</a></li>
+        <li class="nav-item"><a class="font_menu" routerLink="/">{{'he_menu_pricing'|translate}}</a></li>
+        <li class="nav-item"><a class="font_menu" routerLink="/">{{'he_menu_team'|translate}}</a></li>
+        <li *ngIf="!getLogStatus()" class="nav-item" (click)="signIn()"><a
+            class="font_menu">{{'he_menu_signin'|translate}}</a></li>
+        <li *ngIf="getLogStatus()" class="nav-item" (click)="signout()"><a
+            class="font_menu">{{'he_menu_signout'|translate}}</a></li>
+      </ul>
     </div>
   </div>
 

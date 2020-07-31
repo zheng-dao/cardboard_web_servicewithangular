@@ -22,7 +22,7 @@ export class AppGlobals {
    readonly  SCOPE = "r_basicprofile%20r_emailaddress%20w_share";
    //This is the url that LinkedIn Auth process will redirect to. We can put whatever we want that starts with http:// or https:// .
    //We use a made up url that we will intercept when redirecting. Avoid Uppercases.
-   readonly REDIRECT_URI = "https://mycareer.nysm.me";
+   readonly REDIRECT_URI = "http://localhost:4200";
 
    readonly CANCEL_URI = "https://www.linkedin.com/oauth/v2/login-cancel";
    readonly AUTHORIZATION_CANCEL_URI = "https://www.linkedin.com/oauth/v2/authorization-cancel";

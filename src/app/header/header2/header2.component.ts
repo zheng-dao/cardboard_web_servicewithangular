@@ -1,6 +1,8 @@
 import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { MessageService } from '../../httpService/message.service'
-
+import { AuthenticationService } from 'src/app/service/authenticationService';
+import { Router } from '@angular/router';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-header2',
@@ -16,8 +18,8 @@ export class Header2Component implements OnInit {
   sliceMessages: any[];
   is_message_modal_show: boolean = false;
   @ViewChild('message_modal') messageModal: ElementRef;
-  @ViewChild('sub_menu') sub_menu : ElementRef;
-  
+  @ViewChild('sub_menu') sub_menu: ElementRef;
+
   /// notification control
   allNotifications: any[];
   sliceNotifications: any[];
@@ -25,38 +27,39 @@ export class Header2Component implements OnInit {
   @ViewChild('notification_modal') notificationModal: ElementRef;
 
   // event listener register
-  @HostListener('document:click', ['$event'])
-  clickout(event) {        //My custom callback func for document:click handle 
-    if (!this.messageModal.nativeElement.contains(event.target))
-      this.hideMessageModal();
-    if (!this.notificationModal.nativeElement.contains(event.target))
-      this.hideNotificationModal();
-  }
+  // @HostListener('document:click', ['$event'])  
+  // clickout(event) {        //My custom callback func for document:click handle 
+  //   if (!this.messageModal.nativeElement.contains(event.target))
+  //     this.hideMessageModal();
+  //   if (!this.notificationModal.nativeElement.contains(event.target))
+  //     this.hideNotificationModal();
+  // }
 
   //navbar 
-  @ViewChild('header2') header2:ElementRef;
+  // @ViewChild('header2') header2:ElementRef;
 
   constructor(private httpService: MessageService,
-    private eRef: ElementRef) { }
+    private eRef: ElementRef,
+    private authService: AuthenticationService,
+    private router: Router) { }
   ngOnInit() {
     this.getMessages();
     this.getNotifications();
-    
-  }
 
+  }
 
   showSubMenu() {
     this.sub_menu.nativeElement.style.display = "block"
     this.bgColor = "#3771FF";
   }
-  hideSubMenu(){
-   this.sub_menu.nativeElement.style.display = "none"
-    this.bgColor = "";  
-    console.log( this.is_sub_menu_show );  
+  hideSubMenu() {
+    this.sub_menu.nativeElement.style.display = "none"
+    this.bgColor = "";
+    console.log(this.is_sub_menu_show);
   }
 
-  toggleSubMenu() {   
-    if (this.sub_menu.nativeElement.style.display  == "block")
+  toggleSubMenu() {
+    if (this.sub_menu.nativeElement.style.display == "block")
       this.hideSubMenu();
     else
       this.showSubMenu();
@@ -73,13 +76,13 @@ export class Header2Component implements OnInit {
     this.sliceMessages = this.allMessages.slice(0, this.allMessages.length);
   }
 
-  showMessageModal() {  
-    
-    if(document.body.clientWidth < 1350){
+  showMessageModal() {
+
+    if (document.body.clientWidth < 1350) {
       console.log("small")
       this.messageModal.nativeElement.className = "message-modal message-position-right";
     }
-    else{
+    else {
       console.log("large")
       this.messageModal.nativeElement.className = "message-modal message-position-left";
     }
@@ -103,10 +106,10 @@ export class Header2Component implements OnInit {
   }
 
   showNotificationModal() {
-    if(document.body.clientWidth < 1350){
+    if (document.body.clientWidth < 1350) {
       this.notificationModal.nativeElement.className = "message-modal message-position-right";
     }
-    else{
+    else {
       this.notificationModal.nativeElement.className = "message-modal message-position-left";
     }
     this.is_notification_modal_show = true;
@@ -119,13 +122,18 @@ export class Header2Component implements OnInit {
 
   ////////////////////menu show and hide (toggle)////////////////
 
-  toggleHeaderMenu() {
-    let nativeheader = this.header2.nativeElement;
-    if (nativeheader.className === "headerbody") {
-      nativeheader.className += " responsive";
-    }
-    else {
-      nativeheader.className = "headerbody";
-    }
+  // toggleHeaderMenu() {
+  //   let nativeheader = this.header2.nativeElement;
+  //   if (nativeheader.className === "headerbody") {
+  //     nativeheader.className += " responsive";
+  //   }
+  //   else {
+  //     nativeheader.className = "headerbody";
+  //   }
+  // }
+
+  signout() {
+    // this.authService.signout()
+    this.authService.apple_signout();
   }
 }

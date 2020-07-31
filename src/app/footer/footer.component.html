@@ -1,95 +1,68 @@
 <div class="footer" [style.display]="footerShow? 'block':'none'">
-  <div class="content_1">
-         <div class="connect-item" >
-            <img src="../../assets/images/icon/telephone.png">
-            <span class="span-text">Toll Free No: 8000177030</span>
-         </div>
-       
-          <div class="connect-item">
-            <img src="../../assets/images/icon/weburl.png">
-            <span class="span-text">info@nysm.com</span>
-          </div>
-       
-          <div class="connect-item" >
-            <img src="../../assets/images/icon/phone.png">
-            <span class="span-text">Toll No: 961 90 898 228</span>
-          </div>
-       
-          <div class="country-selectbox-wrapper connect-item"> 
-              <app-custom-select class="location-select" [placeholder]="'select location'"
-               [datas]="country_list" [icon_name]=""></app-custom-select>
-          </div> 
-      
-       
-  </div>
-  <div class="content_2">
-    <div class="content_2_1">
-         <div class="title_in_footer"> {{'fo_title_find_jobs'|translate|uppercase}}</div>
-          <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 country" *ngFor="let country of countries"  >
-              <img [src]="country.url"><a href="#">Jobs in {{country.name}}</a>
-            </div>
-          </div>
-          <hr>
+  <div class="row content_1">
+    <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+      <div class="connect-item">
+        <img src="../../assets/images/icon/telephone.png">
+        <span class="span-text">+1 (617) 782 2000</span>
+      </div>
     </div>
+    <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+      <div class="connect-item">
+        <img src="../../assets/images/icon/weburl.png">
+        <span class="span-text">mark@ultramls.com</span>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+      <div class="connect-item">
+        <img src="../../assets/images/icon/phone.png">
+        <span class="span-text">+1 (617) 245 0500</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row content_2">
     <div class="content_2_2">
-        <div class="row">
-            <div class="col-sm-12 col-md-8 " > 
-              <div class="content_2_2_1">
-                  <div class="title_in_footer">{{'fo_title_about_nysm'|translate|uppercase}}</div> 
-                  <div  class="description_nysm"> 
-                    {{'fo_subject_nysm_is_the'|translate}}
-                  </div>       
-              </div>      
-              <div class="content_2_2_2">
-                  <div class="title_in_footer">{{'fo_title_follow_nysm'|translate|uppercase}}</div> 
-                   <ul>
-                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                     <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                     <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                   </ul> 
-              </div> 
+      <div class="row">
+        <div class="col-sm-12 col-md-8 ">
+          <div class="content_2_2_1">
+            <div class="title_in_footer">{{'fo_title_about_cardboard'|translate|uppercase}}</div>
+            <div class="description_nysm">
+              {{'fo_subject_cardboard_is_the'|translate}}
             </div>
-            <div class="col-sm-12  col-md-2"></div>
-            <div class="col-sm-12 col-md-2 " > 
-              <div class="content_2_2_3"> 
-                  <div class="title_in_footer">{{'fo_title_nysm'|translate|uppercase}}</div> 
-                  <ul>
-                    <li><a routerLink="/aboutUs">{{'fo_menu_about_us'|translate}}</a></li>
-                    <li><a routerLink="/contactUs">{{'fo_menu_contact_us'|translate}}</a></li>
-                    <li><a href="#">{{'fo_menu_career'|translate}}</a></li>                 
-                  </ul> 
-              </div>
-              <div class="content_2_2_4"> 
-                  <div class="title_in_footer">LANGUAGE</div> 
-                  <ul>
-                    <li>{{'fo_menu_english'|translate}}</li>
-                    <li>{{'fo_menu_arabic'|translate}}</li>                        
-                  </ul> 
-              </div>
-               
-             </div>
+          </div>
+          <div class="content_2_2_2">
+            <div class="title_in_footer">{{'fo_title_follow_cardboard'|translate|uppercase}}</div>
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
         </div>
-
-        <hr>
+        <div class="col-sm-12  col-md-2"></div>
+        <div class="col-sm-12 col-md-2 ">
+          <div class="content_2_2_3">
+            <div class="title_in_footer">{{'fo_title_cardboard'|translate|uppercase}}</div>
+            <ul>
+              <li><a routerLink="/aboutUs">{{'fo_menu_about_us'|translate}}</a></li>
+              <li><a routerLink="/contactUs">{{'fo_menu_contact_us'|translate}}</a></li>
+              <li><a href="#">{{'fo_menu_career'|translate}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr>
     </div>
     <div class="content_2_3">
-        <ul>
-            <li><a routerLink="/term" class="font_link">{{'fo_menu_terms_of_use'|translate}}</a></li>
-            <li><a href="#" class="font_link">{{'fo_menu_report_a_bug'|translate}}</a></li>
-            <li><a href="#" class="font_link">{{'fo_menu_abuse'|translate}}</a></li>
-            <li><a href="#" class="font_link">{{'fo_menu_add_job'|translate}}</a></li>
-            <li><a href="#" class="font_link">{{'fo_menu_search_box_to'|translate}}</a></li>
-            <li><a href="#" class="font_link">{{'fo_menu_security'|translate}}</a></li>
-            <li><a href="#" class="font_link">{{'fo_menu_privacy'|translate}}</a></li>
-            <li><a href="#" class="font_link">{{'fo_menu_commitment'|translate}}</a></li>
-         </ul> 
+      <ul>
+        <li><a routerLink="/term" class="font_link">{{'fo_menu_terms_of_use'|translate}}</a></li>
+        <li><a href="#" class="font_link">{{'fo_menu_security'|translate}}</a></li>
+        <li><a href="#" class="font_link">{{'fo_menu_privacy'|translate}}</a></li>
+      </ul>
 
-         <div class="reserved_text">{{'fo_script_reverse'|translate}}</div>
+      <div class="reserved_text">{{'fo_script_reverse'|translate}}</div>
     </div>
   </div>
 </div>
-
-

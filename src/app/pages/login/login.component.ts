@@ -12,7 +12,7 @@ import {
   LinkedinLoginProvider
 } from 'ng-dynami-social-login';
 
-import { Router, Event, NavigationEnd } from '@angular/router'
+import { Router, Event, NavigationEnd,ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-login',
@@ -39,13 +39,19 @@ export class LoginComponent implements OnInit {
     private socialAuthService: AuthService,
     private _http: HttpClient,
     private router: Router,
-    private toast: ToastrService
-    // private ngxLinkedinService : NgxLinkedinService
+    private toast: ToastrService,
+    private activatedRoute : ActivatedRoute
+    
   ) {
     this.wndState = this.STATE1;
   }
 
   ngOnInit() {
+
+    this.activatedRoute.queryParams.subscribe((params) => {
+      console.log(params)
+    });
+      
   }
 
   signIn() {
@@ -223,7 +229,7 @@ export class LoginComponent implements OnInit {
   }
 
   signInWithGoogle(): void {
-
+   
     this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID).then(
       (userData) => {
         console.log(userData);
@@ -241,7 +247,6 @@ export class LoginComponent implements OnInit {
             localStorage.setItem("token", res.token)
             localStorage.setItem("loginType", "google")
             this.router.navigateByUrl('/dashboard')
-
           },
             (err: HttpErrorResponse) => {
               if (err.error instanceof Error) {

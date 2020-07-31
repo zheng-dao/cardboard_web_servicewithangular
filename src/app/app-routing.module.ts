@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PortalComponent } from './pages/portal/portal.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { ItemsComponent } from './pages/items/items.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 import { VcvtutoComponent } from './pages/vcvtuto/vcvtuto.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { JobsbyroleComponent } from './pages/find-jobs-by-role/find-jobs-by-role.component';
@@ -43,28 +45,30 @@ import { AuthenticationService } from './service/authenticationService';
 
 const routes: Routes = [
   { path: '', component: PortalComponent },
-  { path:'login', component:LoginComponent},
+  { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'vcvtutorial', component: VcvtutoComponent , canActivate: [AuthenticationService]},
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthenticationService] },
-  { path: 'jobsbyrole', component: JobsbyroleComponent , canActivate: [AuthenticationService]},
-  { path: 'searchresult', component: SearchresultComponent, canActivate: [AuthenticationService] },
-  { path: 'emailconfirm', component: EmailconfirmComponent , canActivate: [AuthenticationService]},
-  { path: 'findJobsBySector', component: FindJobsBySectorComponent , canActivate: [AuthenticationService]},
-  { path: 'findJobsByLocation', component: FindJobsByLocationComponent, canActivate: [AuthenticationService] },
-  { path: 'findJobsByCompany', component: FindJobsByCompanyComponent, canActivate: [AuthenticationService] },
-  { path: 'advancedJobSearch', component: AdvancedJobSearchComponent, canActivate: [AuthenticationService] },
-  { path: 'jobOffer', component: JobOfferComponent , canActivate: [AuthenticationService]},
-  { path: 'companyProfile', component: CompanyProfileComponent, canActivate: [AuthenticationService] },
-  { path: 'myApplications', component: MyApplicationComponent , canActivate: [AuthenticationService]},
-  { path: 'myVCV', component: MyvcvComponent , canActivate: [AuthenticationService]},
-  { path: 'createVCVPlatform', component: CreateVcvPlatformComponent , canActivate: [AuthenticationService]},
-  { path: 'createVCVProfession', component: CreateVcvProfessionComponent , canActivate: [AuthenticationService]},
+  { path: 'items', component: ItemsComponent, canActivate: [AuthenticationService] },
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthenticationService] },
+  { path: 'vcvtutorial', component: VcvtutoComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'jobsbyrole', component: JobsbyroleComponent },
+  { path: 'searchresult', component: SearchresultComponent },
+  { path: 'emailconfirm', component: EmailconfirmComponent },
+  { path: 'findJobsBySector', component: FindJobsBySectorComponent },
+  { path: 'findJobsByLocation', component: FindJobsByLocationComponent },
+  { path: 'findJobsByCompany', component: FindJobsByCompanyComponent },
+  { path: 'advancedJobSearch', component: AdvancedJobSearchComponent },
+  { path: 'jobOffer', component: JobOfferComponent },
+  { path: 'companyProfile', component: CompanyProfileComponent },
+  { path: 'myApplications', component: MyApplicationComponent },
+  { path: 'myVCV', component: MyvcvComponent },
+  { path: 'createVCVPlatform', component: CreateVcvPlatformComponent, canActivate: [AuthenticationService] },
+  { path: 'createVCVProfession', component: CreateVcvProfessionComponent, canActivate: [AuthenticationService] },
   { path: 'createVCVTheme', component: CreateVcvThemeComponent, canActivate: [AuthenticationService] },
   { path: 'profileAnalytics', component: ProfileAnalyticsComponent, canActivate: [AuthenticationService] },
-  { path: 'chat', component: ChatComponent, canActivate: [AuthenticationService] },
-  { path: 'aboutUs', component: AboutUsComponent, canActivate: [AuthenticationService] },
-  { path: 'term', component: TermComponent, canActivate: [AuthenticationService] },
+  { path: 'chat', component: ChatComponent },
+  { path: 'aboutUs', component: AboutUsComponent },
+  { path: 'term', component: TermComponent },
   { path: 'contactUs', component: ContactUsComponent },
   {
     path: 'teleprompter',
@@ -80,15 +84,15 @@ const routes: Routes = [
   },
   {
     path: 'VCVMake',
-    children:[
-      {path: 'VCVVideoEdit', component: VcvVideoEditComponent},
-      {path: 'VCVVideoFx1', component: VcvVideoFx1Component},
-      {path: 'VCVVideoFx2', component: VcvVideoFx2Component},
-      {path: 'VCVVideoFx3', component: VcvVideoFx3Component},
-      {path: 'VCVVideoFx4', component: VcvVideoFx4Component},
-      {path: 'VCVVideoFx5', component: VcvVideoFx5Component},
-      {path: 'VCVVideoFx6', component: VcvVideoFx6Component}
-      
+    children: [
+      { path: 'VCVVideoEdit', component: VcvVideoEditComponent },
+      { path: 'VCVVideoFx1', component: VcvVideoFx1Component },
+      { path: 'VCVVideoFx2', component: VcvVideoFx2Component },
+      { path: 'VCVVideoFx3', component: VcvVideoFx3Component },
+      { path: 'VCVVideoFx4', component: VcvVideoFx4Component },
+      { path: 'VCVVideoFx5', component: VcvVideoFx5Component },
+      { path: 'VCVVideoFx6', component: VcvVideoFx6Component }
+
     ]
 
   }

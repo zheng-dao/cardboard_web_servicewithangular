@@ -1,133 +1,74 @@
-<div class="header2">
-    <div class="headerbody" #header2>       
-        <div class="main-menu-section">            
-            <ul >
-                <li class="nav-item "> 
-                    <a  routerLink = "/">
-                        <img src="../../../assets/images/logo.png" />
-                    </a>
-                </li>
-                <li class="nav-item ">
-                    <a class="font_menu " routerLink="/dashboard">{{'he_menu_dashboard'|translate}}</a>
-                </li>
-                <li class="nav-item dropdown_menu" (click)="toggleSubMenu()" [style.background-color]="bgColor">                        
-                        <a class="font_menu"  >
-                            {{'he_menu_find_jobs'|translate}}
-                        </a>                            
-                        <ul class="sub_menu" id="sub_menu" #sub_menu [style.display]="is_sub_menu_show?'block':'none'" >
-                            <li><a class="font_menu" routerLink="/advancedJobSearch">{{'he_menu_advanced_search'|translate}}</a></li>
-                            <li><a class="font_menu" routerLink="/jobsbyrole" >{{'he_menu_jobs_by_role'|translate}}</a></li>
-                            <li><a class="font_menu" routerLink="/findJobsBySector" >{{'he_menu_jobs_by_sector'|translate}}</a></li>
-                            <li><a class="font_menu" routerLink="/findJobsByLocation" >{{'he_menu_jobs_by_location'|translate}}</a></li>
-                            <li><a class="font_menu" routerLink="/findJobsByCompany" >{{'he_menu_jobs_by_companies'|translate}}</a></li>
-                        </ul>   
-                                                    
-                </li>
-                <li class="nav-item ">
-                    <a class=" font_menu " routerLink="/myApplications">{{'he_menu_my_application'|translate}}</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="font_menu " routerLink="/myVCV">{{'he_menu_my_vcv'|translate}}</a>
-                </li>
-            </ul>
-        </div>           
-        <div class="search-container ">
-            <div class="search-wrapper">
-                <input class="job_search_input" type="text" placeholder="{{'in_job_title_skills_etc'|translate}}">
-                <div class="country-selectbox-wrapper">
-                    <app-country-select [is_flag_show]="false"></app-country-select>
-                </div>
-                <button>{{'btn_find_jobs'|translate}}</button>
+<nav class="navbar top-navbar" style="float: right;">
+    <div class="container-fluid">
+        <div class="navbar-left">
+            <div class="navbar-btn">
+                <a href="#"><img src="../../../assets/images/logo.png" alt="Cardboard Logo" class="img-fluid logo"></a>
+                <button type="button" class="btn-toggle-offcanvas" style="cursor: pointer;"><i
+                        class="lnr lnr-menu fa fa-bars"></i></button>
             </div>
-
         </div>
-        <div class="notification-menu">
-            <ul class="main-container">
-                <li style="margin-top: 12px;" class="menu-item">
-                    <a href="#" class="video_create">
-                        <mat-icon>video_call</mat-icon>
-                        <!-- <span>{{'btn_create_your_vcv'|translate}}</span> -->
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <div class="noti-control" >
-                        <a routerLink="/chat" class="noti-menu" (mouseover)="showMessageModal()">
-                            <img src="../../../assets/images/icon/message.png">
-                            <span class="count">2</span>
-                        </a>
-                        <div class="message-modal message-position-left" #message_modal [style.display]="is_message_modal_show?'block':'none'">
-                            <div class="pointer"><img src="../../../assets/images/header/notification_pointer.png"></div>
-                            <ul class="message-list">
-                                <li *ngFor="let message of sliceMessages" class="message-item">
-                                    <div class="main-section">
-                                        <div class="message-header">
-                                            <div class="message-photo">
-                                                <img [src]="message.photo" class="photo">
-                                                <img [src]="message.company" class="com-mark">
-                                            </div>
-                                            <div class="message-name">
-                                                <span class="person-name">{{message.name}}</span>
-                                                <span class="com-name">{{message.com_name}}</span>
-                                            </div>
-                                        </div>
-                                        <div class="message-body">
-                                            {{message.message}}
-                                        </div>
-                                    </div>
-                                    <div class="side-section">
-                                        <div class="message-time">{{message.time}}</div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="see-all-section" (click)="seeAllMessages()">
-                                {{'btn_see_all'|translate}}
-                            </div>
-                        </div>
 
-                    </div>
-                </li>
-                <li class="menu-item">
-                    <div class="noti-control" (mouseover)="showNotificationModal()">
-                        <a href="#" class="noti-menu">
-                            <img src="../../../assets/images/icon/notification.png">
-                            <span class="count">3</span>
-                        </a>
-                        <div class="message-modal message-position-left" #notification_modal [style.display]="is_notification_modal_show?'block':'none'">
-                            <div class="pointer"><img src="../../../assets/images/header/notification_pointer.png"></div>
-                            <ul class="message-list">
-                                <li *ngFor="let notification of sliceNotifications" class="message-item">
-                                    <div class="icon-section">
-                                        <mat-icon>{{notification.noti_icon}}</mat-icon>
-                                    </div>
-                                    <div class="main-nofication-section">
-                                        <div class="noti-header">{{notification.noti_name|uppercase}}</div>
-                                        <div class="noti-body">
-                                            {{notification.noti_message}}
-                                        </div>
-                                        <div class="noti-time">
-                                            {{notification.time}}
-                                        </div>
-                                    </div>
-                                    <div class="side-noti-section">
-                                        <mat-icon>fiber_manual_record</mat-icon>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="see-all-section" (click)="seeAllNotification()">
-                                {{'btn_see_all'|translate}}
-                            </div>
-                        </div>
-
-                    </div>
-                </li>
-                <li class="menu-item" style="margin-top:8px;">
-                    <a href="#" class="personal">
-                        <img src="../../../assets/images/icon/man.png">
-                    </a>
-                </li>
-            </ul>
+        <div class="navbar-right">
+            <div id="navbar-menu">
+                <ul class="nav navbar-nav" style="flex-direction: row;">
+                    <li>
+                        <a class="icon-menu" title="Get the App">GET THE APP</a>
+                    </li>
+                    <li>
+                        <a class="search_toggle icon-menu" title="Search Result"><i class="fa fa-search"></i></a>
+                    </li>
+                    <li>
+                        <a class="right_toggle icon-menu" title="Messages"><i class="fa fa-comments-o"></i><span
+                                class="notification-dot bg-pink">2</span></a>
+                    </li>
+                    <li><a class="icon-menu sign-out" title="Sign Out" (click)="signout()">
+                            <i class="fa fa-sign-out"></i></a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+</nav>
 
-    <i class="fa fa-bars nav_toggle_btn" (click)="toggleHeaderMenu()"></i>
+<div id="left-sidebar" class="sidebar">
+    <div class="navbar-brand">
+        <a href="#"><img src="../../../assets/images/logo_pure.png" alt="Cardboard Logo"
+                class="img-fluid logo"><span>Cardboard</span></a>
+        <button type="button" class="btn-toggle-offcanvas btn btn-sm float-right"><i
+                class="lnr lnr-menu icon-close"></i></button>
+    </div>
+    <div class="sidebar-scroll">
+        <div class="user-account">
+            <div class="user_div">
+                <img src="../../../assets/images/profile_placeholder.png" class="user-photo" alt="User Profile Picture">
+            </div>
+            <div class="dropdown">
+                <span>Welcome,</span>
+                <a href="" class="dropdown-toggle user-name" data-toggle="dropdown"><strong></strong></a>
+                <ul class="dropdown-menu dropdown-menu-right account vivify flipInY" style="right: auto !important;">
+                    <!-- <li><a routerLink="/profile"><i class="fa fa-users"></i>Profile</a></li> -->
+                    <li><a>GET THE APP</a></li>
+                    <li><a><i class="fa fa-comments-o"></i>Messages</a></li>
+                    <li><a><i class="fa fa-question-circle"></i>Q&As</a></li>
+                    <li class="divider"></li>
+                    <li (click)="signout()" style="cursor: pointer;"><a><i class="fa fa-sign-out"></i><span>Sign
+                                out</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <nav id="left-sidebar-nav" class="sidebar-nav">
+            <ul id="main-menu" class="metismenu">
+                <!-- <li class="header">Main</li> -->
+                <li><a routerLink="/items"><i class="fa fa-cubes"></i><span>Items</span></a></li>
+                <li><a routerLink="/profile"><i class="fa fa-users"></i><span>Profile</span></a></li>
+                <li style="cursor: pointer;"><a><i class="fa fa-question-circle"></i><span>Q&As</span></a></li>
+                <!-- <li><a><i class="icon-badge"></i><span>Job Portal</span></a></li> -->
+                <li (click)="signout()" style="cursor: pointer;"><a><i class="fa fa-sign-out"></i><span>Sign
+                            out</span></a></li>
+            </ul>
+        </nav>
+    </div>
 </div>
