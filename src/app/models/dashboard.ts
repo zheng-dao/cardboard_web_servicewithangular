@@ -29,17 +29,17 @@ export interface Company {
     inc_name: string;
     nat_name: string;
 }
-export interface JobBranch{
-    url:string;
-    branch:string;
+export interface JobBranch {
+    url: string;
+    branch: string;
 }
 
-export interface JobChartModel{
-    x:string;
-    y:number;
+export interface JobChartModel {
+    x: string;
+    y: number;
 }
 
-export interface SearchChartModel{
-    x:string;
-    y:number;
+export interface SearchChartModel {
+    x: string;
+    y: number;
 }

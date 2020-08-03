@@ -1,0 +1,277 @@
+.teleprompter{
+    .teleprompter-container{
+        width:100%;
+        height: 1000px;
+        background: url('/assets/images/teleprompter/teleprompter_bg.png');
+        background-size: 100% 100%;       
+     .teleprompter1{
+        padding-top:150px;
+        padding-bottom:80px;
+        .theme-list{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;  
+            margin-top:80px;
+            margin-bottom: 50px;
+            .theme{
+                width:196px;
+                height:140px;
+                text-align: center;
+                margin: 0 5px 30px 5px;
+                
+                img{
+                    width:196px;
+                    height:114px;
+                    border-radius: 5px;
+                    margin-bottom: 5px;
+                    cursor: pointer;
+                }
+                .theme-name{
+                    @include custom_font(white, 15px , 15px , 'galano_grotesque_alt_medium');
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .script{
+            @include custom_font(white , 17px, 19px, 'galano_grotesque_alt_semi_bold');
+            text-align: center;            
+        }
+        .title{
+            @include custom_font(white , 40px, 45px, 'galano_grotesque_alt_light');
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .subject{
+            @include custom_font(white , 15px, 16px, 'galano_grotesque_alt_light');
+            text-align: center;
+        }
+
+        .load-more{           
+            cursor: pointer;
+            margin: 0 auto;
+            @include custom_font(white , 15px, 16px, 'galano_grotesque_alt_medium');
+             text-decoration: underline;
+             background-color: transparent;
+        }
+        .start_btn{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px auto;
+            @include custom_font(white , 22px, 20px, 'galano_grotesque_alt_medium');
+            mat-icon{
+                margin-right:5px;
+                font-size:25px;               
+            }
+        }
+        .recording-state{
+            margin: 80px auto 0 auto;
+            display: table;                       
+            border-radius: 35px;
+            text-align: center;
+            padding: 15px 30px;            
+            background-color: #4F5467;
+            @include custom_font(#676C7F , 20px, 20px, 'galano_grotesque_alt_medium');
+        }
+
+      }
+      .teleprompter2{
+        padding-top:150px;
+        padding-bottom:80px;
+          .question{
+            @include custom_font(#1EC5B3 , 16px, 20px, 'galano_grotesque_alt_medium');
+            text-align: center;
+            margin-bottom: 40px;    
+          }
+          .title{
+            @include custom_font(white , 26px, 35px, 'galano_grotesque_alt_medium');
+            text-align: center;
+            margin: 0 auto 80px auto; 
+            width: 50%;             
+          }
+          .answer_btn{
+              font-size: 20px;
+              margin-bottom: 80px;
+          }
+          .skip{           
+            cursor: pointer;
+            margin: 0 auto;
+            @include custom_font(white , 20px, 20px, 'galano_grotesque_alt_medium');
+             text-decoration: underline;
+             background-color: transparent;
+          }
+          .divider{
+              width:80%;
+              height:0;
+              margin: 90px auto ;
+              border-bottom: 1px solid rgb(151, 135, 135);
+          }
+          .recording-state{
+            margin: 80px auto 0 auto;
+            display: table;                       
+            border-radius: 35px;
+            text-align: center;
+            padding: 15px 30px;            
+            background-color: #4F5467;
+            @include custom_font(#676C7F , 20px, 20px, 'galano_grotesque_alt_medium'); 
+          }
+       }
+        .teleprompter3{
+        padding-top:150px;
+        padding-bottom:80px;
+        .title{
+            @include custom_font(white , 32px, 35px, 'galano_grotesque_alt_bold');
+            text-align: center;
+            margin: 0 auto 40px auto; 
+            width: 50%;             
+        }
+        .loading-container{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                .loading{
+                    width:180px; 
+                    height:180px;
+                    margin-right:30px;
+                }
+                .skip{           
+                cursor: pointer;                
+                @include custom_font(white , 20px, 20px, 'galano_grotesque_alt_medium');
+                    text-decoration: underline;
+                    background-color: transparent;
+                }
+
+        }
+        .divider{
+            width:80%;
+            height:0;
+            margin: 90px auto ;
+            border-bottom: 1px solid rgb(151, 135, 135);
+        }
+        .recording-state{
+            margin: 80px auto 0 auto;
+            display: table;                       
+            border-radius: 35px;
+            text-align: center;
+            padding: 15px 30px;            
+            background-color: #4F5467;
+            @include custom_font(#676C7F , 20px, 20px, 'galano_grotesque_alt_medium'); 
+        }  
+        } 
+        .teleprompter4{
+            width:100%;    
+            background:url('/assets/images/teleprompter/recording_bg.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;   
+            .top-header{
+               width:100%;
+               height:120px;
+              background-color: rgba(black, 0.7);
+              .top-header-content{
+                  width:100%;
+                  height:100%;
+                  display:flex;
+                  justify-content: space-between;
+                  align-items: center;
+                    .left-header{
+                      width:50%;
+                      display: flex;
+                      justify-content: flex-start;
+                      align-items: center;
+                      .title{
+                        @include custom_font(white , 22px, 25px, 'galano_grotesque_alt_medium');
+                        margin-right:10px;
+                      }
+                      .loading{
+                          width: 50px;
+                          height:50px;
+                      }
+
+                    }
+                    .skip{
+                        cursor: pointer;                
+                        @include custom_font(white , 18px, 20px, 'galano_grotesque_alt_medium');
+                            text-decoration: underline;
+                            background-color: transparent;
+                    }
+              }
+            }
+
+            .recording-state{
+                margin: 830px auto 0 auto;
+                display: table;                       
+                border-radius: 35px;
+                text-align: center;
+                padding: 15px 30px;            
+                background-color: #4F5467;
+                @include custom_font(#676C7F , 20px, 20px, 'galano_grotesque_alt_medium'); 
+            }  
+        } 
+    }
+
+    .video-recoder-container{
+            
+        width:100%;
+        height:600;
+        position: relative;
+
+        .video-display{
+            
+        }
+
+        .top-header{
+           width:100%;
+           height:100px;
+           background-color: rgba(black, 0.7);           
+
+           .top-header-content{
+               width:100%;
+               height:100%;
+               display:flex;
+               justify-content: space-between;
+               align-items: center;
+                 .left-header{
+                   width:50%;
+                   display: flex;
+                   justify-content: flex-start;
+                   align-items: center;
+                   .title{
+                     @include custom_font(white , 22px, 25px, 'galano_grotesque_alt_medium');
+                     margin-right:10px;
+                   }
+                   .loading{
+                       width: 50px;
+                       height:50px;
+                   }
+                   .recording-start-text{
+                       cursor:pointer;                       
+                       margin-left:30px;
+                       @include custom_font(blue , 18px, 18px, 'galano_grotesque_alt_medium');
+                   }
+
+                 }
+                 .skip{
+                     cursor: pointer;                
+                     @include custom_font(white , 18px, 20px, 'galano_grotesque_alt_medium');
+                         text-decoration: underline;
+                         background-color: transparent;
+                 }
+           }
+         }
+         
+         .recording-state{
+            position: absolute;
+            bottom: 40px; 
+            left:50%;           
+            transform: translate(-50%, 0);           
+             display: table;                       
+             border-radius: 35px;
+             text-align: center;
+             padding: 15px 30px;            
+             background-color: #4F5467;
+             @include custom_font(rgb(205, 206, 214) , 20px, 20px, 'galano_grotesque_alt_medium'); 
+         }  
+    }
+
+   
+}

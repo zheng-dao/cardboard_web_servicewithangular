@@ -1,0 +1,32 @@
+export interface AccountModel {
+    firstName: string;
+    lastName: string;
+    fullName: string;
+    email: string;
+    pheoneNumber: string;
+    occupation: string;
+    organization: string;
+    street1: string;
+    street2: string;
+    city: string;
+    state: string;
+    zip: string;
+    country: string;
+    website: string;
+    facebook: string;
+    linkedin: string;
+    twitter: string;
+    address: string;
+    card: string;
+    cardid: string;
+    companyLogo: string;
+    date: any;
+    userid: string;
+    htmlurl: string;
+    fax: string;
+    phoneCountryCode: string;
+    officeCountryCode: string;
+    office: string;
+    vcardurl: string;
+    userPhoto: string;
+}

@@ -1,0 +1,24 @@
+.term{
+    background-image: url('/assets/images/about_us/nysm_bg_2.png');
+    background-repeat: no-repeat;
+    background-position: 90% 100px;
+    .container{
+        padding: 100px 0;
+         position: relative;      
+        .nysm-bg{
+            position: absolute;
+            top:125px;
+            left:-120px;
+        }
+        .title{
+            @include custom_font($thickblue , 46px, 47px, 'galano_grotesque_alt_semi_bold');
+        }
+        .subject{
+            @include custom_font(#09193F , 24px, 33px, 'galano_grotesque_semi_bold');
+        }
+        .content{
+            @include custom_font(#122146 , 14px, 24px, 'galano_grotesque_bold');
+            margin-bottom: 40px;
+        }
+    }
+}

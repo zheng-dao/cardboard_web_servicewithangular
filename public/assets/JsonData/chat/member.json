@@ -1,0 +1,110 @@
+[
+    {
+        "photo": "/assets/images/photo/matt.png",
+        "name": "Matt Tomposon",
+        "position": "Hr Director",
+        "email": "matttomposon@gmail.com",
+        "phone": "(805)651-9088",
+        "birth": "January 20, 1990",
+        "gender": "Female",
+        "language": "English, French",
+        "com":"/assets/images/com_mark/starbucks.png",
+        "location":"Dubai, UAE"
+    }, 
+    {
+        "photo": "/assets/images/photo/stephanie.png",
+        "name": "strphanie Bailey",
+        "position": "Hr Director",
+        "email": "strphaniebailey@gmail.com",
+        "phone": "(805)651-9088",
+        "birth": "January 20, 1990",
+        "gender": "Female",
+        "language": "English, French",
+        "com":"/assets/images/com_mark/starbucks.png",
+        "location":"Dubai, UAE"
+    },
+    {
+        "photo": "/assets/images/photo/amy.png",
+        "name": "Anmy Mattews",
+        "position": "Hr Director",
+        "email": "amymatthews@gmail.com",
+        "phone": "(805)651-9088",
+        "birth": "January 20, 1990",
+        "gender": "Female",
+        "language": "English, French",
+        "com":"/assets/images/com_mark/starbucks.png",
+        "location":"Dubai, UAE"
+    },
+    {
+        "photo": "/assets/images/photo/matt.png",
+        "name": "Matt Tomposon",
+        "position": "Hr Director",
+        "email": "matttomposon@gmail.com",
+        "phone": "(805)651-9088",
+        "birth": "January 20, 1990",
+        "gender": "Female",
+        "language": "English, French",
+        "com":"/assets/images/com_mark/starbucks.png",
+        "location":"Dubai, UAE"
+    },
+    {
+        "photo": "/assets/images/photo/helen.png",
+        "name": "Helen Newman",
+        "position": "Hr Director",
+        "email": "matttomposon@gmail.com",
+        "phone": "(805)651-9088",
+        "birth": "January 20, 1990",
+        "gender": "Female",
+        "language": "English, French",
+        "com":"/assets/images/com_mark/starbucks.png",
+        "location":"Dubai, UAE"
+    },
+    {
+        "photo": "/assets/images/photo/stephanie.png",
+        "name": "strphanie Bailey",
+        "position": "Hr Director",
+        "email": "strphaniebailey@gmail.com",
+        "phone": "(805)651-9088",
+        "birth": "January 20, 1990",
+        "gender": "Female",
+        "language": "English, French",
+        "com":"/assets/images/com_mark/starbucks.png",
+        "location":"Dubai, UAE"
+    },
+    {
+        "photo": "/assets/images/photo/amy.png",
+        "name": "Anmy Mattews",
+        "position": "Hr Director",
+        "email": "amymatthews@gmail.com",
+        "phone": "(805)651-9088",
+        "birth": "January 20, 1990",
+        "gender": "Female",
+        "language": "English, French",
+        "com":"/assets/images/com_mark/starbucks.png",
+        "location":"Dubai, UAE"
+    },
+    {
+        "photo": "/assets/images/photo/matt.png",
+        "name": "Matt Tomposon",
+        "position": "Hr Director",
+        "email": "matttomposon@gmail.com",
+        "phone": "(805)651-9088",
+        "birth": "January 20, 1990",
+        "gender": "Female",
+        "language": "English, French",
+        "com":"/assets/images/com_mark/starbucks.png",
+        "location":"Dubai, UAE"
+    },
+    {
+        "photo": "/assets/images/photo/helen.png",
+        "name": "Helen Newman",
+        "position": "Hr Director",
+        "email": "matttomposon@gmail.com",
+        "phone": "(805)651-9088",
+        "birth": "January 20, 1990",
+        "gender": "Female",
+        "language": "English, French",
+        "com":"/assets/images/com_mark/starbucks.png",
+        "location":"Dubai, UAE"
+    }
+]

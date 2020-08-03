@@ -1,0 +1,742 @@
+
+.portal_content_1.row{
+    width: 100%;
+    //  display: table;   
+    position: relative;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 30px;
+    overflow: hidden;
+    .slider-wrapper{        
+        list-style: none; 
+        display: table;
+        padding: 0;         
+        width:100%;       
+        height:600px;       
+        .slider{   
+           
+            width:100%; 
+            height:100%;  
+            position: relative;             
+            img{  
+                transition: all 0.8s ease-in-out;            
+                position: absolute;
+              top:0%;
+              left: 50%;
+              transform: translate(-50%,0%);              
+                width:100%;
+               height:auto;
+               min-width:1100px;
+               min-height:600px;
+                // height:auto ;
+            }    
+        }          
+    }  
+
+    .slider-radio-group {
+        position: absolute;
+        bottom: 35px; 
+        right: 15px;
+      
+        flex-direction: column;
+        .slider-radio-button {
+            margin: 0px;
+           font-size:10px;  
+           cursor: pointer;       
+        }
+    }
+      
+   
+    .des_content_1{
+    //    position: absolute;
+       left: 0;
+       top:30%;
+       z-index: 99999;
+    //    width:31%;
+        .title{
+            @include custom_font($thickblue, 45px, 56px, 'galano_grotesque_alt_bold');
+           
+        }
+        .subject{
+            margin-top: 4%;
+            @include custom_font(#8e9dc1, 22px, 30px, 'galano_grotesque_alt_regular');
+        }
+        .des_content_1_3{
+            margin-top: 8.5%;  
+            button{
+                font-family:'galano_grotesque_alt_semi_bold';
+                font-size: 16px;
+                line-height:19px; 
+            }         
+        }
+    }
+
+    /*
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::
+    Bootstrap 4 breakpoints
+    */
+ @media (max-width: 576px) {  
+    /*1rem = 16px*/
+    .des_content_1{  
+      .title{
+          font-size: 30px;        
+      }
+      .subject{
+         font-size: 15px;
+      }
+     }
+   }
+
+ /* Small devices (landscape phones, 544px and up) */
+ @media (min-width: 576px) {  
+   /*1rem = 16px*/
+   .des_content_1{  
+     .title{
+         font-size: 30px;        
+     }
+     .subject{
+        font-size: 15px;
+     }
+    }
+  }
+   
+  /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+  @media (min-width: 768px) {  
+     /*1rem = 16px*/
+     .des_content_1{  
+        .title{
+            font-size: 35px;        
+        }
+        .subject{
+           font-size: 17px;
+        }
+    }
+    .slider-radio-group {
+        position: absolute;
+        bottom: 35%; 
+        right: 15%;
+        display: inline-flex;
+        flex-direction: column;
+        .slider-radio-button {
+            margin: 0px;
+           font-size:10px;  
+           cursor: pointer;       
+        }
+    }
+
+  }
+   
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) { 
+     /*1rem = 16px*/
+     .slider-wrapper{ 
+        height:600px;  
+     }
+     .des_content_1{  
+        .title{
+            font-size: 40px;        
+        }
+        .subject{
+           font-size: 20px;
+        }
+       }
+  }
+  @media (min-width: 1200px) { 
+    /*1rem = 16px*/
+    .slider-wrapper{ 
+       height:810px;  
+    }
+    .des_content_1{  
+       .title{
+           font-size: 40px;        
+       }
+       .subject{
+          font-size: 20px;
+       }
+      }
+ }
+
+
+}
+
+.portal_content_2{
+    padding: 110px 0;
+    .title{
+        // color:$color1;
+        @include custom_font($thickblue, 36px,43px ,"galano_grotesque_alt_bold");
+          text-align:center;
+       
+    }
+    .subject{
+        // color:$color2;
+        @include custom_font(#8e9dc1, 16px,16px ,"galano_grotesque_alt_regular");
+        text-align: center;       
+        margin: 10px auto;
+    }
+    .portal_content_2_2{
+        margin-top: 56px;       
+        .apply_btn{
+            padding: 10px 35px;
+            text-align: center;
+            background-color: rgb(255,255,255);
+            position: absolute;
+            right:10px;
+            bottom: 10px;
+            border-radius: 24px;
+            color:#7f6dff;
+            font-size: 16px;
+            font-family: "galano_grotesque_alt_semi_bold";
+        }
+
+        .title{
+            position: absolute;
+            font-family: "galano_grotesque_semi_bold";
+            left: 19px;
+            bottom: 20px;
+            color:#4F5A74;
+            font-size: 18px; 
+        }   
+        .tran_back{
+            background-color: rgba(255,255,255,0.8);
+            position: absolute;
+            width: 100%;
+            height: 75px;
+            bottom: 0;
+         }
+
+         img{
+            width:100%;
+            height:100%;               
+          }   
+
+        .portal_content_2_2_ui{
+            position: relative;  
+            height: 357px; 
+            margin-bottom: 11px;       
+           
+        }
+        .portal_content_2_2_teaching{
+            position: relative;  
+            height: 203px;      
+            margin-bottom: 11px;    
+                  
+        }
+
+        .portal_content_2_2_medical{
+            position: relative;  
+            height: 250px; 
+            width:58%;  
+            float:left;   
+            margin-bottom: 11px;  
+        }
+        .portal_content_2_2_gardening{
+            position: relative;  
+            height: 250px; 
+            width:40%;   
+            float:right;     
+            margin-bottom: 7px;                 
+        }
+        .portal_content_2_2_coca{
+            position: relative;  
+            height: 311px; 
+            width:100%;    
+            float:right;  
+            margin-bottom: 11px;  
+           .apply_btn{
+               padding: 10px 35px;
+               text-align: center;
+               background-color:rgba(255,255,255,0.6);
+               position: absolute;
+               right:10px;
+               bottom: 10px;
+               border-radius: 24px;
+               color:white;
+               font-size: 16px;
+           }
+        }
+    }    
+}
+
+.portal_content_3{
+    padding: 110px 0;
+    overflow: hidden;
+    background-color: #F2F6FF;
+    .title{       
+        text-align: center;       
+        @include custom_font($thickblue, 32px,50px ,"galano_grotesque_bold");
+       
+    }
+    .subject{       
+        text-align: center;
+       
+        @include custom_font(#8e9dc1, 16px,24px ,"galano_grotesque_alt_regular");
+        margin: 10px auto;
+    }
+    .portal_content_3_2{
+        margin-top: 60px;       
+        width:80%;
+        margin-left:20%;
+        overflow: hidden;
+        .portal_content_3_2_1{
+            width:20px;
+            height: 348px;
+            float:left;
+            padding: 125px 0;
+            ul{
+                list-style: none;
+                padding: 0;
+                display: table;
+                li:last-child{
+                    margin-top: 22px;
+                }
+                img{
+                    width: 100%;
+                    height:38px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .portal_content_3_2_2{
+            margin-left:96px;           
+            height:348px;  
+            overflow: hidden;          
+            ul{
+                list-style: none; 
+                padding-left: 0px;              
+                width: 1000%;
+                display: table;
+                transition: all 0.8s ease-in-out;
+                li{
+                    float:left;                    
+                    height: 348px;
+                    width:273px;
+                    position: relative;
+                    border-radius: 15px;
+                    margin-right: 20px;  
+                    opacity: 0.5; 
+                    overflow: hidden;   
+                    transition: all ease-in-out 0.3s;                            
+                    img{
+                        margin: 0 auto;
+                        min-width: 100%;
+                        min-height:100%;
+                        position: absolute;
+                        top:50%;
+                        left:50%;
+                        transform: translate(-50%,-50%);
+                    }
+                    .description{
+                        width:100%;
+                        height: 124px;
+                        background-color: rgb(243,241,246);
+                        padding: 27px 28px;
+                        position: absolute;
+                        border-bottom-left-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                        bottom: 0;
+                        left: 0;
+                        img{
+                            width: 100%;
+                            height: auto;  
+                            cursor: pointer;                          
+                        }
+                        .content{  
+                            p{
+                                margin: 0;
+                            }
+                            p.name{
+                                @include custom_font($thickgray, 18px ,18px , 'galano_grotesque_alt_extra_bold');
+                            }
+                            p.career{
+                                @include custom_font($thinpurple, 12px ,18px , 'galano_grotesque_alt_medium');
+                            }
+                            p.check{
+                                @include custom_font($thickblue, 14px ,24px , 'galano_grotesque_alt_medium'); 
+                            }
+                        }
+                    }
+                }
+                li.selected{
+                    opacity: 1.0;                   
+                    width:340px;
+                    overflow: hidden;  
+                    .description{
+                         .content{  
+                            p{
+                                margin: 0;
+                            }
+                            p.name{
+                                @include custom_font($thickgray, 20px ,18px , 'galano_grotesque_alt_extra_bold');
+                            }
+                            p.career{
+                                @include custom_font($thinpurple, 14px ,18px , 'galano_grotesque_alt_medium');
+                            }
+                            p.check{
+                                @include custom_font($thickblue, 16px ,24px , 'galano_grotesque_alt_medium'); 
+                            }
+                        }
+                    }                                  
+                }
+            }
+        }
+        .portal_content_3_2_3{
+            margin-top: 55px;
+            width: 320px;
+            height:5px;
+            background-color: rgba(150,150,150,0.3);
+            margin-left: 116px;
+            border-radius:2px; 
+            .scroll-bar{
+                width: 40px;
+                height: 5px;
+                background-color: $thickblue;
+                border-radius: 2px;
+                transition: all 0.8s ease-in-out;
+            }
+        }
+    }    
+}
+
+.portal_content_4{
+    padding: 110px 0;
+    background: url("assets/images/portal_images/portal_content_4_back.png");
+    background-size: 100% 100%;
+    .title{       
+        text-align: center;      
+       
+        @include custom_font($white, 38px ,46px , 'galano_grotesque_alt_bold');   
+    }
+    .subject{       
+        text-align: center;       
+        margin: 10px auto;
+        @include custom_font($white, 16px ,26px , 'galano_grotesque_alt_regular'); 
+    }
+    .portal_content_4_2{
+        margin-top: 60px;  
+        height: 70px;       
+       
+        .job_search_input{
+            width:49%;
+            height: 100%;
+            background-color:#77c1c0;
+            border-bottom-left-radius: 35px;
+            border-top-left-radius: 35px;
+            @include custom_font($white, 18px ,16px , 'galano_grotesque_medium'); 
+            padding: 20px 30px;
+            float: left; 
+            border:none;
+            border-right: 1px solid white;
+
+            &::placeholder{
+                color:white;
+                @include custom_font($white, 18px ,16px , 'galano_grotesque_medium'); 
+            }  
+            &:focus{
+              outline: none;
+            }         
+        }
+        .country-selectbox-wrapper{
+            width:30%;
+            height: 100%;
+            background-color:#77c1c0;       
+            @include custom_font($white, 18px ,16px , 'galano_grotesque_medium'); 
+             padding: 10px 0;
+            float: left;    
+        }
+        button{
+            @include custom_font($thickblue, 18px ,16px , 'galano_grotesque_medium'); 
+            width:20%;
+            height: 100%;
+            background-color:#13f3db;
+            border-bottom-right-radius: 35px;
+            border-top-right-radius: 35px; 
+            padding: 20px 30px;
+            float: left;
+            cursor: pointer;  
+            &:focus{
+                outline:none;
+            }  
+        }
+    }  
+    
+    .portal_content_4_3{
+        text-align: center;
+        margin: 45px 0;
+        button{
+            background-color: white;
+            color:$thickblue;
+            font-family: 'galano_grotesque_semi_bold';
+            font-size: 16px;
+            padding: 10px 20px;
+           
+            box-shadow: 0 0 7px #1A1A1A;
+            mat-icon{
+               font-size: 35px; 
+               vertical-align: middle;
+               width: 0;
+               height:0; 
+               margin-right: 5px;  
+               display: inline;          
+            }
+            
+        }
+    }
+    .portal_content_4_4{
+        text-align: center;
+        a{
+            text-decoration: underline;
+            font-size: 14px;
+            font-family: "galano_grotesque_alt_regular";
+            color:white;
+        }
+    }
+}
+
+.portal_content_5{
+    padding: 110px 0%;
+
+    .title{       
+        text-align: center;
+        
+        @include custom_font($thickblue, 32px,50px ,"galano_grotesque_bold");
+        margin: 0 auto;
+    }
+    .subject{       
+        text-align: center;
+        
+        @include custom_font(#8e9dc1, 16px,24px ,"galano_grotesque_alt_regular");
+        margin: 10px auto;
+    }
+
+    .portal_content_5_2{ 
+                      
+        .content_5_2_1, .content_5_2_2{
+         text-align: center;
+          margin:63px auto 0 auto;  
+
+          img{
+              width:56%;
+              height:auto;
+              margin: 0 auto;
+          }
+          .title{
+            @include custom_font(black, 36px,43px ,"galano_grotesque_alt_bold");   
+            text-align: center;            
+          }
+          .sub_title{
+            @include custom_font(#898989, 16px,24px ,"galano_grotesque_alt_regular"); 
+            text-align: center;
+            margin-top: 20px;  
+          }
+          button{
+              margin-top:77px;
+              margin: 77px auto 0 auto;
+              font-family:"galano_grotesque_alt_bold" ;
+              font-size:18px;
+          }
+        }     
+    }    
+}
+
+.portal_content_6{
+    padding: 110px 0;
+   
+    .title{       
+        text-align: center;       
+        margin: 0 auto;
+        @include custom_font($thickblue, 36px , 43px , 'galano_grotesque_alt_bold');
+    }
+    .subject{       
+        text-align: center;       
+        margin: 10px auto;
+        @include custom_font(#8e9dc1, 16px,24px ,"galano_grotesque_alt_regular");
+    }
+    .portal_content_6_2{
+        margin-top: 80px;          
+        margin:80px auto 0 auto;  
+    } 
+    .portal_content_6_3{
+         text-align: center;
+         margin:93px auto 0 auto;
+         button{
+             font-size:18px;
+             font-family: "galano_grotesque_semi_bold";
+         }
+    }   
+}
+
+.portal_content_7{
+    padding: 110px 0;
+    background-color: #9DD0FA;
+   
+    .title{       
+        text-align: center;       
+        margin: 0 auto;       
+        @include custom_font(white,  36px , 43px , 'galano_grotesque_alt_bold');
+    }
+    .subject{       
+        text-align: center;        
+        margin: 10px auto;
+        color:$white;
+        font-family: "galano_grotesque_alt_regular";
+    }
+    .portal_content_7_2{       
+        
+        margin:43px auto 0 auto;  
+        .country{
+            text-align: center;
+            margin-top: 30px;           
+            .country-name{
+                 @include custom_font($white, 30px, 44px, 'galano_grotesque_alt_semi_bold');
+            }
+            .country-jobs{
+                @include custom_font($thickblue, 18px, 22px, 'galano_grotesque_alt_semi_bold');
+            }
+        }
+    } 
+    .portal_content_7_3{
+        margin: 70px auto 0 auto;
+        text-align: center;
+        button{
+            
+             color:white;
+             background: transparent;
+             font-size: 18px;
+            border: 2px solid $white;
+        }
+    }   
+}
+
+.portal_content_8{    
+    padding: 110px 0;
+    .portal_content_8_body{
+        background: url("assets/images/portal_images/content_8_back.png");
+        background-size: 100% 100%;
+        padding: 70px 0;
+        img{
+            width: 100%;
+            height: 557px;
+        }  
+        .portal_content_8_2{
+            text-align: center;  
+            padding: 30px 60px;
+            
+           .portal_content_8_2_3{
+                margin-top: 14px;
+           }
+           input{
+              margin-top:23px;
+              background-color: rgb(226, 226, 236);
+
+              line-height: 53px;
+              height: 53px;
+              width: 100%;
+              padding-left:30px; 
+              border: none;
+              border-radius: 30px;
+           }
+           #message {
+            margin-top:23px;
+            background-color: rgb(226, 226, 236);
+
+            line-height: 53px;
+            width: 100%;
+            padding-left:30px; 
+            border: none;
+            border-radius: 30px;
+           }
+           #message:focus {
+               outline: none;
+           }
+           input:focus{
+               outline: none;
+           }
+           .portal_content_8_2_5{
+               margin-top: 25px;
+               button{               
+                font-family: "galano_grotesque_alt_semi_bold";
+                color:$thickblue;
+                background-color: $thingreen;            
+               }               
+           }
+           .portal_content_8_2_6{
+            margin-top: 17px;
+            }
+            .portal_content_8_2_7{
+                margin-top: 19px;
+                font-family: "galano_grotesque_alt_semi_bold";
+                span{
+                    font-size: 25px;
+                    margin-right:30px;
+                }
+            }
+            .portal_content_8_2_8{
+                margin-top: 24px;
+                a{
+                    text-decoration: underline;
+                    font-size: 14px;
+                    font-family: "galano_grotesque_alt_regular";
+                }
+            }
+        }
+    }
+    
+}
+
+.portal_content_9{
+    padding: 110px 0%;
+    background-image: url("assets/images/portal_images/content_9_back.png");
+    background-size: 100% 100%;
+   
+    .title{       
+        text-align: center;       
+        margin: 0 auto;
+        @include custom_font(white, 36px , 43px, 'galano_grotesque_alt_bold');
+
+    }
+    .subject{       
+        text-align: center;        
+        margin: 10px auto;
+        @include custom_font(white, 16px , 24px, 'galano_grotesque_alt_regular');
+    }
+    .portal_content_9_2{       
+       text-align: center;
+       margin-top: 20px;
+       .download_app_store_btn{
+           width: 172px;
+           height:55px;
+           border-radius: 8px;
+           background-image: url('assets/images/portal_images/download_app_store.png');
+           background-size: 100% 100%;
+           margin-top:20px;
+           margin-right:5px;
+           cursor: pointer;
+       }
+       .download_google_store_btn{
+        width: 172px;
+        height:55px;
+        border-radius: 8px;
+        background-image: url('assets/images/portal_images/download_google_play.png');
+         margin-top: 20px;
+         background-size: 100% 100%;     
+         cursor: pointer;      
+       }
+
+       button:focus{
+           outline: none;           
+       }
+    } 
+
+    .portal_content_9_3{
+        text-align: center;
+        margin-top: 80px;
+        img{
+            width: 50%;
+            height: auto;
+        }
+    }
+   
+}
+
+

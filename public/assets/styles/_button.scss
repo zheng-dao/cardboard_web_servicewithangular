@@ -1,0 +1,24 @@
+.large_flat_btn{
+  @include button-inverse-variant($white,16px, $thickblue, 0, 15px, 40px, $thickblue)
+}
+.large_curved_btn{
+    @include button-inverse-variant($white,16px, $thickblue, 10px, 15px, 40px, $thickblue)
+}
+.large_rounded_btn{
+    @include button-inverse-variant($white,16px, $thickblue, 30px, 15px, 40px, $thickblue)
+}
+
+.small_flat_btn{
+    @include button-inverse-variant($white,16px, $thickblue, 0, 10px, 40px, $thickblue)
+}
+.small_curved_btn{
+    @include button-inverse-variant($white,16px, $thickblue, 10px, 10px, 40px, $thickblue)
+}
+.small_rounded_btn{
+@include button-inverse-variant($white,16px, $thickblue, 25px, 10px, 40px, $thickblue)
+}
+
+button{
+//    line-height: normal;
+   border:none;
+}

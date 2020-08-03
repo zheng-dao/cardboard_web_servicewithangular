@@ -1,0 +1,145 @@
+.advanced-job-search{
+  width:100%;
+  padding: 110px 0;
+  .content-1{
+     width:100%;
+     
+     .title{
+        @include custom_font(#1C2B4F, 32px , 19px , 'galano_grotesque_alt_bold'); 
+         margin-bottom:60px;
+         text-align: center;
+     }
+     .sub-title{
+        @include custom_font(#8E9DC1, 22px , 26px , 'galano_grotesque_alt_light'); 
+        margin-bottom:20px;
+        text-align: center;
+     }
+     .abstract-text{          
+        @include custom_font(#8E9DC1, 16px , 24px , 'galano_grotesque_alt_regular');        
+        text-align: center;
+        margin:0 auto;
+     }
+  }
+  .content-2{
+        margin-top:50px;
+        width: 100%;
+        background-image:url('/assets/images/content_back.png');
+        border: 1px solid #E2E5F0;
+        background-size: 100% 100%;
+        border-radius: 15px;
+        padding:50px 6%;
+       .divider{
+         height:0px;
+         border: 1px solid #E2E5F0;
+         width:100%;
+         margin:35px 0;
+       }
+       .input-wrapper{
+            height:60px;
+            position: relative;
+            .keyword{
+                width:100%;
+                height:100%;
+                border:none;
+                padding-right:50px;
+                background: transparent;
+                &::placeholder{
+                 @include custom_font(#C0C4D1, 29px , 35px , 'galano_grotesque_alt_light');  
+                }
+                &:focus{
+                    outline: none;
+                }    
+
+            } 
+            mat-icon{
+                position: absolute;
+                font-size:40px;
+                width:40px;
+                height:40px;
+                color:#666EE8;
+                top:50%;
+                right:20px;
+                transform:translate(0, -50%);
+            }       
+        }
+    
+        .selectbox-container{
+            margin: 0;
+            .selectbox-wrapper{
+                width:100%;
+                margin-bottom: 20px;
+                .selectbox-title{
+                    @include custom_font(#898EA2, 14px , 17px , 'galano_grotesque_alt_medium');  
+                    margin-bottom:25px;
+                }
+                .location-select,
+                .role-select,
+                .industry-select{
+                    width:100%;
+                    .cu-select-wrapper{                   
+                        background-color: #F3F7FF;                    
+                        select:required:invalid {
+                            opacity: 0.5;
+                        }
+                        .selectbox{
+                            color:#283142;
+
+                        }
+                        .mark-icon{
+                            color:#283142;
+                        }
+                        .direction-icon{
+                            color:#283142;
+                            background-color:#F3F7FF; 
+                        }
+                    } 
+                }
+                .salary-select{
+                    width:100%;
+                    .cu-select-wrapper{
+                        box-shadow: 0 3px 5px #7296f0;
+                        background-color: #306cff;
+                        select:required:invalid {
+                            opacity: 0.5;
+                        }
+                        .selectbox{
+                            color:white;
+
+                        }
+                        .mark-icon{
+                            color:white;
+                        }
+                        .direction-icon{
+                            color:white;
+                            background-color:#306cff; 
+                        }
+                    }
+                }
+            }
+        }
+
+        .checkbox-group-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0;
+            .checkbox-wrapper{               
+                display: table;                
+                margin-right:4%;
+                .checkbox-title{
+                    @include custom_font(#898EA2, 14px , 17px , 'galano_grotesque_alt_medium');  
+                    margin-bottom:25px;
+                }
+              &:last-of-type{
+                 margin-right: 0;
+              }  
+            }
+           
+            
+        }
+
+        large_rounded_btn{
+           margin:0 auto;
+        }
+    }
+}
