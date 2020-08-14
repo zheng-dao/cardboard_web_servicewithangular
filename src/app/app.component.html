@@ -1,8 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="overlay"></div>
-<div id="wrapper">
-  <app-header [which_header]="which_header"></app-header>
-</div>
+
+<app-header [which_header]="which_header"></app-header>
 <router-outlet></router-outlet>
 <app-footer [footerShow]="isFooterShow"></app-footer>
 <ngx-spinner name="loading" bdColor="rgba(0,0,0,0.4)" color="yellow" [fullScreen]="true" size="medium"
