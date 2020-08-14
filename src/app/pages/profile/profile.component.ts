@@ -10,10 +10,10 @@ import { AccountModel } from '../../models/account';
 })
 export class ProfileComponent implements OnInit {
 
-  private user: any;
-  private countryList: Array<string>;
-  private account: any;
-  private uid: any;
+  user: any;
+  countryList: Array<string>;
+  account: any;
+  uid: any;
   constructor() { }
 
   ngOnInit() {

@@ -10,10 +10,10 @@ import countries from 'country-list';
 })
 export class ItemsComponent implements OnInit {
 
-  private user: any;
-  private cards: any;
-  private uid: any;
-  private countryList: Array<string>;
+  user: any;
+  cards: any;
+  uid: any;
+  countryList: Array<string>;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {

@@ -131,7 +131,7 @@
 
     "portal_title1": "Cardboard",
     "portal_subject1": "We are here to make digital, contact-free cards a smarter alternative to paper cards.",
-    "portal_title2": "Benefits of Using The Cardboard App",
+    "portal_title2": "Benefits of Using the Cardboard App",
     "portal_subject2": "One of our goals is to attack the source of Covid-19 by lessening unnecessary human-to-human physical contact.",
     "portal_title3": "The Royal Flush Team",
     "portal_subject3": "We are responsible for elevating the way you make introductions",
@@ -177,7 +177,7 @@
     "sign_up_button_sign_up":"Sign Up",
     "sign_up_button_verify":"Verify",
     "sign_up_button_resend":"Resend email",
-   
+
     "login_title":"Log In",
     "login_subject":"Do not have an account with Cardboard?",
     "login_sign_up":"Sign Up",
@@ -210,11 +210,11 @@
     "dashboard_script_age": "Age",
     "dashboard_script_country": "Country",
     "dashboard_script_languages": "Languages",
-  
+
     "vcvtuto_title": "learn",
     "vcvtuto_subject": "how to record your first VCV",
     "vcvtuto_script": "Create your stuning video cvc and land your next job, this 3 minute tutorial willtake you through the process and help you get the best experience out of Cardboard",
-   
+
     "fjbr_title1": "Jobs By Role",
     "fjbr_title2": "Find Jobs By Company",
     "fjbr_title3": "Find Jobs By Country",
@@ -235,7 +235,7 @@
 
     "fjbs_script_jobs": "jobs",
     "fjbs_title2": "Most Common Job Titles",
-    
+
     "fjbl_script_jobs": "jobs",
     "fjbl_title1": "Find Jobs by Location",
     "fjbl_subject1": "At half past eight foor opened, the policeman appeared, and, rewuesting them to follow him led the way to an adjoining half",
@@ -254,7 +254,7 @@
     "ajs_script_company_type": "Company Type",
     "ajs_script_career_level": "Career Level",
     "ajs_script_employment_type": "Employment Type",
-    
+
     "job_offer_applicants":"applicants",
     "job_offer_job_reference":"Job Reference",
     "job_offer_preffered candidates":"Preffered Candidates",
@@ -290,7 +290,7 @@
     "job_offer_post_job":"Post a job!",
     "job_offer_find_similar_jobs":"Find Similar Jobs",
     "job_offer_button_view_them_all":"view them all",
-    
+
     "com_profile_button_see_all":"see all jobs",
     "com_profile_about_us":"About Us",
     "com_profile_cultural_insights":"Cultural Insights",
@@ -298,7 +298,7 @@
     "com_profile_other_companies":"Other Companies hiring",
     "com_profile_view_them_all":"view them all",
     "com_profile_languages":"languages we speak",
-    "com_profile_cause_our":"causes our employees care about",    
+    "com_profile_cause_our":"causes our employees care about",
     "com_profile_specialties":"Specialties",
     "com_profile_company_video":"Company Video",
     "com_profile_info_headquarter":"Headquarter",
@@ -326,7 +326,7 @@
     "my_app_active":"active",
     "my_app_closed":"closed",
     "my_app_saved":"saved",
-    
+
     "myvcv_watch_vcv":"watch vcv",
     "myvcv_role_skills":"Role & Skills",
     "myvcv_work_experience":"Work Experience",
@@ -403,7 +403,7 @@
     "chat_birth":"Date of birth",
     "chat_gender":"Gender",
     "chat_language":"Language"   ,
-    
+
     "about_us_about_us":"About us",
     "about_us_mission":"Mission",
     "about_us_nysm_people":"Cardboard, people matters",
@@ -418,7 +418,7 @@
     "contact_us_button_submit":"submit",
     "contact_us_send_us_email":"Send us an email at",
     "contact_us_call_us_on":"Call us on",
-    
+
     "teleprompter_status_bar_post_to_profile":"Post to Profile",
 
     "teleprompter1_our_teleprompter":"our teleprompter will help you build your vcv",
@@ -433,7 +433,7 @@
     "teleprompter2_button_answer":"Answer",
     "teleprompter2_button_skip":"Skip",
     "teleprompter2_not_recording":"not recording",
-      
+
     "teleprompter3_title":"Recording will start in",
     "teleprompter3_button_skip":"Skip",
     "teleprompter3_not_recording":"not recording",
@@ -447,7 +447,7 @@
     "teleprompter5_button_answer":"Answer",
     "teleprompter5_button_skip":"Skip",
     "teleprompter5_not_recording":"not recording",
-      
+
     "teleprompter6_title":"Recording will start in",
     "teleprompter6_button_skip":"Skip",
     "teleprompter6_not_recording":"not recording",

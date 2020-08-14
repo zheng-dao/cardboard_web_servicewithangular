@@ -15,7 +15,7 @@ import {
 } from '@angular/material'
 import { MultiSelectAllModule } from '@syncfusion/ej2-angular-dropdowns';
 import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
-import { DoughnutChartComponent } from 'angular-d3-charts';
+// import { DoughnutChartComponent } from 'angular-d3-charts';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 
 // Module for language translate 
@@ -175,7 +175,7 @@ export function provideConfig() {
     CheckboxGroupComponent,
     JobOfferComponent,
     CompanyProfileComponent,
-    DoughnutChartComponent,
+    // DoughnutChartComponent,
     CustomDonutChartComponent,
     MyApplicationComponent,
     SemiCircleChartComponent,

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vcv-video-fx2.component.scss']
 })
 export class VcvVideoFx2Component implements OnInit {
-
+  state_list: any[];
   constructor() { }
 
   ngOnInit() {

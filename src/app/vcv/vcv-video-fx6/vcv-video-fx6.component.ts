@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VcvVideoFx6Component implements OnInit {
 
+  state_list: any[];
   constructor() { }
 
   ngOnInit() {
