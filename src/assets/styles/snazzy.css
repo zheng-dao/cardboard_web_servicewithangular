@@ -227,6 +227,47 @@ a:after {
   color: #1F262F!important;
 }
 
+.pricing-table {
+  min-width: 250px;
+  padding: 50px 20px!important;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #fff;
+}
+.pricing-table:nth-child(1) {
+  background-color: #F8F9FA;
+  color: #1f262f;
+}
+.pricing-table
+.large_rounded_btn {
+  padding: 5px 15px!important;
+  background-color: #fff;
+  font-size: 0.90em!important;
+  color: #1f262f;
+}
+.pricing-table .title {
+  font-weight: bold;
+}
+.pricing-table
+.sub_title {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.95em!important;
+  letter-spacing: .35em;
+}
+.pricing-table .title,
+.pricing-table .sub_title,
+.pricing-table li {
+  text-align: left;
+  list-style: disc;
+  color: #fff!important;
+}
+.pricing-table:nth-child(1) .title,
+.pricing-table:nth-child(1) .sub_title,
+.pricing-table:nth-child(1) li {
+  color: #1f262f!important;
+}
 /* media queries
 *************************************************************/
 
