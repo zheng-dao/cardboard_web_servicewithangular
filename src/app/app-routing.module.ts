@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PortalComponent } from './pages/portal/portal.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { ItemsComponent } from './pages/items/items.component';
+import { ShareditemsComponent } from './pages/shareditems/shareditems.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { VcvtutoComponent } from './pages/vcvtuto/vcvtuto.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
@@ -48,6 +49,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'items', component: ItemsComponent, canActivate: [AuthenticationService] },
+  { path: 'items/:id', component: ShareditemsComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthenticationService] },
   { path: 'vcvtutorial', component: VcvtutoComponent },
   { path: 'dashboard', component: DashboardComponent },

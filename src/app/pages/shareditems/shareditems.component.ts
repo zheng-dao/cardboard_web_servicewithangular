@@ -3,12 +3,13 @@ import { ActivatedRoute } from '@angular/router';
 import * as firebase from 'firebase';
 import countries from 'country-list';
 
+
 @Component({
-  selector: 'app-items',
-  templateUrl: './items.component.html',
-  styleUrls: ['./items.component.scss']
+  selector: 'app-shareditems',
+  templateUrl: './shareditems.component.html',
+  styleUrls: ['./shareditems.component.scss']
 })
-export class ItemsComponent implements OnInit {
+export class ShareditemsComponent implements OnInit {
 
   private user: any;
   private cards: any;
@@ -17,8 +18,7 @@ export class ItemsComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log(this.route.snapshot.url);
-    this.uid = localStorage.getItem('token');
+    this.uid = this.route.snapshot.paramMap.get('id');
     this.countryList = [];
     this.user = {};
     this.cards = [];
@@ -59,4 +59,5 @@ export class ItemsComponent implements OnInit {
   submitContactInfo() {
 
   }
+
 }

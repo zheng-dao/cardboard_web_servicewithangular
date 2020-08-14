@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import * as firebase from 'firebase';
 
 @Component({
@@ -7,6 +8,10 @@ import * as firebase from 'firebase';
   styleUrls: ['./portal.component.scss']
 })
 export class PortalComponent implements OnInit {
+
+  constructor(private router: Router) {
+    
+  }
 
   // slider operation
   slider_Images: any[];
@@ -66,6 +71,7 @@ export class PortalComponent implements OnInit {
   marks: any[];
 
   ngOnInit() {
+
     this.slider_Images = [
       { url: '../assets/images/portal_images/slider2.png' },
       { url: '../assets/images/portal_images/slider3.png' },

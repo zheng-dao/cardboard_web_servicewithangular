@@ -48,10 +48,17 @@ export class AppComponent implements OnInit {
           this.which_header = true;
           this.isFooterShow = true;
         }
+
+        // else if (event.url.toString() == itemsURL) {
+        //   this.which_header = false;
+        //   this.isFooterShow = false;
+        // }
+
         else if (event.url.toString() == "/items") {
           this.which_header = false;
           this.isFooterShow = false;
         }
+
         else if (event.url.toString() == "/profile") {
           this.which_header = false;
           this.isFooterShow = false;
@@ -103,6 +110,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    console.log(this.activateRouter.snapshot);
     this.activateRouter.queryParams.subscribe((params) => {
       console.log(params)
       let code = params['code']

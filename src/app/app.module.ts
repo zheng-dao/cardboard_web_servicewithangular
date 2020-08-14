@@ -112,6 +112,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { ItemsComponent } from './pages/items/items.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { environment } from 'src/environments/environment';
+import { ShareditemsComponent } from './pages/shareditems/shareditems.component';
 
 //  import { NgxLinkedinModule } from 'ngx-linkedin';
 
@@ -207,6 +208,7 @@ export function provideConfig() {
     LoginComponent,
     ItemsComponent,
     ProfileComponent,
+    ShareditemsComponent,
 
   ],
 
