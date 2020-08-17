@@ -268,13 +268,21 @@ a:after {
 .pricing-table:nth-child(1) li {
   color: #1f262f!important;
 }
+.pricing-table
+.pricing {
+  padding-left: 25px;
+}
 /* media queries
 *************************************************************/
 
 @media (min-width: 768px) {
   .portal_content_1.row
   .des_content_1 .title {
-    font-size: 4em!important;;
+    font-size: 4em!important;
+  }
+  .portal_content_5
+  h2.title {
+    margin-left: -45px!important;
   }
 }
 @media screen and (min-width: 992px) {
