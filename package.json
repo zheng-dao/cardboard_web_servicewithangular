@@ -41,7 +41,7 @@
     "font-awesome": "^4.7.0",
     "google-libphonenumber": "^3.2.2",
     "install": "^0.12.2",
-    "jquery": "^1.12.4",
+    "jquery": "^3.5.0",
     "ng-dynami-social-login": "^1.0.8",
     "ngx-international-phone-number": "^1.0.4",
     "ngx-linkedin": "0.0.6",
