@@ -113,6 +113,7 @@ import { ItemsComponent } from './pages/items/items.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { environment } from 'src/environments/environment';
 import { ShareditemsComponent } from './pages/shareditems/shareditems.component';
+import { PrivacyComponent } from './pages/privacy/privacy.component';
 
 //  import { NgxLinkedinModule } from 'ngx-linkedin';
 
@@ -209,6 +210,7 @@ export function provideConfig() {
     ItemsComponent,
     ProfileComponent,
     ShareditemsComponent,
+    PrivacyComponent,
 
   ],
 

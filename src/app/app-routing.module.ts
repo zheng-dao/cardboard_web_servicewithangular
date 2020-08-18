@@ -25,6 +25,7 @@ import { ProfileAnalyticsComponent } from './pages/profile-analytics/profile-ana
 import { ChatComponent } from './pages/chat/chat.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { TermComponent } from './pages/term/term.component';
+import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { Teleprompter1Component } from './teleprompter/teleprompter1/teleprompter1.component';
 import { Teleprompter2Component } from './teleprompter/teleprompter2/teleprompter2.component';
@@ -71,6 +72,7 @@ const routes: Routes = [
   { path: 'chat', component: ChatComponent },
   { path: 'aboutUs', component: AboutUsComponent },
   { path: 'term', component: TermComponent },
+  { path: 'privacy', component: PrivacyComponent },
   { path: 'contactUs', component: ContactUsComponent },
   {
     path: 'teleprompter',

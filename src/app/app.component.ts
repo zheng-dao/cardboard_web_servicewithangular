@@ -75,6 +75,10 @@ export class AppComponent implements OnInit {
           this.which_header = true;
           this.isFooterShow = true;
         }
+        else if (event.url.toString() == "/privacy") {
+          this.which_header = true;
+          this.isFooterShow = false;
+        }
         else if (event.url.toString() == "/vcvtutorial") {
           this.which_header = true;
           this.isFooterShow = false;
