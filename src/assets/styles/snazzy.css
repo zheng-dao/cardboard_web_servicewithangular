@@ -223,7 +223,9 @@ a:after {
 .portal_content_5 p {
   color: #1f262f!important;
 }
-
+.portal_content_9 {
+  background: #121a23!important;
+}
 .pricing-table {
   min-width: 250px;
   padding: 50px 20px!important;
