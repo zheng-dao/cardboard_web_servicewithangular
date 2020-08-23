@@ -198,6 +198,10 @@ a:after {
 .portal_content_1.row {
   margin-top: 0;
 }
+.portal_content_1a,
+.portal_content_7 {
+  background-color: #fff!important;
+}
 .portal_content_2
 .container {
   margin-bottom: 200px;
@@ -206,25 +210,18 @@ a:after {
 .portal_content_2 p {
   color: #fff!important;
 }
-.portal_content_2,
-.portal_content_5 {
+.portal-section {
   position: relative;
 }
-.portal_content_2
-.section-content {
-}
-.portal_content_2 h2, .portal_content_2 p,
-.portal_content_5 h2, .portal_content_5 p  {
+.portal-section h2,
+.portal-section p {
   max-width: 450px;
   margin-left: 0!important;
   text-align: left!important;
 }
-.portal_content_5 {
-  background-color: #fff;
-}
 .portal_content_5 h2,
 .portal_content_5 p {
-  color: #1F262F!important;
+  color: #1f262f!important;
 }
 
 .pricing-table {
@@ -235,7 +232,7 @@ a:after {
   color: #fff;
 }
 .pricing-table:nth-child(1) {
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
   color: #1f262f;
 }
 .pricing-table
