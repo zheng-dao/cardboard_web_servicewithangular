@@ -207,7 +207,9 @@ a:after {
   margin-bottom: 200px;
 }
 .portal_content_2 h2,
-.portal_content_2 p {
+.portal_content_2 p,
+.portal_content_5 h2,
+.portal_content_5 p {
   color: #fff!important;
 }
 .portal-section {
@@ -219,8 +221,8 @@ a:after {
   margin-left: 0!important;
   text-align: left!important;
 }
-.portal_content_5 h2,
-.portal_content_5 p {
+.portal_content_1a h2,
+.portal_content_1a p {
   color: #1f262f!important;
 }
 .portal_content_9 {
