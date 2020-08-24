@@ -225,23 +225,38 @@ a:after {
 .portal_content_1a p {
   color: #1f262f!important;
 }
+.portal_content_5 {
+  padding-bottom: 200px;
+}
 .portal_content_9 {
   background: #121a23!important;
 }
+.portal_content_5
+.portal_content_5_2
+ .content_5_2_1,
+.portal_content_5
+.portal_content_5_2
+.content_5_2_2 {
+  margin: 0;
+}
+.portal_content_5_2 {
+  margin-top: -90px;
+}
 .pricing-table {
-  min-width: 250px;
+  min-width: 240px;
   padding: 50px 20px!important;
   border-radius: 10px;
   background-color: #fff;
   color: #fff;
 }
 .pricing-table:nth-child(1) {
-  background-color: #f8f9fa;
-  color: #1f262f;
+  margin-right: 30px!important;
+  background-color: transparent;
+  color: #fff;
 }
 .pricing-table
 .large_rounded_btn {
-  padding: 5px 15px!important;
+  padding: 8px 25px!important;
   background-color: #fff;
   font-size: 0.90em!important;
   color: #1f262f;
@@ -267,7 +282,7 @@ a:after {
 .pricing-table:nth-child(1) .title,
 .pricing-table:nth-child(1) .sub_title,
 .pricing-table:nth-child(1) li {
-  color: #1f262f!important;
+  color: #fff!important;
 }
 .pricing-table
 .pricing {
