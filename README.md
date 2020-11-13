@@ -1,6 +1,6 @@
-# JobSeeker
+# (C)board
 
-This project is JobSeeker web server's project.
+This project is (C)board web server's project.
 Set up.
    -  setting up npm modules(terminal direction   npm install )
    -  setting up additional npm modules needed for this project.

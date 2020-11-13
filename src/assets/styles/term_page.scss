@@ -12,13 +12,16 @@
         }
         .title{
             @include custom_font($thickblue , 46px, 47px, 'galano_grotesque_alt_semi_bold');
+            color: white;
         }
         .subject{
             @include custom_font(#09193F , 24px, 33px, 'galano_grotesque_semi_bold');
+            color: white;
         }
         .content{
             @include custom_font(#122146 , 14px, 24px, 'galano_grotesque_bold');
             margin-bottom: 40px;
+            color: white;
         }
     }
 }
