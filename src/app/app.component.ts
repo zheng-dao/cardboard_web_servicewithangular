@@ -16,7 +16,7 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements OnInit {
   static shardApp: AppComponent;
   which_header: boolean = true;// true-header1, false-header2
-  title = '(C)board';
+  title = 'Cardbook®';
   isFooterShow: boolean = true;
 
   constructor(private translate: TranslateService,

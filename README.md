@@ -1,6 +1,6 @@
-# (C)board
+# Cardbook®
 
-This project is (C)board web server's project.
+This project is Cardbook® web server's project.
 Set up.
    -  setting up npm modules(terminal direction   npm install )
    -  setting up additional npm modules needed for this project.

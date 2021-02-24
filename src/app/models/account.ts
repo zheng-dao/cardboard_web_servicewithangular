@@ -3,7 +3,7 @@ export interface AccountModel {
     lastName: string;
     fullName: string;
     email: string;
-    pheoneNumber: string;
+    phoneNumber: string;
     occupation: string;
     organization: string;
     street1: string;
