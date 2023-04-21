@@ -48,7 +48,7 @@
     "ngx-scrollbar": "^4.1.1",
     "ngx-spinner": "^7.1.4",
     "ngx-toastr": "^10.0.4",
-    "npm": "^6.9.0",
+    "npm": "^9.6.5",
     "popper.js": "^1.14.7",
     "recordrtc": "^5.5.4",
     "resolve-url-loader": "^3.0.0",
@@ -60,7 +60,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.13.10",
-    "@angular/cli": "~7.3.0",
+    "@angular/cli": "~15.2.6",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
     "@types/jasmine": "~2.8.8",
